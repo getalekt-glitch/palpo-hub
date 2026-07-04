@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Руки массажиста — заметки о теле</title>
+<meta name="description" content="Практикующий массажист. Пишу про тело, контакт и восстановление: напряжение, усталость, спокойные телесные практики, атмосфера. Без медицинских обещаний.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --beige: #DBC38E;
+    --taupe: #7C6E4E;
+    --amber: #3F2C15;
+    --linen: #C8B595;
+    --wall: #E6D9C0;
+    --trim: #E0E0E0;
+    --bg: #FBF9F5;
+    --bg-alt: #F5EEE3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--amber);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .serif { font-family: 'Cormorant Garamond', serif; }
+
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  nav.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--wall);
+  }
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .nav-links a { opacity: 0.75; transition: opacity 0.2s; }
+  .nav-links a:hover { opacity: 1; }
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+  }
+
+  header.hero {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 96px 24px 56px;
+    text-align: center;
+  }
+  .eyebrow {
+    display: block;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    margin-bottom: 28px;
+  }
+  h1.hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 24px;
+  }
+  .rule {
+    width: 48px;
+    height: 1px;
+    background: var(--amber);
+    opacity: 0.4;
+    margin: 0 auto 24px;
+  }
+  .hero-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--taupe);
+    margin-bottom: 20px;
+  }
+  .hero-desc {
+    font-size: 0.92rem;
+    color: #5c5040;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .section-eyebrow {
+    font-size: 0.66rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    margin-bottom: 14px;
+    display: block;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    letter-spacing: -0.01em;
+  }
+
+  .hero-visual {
+    max-width: 360px;
+    margin: 0 auto 8px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--wall);
+  }
+  .hero-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 480px) {
+    .hero-visual { max-width: 280px; }
+  }
+
+  section.atmosphere {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--wall);
+    border-bottom: 1px solid var(--wall);
+    padding: 88px 0;
+  }
+  .atmo-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 56px;
+    align-items: center;
+  }
+  @media (max-width: 800px) {
+    .atmo-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+  .atmo-text p {
+    font-size: 0.9rem;
+    color: #5c5040;
+    max-width: 420px;
+    margin: 20px 0 28px;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 26px;
+    background: var(--amber);
+    color: var(--bg);
+    border-radius: 100px;
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: opacity 0.2s;
+  }
+  .btn:hover { opacity: 0.85; }
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border: 1px solid var(--amber);
+    border-radius: 100px;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .disc {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    border-radius: 24px;
+    background: var(--bg);
+    border: 1px solid var(--wall);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    position: relative;
+  }
+  .disc-ring {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px dashed var(--taupe);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: spin 14s linear infinite;
+  }
+  .disc-ring::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--amber);
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .disc-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--taupe);
+  }
+
+  section.reading { padding: 96px 0; }
+  .reading-head {
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto 56px;
+  }
+  .reading-head p {
+    font-size: 0.85rem;
+    color: #5c5040;
+    margin-top: 14px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  @media (max-width: 900px) {
+    .cards { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: var(--bg-alt);
+    border: 1px solid var(--wall);
+    border-radius: 18px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card-num {
+    font-size: 0.66rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--taupe);
+    display: block;
+    margin-bottom: 18px;
+  }
+  .card blockquote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--amber);
+    margin-bottom: 20px;
+  }
+  .card blockquote em {
+    display: block;
+    font-style: italic;
+    color: var(--taupe);
+    margin-top: 10px;
+  }
+  .card-link {
+    padding-top: 20px;
+    border-top: 1px solid var(--wall);
+    margin-top: 20px;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  section.aesthetics {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--wall);
+    padding: 96px 0;
+  }
+  .aes-head { max-width: 480px; margin-bottom: 56px; }
+  .aes-head p {
+    font-size: 0.85rem;
+    color: #5c5040;
+    margin-top: 14px;
+  }
+  .aes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+  @media (max-width: 800px) {
+    .aes-grid { grid-template-columns: 1fr; gap: 36px; }
+  }
+  .aes-frame {
+    aspect-ratio: 4 / 3;
+    background: linear-gradient(135deg, var(--linen), var(--wall));
+    border: 1px solid var(--wall);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+  }
+  .aes-grid > div:nth-child(2) .aes-frame { margin-top: 48px; }
+  .aes-frame span {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: var(--amber);
+    opacity: 0.55;
+  }
+  .aes-caption {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    color: var(--taupe);
+    margin-top: 12px;
+    text-transform: uppercase;
+  }
+
+  section.channels {
+    padding: 88px 0 100px;
+    text-align: center;
+  }
+  .channels-head {
+    max-width: 480px;
+    margin: 0 auto 40px;
+  }
+  .channel-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  footer {
+    border-top: 1px solid var(--wall);
+    padding: 36px 0;
+    font-size: 0.68rem;
+    color: var(--taupe);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+</style>
+</head>
+<body>
+
+<nav class="wrap">
+  <span class="brand">Руки массажиста</span>
+  <div class="nav-links">
+    <a href="#about">О канале</a>
+    <a href="#music">Атмосфера</a>
+    <a href="#reading">Наблюдения</a>
+    <a href="#aesthetics">Эстетика</a>
+  </div>
+</nav>
+
+<header class="hero" id="about">
+  <span class="eyebrow">Заметки о теле</span>
+  <h1 class="hero-title serif">Тело знает.<br>Я замечаю.</h1>
+  <div class="rule"></div>
+  <p class="hero-sub">Заметки о теле. Авторская практика в Минске.</p>
+  <p class="hero-desc">Не учу. Замечаю. Пишу про тело, контакт и восстановление — напряжение, усталость, спокойные телесные практики. Без медицинских обещаний.</p>
+</header>
+
+<div class="wrap">
+  <div class="hero-visual">
+    <img src="hero.jpg" alt="Руки массажиста на спине, тёплый свет, крупный план">
+  </div>
+</div>
+
+<section class="atmosphere" id="music">
+  <div class="wrap atmo-grid">
+    <div class="atmo-text">
+      <span class="section-eyebrow">Акустическое равновесие</span>
+      <h2 class="section-title serif">Музыкальная атмосфера</h2>
+      <p>Плейлист, под который я работаю между сеансами. Не терапия — просто фон, который помогает телу перестать спешить.</p>
+      <a href="https://youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN&si=zz95gK19tJRYIGeZ" target="_blank" rel="noreferrer" class="btn">
+        Слушать на YouTube →
+      </a>
+    </div>
+    <div>
+      <div class="disc">
+        <div class="disc-ring"></div>
+        <span class="disc-label">Lighthouse Ambiance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reading" id="reading">
+  <div class="wrap">
+    <div class="reading-head">
+      <span class="section-eyebrow">Живое чтение</span>
+      <h2 class="section-title serif">Наблюдения у стола</h2>
+      <p>Фрагменты постов из телеграм-канала. Без сокращений и без объяснений — как написано.</p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <div>
+          <span class="card-num">#01</span>
+          <blockquote>
+            «Он разделся. Лёг. Телефон — рядом на стуле. Экраном вниз.
+            <em>Я заметил это случайно. Он перевернул его, прежде чем лечь. Не попросил. Сам. Как будто всем сказал: "Всё. Меня нет. Я здесь".»</em>
+          </blockquote>
+        </div>
+        <a class="card-link" href="https://t.me/Lighthouse_massage_music/1723" target="_blank" rel="noreferrer">
+          Читать полностью →
+        </a>
+      </article>
+
+      <article class="card">
+        <div>
+          <span class="card-num">#02</span>
+          <blockquote>
+            «Ты говоришь себе "расслабься". И напрягаешься сильнее.
+            <em>Команда "расслабься" для тела — это задача. Расслабиться по приказу нельзя. Можно только перестать приказывать.»</em>
+          </blockquote>
+        </div>
+        <a class="card-link" href="https://t.me/Lighthouse_massage_music/1694" target="_blank" rel="noreferrer">
+          Читать полностью →
+        </a>
+      </article>
+
+      <article class="card">
+        <div>
+          <span class="card-num">#03</span>
+          <blockquote>
+            «Меня не тратят. Меня заправляют.
+            <em>Каждый день. Чужие спины. Спрашивают: как не устаёшь? Не знал что ответить. Теперь знаю.»</em>
+          </blockquote>
+        </div>
+        <a class="card-link" href="https://t.me/Lighthouse_massage_music/1721" target="_blank" rel="noreferrer">
+          Читать полностью →
+        </a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="aesthetics" id="aesthetics">
+  <div class="wrap">
+    <div class="aes-head">
+      <span class="section-eyebrow">Визуальный ритм</span>
+      <h2 class="section-title serif">Эстетика прикосновения</h2>
+      <p>Моменты замедления через свет и текстуру. Кадры из практики — не иллюстрация к тексту, а самостоятельное высказывание.</p>
+    </div>
+    <div class="aes-grid">
+      <div>
+        <div class="aes-frame"><span>[ кадр 1 — заменить на визуал проекта ]</span></div>
+        <div class="aes-caption"><span>Кадр · Ритм тишины</span><span>Минск · Кабинет</span></div>
+      </div>
+      <div>
+        <div class="aes-frame"><span>[ кадр 2 — заменить на визуал проекта ]</span></div>
+        <div class="aes-caption"><span>Кадр · Полка массажиста</span><span>Рабочий инструмент</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="channels">
+  <div class="wrap">
+    <div class="channels-head">
+      <span class="section-eyebrow">Продолжение</span>
+      <h2 class="section-title serif">Где меня найти</h2>
+    </div>
+    <div class="channel-row">
+      <a class="btn" href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">Telegram</a>
+      <a class="btn-outline" href="https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/" target="_blank" rel="noreferrer">Pinterest</a>
+      <a class="btn-outline" href="https://www.youtube.com/@aleksei_massage_minsk" target="_blank" rel="noreferrer">YouTube</a>
+      <a class="btn-outline" href="https://www.instagram.com/aleksei_massage_minsk/" target="_blank" rel="noreferrer">Instagram</a>
+      <a class="btn-outline" href="https://www.tiktok.com/@aleksei_massage_minsk" target="_blank" rel="noreferrer">TikTok</a>
+    </div>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>© 2026 Руки массажиста</span>
+  <span>Минск</span>
+</footer>
+
+</body>
+</html>
