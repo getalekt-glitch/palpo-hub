@@ -6,6 +6,12 @@
 <title>Руки массажиста — Тело знает</title>
 <meta name="description" content="Практикующий массажист. Пишу про тело, контакт и восстановление: напряжение, усталость, спокойные телесные практики, атмосфера. Без медицинских обещаний.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta property="og:title" content="Руки массажиста — Тело знает">
+<meta property="og:description" content="Практикующий массажист. Пишу про тело, контакт и восстановление. Без медицинских обещаний.">
+<meta property="og:image" content="https://palpo.org/hero-door.jpg">
+<meta property="og:url" content="https://palpo.org">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%233F2C15%22/%3E%3Ctext x=%2250%25%22 y=%2258%25%22 font-size=%2255%22 fill=%22%23FBF9F5%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22%3ER%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -42,6 +48,12 @@
   }
   .nav-links a:hover::after { right: 0; }
   @media (max-width: 720px) { .nav-links { display: none; } }
+
+  .lang-toggle {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
+    border: 1px solid var(--amber); border-radius: 100px; padding: 6px 14px;
+    color: var(--amber); flex-shrink: 0;
+  }
 
   .mobile-cta { display: none; }
   @media (max-width: 720px) {
@@ -176,7 +188,11 @@
   .atmosphere-scroll::-webkit-scrollbar { display: none; }
   .atmosphere-slide {
     flex: 0 0 100%; scroll-snap-align: start; height: 82vh;
-    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center;
+    background: #2a1f14;
+  }
+  .atmosphere-slide img {
+    max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;
   }
   .atmosphere-hint {
     text-align: center; font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase;
@@ -207,8 +223,8 @@
     <a href="#humor">Юмор массажиста</a>
     <a href="#faq">Вопросы</a>
     <a href="#atmosphere">Атмосфера</a>
-    <a href="en.html" style="opacity:0.6;">EN</a>
   </div>
+  <a href="en.html" class="lang-toggle">EN</a>
 </nav>
 
 <a class="mobile-cta" href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">
@@ -360,8 +376,8 @@
       <a class="atmosphere-read" href="https://t.me/Lighthouse_massage_music/1632" target="_blank" rel="noreferrer">Читать полностью →</a>
     </div>
     <div class="atmosphere-scroll">
-      <div class="atmosphere-slide" style="background-image:url('atmosphere.jpg')"></div>
-      <div class="atmosphere-slide" style="background-image:url('atmosphere-table.jpg')"></div>
+      <div class="atmosphere-slide"><img src="atmosphere.jpg" alt="Лампа, табурет, комната"></div>
+      <div class="atmosphere-slide"><img src="atmosphere-table.jpg" alt="Массажный стол, боковой свет, флакон и полотенца"></div>
     </div>
     <p class="atmosphere-hint">← пролистайте →</p>
   </div>

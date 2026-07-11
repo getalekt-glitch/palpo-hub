@@ -6,6 +6,12 @@
 <title>Massage Hands — The Body Knows</title>
 <meta name="description" content="A practicing massage therapist. I write about the body, contact, and recovery: tension, fatigue, quiet bodily practices, atmosphere. No medical promises.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta property="og:title" content="Massage Hands — The Body Knows">
+<meta property="og:description" content="A practicing massage therapist. I write about the body, contact, and recovery. No medical promises.">
+<meta property="og:image" content="https://palpo.org/hero-door.jpg">
+<meta property="og:url" content="https://palpo.org/en.html">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%233F2C15%22/%3E%3Ctext x=%2250%25%22 y=%2258%25%22 font-size=%2255%22 fill=%22%23FBF9F5%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22%3ER%3C/text%3E%3C/svg%3E">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -42,6 +48,12 @@
   }
   .nav-links a:hover::after { right: 0; }
   @media (max-width: 720px) { .nav-links { display: none; } }
+
+  .lang-toggle {
+    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
+    border: 1px solid var(--amber); border-radius: 100px; padding: 6px 14px;
+    color: var(--amber); flex-shrink: 0;
+  }
 
   .mobile-cta { display: none; }
   @media (max-width: 720px) {
@@ -176,7 +188,11 @@
   .atmosphere-scroll::-webkit-scrollbar { display: none; }
   .atmosphere-slide {
     flex: 0 0 100%; scroll-snap-align: start; height: 82vh;
-    background-size: cover; background-position: center;
+    display: flex; align-items: center; justify-content: center;
+    background: #2a1f14;
+  }
+  .atmosphere-slide img {
+    max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;
   }
   .atmosphere-hint {
     text-align: center; font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase;
@@ -207,8 +223,8 @@
     <a href="#humor">Massage Humor</a>
     <a href="#faq">Questions</a>
     <a href="#atmosphere">Atmosphere</a>
-    <a href="index.html" style="opacity:0.6;">RU</a>
   </div>
+  <a href="index.html" class="lang-toggle">RU</a>
 </nav>
 
 <a class="mobile-cta" href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">
@@ -360,8 +376,8 @@
       <a class="atmosphere-read" href="https://t.me/Lighthouse_massage_music/1632" target="_blank" rel="noreferrer">Read in full →</a>
     </div>
     <div class="atmosphere-scroll">
-      <div class="atmosphere-slide" style="background-image:url('atmosphere.jpg')"></div>
-      <div class="atmosphere-slide" style="background-image:url('atmosphere-table.jpg')"></div>
+      <div class="atmosphere-slide"><img src="atmosphere.jpg" alt="Lamp, stool, room"></div>
+      <div class="atmosphere-slide"><img src="atmosphere-table.jpg" alt="Massage table, side light, oil bottle and towels"></div>
     </div>
     <p class="atmosphere-hint">← swipe →</p>
   </div>
