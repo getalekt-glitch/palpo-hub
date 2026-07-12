@@ -144,13 +144,18 @@
   }
 
   /* MODULES */
-  section.modules { padding: 80px 0; text-align: center; }
+  section.modules {
+    position: relative; padding: 100px 0; text-align: center;
+    background-image: linear-gradient(180deg, rgba(20,14,8,0.72) 0%, rgba(20,14,8,0.82) 100%), url('modules-bg.jpg');
+    background-size: cover; background-position: center 25%;
+    color: var(--bg);
+  }
   .modules-head { max-width: 480px; margin: 0 auto 40px; }
   .modules-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; align-items: center; }
   .btn-disabled {
     display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px;
-    border: 1px dashed var(--taupe); border-radius: 100px; color: var(--taupe);
-    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.7;
+    border: 1px dashed var(--beige); border-radius: 100px; color: var(--beige);
+    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75;
   }
 
   /* FAQ */
@@ -321,12 +326,12 @@
 <section class="modules" id="humor">
   <div class="wrap">
     <div class="modules-head">
-      <span class="section-eyebrow" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--taupe);display:block;margin-bottom:14px;">Ещё по проекту</span>
-      <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;">Отдельные рубрики</h2>
+      <span class="section-eyebrow" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--beige);display:block;margin-bottom:14px;">Ещё по проекту</span>
+      <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;color:var(--bg);">Отдельные рубрики</h2>
     </div>
     <div class="modules-row reveal">
-      <a class="btn" href="https://t.me/Lighthouse_massage_music/1535" target="_blank" rel="noreferrer">Юмор массажиста →</a>
-      <span class="btn-disabled">Биомеханика — скоро</span>
+      <a class="btn" href="humor.html">Юмор массажиста →</a>
+      <a class="btn" href="biomechanics.html">Биомеханика →</a>
     </div>
   </div>
 </section>
