@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кабинет и выезд — практика в Минске — Руки массажиста</title>
+<meta name="description" content="Приём в кабинете за городом и выезд на дом по Минску и Колодищам. Индивидуальный формат.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%233F2C15%22/%3E%3Ctext x=%2250%25%22 y=%2258%25%22 font-size=%2255%22 fill=%22%23FBF9F5%22 text-anchor=%22middle%22 font-family=%22Georgia,serif%22%3ER%3C/text%3E%3C/svg%3E">
+<meta property="og:title" content="Кабинет и выезд — практика в Минске — Руки массажиста">
+<meta property="og:description" content="Приём в кабинете за городом и выезд на дом по Минску и Колодищам.">
+<meta property="og:image" content="https://palpo.org/og-image.jpg">
+<meta property="og:url" content="https://palpo.org/minsk.html">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --beige: #DBC38E; --taupe: #7C6E4E; --amber: #3F2C15;
+    --linen: #C8B595; --wall: #E6D9C0; --bg: #FBF9F5; --bg-alt: #F5EEE3;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--amber);
+    font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; }
+  .serif { font-family: 'Cormorant Garamond', serif; }
+  .wrap { max-width: 620px; margin: 0 auto; padding: 0 24px; }
+
+  nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 26px 24px; border-bottom: 1px solid var(--wall);
+    max-width: 620px; margin: 0 auto;
+  }
+  .brand {
+    font-family: 'Cormorant Garamond', serif; font-size: 1rem;
+    letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+  }
+  .back-link {
+    font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+    text-decoration: none; opacity: 0.7;
+  }
+
+  .hero { padding: 48px 24px 36px; text-align: center; }
+  .eyebrow {
+    display: block; font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--taupe); margin-bottom: 14px;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500;
+    font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;
+  }
+  .subtitle { font-size: 0.92rem; color: var(--taupe); }
+
+  section.about { padding: 8px 24px 40px; }
+  section.about p { font-size: 0.98rem; color: #3a2d1c; }
+
+  .formats { display: grid; gap: 16px; padding: 0 24px 40px; max-width: 620px; margin: 0 auto; }
+  @media (min-width: 560px) { .formats { grid-template-columns: 1fr 1fr; } }
+  .format-block {
+    background: var(--bg-alt); border: 1px solid var(--wall); border-radius: 14px; padding: 22px;
+  }
+  .format-block h3 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.1rem; margin-bottom: 8px;
+  }
+  .format-block p { font-size: 0.92rem; color: #3a2d1c; }
+
+  section.services { padding: 0 24px 40px; max-width: 620px; margin: 0 auto; }
+  section.services h3 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.15rem; margin-bottom: 12px;
+  }
+  section.services p { font-size: 0.94rem; color: #3a2d1c; margin-bottom: 10px; }
+  section.services .note { font-size: 0.86rem; color: var(--taupe); margin-top: 10px; }
+
+  section.pricing { padding: 0 24px 40px; max-width: 620px; margin: 0 auto; }
+  section.pricing h3 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.15rem; margin-bottom: 10px;
+  }
+  section.pricing p { font-size: 0.94rem; color: #3a2d1c; }
+
+  section.contact {
+    background: var(--bg-alt); border-top: 1px solid var(--wall); border-bottom: 1px solid var(--wall);
+    padding: 40px 24px; text-align: center;
+  }
+  section.contact h3 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.15rem; margin-bottom: 14px;
+  }
+  .phone {
+    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.7rem;
+    display: block; margin-bottom: 8px; text-decoration: none;
+  }
+  .contact-note { font-size: 0.86rem; color: var(--taupe); }
+  .contact-note + .contact-note { margin-top: 6px; }
+
+  .bridge {
+    padding: 32px 24px; text-align: center; font-size: 0.86rem; color: var(--taupe);
+  }
+  .bridge a { text-decoration: underline; text-underline-offset: 3px; }
+
+  footer {
+    border-top: 1px solid var(--wall); padding: 24px 24px 32px; text-align: center;
+    font-size: 0.66rem; color: var(--taupe); line-height: 1.6;
+  }
+  footer .disclaimer { max-width: 480px; margin: 0 auto 14px; opacity: 0.8; }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="brand" href="index.html">Руки массажиста</a>
+  <a class="back-link" href="index.html">← На хаб</a>
+</nav>
+
+<section class="hero">
+  <span class="eyebrow">Практика в Минске</span>
+  <h1 class="serif">Кабинет и выезд</h1>
+  <p class="subtitle">Колодищи и Минск. Индивидуальный формат.</p>
+</section>
+
+<section class="about wrap">
+  <p>Работаю в двух режимах: приём в кабинете за городом и выезд на дом по Минску и Колодищам. Массажный стол, косметика и расходные материалы — всё привожу с собой. Программа подбирается индивидуально, в зависимости от того, что нужно.</p>
+</section>
+
+<div class="formats">
+  <div class="format-block">
+    <h3 class="serif">Кабинет</h3>
+    <p>Колодищи, Минский район. Тихо, парковка есть. Для тех, кто хочет физически выйти из дома.</p>
+  </div>
+  <div class="format-block">
+    <h3 class="serif">Выезд</h3>
+    <p>По Минску и Колодищам — включён в стоимость сеанса. Для тех, кому проще, чтобы приехали. После сеанса — не нужно никуда ехать.</p>
+  </div>
+</div>
+
+<section class="services wrap">
+  <h3 class="serif">Что делаю</h3>
+  <p>Классический массаж — всего тела, спины, шейно-воротниковой зоны. Антицеллюлитный и лимфодренажный массаж — включая программы коррекции фигуры с обёртываниями. Массаж лица — классический, Асахи, 3D-лифтинг, с массажным мячом. Комплексные программы с косметикой премиум-класса, обёртываниями, «виски»-пеленаниями.</p>
+  <p class="note">Одиночные сеансы или курсы (обычно 10 процедур).</p>
+</section>
+
+<section class="pricing wrap">
+  <h3 class="serif">О стоимости</h3>
+  <p>Зависит от программы, продолжительности сеанса и того, включена ли косметика. Пришлю прайс в ответ на сообщение или расскажу голосом — как удобнее.</p>
+</section>
+
+<section class="contact">
+  <h3 class="serif">Связаться</h3>
+  <a class="phone serif" href="tel:+375333778872">+375 33 377 88 72</a>
+  <p class="contact-note">Telegram, Viber, звонок</p>
+  <p class="contact-note">Мессенджеры — быстрее: руки часто заняты работой.</p>
+  <p class="contact-note" style="margin-top:10px;">Отвечаю в течение дня. Если не отвечаю сразу — на сеансе.</p>
+</section>
+
+<p class="bridge wrap">Не из Минска? Здесь заметки массажиста и наблюдения о теле — <a href="index.html">вернуться на хаб</a>.</p>
+
+<footer>
+  <p class="disclaimer">Процедуры не являются медицинскими услугами. Имеют общеоздоровительное, косметическое или релаксирующее воздействие.</p>
+  <a href="index.html">Руки массажиста</a>
+</footer>
+
+</body>
+</html>
