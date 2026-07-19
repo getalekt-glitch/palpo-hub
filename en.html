@@ -76,13 +76,19 @@
     background-image: linear-gradient(180deg, rgba(30,20,10,0.15) 0%, rgba(20,14,8,0.75) 100%), url('hero-door.jpg');
     background-size: cover; background-position: center;
   }
-  .hero-inner { width: 100%; padding: 80px 24px 72px; max-width: 1100px; margin: 0 auto; text-align: center; color: var(--bg); }
+  .hero-inner { width: 100%; padding: 80px 24px 72px; max-width: 1100px; margin: 0 auto; text-align: center; color: var(--bg); min-height: 340px; display: flex; flex-direction: column; justify-content: flex-end; }
   .eyebrow { display: block; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--beige); margin-bottom: 24px; }
   h1.hero-title { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.12; margin-bottom: 20px; }
-  .hero-sub { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--wall); opacity: 0.85; }
+  .hero-sub { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--wall); opacity: 0.85; display: block; }
+  .attribution { font-size: 0.78rem; letter-spacing: 0.04em; color: var(--beige); opacity: 0.9; display: block; margin-top: 14px; }
 
   /* KTO ETO */
   section.kto-eto { padding: 96px 24px; text-align: center; }
+  .kto-eto-photo {
+    max-width: 480px; margin: 0 auto 40px; border-radius: 18px; overflow: hidden;
+    border: 1px solid var(--wall); box-shadow: 0 20px 40px -20px rgba(63,44,21,0.3);
+  }
+  .kto-eto-photo img { width: 100%; display: block; }
   .kto-eto p {
     font-family: 'Cormorant Garamond', serif; font-style: italic;
     font-size: clamp(1.2rem, 2.4vw, 1.5rem); line-height: 1.65; color: var(--amber);
@@ -213,6 +219,8 @@
   }
   .version-tag { font-size: 0.62rem; letter-spacing: 0.1em; color: var(--taupe); opacity: 0.6; }
   .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; letter-spacing: 0.04em; color: var(--amber); }
+  .footer-links { display: flex; gap: 18px; }
+  .footer-links a { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--taupe); text-decoration: underline; text-underline-offset: 3px; }
   /* REVEAL */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.is-visible { opacity: 1; transform: translateY(0); }
@@ -257,12 +265,16 @@
 <section class="hero" id="hero">
   <div class="hero-inner">
     <span class="eyebrow">A massage therapist's observations</span>
-    <h1 class="hero-title serif">The body knows.<br>This is where it shows.</h1>
+    <h1 class="hero-title serif" id="hero-observation">The body hasn't spoken yet.<br>The hands already know.</h1>
     <span class="hero-sub">The &quot;Massage Hands&quot; project · no textbooks</span>
+    <span class="attribution">Aleksei · massage therapist · Minsk · practicing since 2006</span>
   </div>
 </section>
 
 <section class="kto-eto">
+  <div class="kto-eto-photo reveal">
+    <img src="author.jpg" alt="Aleksei at the massage table, from behind">
+  </div>
   <p class="reveal">I work with my hands, but I notice with my eyes. Twenty years at the table have shown me more about bodies — and people — than I expected. Here, I put it into words. As it is. No textbooks.</p>
 </section>
 
@@ -294,9 +306,7 @@
       <h2 class="serif">This is only part of it. The rest lives at these links.</h2>
     </div>
     <div class="channel-row">
-      <a class="btn" href="https://telegram.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">Telegram</a>
-      <a class="btn-outline" href="https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/" target="_blank" rel="noreferrer">Pinterest</a>
-      <a class="btn-outline" href="https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN" target="_blank" rel="noreferrer">YouTube</a>
+      <a class="btn" href="https://telegram.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">Read on Telegram →</a>
     </div>
   </div>
 </section>
@@ -355,18 +365,8 @@
       </details>
 
       <details>
-        <summary class="serif">Can I book a session with you?</summary>
-        <p>Yes — studio and house calls. Studio is just outside the city, quiet, parking available, you can close the door and leave daily life outside. House calls — if the trip is too much and you'd rather fall asleep in your own bed right after the session. Details — direct message: <a href="https://telegram.me/aleksei_massage_minsk" target="_blank" rel="noreferrer">@aleksei_massage_minsk</a>.</p>
-      </details>
-
-      <details>
-        <summary class="serif">Do you only work in Minsk?</summary>
-        <p>Studio and house calls — Minsk only. Telegram and Pinterest — no geography. People read from many countries, and that's fine: observations about the body don't know borders.</p>
-      </details>
-
-      <details>
         <summary class="serif">How long have you been doing this?</summary>
-        <p>Over 20 years. Came into the profession at 40, while building a house and running other things on the side. Worked hard — up to ten sessions a day. Still at it. Many who started around the same time aren't anymore.</p>
+        <p>Came into the profession at 40. Working at the table daily since 2006. Up to ten sessions a day.</p>
       </details>
 
       <details>
@@ -377,14 +377,6 @@
       <details>
         <summary class="serif">Why do you use Pinterest?</summary>
         <p>Because it's search, not a feed. Someone looks up "what is shoulder tension" or "what a massage studio in Minsk looks like" — and ends up here. Pinterest moves slowly, and it lasts. A pin published a year ago still works today.</p>
-      </details>
-
-      <details>
-        <summary class="serif">Where can I read more?</summary>
-        <div class="faq-buttons">
-          <a class="btn" href="https://telegram.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">Telegram</a>
-          <a class="btn-outline" href="https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/" target="_blank" rel="noreferrer">Pinterest</a>
-        </div>
       </details>
 
     </div>
@@ -407,10 +399,26 @@
 <footer>
   <span class="footer-brand">The &quot;Massage Hands&quot; Project</span>
   <a class="btn" href="https://telegram.me/aleksei_massage_minsk" target="_blank" rel="noreferrer">Contact</a>
-  <span class="version-tag">version 9.0 · EN</span>
+  <div class="footer-links">
+    <a href="https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/" target="_blank" rel="noreferrer">Pinterest</a>
+    <a href="https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN" target="_blank" rel="noreferrer">YouTube</a>
+  </div>
+  <span class="version-tag">version 14.0 · EN</span>
 </footer>
 
 </body>
+<script>
+  const heroObservations = [
+    "The body hasn't spoken yet.<br>The hands already know.",
+    "My feet didn't feel like mine.<br>Like a child's.",
+    "I can't wait for next week.<br>I'm already going to miss your hands."
+  ];
+  const heroEl = document.getElementById('hero-observation');
+  if (heroEl) {
+    const pick = heroObservations[Math.floor(Math.random() * heroObservations.length)];
+    heroEl.innerHTML = pick;
+  }
+</script>
 <script>
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
