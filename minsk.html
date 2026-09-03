@@ -3,165 +3,528 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Кабинет и выезд — практика в Минске — Руки массажиста</title>
-<meta name="description" content="Приём в кабинете за городом и выезд на дом по Минску и Колодищам. Индивидуальный формат.">
+<title>Массаж с выездом на дом — Минск и Колодищи — Алексей Гордиенко</title>
+<meta name="description" content="Приезжаю со своим столом, косметикой и одноразовым бельём. Выезд по Минску и Колодищам включён в стоимость. Есть кабинет в Колодищах. У стола с 2006 года.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="znak-P-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="znak-P-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="znak-P-180x180.png">
-<meta property="og:title" content="Кабинет и выезд — практика в Минске — Руки массажиста">
-<meta property="og:description" content="Приём в кабинете за городом и выезд на дом по Минску и Колодищам.">
+<meta property="og:title" content="Массаж с выездом на дом — Минск и Колодищи">
+<meta property="og:description" content="Приезжаю со своим столом, косметикой и одноразовым бельём. От вас не нужно ничего.">
 <meta property="og:image" content="https://palpo.org/og-image.jpg">
 <meta property="og:url" content="https://palpo.org/minsk.html">
 <meta property="og:type" content="website">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://palpo.org/minsk.html">
 <style>
   :root {
-    --beige: #DBC38E; --taupe: #7C6E4E; --amber: #3F2C15;
-    --linen: #C8B595; --wall: #E6D9C0; --bg: #FBF9F5; --bg-alt: #F5EEE3;
+    --beige: #DBC38E;
+    --taupe: #7C6E4E;
+    --amber: #3F2C15;
+    --linen: #C8B595;
+    --wall: #E6D9C0;
+    --bg: #FBF9F5;
+    --bg-alt: #F5EEE3;
+    --card: #FFFDFA;
+    --ink: #3A2D1C;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
-    background: var(--bg); color: var(--amber);
-    font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.65;
+    background: var(--bg);
+    color: var(--amber);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 300;
+    line-height: 1.68;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
   a { color: inherit; }
-  .serif { font-family: 'Cormorant Garamond', serif; }
-  .wrap { max-width: 620px; margin: 0 auto; padding: 0 24px; }
+  .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+  .wrap { max-width: 660px; margin: 0 auto; padding: 0 24px; }
 
+  /* ── навигация ───────────────────────────── */
   nav {
     display: flex; justify-content: space-between; align-items: center;
-    padding: 26px 24px; border-bottom: 1px solid var(--wall);
-    max-width: 620px; margin: 0 auto;
+    padding: 22px 24px; border-bottom: 1px solid var(--wall);
+    max-width: 660px; margin: 0 auto;
   }
   .brand {
-    font-family: 'Cormorant Garamond', serif; font-size: 1rem;
-    letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+    font-family: 'Cormorant Garamond', Georgia, serif; font-size: 1rem;
+    letter-spacing: 0.11em; text-transform: uppercase; text-decoration: none;
   }
   .back-link {
-    font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
-    text-decoration: none; opacity: 0.7;
+    font-size: 0.66rem; letter-spacing: 0.11em; text-transform: uppercase;
+    text-decoration: none; color: var(--taupe);
+    transition: color .2s ease;
   }
+  .back-link:hover { color: var(--amber); }
 
-  .hero { padding: 48px 24px 36px; text-align: center; }
+  /* ── первый экран ────────────────────────── */
+  .hero {
+    padding: 54px 24px 40px; max-width: 660px; margin: 0 auto;
+    background:
+      radial-gradient(120% 90% at 50% 0%, rgba(219,195,142,.20) 0%, rgba(219,195,142,0) 62%);
+  }
   .eyebrow {
-    display: block; font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--taupe); margin-bottom: 14px;
+    display: block; font-size: 0.64rem; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--taupe); margin-bottom: 16px;
   }
   h1 {
-    font-family: 'Cormorant Garamond', serif; font-weight: 500;
-    font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.2; margin-bottom: 10px;
+    font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500;
+    font-size: clamp(1.85rem, 6.2vw, 2.65rem); line-height: 1.14;
+    letter-spacing: -0.005em; margin-bottom: 16px;
   }
-  .subtitle { font-size: 0.92rem; color: var(--taupe); }
+  .lead { font-size: 1.02rem; color: var(--ink); max-width: 30em; }
+  .byline {
+    margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--wall);
+    font-size: 0.78rem; letter-spacing: 0.04em; color: var(--taupe);
+  }
 
-  section.about { padding: 8px 24px 40px; }
-  section.about p { font-size: 0.98rem; color: #3a2d1c; }
+  /* ── кнопки действия ─────────────────────── */
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 14px 22px; border-radius: 999px; text-decoration: none;
+    font-size: 0.92rem; letter-spacing: 0.01em; white-space: nowrap;
+    transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  }
+  .btn svg { width: 17px; height: 17px; flex: none; }
+  .btn-primary {
+    background: var(--amber); color: var(--bg); font-weight: 400;
+    box-shadow: 0 2px 10px rgba(63,44,21,.16);
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(63,44,21,.24); }
+  .btn-ghost { border: 1px solid var(--linen); background: var(--card); color: var(--amber); }
+  .btn-ghost:hover { transform: translateY(-2px); background: var(--bg-alt); }
+  .btn:focus-visible { outline: 2px solid var(--taupe); outline-offset: 3px; }
+  .reply-note { margin-top: 14px; font-size: 0.8rem; color: var(--taupe); }
 
-  .formats { display: grid; gap: 16px; padding: 0 24px 40px; max-width: 620px; margin: 0 auto; }
-  @media (min-width: 560px) { .formats { grid-template-columns: 1fr 1fr; } }
-  .format-block {
-    background: var(--bg-alt); border: 1px solid var(--wall); border-radius: 14px; padding: 22px;
+  /* ── секции ──────────────────────────────── */
+  section { max-width: 660px; margin: 0 auto; padding: 0 24px 46px; }
+  h2 {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500;
+    font-size: clamp(1.35rem, 4vw, 1.62rem); line-height: 1.25; margin-bottom: 18px;
   }
-  .format-block h3 {
-    font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.1rem; margin-bottom: 8px;
-  }
-  .format-block p { font-size: 0.92rem; color: #3a2d1c; }
+  section p { font-size: 0.97rem; color: var(--ink); }
+  section p + p { margin-top: 13px; }
 
-  section.services { padding: 0 24px 40px; max-width: 620px; margin: 0 auto; }
-  section.services h3 {
-    font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.15rem; margin-bottom: 12px;
+  .band {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--wall); border-bottom: 1px solid var(--wall);
+    padding: 46px 0; margin-bottom: 46px;
   }
-  section.services p { font-size: 0.94rem; color: #3a2d1c; margin-bottom: 10px; }
-  section.services .note { font-size: 0.86rem; color: var(--taupe); margin-top: 10px; }
+  .band > section { padding-bottom: 0; }
 
-  section.pricing { padding: 0 24px 40px; max-width: 620px; margin: 0 auto; }
-  section.pricing h3 {
-    font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.15rem; margin-bottom: 10px;
+  /* ── список «что приезжает» ──────────────── */
+  .statements { list-style: none; margin: 0 0 22px; }
+  .statements li {
+    font-size: 1rem; color: var(--ink); line-height: 1.6;
+    padding: 15px 0; border-bottom: 1px solid var(--wall);
   }
-  section.pricing p { font-size: 0.94rem; color: #3a2d1c; }
+  .statements li:first-child { padding-top: 0; }
 
-  section.contact {
-    background: var(--bg-alt); border-top: 1px solid var(--wall); border-bottom: 1px solid var(--wall);
-    padding: 40px 24px; text-align: center;
+  /* ── карточки форматов ───────────────────── */
+  .formats { display: grid; gap: 14px; margin-top: 6px; }
+  @media (min-width: 620px) { .formats { grid-template-columns: 1fr 1fr; } }
+  .fmt {
+    position: relative; background: var(--card); border: 1px solid var(--wall);
+    border-radius: 16px; padding: 22px 22px 20px; overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
   }
-  section.contact h3 {
-    font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: 1.15rem; margin-bottom: 14px;
+  .fmt::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: var(--beige);
   }
+  .fmt:hover {
+    transform: translateY(-3px); border-color: var(--linen);
+    box-shadow: 0 8px 22px rgba(63,44,21,.07);
+  }
+  .fmt h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600;
+    font-size: 1.16rem; line-height: 1.25; margin-bottom: 9px;
+  }
+  .fmt p { font-size: 0.9rem; color: var(--ink); }
+  .fmt .price {
+    display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline;
+    margin-top: 15px; padding-top: 13px; border-top: 1px solid var(--wall);
+    font-size: 0.82rem; color: var(--taupe);
+  }
+  .fmt .price b {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600; font-size: 1.06rem; color: var(--amber);
+  }
+  .fmt--wide { grid-column: 1 / -1; }
+
+  .course {
+    margin-top: 22px; padding: 20px 22px; border-radius: 14px;
+    background: var(--card); border: 1px solid var(--wall);
+    font-size: 0.96rem; color: var(--ink); line-height: 1.6;
+  }
+  .course b {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600; font-size: 1.06rem; color: var(--amber);
+  }
+
+  .fine { margin-top: 20px; list-style: none; }
+  .fine li {
+    font-size: 0.86rem; color: var(--taupe); line-height: 1.6;
+    padding-left: 16px; position: relative; margin-bottom: 8px;
+  }
+  .fine li::before {
+    content: "—"; position: absolute; left: 0; color: var(--linen);
+  }
+
+  /* ── кабинет ─────────────────────────────── */
+  .cabinet {
+    position: relative; background: var(--card); border: 1px solid var(--wall);
+    border-radius: 16px; padding: 24px; overflow: hidden;
+  }
+  .cabinet::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: var(--beige);
+  }
+  .cabinet .invite { margin-top: 12px; font-size: 0.94rem; color: var(--ink); }
+  .cabinet .addr {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1.14rem; margin-bottom: 6px;
+  }
+  .cabinet .stop { font-size: 0.88rem; color: var(--taupe); }
+
+  /* ── доверие и профили ───────────────────── */
+  .profiles-lead { margin-top: 26px; font-size: 0.94rem; color: var(--ink); }
+  .profiles { display: grid; gap: 10px; margin-top: 12px; }
+  @media (min-width: 560px) { .profiles { grid-template-columns: 1fr 1fr; } }
+  .profile-chip {
+    display: flex; align-items: center; gap: 13px;
+    padding: 15px 17px; border: 1px solid var(--linen); border-radius: 12px;
+    background: var(--card); text-decoration: none; color: var(--amber);
+    transition: transform .18s ease, background .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .profile-chip:hover {
+    transform: translateY(-2px); background: var(--bg-alt); border-color: var(--taupe);
+    box-shadow: 0 6px 16px rgba(63,44,21,.07);
+  }
+  .profile-chip:focus-visible { outline: 2px solid var(--taupe); outline-offset: 3px; }
+  .profile-chip .pin { flex: none; width: 19px; height: 19px; color: var(--taupe); }
+  .profile-chip .txt { flex: 1; min-width: 0; }
+  .profile-chip .name { font-size: 0.92rem; line-height: 1.35; }
+  .profile-chip .what {
+    display: block; margin-top: 2px; font-size: 0.76rem;
+    color: var(--taupe); line-height: 1.4;
+  }
+  .profile-chip .arr {
+    flex: none; color: var(--taupe); font-size: 0.9rem;
+    transition: transform .18s ease;
+  }
+  .profile-chip:hover .arr { transform: translateX(4px); }
+
+  .receipt {
+    margin-top: 22px; padding: 18px 20px; border-radius: 14px;
+    background: var(--bg-alt); border: 1px solid var(--wall);
+    font-size: 0.9rem; color: var(--ink);
+  }
+
+  /* ── карточка канала ─────────────────────── */
+  .channel {
+    position: relative; border: 1px solid var(--linen); border-radius: 18px;
+    padding: 30px 26px; background: linear-gradient(160deg, var(--card) 0%, var(--bg-alt) 100%);
+    overflow: hidden;
+  }
+  .channel::after {
+    content: ""; position: absolute; right: -46px; top: -46px;
+    width: 150px; height: 150px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(219,195,142,.30) 0%, rgba(219,195,142,0) 70%);
+  }
+  .channel h2 { margin-bottom: 11px; }
+  .channel p { font-size: 0.95rem; }
+  .channel-link {
+    display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
+    font-size: 0.92rem; text-decoration: none;
+    border-bottom: 1px solid var(--linen); padding-bottom: 3px;
+    transition: gap .2s ease, border-color .2s ease;
+  }
+  .channel-link:hover { gap: 13px; border-color: var(--amber); }
+  .channel-link:focus-visible { outline: 2px solid var(--taupe); outline-offset: 4px; }
+
+  /* ── финальный контакт ───────────────────── */
+  .contact { text-align: center; }
   .phone {
-    font-family: 'Cormorant Garamond', serif; font-weight: 600; font-size: 1.7rem;
-    display: block; margin-bottom: 8px; text-decoration: none;
+    font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 600;
+    font-size: clamp(1.7rem, 6vw, 2.15rem); text-decoration: none;
+    display: inline-block; margin-bottom: 6px; letter-spacing: 0.01em;
   }
-  .contact-note { font-size: 0.86rem; color: var(--taupe); }
-  .contact-note + .contact-note { margin-top: 6px; }
+  .phone:hover { color: var(--taupe); }
+  .contact .actions { justify-content: center; }
 
-  .bridge {
-    padding: 32px 24px; text-align: center; font-size: 0.86rem; color: var(--taupe);
+  /* ── оговорка и футер ────────────────────── */
+  .disclaimer {
+    max-width: 660px; margin: 0 auto; padding: 0 24px 40px;
+    font-size: 0.76rem; line-height: 1.62; color: var(--taupe); opacity: 0.85;
   }
-  .bridge a { text-decoration: underline; text-underline-offset: 3px; }
-
   footer {
-    border-top: 1px solid var(--wall); padding: 24px 24px 32px; text-align: center;
-    font-size: 0.66rem; color: var(--taupe); line-height: 1.6;
+    border-top: 1px solid var(--wall); padding: 28px 24px 34px;
+    text-align: center; font-size: 0.72rem; color: var(--taupe); line-height: 1.75;
   }
-  footer .disclaimer { max-width: 480px; margin: 0 auto 14px; opacity: 0.8; }
+  footer .legal { margin-bottom: 10px; }
+  footer .copy { margin-top: 14px; opacity: 0.8; font-size: 0.68rem; }
+  footer a { text-decoration: none; border-bottom: 1px solid var(--wall); }
+  footer a:hover { border-color: var(--taupe); }
+
+  /* ── липкая панель на телефоне ───────────── */
+  .sticky { display: none; }
+  @media (max-width: 640px) {
+    body { padding-bottom: 74px; }
+    .sticky {
+      display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+      transform: translateY(110%); transition: transform .28s ease;
+      gap: 8px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(251,249,245,.96);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      border-top: 1px solid var(--wall);
+    }
+    .sticky.on { transform: translateY(0); }
+    .sticky a {
+      flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 13px 10px; border-radius: 12px; text-decoration: none; font-size: 0.9rem;
+    }
+    .sticky .call { background: var(--amber); color: var(--bg); }
+    .sticky .write { background: var(--card); border: 1px solid var(--linen); color: var(--amber); }
+    .sticky svg { width: 16px; height: 16px; }
+    .actions { gap: 9px; }
+    .actions .btn { flex: 1 1 calc(50% - 5px); min-width: 0; justify-content: center; padding: 13px 10px; }
+    .actions .btn-primary { flex: 1 1 100%; }
+    .lbl-long { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; scroll-behavior: auto !important; }
+  }
 </style>
 </head>
 <body>
 
 <nav>
-  <a class="brand" href="index.html">Руки массажиста</a>
-  <a class="back-link" href="index.html">← На хаб</a>
+  <a class="brand" href="/">Руки массажиста</a>
+  <a class="back-link" href="/">На главную</a>
 </nav>
 
-<section class="hero">
-  <span class="eyebrow">Практика в Минске</span>
-  <h1 class="serif">Кабинет и выезд</h1>
-  <p class="subtitle">Колодищи и Минск. Индивидуальный формат.</p>
+<header class="hero">
+  <span class="eyebrow">Минск и Колодищи · выезд на дом</span>
+  <h1>Массаж у вас дома.<br>Приезжаю со своим столом.</h1>
+  <p class="lead">Никуда ехать не нужно. Готовиться тоже не нужно — всё, что требуется для сеанса, я привожу с собой.</p>
+
+  <div class="actions">
+    <a class="btn btn-primary" href="tel:+375333778872">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+      Позвонить
+    </a>
+    <a class="btn btn-ghost" href="https://t.me/aleksei_massage_minsk" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z"/></svg>
+      <span class="lbl-long">Написать в </span>Telegram
+    </a>
+    <a class="btn btn-ghost" href="viber://chat?number=%2B375333778872">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/></svg>
+      Viber
+    </a>
+  </div>
+  <p class="byline">Алексей Гордиенко · массажист · практика с 2006 года</p>
+</header>
+
+<section>
+  <ul class="statements">
+    <li>Стол складной. Ставлю и убираю сам, быстро и без лишнего шума.</li>
+    <li>Пол и ковёр останутся чистыми — привожу защитные покрытия.</li>
+    <li>Бельё и расходники одноразовые. Упаковку открываю при вас, а не заранее.</li>
+  </ul>
+  <p>От вас не нужно ничего. Убирать перед моим приходом не нужно, угощать тоже. Нужно только место, где встанет стол.</p>
+  <p>Выезд по Минску и Колодищам входит в стоимость. За дорогу отдельно платить не нужно.</p>
 </section>
 
-<section class="about wrap">
-  <p>Работаю в двух режимах: приём в кабинете за городом и выезд на дом по Минску и Колодищам. Массажный стол, косметика и расходные материалы — всё привожу с собой. Программа подбирается индивидуально, в зависимости от того, что нужно.</p>
-</section>
+<div class="band">
+  <section>
+    <h2>Что делаю</h2>
+    <div class="formats">
 
-<div class="formats">
-  <div class="format-block">
-    <h3 class="serif">Кабинет</h3>
-    <p>Колодищи, Минский район. Тихо, парковка есть. Для тех, кто хочет физически выйти из дома.</p>
-  </div>
-  <div class="format-block">
-    <h3 class="serif">Выезд</h3>
-    <p>По Минску и Колодищам — включён в стоимость сеанса. Для тех, кому проще, чтобы приехали. После сеанса — не нужно никуда ехать.</p>
-  </div>
+      <article class="fmt">
+        <h3>Короткие</h3>
+        <p>Шейно-воротниковая зона. Спина и шея. Лицо — классический, асахи, с массажным мячом, 3D-лифтинг.</p>
+        <div class="price"><b>40–70 руб.</b><span>20–45 минут</span></div>
+      </article>
+
+      <article class="fmt">
+        <h3>Базовые</h3>
+        <p>Классический массаж всего тела. Антицеллюлитный и лимфодренажный ручной.</p>
+        <div class="price"><b>70–100 руб.</b><span>60–90 минут</span></div>
+      </article>
+
+      <article class="fmt fmt--wide">
+        <h3>Комплексная коррекция фигуры</h3>
+        <p>Ручной антицеллюлитный, бамбуковые палки, вакуумный, лимфодренажный, обёртывание. Косметика подобрана под задачу и уже входит в стоимость.</p>
+        <div class="price"><b>90–110 руб.</b><span>60–90 минут</span></div>
+      </article>
+
+    </div>
+
+    <p class="course">
+      Любой формат берётся разово. Но тело отвечает не на один сеанс, а на череду — поэтому есть курс из десяти.
+      <b>От 400 до 1000 руб.</b> за курс, в зависимости от формата.
+    </p>
+
+    <ul class="fine">
+      <li>Обёртывания, пеленания, массажные корсеты и подложки оплачиваются сверх сеанса. Я говорю об этом до записи, а не после.</li>
+      <li>Точную цену называю сразу, как только понимаю, что именно делаем.</li>
+    </ul>
+  </section>
 </div>
 
-<section class="services wrap">
-  <h3 class="serif">Что делаю</h3>
-  <p>Классический массаж — всего тела, спины, шейно-воротниковой зоны. Антицеллюлитный и лимфодренажный массаж — включая программы коррекции фигуры с обёртываниями. Массаж лица — классический, Асахи, 3D-лифтинг, с массажным мячом. Комплексные программы с косметикой премиум-класса, обёртываниями, «виски»-пеленаниями.</p>
-  <p class="note">Одиночные сеансы или курсы (обычно 10 процедур).</p>
+<section>
+  <h2>Можно и ко мне</h2>
+  <div class="cabinet">
+    <p class="addr serif">Колодищи, улица Волмянский Шлях, 8</p>
+    <p class="stop">От остановки «Звёздная» — сто метров.</p>
+    <p class="invite">Если вам комфортнее вне дома — жду в кабинете в Колодищах.</p>
+  </div>
 </section>
 
-<section class="pricing wrap">
-  <h3 class="serif">О стоимости</h3>
-  <p>Зависит от программы, продолжительности сеанса и того, включена ли косметика. Пришлю прайс в ответ на сообщение или расскажу голосом — как удобнее.</p>
+<section>
+  <h2>Обо мне коротко</h2>
+  <p>Практика с 2006 года. Руки знают, что делают, и не торопятся.</p>
+  <p>Работаю официально, как плательщик налога на профессиональный доход.</p>
+
+  <div class="receipt">
+    Чек приходит вам на телефон через приложение МНС «Профдоход» сразу после сеанса — с моим именем и УНП.
+  </div>
+
+  <p class="profiles-lead">Где меня видно целиком:</p>
+  <div class="profiles">
+    <a class="profile-chip" href="https://yandex.by/profile/29272286204" target="_blank" rel="noopener">
+      <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span class="txt">
+        <span class="name">Яндекс Бизнес</span>
+        <span class="what">Профиль, фотографии работы, зона выезда</span>
+      </span>
+      <span class="arr" aria-hidden="true">→</span>
+    </a>
+    <a class="profile-chip" href="https://share.google/NzkXBERM9eFljeBZh" target="_blank" rel="noopener">
+      <svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+      <span class="txt">
+        <span class="name">Google</span>
+        <span class="what">Профиль и зона обслуживания</span>
+      </span>
+      <span class="arr" aria-hidden="true">→</span>
+    </a>
+  </div>
 </section>
 
 <section class="contact">
-  <h3 class="serif">Связаться</h3>
-  <a class="phone serif" href="tel:+375333778872">+375 33 377 88 72</a>
-  <p class="contact-note">Telegram, Viber, звонок</p>
-  <p class="contact-note">Мессенджеры — быстрее: руки часто заняты работой.</p>
-  <p class="contact-note" style="margin-top:10px;">Отвечаю в течение дня. Если не отвечаю сразу — на сеансе.</p>
+  <h2>Записаться</h2>
+  <a class="phone" href="tel:+375333778872">+375 33 377 88 72</a>
+  <div class="actions">
+    <a class="btn btn-ghost" href="https://t.me/aleksei_massage_minsk" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z"/></svg>
+      Telegram
+    </a>
+    <a class="btn btn-ghost" href="viber://chat?number=%2B375333778872">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z"/></svg>
+      Viber
+    </a>
+  </div>
+  <p class="reply-note">Отвечаю в течение дня. Если не ответил сразу — я за столом.</p>
 </section>
 
-<p class="bridge wrap">Не из Минска? Здесь заметки массажиста и наблюдения о теле — <a href="index.html">вернуться на хаб</a>.</p>
+<section>
+  <div class="channel">
+    <h2>Я пишу о теле каждый день</h2>
+    <p>Что видно рукам за столом — и что человек может сделать с собой сам, там где сидит, без стола и без меня.</p>
+    <a class="channel-link" href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noopener">Читать в Telegram <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<p class="disclaimer">Все процедуры не являются медицинскими услугами, не направлены на лечение, диагностику и медицинскую реабилитацию. Имеют общеоздоровительное, косметическое или релаксирующее воздействие на организм.</p>
 
 <footer>
-  <p class="disclaimer">Процедуры не являются медицинскими услугами. Имеют общеоздоровительное, косметическое или релаксирующее воздействие.</p>
-  <a href="index.html">Руки массажиста</a>
+  <div class="legal">
+    Гордиенко Алексей Евгеньевич · плательщик налога на профессиональный доход · УНП AB7716165
+  </div>
+  <div>
+    <a href="tel:+375333778872">+375 33 377 88 72</a> ·
+    <a href="https://t.me/aleksei_massage_minsk" target="_blank" rel="noopener">Telegram</a> ·
+    <a href="viber://chat?number=%2B375333778872">Viber</a>
+  </div>
+  <div>Колодищи, ул. Волмянский Шлях, 8</div>
+  <div class="copy">© 2026 HARDZIYENKA ALIAKSEI. Тексты и визуальные материалы — собственность автора. Публикуются на palpo.org.</div>
 </footer>
 
-<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e0cfa89fa9b44378ab3443a1d1e8e7e"}'></script><!-- End Cloudflare Web Analytics -->
+<div class="sticky">
+  <a class="call" href="tel:+375333778872">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></svg>
+    Позвонить
+  </a>
+  <a class="write" href="https://t.me/aleksei_massage_minsk" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4 20-7Z"/></svg>
+    Написать
+  </a>
+</div>
+
+<script>
+(function () {
+  var bar = document.querySelector('.sticky');
+  if (!bar) return;
+  var show = function () { bar.classList.toggle('on', window.scrollY > 420); };
+  window.addEventListener('scroll', show, { passive: true });
+  show();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HealthAndBeautyBusiness",
+  "name": "Алексей Гордиенко — массаж",
+  "alternateName": "Руки массажиста",
+  "url": "https://palpo.org/minsk.html",
+  "image": "https://palpo.org/og-image.jpg",
+  "telephone": "+375333778872",
+  "priceRange": "40-110 BYN",
+  "currenciesAccepted": "BYN",
+  "founder": {
+    "@type": "Person",
+    "name": "HARDZIYENKA ALIAKSEI",
+    "alternateName": "Гордиенко Алексей Евгеньевич",
+    "jobTitle": "Массажист"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Волмянский Шлях, 8",
+    "addressLocality": "Колодищи",
+    "addressRegion": "Минская область",
+    "addressCountry": "BY"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Минск" },
+    { "@type": "Place", "name": "Колодищи" }
+  ],
+  "availableService": [
+    { "@type": "Service", "name": "Массаж шейно-воротниковой зоны" },
+    { "@type": "Service", "name": "Массаж спины и шеи" },
+    { "@type": "Service", "name": "Массаж лица" },
+    { "@type": "Service", "name": "Классический массаж всего тела" },
+    { "@type": "Service", "name": "Антицеллюлитный ручной массаж" },
+    { "@type": "Service", "name": "Лимфодренажный ручной массаж" },
+    { "@type": "Service", "name": "Комплексная программа коррекции фигуры" }
+  ],
+  "sameAs": [
+    "https://yandex.by/profile/29272286204",
+    "https://share.google/NzkXBERM9eFljeBZh",
+    "https://t.me/Lighthouse_massage_music"
+  ]
+}
+</script>
+
+<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e0cfa89fa9b44378ab3443a1d1e8e7e"}'></script>
+
 </body>
 </html>
