@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Массаж с выездом на дом — Минск и Колодищи — Алексей Гордиенко</title>
-<meta name="description" content="Приезжаю со своим столом, косметикой и одноразовым бельём. Выезд по Минску и Колодищам включён в стоимость. Есть кабинет в Колодищах. У стола с 2006 года.">
+<title>Массаж с выездом на дом — Минск, Колодищи и пригород — Алексей Гордиенко</title>
+<meta name="description" content="Приезжаю со своим столом, косметикой и одноразовым бельём. Выезд по Минску, Колодищам и ближайшему пригороду включён в стоимость. Есть кабинет в Колодищах. Практика с 2006 года.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="znak-P-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="znak-P-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="znak-P-180x180.png">
-<meta property="og:title" content="Массаж с выездом на дом — Минск и Колодищи">
+<meta property="og:title" content="Массаж с выездом на дом — Минск, Колодищи и пригород">
 <meta property="og:description" content="Приезжаю со своим столом, косметикой и одноразовым бельём. От вас не нужно ничего.">
 <meta property="og:image" content="https://palpo.org/og-image.jpg">
 <meta property="og:url" content="https://palpo.org/minsk.html">
@@ -65,7 +65,7 @@
 
   /* ── первый экран ────────────────────────── */
   .hero {
-    padding: 54px 24px 40px; max-width: 660px; margin: 0 auto;
+    padding: 54px 24px 46px; max-width: 660px; margin: 0 auto;
     background:
       radial-gradient(120% 90% at 50% 0%, rgba(219,195,142,.20) 0%, rgba(219,195,142,0) 62%);
   }
@@ -104,10 +104,10 @@
   .reply-note { margin-top: 14px; font-size: 0.8rem; color: var(--taupe); }
 
   /* ── секции ──────────────────────────────── */
-  section { max-width: 660px; margin: 0 auto; padding: 0 24px 46px; }
+  section { max-width: 660px; margin: 0 auto; padding: 0 24px 64px; }
   h2 {
     font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500;
-    font-size: clamp(1.35rem, 4vw, 1.62rem); line-height: 1.25; margin-bottom: 18px;
+    font-size: clamp(1.35rem, 4vw, 1.62rem); line-height: 1.25; margin-bottom: 20px;
   }
   section p { font-size: 0.97rem; color: var(--ink); }
   section p + p { margin-top: 13px; }
@@ -115,12 +115,12 @@
   .band {
     background: var(--bg-alt);
     border-top: 1px solid var(--wall); border-bottom: 1px solid var(--wall);
-    padding: 46px 0; margin-bottom: 46px;
+    padding: 60px 0 4px; margin: 12px 0 64px;
   }
   .band > section { padding-bottom: 0; }
 
   /* ── список «что приезжает» ──────────────── */
-  .statements { list-style: none; margin: 0 0 22px; }
+  .statements { list-style: none; margin: 0 0 26px; }
   .statements li {
     font-size: 1rem; color: var(--ink); line-height: 1.6;
     padding: 15px 0; border-bottom: 1px solid var(--wall);
@@ -180,14 +180,36 @@
 
   /* ── кабинет ─────────────────────────────── */
   .cabinet {
-    position: relative; background: var(--card); border: 1px solid var(--wall);
-    border-radius: 16px; padding: 24px; overflow: hidden;
+    position: relative; background: var(--bg-alt); border: 1px solid var(--linen);
+    border-radius: 18px; padding: 30px 28px; overflow: hidden;
+    box-shadow: 0 4px 20px rgba(63,44,21,.05);
   }
   .cabinet::before {
     content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
     background: var(--beige);
   }
   .cabinet .invite { margin-top: 12px; font-size: 0.94rem; color: var(--ink); }
+  .routes {
+    display: flex; flex-wrap: wrap; gap: 9px;
+    margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--wall);
+  }
+  .route {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 15px; border: 1px solid var(--linen); border-radius: 10px;
+    background: var(--card); text-decoration: none; color: var(--amber);
+    font-size: 0.83rem; line-height: 1.2;
+    transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+  .route:hover {
+    transform: translateY(-2px); border-color: var(--taupe);
+    box-shadow: 0 5px 14px rgba(63,44,21,.07);
+  }
+  .route:focus-visible { outline: 2px solid var(--taupe); outline-offset: 3px; }
+  .route svg { width: 15px; height: 15px; flex: none; color: var(--taupe); }
+  @media (max-width: 480px) {
+    .routes { flex-direction: column; }
+    .route { justify-content: center; padding: 12px 14px; }
+  }
   .cabinet .addr {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 1.14rem; margin-bottom: 6px;
@@ -312,7 +334,7 @@
 </nav>
 
 <header class="hero">
-  <span class="eyebrow">Минск и Колодищи · выезд на дом</span>
+  <span class="eyebrow">Минск, Колодищи и ближайший пригород · выезд на дом</span>
   <h1>Массаж у вас дома.<br>Приезжаю со своим столом.</h1>
   <p class="lead">Никуда ехать не нужно. Готовиться тоже не нужно — всё, что требуется для сеанса, я привожу с собой.</p>
 
@@ -341,6 +363,7 @@
   </ul>
   <p>От вас не нужно ничего. Убирать перед моим приходом не нужно, угощать тоже. Нужно только место, где встанет стол.</p>
   <p>Выезд по Минску и Колодищам входит в стоимость. За дорогу отдельно платить не нужно.</p>
+  <p>Ближайший пригород — тоже: Новая Боровая, Юхновка, Сухорукие и соседние посёлки. Если вашего адреса в списке нет, просто спросите.</p>
 </section>
 
 <div class="band">
@@ -386,6 +409,16 @@
     <p class="addr serif">Колодищи, улица Волмянский Шлях, 8</p>
     <p class="stop">От остановки «Звёздная» — сто метров.</p>
     <p class="invite">Если вам комфортнее вне дома — жду в кабинете в Колодищах.</p>
+    <div class="routes">
+      <a class="route" href="https://yandex.by/maps/?text=%D0%9A%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D1%89%D0%B8+%D0%92%D0%BE%D0%BB%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9+%D0%A8%D0%BB%D1%8F%D1%85+8" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        Маршрут в Яндекс Картах
+      </a>
+      <a class="route" href="https://www.google.com/maps/dir/?api=1&amp;destination=%D0%9A%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D1%89%D0%B8+%D0%92%D0%BE%D0%BB%D0%BC%D1%8F%D0%BD%D1%81%D0%BA%D0%B8%D0%B9+%D0%A8%D0%BB%D1%8F%D1%85+8" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        Маршрут в Google Maps
+      </a>
+    </div>
   </div>
 </section>
 
@@ -505,7 +538,11 @@
   },
   "areaServed": [
     { "@type": "City", "name": "Минск" },
-    { "@type": "Place", "name": "Колодищи" }
+    { "@type": "Place", "name": "Колодищи" },
+    { "@type": "Place", "name": "Новая Боровая" },
+    { "@type": "Place", "name": "Юхновка" },
+    { "@type": "Place", "name": "Сухорукие" },
+    { "@type": "Place", "name": "Ближайший пригород Минска" }
   ],
   "availableService": [
     { "@type": "Service", "name": "Массаж шейно-воротниковой зоны" },
