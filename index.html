@@ -4,10 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Руки массажиста — Тело знает</title>
-<meta name="description" content="Практикующий массажист. Пишу про тело, контакт и восстановление: напряжение, усталость, спокойные телесные практики, атмосфера. Без медицинских обещаний.">
+<meta name="description" content="Практикующий массажист. Пишу про тело и контакт: напряжение, усталость, спокойные телесные практики, атмосфера. Без медицинских обещаний.">
+<link rel="canonical" href="https://palpo.org/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <meta property="og:title" content="Руки массажиста — Тело знает">
-<meta property="og:description" content="Практикующий массажист. Пишу про тело, контакт и восстановление. Без медицинских обещаний.">
+<meta property="og:description" content="Практикующий массажист. Пишу про тело и контакт. Без медицинских обещаний.">
 <meta property="og:image" content="https://palpo.org/og-image.jpg">
 <meta property="og:url" content="https://palpo.org">
 <meta property="og:type" content="website">
@@ -51,6 +52,18 @@
   }
   .nav-links a:hover::after { right: 0; }
   @media (max-width: 720px) { .nav-links { display: none; } }
+
+  .geo-status {
+    font-size: 0.74rem; letter-spacing: 0.04em; font-weight: 400; color: var(--taupe);
+    text-decoration: underline; text-underline-offset: 3px;
+    white-space: nowrap; flex-shrink: 0; padding: 4px 0;
+  }
+  @media (max-width: 720px) {
+    .geo-status {
+      font-size: 0.58rem; line-height: 1.25; white-space: normal;
+      max-width: 100px; text-align: right; margin-left: 10px;
+    }
+  }
 
   .lang-toggle {
     font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
@@ -217,7 +230,11 @@
     border-top: 1px solid var(--wall); padding: 40px 24px;
     display: flex; flex-direction: column; align-items: center; gap: 14px;
   }
-  .version-tag { font-size: 0.62rem; letter-spacing: 0.1em; color: var(--taupe); opacity: 0.6; }
+  .footer-geo {
+    font-size: 0.72rem; letter-spacing: 0.04em; color: var(--taupe);
+    text-decoration: underline; text-underline-offset: 3px;
+  }
+  .footer-copy { font-size: 0.62rem; letter-spacing: 0.08em; color: var(--taupe); opacity: 0.7; text-align: center; }
   .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; letter-spacing: 0.04em; color: var(--amber); }
   .footer-links { display: flex; gap: 18px; }
   .footer-links a { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--taupe); text-decoration: underline; text-underline-offset: 3px; }
@@ -238,7 +255,7 @@
   "description": "Практикующий массажист из Минска, более 20 лет практики. Пишет наблюдения о теле и работе с телом.",
   "url": "https://palpo.org",
   "sameAs": [
-    "https://telegram.me/Lighthouse_massage_music",
+    "https://t.me/Lighthouse_massage_music",
     "https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/"
   ]
 }
@@ -249,16 +266,17 @@
 <nav class="wrap">
   <span class="brand">Руки массажиста</span>
   <div class="nav-links">
-    <a href="#u-stola">Наблюдения</a>
-    <a href="#polka">Полка массажиста</a>
-    <a href="#humor">Юмор массажиста</a>
+    <a href="#u-stola">Что видно со стороны</a>
+    <a href="#polka">Инструменты для тела</a>
+    <a href="#humor">Ещё в проекте</a>
     <a href="#faq">Вопросы</a>
     <a href="#atmosphere">Атмосфера</a>
   </div>
+  <a href="/minsk.html" class="geo-status">Кабинет и выезд · Минск</a>
   <a href="en.html" class="lang-toggle">EN</a>
 </nav>
 
-<a class="mobile-cta" href="https://telegram.me/+dsn9lVd9GNY5MWJi" target="_blank" rel="noreferrer">
+<a class="mobile-cta" href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">
   Читать в Telegram →
 </a>
 
@@ -278,22 +296,23 @@
   <p class="reveal">Я работаю руками, а замечаю глазами. За двадцать лет у стола я увидел о теле и о людях больше, чем ожидал. Здесь я это называю — как есть, без учебников.</p>
 </section>
 
+<span id="ustola" aria-hidden="true"></span>
 <section class="u-stola" id="u-stola">
   <div class="wrap">
     <div class="u-stola-head reveal">
       <h2 class="serif">Кто-то положил телефон экраном вниз</h2>
     </div>
     <div class="cards reveal">
-      <a class="card" href="https://telegram.me/Lighthouse_massage_music/1723" target="_blank" rel="noreferrer">
+      <a class="card" href="https://t.me/Lighthouse_massage_music/1723" target="_blank" rel="noreferrer">
         <blockquote>«Телефон — рядом на стуле. Экраном вниз. Он перевернул его, прежде чем лечь.»</blockquote>
         <span class="card-read">Читать полностью →</span>
       </a>
-      <a class="card" href="https://telegram.me/Lighthouse_massage_music/1730" target="_blank" rel="noreferrer">
+      <a class="card" href="https://t.me/Lighthouse_massage_music/1730" target="_blank" rel="noreferrer">
         <blockquote>«Берёшь за руку — он подаёт руку. За ногу — подаёт ногу.»</blockquote>
         <span class="card-read">Читать полностью →</span>
       </a>
-      <a class="card" href="https://telegram.me/Lighthouse_massage_music/1731" target="_blank" rel="noreferrer">
-        <blockquote>«Пяткой клиента я массажирую свою ладонь.»</blockquote>
+      <a class="card" href="https://t.me/Lighthouse_massage_music/1731" target="_blank" rel="noreferrer">
+        <blockquote>«Его пяткой я массажирую свою ладонь.»</blockquote>
         <span class="card-read">Читать полностью →</span>
       </a>
     </div>
@@ -306,7 +325,7 @@
       <h2 class="serif">Здесь только часть. Остальное — по адресам.</h2>
     </div>
     <div class="channel-row">
-      <a class="btn" href="https://telegram.me/+dsn9lVd9GNY5MWJi" target="_blank" rel="noreferrer">Читать в Telegram →</a>
+      <a class="btn" href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">Читать в Telegram →</a>
     </div>
   </div>
 </section>
@@ -314,18 +333,18 @@
 <section class="polka" id="polka">
   <div class="wrap">
     <div class="polka-head reveal">
-      <span class="section-eyebrow" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--taupe);display:block;margin-bottom:14px;">Полка массажиста</span>
+      <span class="section-eyebrow" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--taupe);display:block;margin-bottom:14px;">Инструменты для тела</span>
       <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;">С чем реально работаю</h2>
     </div>
     <div class="polka-items reveal">
-      <a class="polka-item" href="https://telegram.me/Lighthouse_massage_music/1510" target="_blank" rel="noreferrer">
+      <a class="polka-item" href="https://t.me/Lighthouse_massage_music/1510" target="_blank" rel="noreferrer">
         <img src="polka-balm.jpg" alt="Бальзам, текстура на пальцах">
         <div class="polka-item-body">
           <blockquote>«Держу этот бальзам в кабинете уже второй год. Использую перед плотной работой — на плечах, крестце, глубоких точках. Плотный, тянется за пальцем, не растекается. Хватает надолго. Работаю — доволен.»</blockquote>
           <span class="polka-read">Читать полностью →</span>
         </div>
       </a>
-      <a class="polka-item" href="https://telegram.me/Lighthouse_massage_music/1561" target="_blank" rel="noreferrer">
+      <a class="polka-item" href="https://t.me/Lighthouse_massage_music/1561" target="_blank" rel="noreferrer">
         <img src="polka-cream.jpg" alt="Крем плотной текстуры, растёртый в руке">
         <div class="polka-item-body">
           <blockquote>«Крем плотной текстуры — работаю им полтора часа подряд, не липнет, не улетает. После сеанса кожа как выдохнула.»</blockquote>
@@ -339,13 +358,13 @@
 <section class="modules" id="humor">
   <div class="wrap">
     <div class="modules-head">
-      <span class="section-eyebrow" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--beige);display:block;margin-bottom:14px;">Ещё по проекту</span>
-      <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;color:var(--bg);">Отдельные рубрики</h2>
+      <span class="section-eyebrow" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--beige);display:block;margin-bottom:14px;">Ещё в проекте</span>
+      <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;color:var(--bg);">Что ещё есть на сайте</h2>
     </div>
     <div class="modules-row reveal">
-      <a class="btn" href="polka.html">Полка массажиста →</a>
-      <a class="btn" href="humor.html">Юмор массажиста →</a>
-      <a class="btn" href="biomechanics.html">Биомеханика →</a>
+      <a class="btn" href="polka.html">Инструменты для тела →</a>
+      <a class="btn" href="humor.html">Смешное из кабинета →</a>
+      <a class="btn" href="biomechanics.html">О чём этот проект →</a>
     </div>
   </div>
 </section>
@@ -371,8 +390,8 @@
       </details>
 
       <details>
-        <summary class="serif">Что такое «Полка массажиста»?</summary>
-        <p>Рубрика про объекты, с которыми работает Алексей: масла, инструменты, текстиль. Не реклама — наблюдения про то, как конкретная вещь меняет работу. Алексей пишет только про то, что реально использует.</p>
+        <summary class="serif">Что такое «Инструменты для тела»?</summary>
+        <p>Раздел про объекты, с которыми работает Алексей: масла, инструменты, текстиль. Не реклама — наблюдения про то, как конкретная вещь меняет работу. Алексей пишет только про то, что реально использует.</p>
       </details>
 
       <details>
@@ -389,7 +408,7 @@
     <div class="atmosphere-head reveal">
       <span>Атмосфера</span>
       <p class="atmosphere-quote">«Мне нравится момент между сеансами, когда кабинет пустой. Свет, масло, край стола. Всё на месте. И ничего не нужно.»</p>
-      <a class="atmosphere-read" href="https://telegram.me/Lighthouse_massage_music/1632" target="_blank" rel="noreferrer">Читать полностью →</a>
+      <a class="atmosphere-read" href="https://t.me/Lighthouse_massage_music/1632" target="_blank" rel="noreferrer">Читать полностью →</a>
     </div>
     <div class="atmosphere-scroll">
       <div class="atmosphere-slide"><img src="atmosphere.jpg" alt="Лампа, табурет, комната"></div>
@@ -400,28 +419,17 @@
 
 <footer>
   <span class="footer-brand">Проект "Руки массажиста"</span>
-  <a class="btn" href="https://telegram.me/aleksei_massage_minsk" target="_blank" rel="noreferrer">Контакты</a>
+  <a class="btn" href="https://t.me/aleksei_massage_minsk" target="_blank" rel="noreferrer">Контакты</a>
+  <a class="footer-geo" href="/minsk.html">Кабинет и выезд · Минск</a>
   <div class="footer-links">
     <a href="https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/" target="_blank" rel="noreferrer">Pinterest</a>
     <a href="https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN" target="_blank" rel="noreferrer">YouTube</a>
   </div>
-  <span class="version-tag">версия 14.0</span>
+  <span class="footer-copy">© 2026 HARDZIYENKA ALIAKSEI. palpo.org</span>
 </footer>
 
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e0cfa89fa9b44378ab3443a1d1e8e7e"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
-<script>
-  const heroObservations = [
-    "Тело ещё молчит.<br>Руки уже знают.",
-    "Стопы были не мои.<br>Как детские.",
-    "Скорее бы следующая неделя.<br>Мне будет не хватать ваших рук."
-  ];
-  const heroEl = document.getElementById('hero-observation');
-  if (heroEl) {
-    const pick = heroObservations[Math.floor(Math.random() * heroObservations.length)];
-    heroEl.innerHTML = pick;
-  }
-</script>
 <script>
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
