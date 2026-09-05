@@ -3,12 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Руки массажиста — Тело знает</title>
-<meta name="description" content="Практикующий массажист. Пишу про тело и контакт: напряжение, усталость, спокойные телесные практики, атмосфера. Без медицинских обещаний.">
+<title>Руки массажиста — что происходит с телом, пока вы сидите</title>
+<meta name="description" content="Затекла поясница на стуле, каменеет предплечье от мышки. Наблюдения массажиста с 2006 года и одно движение на минуту для каждого состояния. Без медицинских обещаний.">
 <link rel="canonical" href="https://palpo.org/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<meta property="og:title" content="Руки массажиста — Тело знает">
-<meta property="og:description" content="Практикующий массажист. Пишу про тело и контакт. Без медицинских обещаний.">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="image" href="hero-door.jpg" fetchpriority="high">
+<meta property="og:title" content="Руки массажиста — что происходит с телом, пока вы сидите">
+<meta property="og:description" content="Наблюдения массажиста. Одно движение на минуту для каждого состояния.">
 <meta property="og:image" content="https://palpo.org/og-image.jpg">
 <meta property="og:url" content="https://palpo.org">
 <meta property="og:type" content="website">
@@ -16,7 +18,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="znak-P-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="znak-P-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="znak-P-180x180.png">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --beige: #DBC38E;
@@ -41,7 +43,7 @@
   /* NAV */
   nav.wrap {
     display: flex; justify-content: space-between; align-items: center;
-    padding-top: 32px; padding-bottom: 32px; border-bottom: 1px solid var(--wall);
+    padding-top: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--wall);
   }
   .brand { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; letter-spacing: 0.12em; text-transform: uppercase; }
   .nav-links { display: flex; gap: 28px; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
@@ -53,20 +55,8 @@
   .nav-links a:hover::after { right: 0; }
   @media (max-width: 720px) { .nav-links { display: none; } }
 
-  .geo-status {
-    font-size: 0.74rem; letter-spacing: 0.04em; font-weight: 400; color: var(--taupe);
-    text-decoration: underline; text-underline-offset: 3px;
-    white-space: nowrap; flex-shrink: 0; padding: 4px 0;
-  }
-  @media (max-width: 720px) {
-    .geo-status {
-      font-size: 0.58rem; line-height: 1.25; white-space: normal;
-      max-width: 100px; text-align: right; margin-left: 10px;
-    }
-  }
-
   .lang-toggle {
-    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.08em;
+    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.08em;
     border: 1px solid var(--amber); border-radius: 100px; padding: 6px 14px;
     color: var(--amber); flex-shrink: 0;
   }
@@ -83,17 +73,101 @@
     body { padding-bottom: 76px; }
   }
 
-  /* HERO */
+  /* HERO v16 — 62vh */
   .hero {
-    position: relative; min-height: 78vh; display: flex; align-items: flex-end;
-    background-image: linear-gradient(180deg, rgba(30,20,10,0.15) 0%, rgba(20,14,8,0.75) 100%), url('hero-door.jpg');
+    position: relative; min-height: 62vh; display: flex; align-items: center;
+    background-image: linear-gradient(180deg, rgba(30,20,10,0.28) 0%, rgba(20,14,8,0.78) 100%), url('hero-door.jpg');
     background-size: cover; background-position: center;
   }
-  .hero-inner { width: 100%; padding: 80px 24px 72px; max-width: 1100px; margin: 0 auto; text-align: center; color: var(--bg); min-height: 340px; display: flex; flex-direction: column; justify-content: flex-end; }
-  .eyebrow { display: block; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--beige); margin-bottom: 24px; }
-  h1.hero-title { font-family: 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(2.6rem, 6vw, 4.4rem); line-height: 1.12; margin-bottom: 20px; }
-  .hero-sub { font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--wall); opacity: 0.85; display: block; }
-  .attribution { font-size: 0.78rem; letter-spacing: 0.04em; color: var(--beige); opacity: 0.9; display: block; margin-top: 14px; }
+  @media (max-width: 720px) { .hero { min-height: 56vh; } }
+  .hero-inner {
+    width: 100%; max-width: 1100px; margin: 0 auto;
+    padding: 48px 24px; text-align: center; color: var(--bg);
+  }
+  .eyebrow {
+    display: block; font-size: 0.66rem; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--beige); margin-bottom: 18px;
+  }
+  h1.hero-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.14; margin-bottom: 14px;
+  }
+  .hero-bridge {
+    display: block; font-size: 0.82rem; letter-spacing: 0.06em;
+    color: var(--wall); opacity: 0.9; margin-bottom: 28px;
+  }
+
+  /* ПЕРЕКЛЮЧАТЕЛЬ ОПТИКИ */
+  .optic-switch {
+    display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 6px;
+    border: 1px solid rgba(219,195,142,0.45); border-radius: 100px; padding: 5px;
+    background: rgba(20,14,8,0.32);
+  }
+  .optic-switch button {
+    font-family: 'Inter', sans-serif; font-weight: 300; font-size: 0.7rem;
+    letter-spacing: 0.06em; color: var(--wall);
+    background: none; border: 0; border-radius: 100px;
+    padding: 9px 16px; cursor: pointer; white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+  }
+  .optic-switch button[aria-pressed="true"] { background: var(--beige); color: #241605; font-weight: 500; }
+  @media (max-width: 560px) { .optic-switch button { font-size: 0.66rem; padding: 8px 12px; } }
+  @media (max-width: 430px) {
+    .optic-switch { gap: 4px; padding: 4px; }
+    .optic-switch button { font-size: 0.62rem; padding: 7px 10px; letter-spacing: 0.03em; }
+  }
+
+  /* АТЛАС */
+  section.atlas { padding: 34px 0 72px; background: var(--bg); }
+  .atlas-head { text-align: center; margin-bottom: 20px; }
+  .atlas-head h2 {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400;
+    font-size: clamp(1.5rem, 3.4vw, 2.2rem);
+  }
+  .atlas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 900px) { .atlas-grid { grid-template-columns: 1fr; } }
+
+  details.state {
+    background: var(--bg-alt); border: 1px solid var(--wall); border-radius: 16px;
+    overflow: hidden; align-self: start;
+  }
+  details.state > summary {
+    cursor: pointer; list-style: none; padding: 22px 24px;
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  details.state > summary::-webkit-details-marker { display: none; }
+  .state-name {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.24rem; line-height: 1.3; color: var(--amber);
+  }
+  .state-hint { font-size: 0.64rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--taupe); }
+  details.state[open] > summary { border-bottom: 1px solid var(--wall); }
+  .state-body { padding: 20px 24px 24px; }
+  .state-body p { font-size: 0.9rem; color: #4a3f30; margin-bottom: 12px; }
+  .state-body p:last-of-type { margin-bottom: 0; }
+  .state-do {
+    background: var(--bg); border: 1px solid var(--wall); border-radius: 12px;
+    padding: 14px 16px; margin-top: 12px;
+  }
+  .state-do b { font-weight: 500; }
+  .state-limit {
+    font-size: 0.82rem; color: var(--taupe); border-left: 2px solid var(--linen);
+    padding-left: 12px; margin: 18px 0 12px;
+  }
+  .state-src { font-size: 0.68rem; letter-spacing: 0.06em; color: var(--taupe); opacity: 0.85; }
+  .state-src a { text-decoration: underline; text-underline-offset: 3px; }
+  .state-gate {
+    display: block; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--wall);
+    font-size: 0.74rem; color: var(--amber);
+  }
+  .state-gate a { text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
+
+  .optic { display: none; }
+  [data-optic="feel"] .optic-feel,
+  [data-optic="see"] .optic-see,
+  [data-optic="how"] .optic-how { display: block; }
+
+  .atlas-miss { text-align: center; margin-top: 28px; font-size: 0.8rem; color: var(--taupe); }
+  .atlas-miss a { text-decoration: underline; text-underline-offset: 3px; }
 
   /* KTO ETO */
   section.kto-eto { padding: 96px 24px; text-align: center; }
@@ -133,8 +207,8 @@
 
   /* CHANNELS */
   section.channels { padding: 96px 0; text-align: center; }
-  .channels-head { max-width: 480px; margin: 0 auto 40px; }
-  .channels-head h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(1.8rem, 4vw, 2.6rem); }
+  .channels-head { max-width: 620px; margin: 0 auto 40px; }
+  .channels-head h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(1.6rem, 3.4vw, 2.2rem); }
   .channel-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
   .btn {
     display: inline-flex; align-items: center; gap: 10px; padding: 13px 28px;
@@ -142,11 +216,6 @@
     font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; transition: opacity 0.2s;
   }
   .btn:hover { opacity: 0.85; }
-  .btn-outline {
-    display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px;
-    border: 1px solid var(--amber); border-radius: 100px;
-    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase;
-  }
 
   /* POLKA */
   section.polka { background: var(--bg-alt); border-top: 1px solid var(--wall); border-bottom: 1px solid var(--wall); padding: 96px 0; }
@@ -157,7 +226,8 @@
     display: block; background: var(--bg); border: 1px solid var(--wall); border-radius: 18px;
     overflow: hidden; box-shadow: 0 16px 32px -24px rgba(63, 44, 21, 0.25);
   }
-  .polka-item img { width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover; }
+  .polka-item img { width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover; transition: transform 0.4s ease; }
+  .polka-item:hover img { transform: scale(1.04); }
   .polka-item-body { padding: 28px; }
   .polka-item blockquote { font-family: 'Cormorant Garamond', serif; font-size: 1.02rem; line-height: 1.5; color: var(--amber); }
   .polka-read {
@@ -174,27 +244,21 @@
   }
   .modules-head { max-width: 480px; margin: 0 auto 40px; }
   .modules-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; align-items: center; }
-  .btn-disabled {
-    display: inline-flex; align-items: center; gap: 8px; padding: 13px 26px;
-    border: 1px dashed var(--beige); border-radius: 100px; color: var(--beige);
-    font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.75;
-  }
 
   /* FAQ */
   section.faq { padding: 96px 0; }
   .faq-head { text-align: center; margin-bottom: 48px; }
   .faq-head span { font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--taupe); }
   .faq-list { max-width: 720px; margin: 0 auto; }
-  details { border-bottom: 1px solid var(--wall); padding: 20px 0; }
-  summary {
+  .faq-list details { border-bottom: 1px solid var(--wall); padding: 20px 0; }
+  .faq-list summary {
     cursor: pointer; list-style: none; font-family: 'Cormorant Garamond', serif; font-size: 1.15rem;
     display: flex; justify-content: space-between; align-items: center; gap: 16px;
   }
-  summary::-webkit-details-marker { display: none; }
-  summary::after { content: '+'; font-size: 1.3rem; color: var(--taupe); flex-shrink: 0; transition: transform 0.2s; }
-  details[open] summary::after { transform: rotate(45deg); }
-  details p, details .faq-buttons { font-size: 0.9rem; color: #4a3f30; margin-top: 14px; max-width: 600px; }
-  .faq-buttons { display: flex; gap: 12px; margin-top: 14px; }
+  .faq-list summary::-webkit-details-marker { display: none; }
+  .faq-list summary::after { content: '+'; font-size: 1.3rem; color: var(--taupe); flex-shrink: 0; transition: transform 0.2s; }
+  .faq-list details[open] summary::after { transform: rotate(45deg); }
+  .faq-list details p { font-size: 0.9rem; color: #4a3f30; margin-top: 14px; max-width: 600px; }
 
   /* ATMOSPHERE */
   section.atmosphere { padding: 100px 0 0; }
@@ -218,14 +282,9 @@
     display: flex; align-items: center; justify-content: center;
     background: #2a1f14;
   }
-  .atmosphere-slide img {
-    max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;
-  }
-  .atmosphere-hint {
-    text-align: center; font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--taupe); padding: 14px 0; opacity: 0.7;
-  }
+  .atmosphere-slide img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
 
+  /* FOOTER */
   footer {
     border-top: 1px solid var(--wall); padding: 40px 24px;
     display: flex; flex-direction: column; align-items: center; gap: 14px;
@@ -236,15 +295,15 @@
   }
   .footer-copy { font-size: 0.62rem; letter-spacing: 0.08em; color: var(--taupe); opacity: 0.7; text-align: center; }
   .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; letter-spacing: 0.04em; color: var(--amber); }
-  .footer-links { display: flex; gap: 18px; }
+  .footer-links { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
   .footer-links a { font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--taupe); text-decoration: underline; text-underline-offset: 3px; }
-  /* REVEAL */
+  .footer-note { font-size: 0.62rem; letter-spacing: 0.04em; color: var(--taupe); opacity: 0.75; }
+
+  /* REVEAL — только ниже первых двух экранов */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.is-visible { opacity: 1; transform: translateY(0); }
-
-  .polka-item img, .card img { transition: transform 0.4s ease; }
-  .polka-item:hover img { transform: scale(1.04); }
 </style>
+<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 <meta name="p:domain_verify" content="342babc59d09ad48a1f9f7a3593d4126"/>
 <script type="application/ld+json">
 {
@@ -256,7 +315,8 @@
   "url": "https://palpo.org",
   "sameAs": [
     "https://t.me/Lighthouse_massage_music",
-    "https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/"
+    "https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/",
+    "https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN"
   ]
 }
 </script>
@@ -266,13 +326,10 @@
 <nav class="wrap">
   <span class="brand">Руки массажиста</span>
   <div class="nav-links">
-    <a href="#u-stola">Что видно со стороны</a>
-    <a href="#polka">Инструменты для тела</a>
-    <a href="#humor">Ещё в проекте</a>
+    <a href="#atlas">Что с телом</a>
+    <a href="#u-stola">Со стороны стола</a>
     <a href="#faq">Вопросы</a>
-    <a href="#atmosphere">Атмосфера</a>
   </div>
-  <a href="/minsk.html" class="geo-status">Кабинет и выезд · Минск</a>
   <a href="en.html" class="lang-toggle">EN</a>
 </nav>
 
@@ -282,18 +339,113 @@
 
 <section class="hero" id="hero">
   <div class="hero-inner">
-    <span class="eyebrow">Наблюдения массажиста</span>
-    <h1 class="hero-title serif" id="hero-observation">Тело ещё молчит.<br>Руки уже знают.</h1>
-    <span class="hero-sub">проект "Руки массажиста" · без учебников</span>
-    <span class="attribution">Алексей · массажист · Минск · практика с 2006 года</span>
+    <span class="eyebrow">Наблюдения массажиста · практика с 2006 года</span>
+    <h1 class="hero-title serif">Что происходит с телом,<br>пока вы сидите</h1>
+    <span class="hero-bridge">Найдите своё состояние ниже</span>
+    <div class="optic-switch" role="group" aria-label="Выбор оптики">
+      <button type="button" data-optic="feel" aria-pressed="true">Что чувствуете вы</button>
+      <button type="button" data-optic="see" aria-pressed="false">Что вижу я</button>
+      <button type="button" data-optic="how" aria-pressed="false">Как это устроено</button>
+    </div>
   </div>
 </section>
 
-<section class="kto-eto">
-  <div class="kto-eto-photo reveal">
-    <img src="author.jpg" alt="Алексей у массажного стола, со спины">
+<section class="atlas" id="atlas" data-optic="feel">
+  <div class="wrap">
+    <div class="atlas-head">
+      <h2 class="serif">Что с телом</h2>
+    </div>
+
+    <div class="atlas-grid">
+
+      <details class="state" id="lower-back">
+        <summary>
+          <span class="state-name">Затекла поясница на стуле</span>
+          <span class="state-hint">одна минута, сидя</span>
+        </summary>
+        <div class="state-body">
+
+          <div class="optic optic-feel">
+            <p>Три часа без движения — и поясница становится плоской, как доска. Не острая боль, а тугой чужой валик над крестцом, который мешает разогнуться в полный рост.</p>
+            <div class="state-do">
+              <p><b>Минута на стуле.</b> Сдвиньтесь на край стула, стопы плотно в пол, ладони на колени. На вдохе мягко качните таз вперёд на 3–5 миллиметров, чуть обозначив прогиб. На выдохе — сгладьте поясницу обратно. Движение едва заметно глазу: не гимнастика, а смазка суставов крестца. 10 микро-качаний.</p>
+            </div>
+          </div>
+
+          <div class="optic optic-see">
+            <p>Под пальцами квадратная мышца поясницы на ощупь как застывший сургуч. Она держит весь вес корпуса, пока вытянутые вперёд руки тянутся к клавиатуре. Ткань не спазмирована — она просто устала держать оборону в одиночку.</p>
+          </div>
+
+          <div class="optic optic-how">
+            <p>M. quadratus lumborum и грудопоясничная фасция (fascia thoracolumbalis). Статическая изометрическая перегрузка при отсутствии опоры на седалищные бугры.</p>
+          </div>
+
+          <p class="state-limit">Если ночью будит и к утру хуже, чем было вечером — это к врачу.</p>
+          <p class="state-src">Kett, 2021 · <a href="https://pubmed.ncbi.nlm.nih.gov/34805980/" target="_blank" rel="noreferrer nofollow">источник</a></p>
+
+          <span class="state-gate">
+            Разбор к этой минуте — <a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">в канале</a>
+          </span>
+        </div>
+      </details>
+
+      <details class="state" id="mouse-hand">
+        <summary>
+          <span class="state-name">Каменеет предплечье от мышки</span>
+          <span class="state-hint">одна минута, сидя</span>
+        </summary>
+        <div class="state-body">
+
+          <div class="optic optic-feel">
+            <p>Пальцы бегают по клавишам легко, но предплечье изнутри наливается свинцом. К концу дня запястье словно стянуто тугой невидимой манжетой.</p>
+            <div class="state-do">
+              <p><b>Минута на стуле.</b> Положите руку на стол ладонью вниз. Второй ладонью плотно прижмите ткани предплечья чуть ниже локтя. Не скользите по коже. Зафиксируйте глубину и медленно пошевелите пальцами, словно берёте аккорд на пианино. Движение идёт внутри, под неподвижной ладонью. 40 секунд.</p>
+            </div>
+          </div>
+
+          <div class="optic optic-see">
+            <p>Берёшь руку за лучезапястный сустав — а там сплошной струнный жгут. Сухожилия разгибателей слипаются с фасциальным футляром от монотонного микродвижения пальца по кнопке мыши. Рука забыла, что такое полное раскрытие ладони.</p>
+          </div>
+
+          <div class="optic optic-how">
+            <p>Fascia antebrachii и скольжение сухожилий mm. extensores digitorum в карпальном канале. Нарушение межфасциального сдвига при монотонной статической нагрузке.</p>
+          </div>
+
+          <p class="state-limit">Если пальцы немеют и вещи начали валиться из руки — это к врачу.</p>
+          <p class="state-src">Tat, 2013 · <a href="https://pubmed.ncbi.nlm.nih.gov/23729391/" target="_blank" rel="noreferrer nofollow">источник</a></p>
+
+          <span class="state-gate">
+            Разбор к этой минуте — <a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">в канале</a>
+          </span>
+        </div>
+      </details>
+
+      <!-- ЯКОРЬ #heavy-legs — ждёт источника и границы от Аналитика.
+           Раскомментировать, когда они закрыты. Имя якоря вечное.
+      <details class="state" id="heavy-legs">
+        <summary>
+          <span class="state-name">К вечеру ноги налились</span>
+          <span class="state-hint">одна минута, сидя</span>
+        </summary>
+        <div class="state-body">
+          <div class="optic optic-feel"><p></p></div>
+          <div class="optic optic-see"><p></p></div>
+          <div class="optic optic-how"><p></p></div>
+          <p class="state-limit"></p>
+          <p class="state-src"></p>
+          <span class="state-gate">
+            Разбор к этой минуте — <a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">в канале</a>
+          </span>
+        </div>
+      </details>
+      -->
+
+    </div>
+
+    <p class="atlas-miss">
+      Не нашли своё — <a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">двадцать лет наблюдений в канале</a>, поиском по слову
+    </p>
   </div>
-  <p class="reveal">Я работаю руками, а замечаю глазами. За двадцать лет у стола я увидел о теле и о людях больше, чем ожидал. Здесь я это называю — как есть, без учебников.</p>
 </section>
 
 <span id="ustola" aria-hidden="true"></span>
@@ -319,10 +471,17 @@
   </div>
 </section>
 
+<section class="kto-eto">
+  <div class="kto-eto-photo reveal">
+    <img src="author.jpg" alt="Алексей у массажного стола, со спины" loading="lazy">
+  </div>
+  <p class="reveal">Я работаю руками, а замечаю глазами. За двадцать лет у стола я увидел о теле и о людях больше, чем ожидал. Здесь я это называю — как есть, без учебников.</p>
+</section>
+
 <section class="channels">
   <div class="wrap">
     <div class="channels-head reveal">
-      <h2 class="serif">Здесь только часть. Остальное — по адресам.</h2>
+      <h2 class="serif">Новые состояния появляются каждую неделю. Первыми — в канале.</h2>
     </div>
     <div class="channel-row">
       <a class="btn" href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">Читать в Telegram →</a>
@@ -333,19 +492,19 @@
 <section class="polka" id="polka">
   <div class="wrap">
     <div class="polka-head reveal">
-      <span class="section-eyebrow" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--taupe);display:block;margin-bottom:14px;">Инструменты для тела</span>
+      <span style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--taupe);display:block;margin-bottom:14px;">Чем работаю</span>
       <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;">С чем реально работаю</h2>
     </div>
     <div class="polka-items reveal">
       <a class="polka-item" href="https://t.me/Lighthouse_massage_music/1510" target="_blank" rel="noreferrer">
-        <img src="polka-balm.jpg" alt="Бальзам, текстура на пальцах">
+        <img src="polka-balm.jpg" alt="Бальзам, текстура на пальцах" loading="lazy">
         <div class="polka-item-body">
           <blockquote>«Держу этот бальзам в кабинете уже второй год. Использую перед плотной работой — на плечах, крестце, глубоких точках. Плотный, тянется за пальцем, не растекается. Хватает надолго. Работаю — доволен.»</blockquote>
           <span class="polka-read">Читать полностью →</span>
         </div>
       </a>
       <a class="polka-item" href="https://t.me/Lighthouse_massage_music/1561" target="_blank" rel="noreferrer">
-        <img src="polka-cream.jpg" alt="Крем плотной текстуры, растёртый в руке">
+        <img src="polka-cream.jpg" alt="Крем плотной текстуры, растёртый в руке" loading="lazy">
         <div class="polka-item-body">
           <blockquote>«Крем плотной текстуры — работаю им полтора часа подряд, не липнет, не улетает. После сеанса кожа как выдохнула.»</blockquote>
           <span class="polka-read">Читать полностью →</span>
@@ -358,11 +517,11 @@
 <section class="modules" id="humor">
   <div class="wrap">
     <div class="modules-head">
-      <span class="section-eyebrow" style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--beige);display:block;margin-bottom:14px;">Ещё в проекте</span>
+      <span style="font-size:0.66rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--beige);display:block;margin-bottom:14px;">Ещё в проекте</span>
       <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;color:var(--bg);">Что ещё есть на сайте</h2>
     </div>
     <div class="modules-row reveal">
-      <a class="btn" href="polka.html">Инструменты для тела →</a>
+      <a class="btn" href="polka.html">Чем работаю →</a>
       <a class="btn" href="humor.html">Смешное из кабинета →</a>
       <a class="btn" href="biomechanics.html">О чём этот проект →</a>
     </div>
@@ -375,13 +534,13 @@
     <div class="faq-list">
 
       <details>
-        <summary class="serif">Что это такое и зачем?</summary>
-        <p>Это не обучающий проект и не реклама услуг. Алексей — практикующий массажист из Минска, работает больше 20 лет. Пишет про тело так, как видит его руками: что замечает, что удивляет, что остаётся непонятным даже после тысяч сеансов. Без рецептов. Без обещаний.</p>
+        <summary class="serif">Что здесь можно получить?</summary>
+        <p>Своё состояние в списке выше и одно движение на минуту к нему — сидя, там, где вы сейчас, ничего не покупая. Под каждым состоянием стоит строка о том, когда этого недостаточно и нужен врач.</p>
       </details>
 
       <details>
         <summary class="serif">Здесь дают советы по здоровью?</summary>
-        <p>Нет. Алексей не врач и не претендует на это. Здесь — наблюдения практика, не медицинские рекомендации. Если у вас что-то болит — это к врачу. Здесь другое: как тело ведёт себя, что оно говорит, когда его слушают руками.</p>
+        <p>Нет. Алексей не врач и не претендует на это. Здесь — наблюдения от стола, не медицинские рекомендации. Если у вас что-то болит — это к врачу. Здесь другое: как тело ведёт себя, что оно говорит, когда его слушают руками.</p>
       </details>
 
       <details>
@@ -390,7 +549,7 @@
       </details>
 
       <details>
-        <summary class="serif">Что такое «Инструменты для тела»?</summary>
+        <summary class="serif">Что такое «Чем работаю»?</summary>
         <p>Раздел про объекты, с которыми работает Алексей: масла, инструменты, текстиль. Не реклама — наблюдения про то, как конкретная вещь меняет работу. Алексей пишет только про то, что реально использует.</p>
       </details>
 
@@ -411,19 +570,19 @@
       <a class="atmosphere-read" href="https://t.me/Lighthouse_massage_music/1632" target="_blank" rel="noreferrer">Читать полностью →</a>
     </div>
     <div class="atmosphere-scroll">
-      <div class="atmosphere-slide"><img src="atmosphere.jpg" alt="Лампа, табурет, комната"></div>
+      <div class="atmosphere-slide"><img src="atmosphere.jpg" alt="Лампа, табурет, комната" loading="lazy"></div>
     </div>
-
   </div>
 </section>
 
 <footer>
   <span class="footer-brand">Проект "Руки массажиста"</span>
   <a class="btn" href="https://t.me/aleksei_massage_minsk" target="_blank" rel="noreferrer">Контакты</a>
+  <span class="footer-note">личный контакт · не канал</span>
   <a class="footer-geo" href="/minsk.html">Кабинет и выезд · Минск</a>
   <div class="footer-links">
     <a href="https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/" target="_blank" rel="noreferrer">Pinterest</a>
-    <a href="https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN" target="_blank" rel="noreferrer">YouTube</a>
+    <a href="https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN" target="_blank" rel="noreferrer">Lighthouse · музыка</a>
   </div>
   <span class="footer-copy">© 2026 HARDZIYENKA ALIAKSEI. palpo.org</span>
 </footer>
@@ -431,9 +590,37 @@
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e0cfa89fa9b44378ab3443a1d1e8e7e"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 <script>
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('is-visible'); });
+(function () {
+  var atlas = document.getElementById('atlas');
+  var btns = document.querySelectorAll('.optic-switch button');
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', function () {
+      if (!atlas) return;
+      atlas.setAttribute('data-optic', this.getAttribute('data-optic'));
+      for (var j = 0; j < btns.length; j++) {
+        btns[j].setAttribute('aria-pressed', btns[j] === this ? 'true' : 'false');
+      }
+    });
+  }
+
+  function openByHash() {
+    var id = (location.hash || '').slice(1);
+    if (!id) return;
+    var el = document.getElementById(id);
+    if (el && el.tagName === 'DETAILS') el.open = true;
+  }
+  openByHash();
+  window.addEventListener('hashchange', openByHash);
+
+  var targets = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    for (var k = 0; k < targets.length; k++) targets[k].classList.add('is-visible');
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
   }, { threshold: 0.15 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  for (var m = 0; m < targets.length; m++) io.observe(targets[m]);
+})();
 </script>
 </html>
