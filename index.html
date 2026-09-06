@@ -61,17 +61,6 @@
     color: var(--amber); flex-shrink: 0;
   }
 
-  .mobile-cta { display: none; }
-  @media (max-width: 720px) {
-    .mobile-cta {
-      display: flex; position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 50;
-      background: var(--amber); color: var(--bg); border-radius: 100px;
-      padding: 15px 20px; align-items: center; justify-content: center; gap: 8px;
-      font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase;
-      box-shadow: 0 12px 32px -8px rgba(0,0,0,0.45);
-    }
-    body { padding-bottom: 76px; }
-  }
 
   /* HERO v16 — 62vh */
   .hero {
@@ -95,26 +84,6 @@
   .hero-bridge {
     display: block; font-size: 0.82rem; letter-spacing: 0.06em;
     color: var(--wall); opacity: 0.9; margin-bottom: 28px;
-  }
-
-  /* ПЕРЕКЛЮЧАТЕЛЬ ОПТИКИ */
-  .optic-switch {
-    display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 6px;
-    border: 1px solid rgba(219,195,142,0.45); border-radius: 100px; padding: 5px;
-    background: rgba(20,14,8,0.32);
-  }
-  .optic-switch button {
-    font-family: 'Inter', sans-serif; font-weight: 300; font-size: 0.7rem;
-    letter-spacing: 0.06em; color: var(--wall);
-    background: none; border: 0; border-radius: 100px;
-    padding: 9px 16px; cursor: pointer; white-space: nowrap;
-    transition: background 0.2s, color 0.2s;
-  }
-  .optic-switch button[aria-pressed="true"] { background: var(--beige); color: #241605; font-weight: 500; }
-  @media (max-width: 560px) { .optic-switch button { font-size: 0.66rem; padding: 8px 12px; } }
-  @media (max-width: 430px) {
-    .optic-switch { gap: 4px; padding: 4px; }
-    .optic-switch button { font-size: 0.62rem; padding: 7px 10px; letter-spacing: 0.03em; }
   }
 
   /* АТЛАС */
@@ -161,10 +130,6 @@
   }
   .state-gate a { text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
 
-  .optic { display: none; }
-  [data-optic="feel"] .optic-feel,
-  [data-optic="see"] .optic-see,
-  [data-optic="how"] .optic-how { display: block; }
 
   .atlas-miss { text-align: center; margin-top: 28px; font-size: 0.8rem; color: var(--taupe); }
   .atlas-miss a { text-decoration: underline; text-underline-offset: 3px; }
@@ -302,6 +267,68 @@
   /* REVEAL — только ниже первых двух экранов */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
   .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  /* ===== v17: видео-фасад ===== */
+  .st-video {
+    position: relative; width: 100%; aspect-ratio: 9/16; max-height: 420px;
+    border-radius: 12px; overflow: hidden; background: #2a1f14;
+    cursor: pointer; border: 0; padding: 0; display: block;
+  }
+  .st-video img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .st-video::after {
+    content: ''; position: absolute; left: 50%; top: 50%;
+    width: 62px; height: 62px; margin: -31px 0 0 -31px; border-radius: 50%;
+    background: rgba(251,249,245,0.92); box-shadow: 0 6px 20px -6px rgba(0,0,0,0.5);
+  }
+  .st-video::before {
+    content: ''; position: absolute; left: 50%; top: 50%; z-index: 2;
+    margin: -11px 0 0 -6px; border-style: solid; border-width: 11px 0 11px 18px;
+    border-color: transparent transparent transparent #3F2C15;
+  }
+  .st-video iframe { width: 100%; height: 100%; border: 0; display: block; }
+  .st-video.is-live::before, .st-video.is-live::after { display: none; }
+  .st-vcap {
+    display: block; text-align: center; font-size: 0.64rem; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--taupe); margin-top: 8px;
+  }
+  /* ===== v17: шаги ===== */
+  .st-steps { margin: 18px 0 0; padding: 0; list-style: none; counter-reset: s; }
+  .st-steps li {
+    position: relative; padding-left: 30px; margin-bottom: 10px;
+    font-size: 0.92rem; line-height: 1.5; color: #3a3026;
+  }
+  .st-steps li::before {
+    counter-increment: s; content: counter(s);
+    position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%;
+    background: var(--beige); color: #241605;
+    font-size: 0.66rem; font-weight: 500; line-height: 20px; text-align: center;
+  }
+  /* ===== v17: кнопка на конкретный пост ===== */
+  .st-post {
+    display: block; margin-top: 18px; padding: 14px 16px;
+    background: var(--amber); color: var(--bg); border-radius: 12px;
+    font-size: 0.86rem; line-height: 1.4; transition: opacity 0.2s;
+  }
+  .st-post:hover { opacity: 0.9; }
+  .st-post b { display: block; font-weight: 500; margin-bottom: 3px; }
+  .st-post span {
+    display: block; font-size: 0.64rem; letter-spacing: 0.12em;
+    text-transform: uppercase; opacity: 0.72; margin-top: 6px;
+  }
+  /* ===== v17: второй взгляд ===== */
+  .st-more { margin-top: 14px; }
+  .st-more > summary {
+    cursor: pointer; list-style: none;
+    font-size: 0.72rem; letter-spacing: 0.06em; color: var(--taupe);
+    text-decoration: underline; text-underline-offset: 3px;
+  }
+  .st-more > summary::-webkit-details-marker { display: none; }
+  .st-more p { font-size: 0.88rem; color: #4a3f30; margin-top: 10px; line-height: 1.55; }
+  /* ===== v17: правовой низ ===== */
+  .st-foot {
+    margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--wall);
+    font-size: 0.7rem; line-height: 1.45; color: var(--taupe);
+  }
+  .st-foot .src { display: block; font-size: 0.62rem; opacity: 0.7; margin-top: 5px; }
 </style>
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 <meta name="p:domain_verify" content="342babc59d09ad48a1f9f7a3593d4126"/>
@@ -333,24 +360,15 @@
   <a href="en.html" class="lang-toggle">EN</a>
 </nav>
 
-<a class="mobile-cta" href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">
-  Читать в Telegram →
-</a>
-
 <section class="hero" id="hero">
   <div class="hero-inner">
     <span class="eyebrow">Наблюдения массажиста · практика с 2006 года</span>
     <h1 class="hero-title serif">Что происходит с телом,<br>пока вы сидите</h1>
     <span class="hero-bridge">Найдите своё состояние ниже</span>
-    <div class="optic-switch" role="group" aria-label="Выбор оптики">
-      <button type="button" data-optic="feel" aria-pressed="true">Что чувствуете вы</button>
-      <button type="button" data-optic="see" aria-pressed="false">Что вижу я</button>
-      <button type="button" data-optic="how" aria-pressed="false">Как это устроено</button>
-    </div>
   </div>
 </section>
 
-<section class="atlas" id="atlas" data-optic="feel">
+<section class="atlas" id="atlas">
   <div class="wrap">
     <div class="atlas-head">
       <h2 class="serif">Что с телом</h2>
@@ -358,87 +376,116 @@
 
     <div class="atlas-grid">
 
+      <!-- ================= #lower-back ================= -->
       <details class="state" id="lower-back">
         <summary>
           <span class="state-name">Затекла поясница на стуле</span>
-          <span class="state-hint">одна минута, сидя</span>
+          <span class="state-hint">40 секунд &middot; сидя</span>
         </summary>
         <div class="state-body">
 
-          <div class="optic optic-feel">
-            <p>Три часа без движения — и поясница становится плоской, как доска. Не острая боль, а тугой чужой валик над крестцом, который мешает разогнуться в полный рост.</p>
-            <div class="state-do">
-              <p><b>Минута на стуле.</b> Сдвиньтесь на край стула, стопы плотно в пол, ладони на колени. На вдохе мягко качните таз вперёд на 3–5 миллиметров, чуть обозначив прогиб. На выдохе — сгладьте поясницу обратно. Движение едва заметно глазу: не гимнастика, а смазка суставов крестца. 10 микро-качаний.</p>
-            </div>
-          </div>
+          <button class="st-video" type="button" data-yt="jO5B56bXtbM" aria-label="Показать движение, 40 секунд">
+            <img src="atlas-lower-back.jpg" alt="Покачивание таза сидя на краю стула" loading="lazy" onerror="this.style.display='none'">
+          </button>
+          <span class="st-vcap">Показать движение &middot; 40 секунд</span>
 
-          <div class="optic optic-see">
+          <ol class="st-steps">
+            <li>Сядьте на край стула, стопы плотно в пол.</li>
+            <li>Медленно качните таз вперёд — и отпустите назад. Движение мелкое, глазу почти не видно.</li>
+            <li>Пять-шесть раз, без усилия. Спина сама найдёт, где отпустить.</li>
+          </ol>
+
+          <a class="st-post" href="https://t.me/Lighthouse_massage_music/1803" target="_blank" rel="noreferrer">
+            <b>«Поясница глухая, таз словно влип в стул»</b>
+            Что видно со стороны стола, когда это приносят
+            <span>Читать в канале →</span>
+          </a>
+
+          <details class="st-more">
+            <summary>Что я вижу у стола</summary>
             <p>Под пальцами квадратная мышца поясницы на ощупь как застывший сургуч. Она держит весь вес корпуса, пока вытянутые вперёд руки тянутся к клавиатуре. Ткань не спазмирована — она просто устала держать оборону в одиночку.</p>
-          </div>
+          </details>
 
-          <div class="optic optic-how">
-            <p>M. quadratus lumborum и грудопоясничная фасция (fascia thoracolumbalis). Статическая изометрическая перегрузка при отсутствии опоры на седалищные бугры.</p>
-          </div>
-
-          <p class="state-limit">Если ночью будит и к утру хуже, чем было вечером — это к врачу.</p>
-          <p class="state-src">Kett, 2021 · <a href="https://pubmed.ncbi.nlm.nih.gov/34805980/" target="_blank" rel="noreferrer nofollow">источник</a></p>
-
-          <span class="state-gate">
-            Разбор к этой минуте — <a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">в канале</a>
-          </span>
+          <p class="st-foot">
+            Если ночью будит и к утру хуже, чем было вечером — это к врачу.
+            <span class="src">Наблюдение опирается на работу: Kett, 2021</span>
+          </p>
         </div>
       </details>
 
-      <details class="state" id="mouse-hand">
+      <!-- ================= #shoulders ================= -->
+      <details class="state" id="shoulders">
         <summary>
-          <span class="state-name">Каменеет предплечье от мышки</span>
-          <span class="state-hint">одна минута, сидя</span>
+          <span class="state-name">Плечи поднялись к ушам</span>
+          <span class="state-hint">40 секунд &middot; сидя</span>
         </summary>
         <div class="state-body">
 
-          <div class="optic optic-feel">
-            <p>Пальцы бегают по клавишам легко, но предплечье изнутри наливается свинцом. К концу дня запястье словно стянуто тугой невидимой манжетой.</p>
-            <div class="state-do">
-              <p><b>Минута на стуле.</b> Положите руку на стол ладонью вниз. Второй ладонью плотно прижмите ткани предплечья чуть ниже локтя. Не скользите по коже. Зафиксируйте глубину и медленно пошевелите пальцами, словно берёте аккорд на пианино. Движение идёт внутри, под неподвижной ладонью. 40 секунд.</p>
-            </div>
-          </div>
+          <button class="st-video" type="button" data-yt="SZsfyA0kMss" aria-label="Показать движение, 40 секунд">
+            <img src="atlas-shoulders.jpg" alt="Ладони давят в стол, плечи опускаются" loading="lazy" onerror="this.style.display='none'">
+          </button>
+          <span class="st-vcap">Показать движение &middot; 40 секунд</span>
 
-          <div class="optic optic-see">
-            <p>Берёшь руку за лучезапястный сустав — а там сплошной струнный жгут. Сухожилия разгибателей слипаются с фасциальным футляром от монотонного микродвижения пальца по кнопке мыши. Рука забыла, что такое полное раскрытие ладони.</p>
-          </div>
+          <ol class="st-steps">
+            <li>Положите ладони на стол.</li>
+            <li>На выдохе надавите ладонями вниз — и отпустите через четыре секунды.</li>
+            <li>Плечи уйдут вниз сами. Три раза, между делами.</li>
+          </ol>
 
-          <div class="optic optic-how">
-            <p>Fascia antebrachii и скольжение сухожилий mm. extensores digitorum в карпальном канале. Нарушение межфасциального сдвига при монотонной статической нагрузке.</p>
-          </div>
+          <a class="st-post" href="https://t.me/Lighthouse_massage_music/1581" target="_blank" rel="noreferrer">
+            <b>«После созвона плечи снова у ушей»</b>
+            Что видно со стороны стола, когда это приносят
+            <span>Читать в канале →</span>
+          </a>
 
-          <p class="state-limit">Если пальцы немеют и вещи начали валиться из руки — это к врачу.</p>
-          <p class="state-src">Tat, 2013 · <a href="https://pubmed.ncbi.nlm.nih.gov/23729391/" target="_blank" rel="noreferrer nofollow">источник</a></p>
+          <details class="st-more">
+            <summary>Что я вижу у стола</summary>
+            <p>Человек ложится на стол, а плечи остаются у ушей — словно пиджак забыли снять с вешалки. Верхняя трапеция на ощупь как натянутый стальной трос: она часами спасает голову от падения в монитор и просто разучилась падать вниз сама.</p>
+          </details>
 
-          <span class="state-gate">
-            Разбор к этой минуте — <a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">в канале</a>
-          </span>
+          <p class="st-foot">
+            Если опускание плеча отдаёт резкой стреляющей болью в пальцы руки или шею заклинило — это к врачу.
+            <span class="src">Наблюдение опирается на работу: Szeto, 2005</span>
+          </p>
         </div>
       </details>
 
-      <!-- ЯКОРЬ #heavy-legs — ждёт источника и границы от Аналитика.
-           Раскомментировать, когда они закрыты. Имя якоря вечное.
+      <!-- ================= #heavy-legs ================= -->
       <details class="state" id="heavy-legs">
         <summary>
           <span class="state-name">К вечеру ноги налились</span>
-          <span class="state-hint">одна минута, сидя</span>
+          <span class="state-hint">60 секунд &middot; сидя или стоя</span>
         </summary>
         <div class="state-body">
-          <div class="optic optic-feel"><p></p></div>
-          <div class="optic optic-see"><p></p></div>
-          <div class="optic optic-how"><p></p></div>
-          <p class="state-limit"></p>
-          <p class="state-src"></p>
-          <span class="state-gate">
-            Разбор к этой минуте — <a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">в канале</a>
-          </span>
+
+          <button class="st-video" type="button" data-yt="6VJnEiptHlA" aria-label="Показать движение, 40 секунд">
+            <img src="atlas-heavy-legs.jpg" alt="Перекат стопы с носка на пятку" loading="lazy" onerror="this.style.display='none'">
+          </button>
+          <span class="st-vcap">Показать движение &middot; 40 секунд</span>
+
+          <ol class="st-steps">
+            <li>Поджать пальцы стоп на пять секунд — и расслабить.</li>
+            <li>Перенести вес на пятки, оторвав носки от пола.</li>
+            <li>Натянуть носок сильно на себя. Десять перекатов.</li>
+          </ol>
+
+          <a class="st-post" href="https://t.me/Lighthouse_massage_music/1772" target="_blank" rel="noreferrer">
+            <b>«Ноги гудят к вечеру, а размять их некому»</b>
+            Что видно со стороны стола, когда это приносят
+            <span>Читать в канале →</span>
+          </a>
+
+          <details class="st-more">
+            <summary>Что я вижу у стола</summary>
+            <p>Тело часто удерживает воду в тканях неделями, создавая ложное чувство лишнего веса. Когда жидкость уходит, ноги перестают ощущаться как свинцовые.</p>
+          </details>
+
+          <p class="st-foot">
+            Если отёк только на одной ноге, сопровождается жаром или острой распирающей болью — это к врачу.
+            <span class="src">Наблюдение опирается на работу: Ludbrook, 1966</span>
+          </p>
         </div>
       </details>
-      -->
 
     </div>
 
@@ -591,18 +638,25 @@
 </body>
 <script>
 (function () {
-  var atlas = document.getElementById('atlas');
-  var btns = document.querySelectorAll('.optic-switch button');
-  for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener('click', function () {
-      if (!atlas) return;
-      atlas.setAttribute('data-optic', this.getAttribute('data-optic'));
-      for (var j = 0; j < btns.length; j++) {
-        btns[j].setAttribute('aria-pressed', btns[j] === this ? 'true' : 'false');
-      }
+  /* видео-фасад: плеер подставляется только по клику */
+  var vids = document.querySelectorAll('.st-video');
+  for (var i = 0; i < vids.length; i++) {
+    vids[i].addEventListener('click', function () {
+      if (this.classList.contains('is-live')) return;
+      var id = this.getAttribute('data-yt');
+      if (!id) return;
+      var f = document.createElement('iframe');
+      f.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
+      f.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
+      f.setAttribute('allowfullscreen', '');
+      f.title = 'Показ движения';
+      this.innerHTML = '';
+      this.appendChild(f);
+      this.classList.add('is-live');
     });
   }
 
+  /* переход по якорю раскрывает плашку */
   function openByHash() {
     var id = (location.hash || '').slice(1);
     if (!id) return;
@@ -612,6 +666,7 @@
   openByHash();
   window.addEventListener('hashchange', openByHash);
 
+  /* проявление ниже первых экранов */
   var targets = document.querySelectorAll('.reveal');
   if (!('IntersectionObserver' in window)) {
     for (var k = 0; k < targets.length; k++) targets[k].classList.add('is-visible');
