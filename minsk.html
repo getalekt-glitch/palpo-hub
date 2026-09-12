@@ -324,7 +324,45 @@
   @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; scroll-behavior: auto !important; }
   }
+
+  /* ── вопросы до записи ───────────────────── */
+  .faq-list { list-style: none; margin-top: 6px; }
+  .faq-item {
+    background: var(--card); border: 1px solid var(--wall); border-radius: 14px;
+    margin-bottom: 10px; overflow: hidden;
+    transition: border-color .2s ease, box-shadow .2s ease;
+  }
+  .faq-item[open] { border-color: var(--linen); box-shadow: 0 4px 18px rgba(63,44,21,.05); }
+  .faq-item > summary {
+    list-style: none; cursor: pointer; padding: 17px 48px 17px 20px; position: relative;
+    font-size: 0.97rem; line-height: 1.45; color: var(--ink);
+  }
+  .faq-item > summary::-webkit-details-marker { display: none; }
+  .faq-item > summary::after {
+    content: ""; position: absolute; right: 20px; top: 50%;
+    width: 8px; height: 8px; margin-top: -5px;
+    border-right: 1.5px solid var(--taupe); border-bottom: 1.5px solid var(--taupe);
+    transform: rotate(45deg); transition: transform .25s ease;
+  }
+  .faq-item[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
+  .faq-item > summary:focus-visible { outline: 2px solid var(--taupe); outline-offset: -2px; }
+  .faq-answer {
+    padding: 0 20px 19px; font-size: 0.94rem; line-height: 1.62; color: var(--taupe);
+  }
+  .faq-note { margin-top: 18px; font-size: 0.86rem; color: var(--taupe); }
+
 </style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(112520327, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112520327" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 
@@ -451,6 +489,70 @@
     </a>
   </div>
 </section>
+<!-- ── вопросы до записи ───────────────────────────────── -->
+<section id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">Что спрашивают до записи</h2>
+  <div class="faq-list">
+      <details class="faq-item">
+        <summary>Выезжаете в мой посёлок?</summary>
+        <div class="faq-answer">Минск, Колодищи и ближайший пригород: Боровляны, Копище, Новая Боровая, Дроздово, Валерьяново, Жуков Луг, Королёв Стан, Юхновка, Городище, Слобода, Сосновая, Сосны, Раубичи, Острошицкий Городок, Околица, Марьяливо, Сухорукие, Старина, Глебковичи. Вашего адреса в списке нет — спросите.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Дорога оплачивается отдельно?</summary>
+        <div class="faq-answer">По Минску и ближайшему пригороду — нет. Если ехать дальше, скажу до записи.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Что приготовить к приходу?</summary>
+        <div class="faq-answer">Ничего. Нужно только место.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Сколько нужно места?</summary>
+        <div class="faq-answer">Массажный стол — шестьдесят сантиметров на два метра, и около полутора метров вокруг. Обычно место находится.</div>
+      </details>
+      <details class="faq-item">
+        <summary>А если места нет?</summary>
+        <div class="faq-answer">Посмотрим, чаще находится. Есть свой стол — работаю на нём. На полу и на кровати не берусь.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Чьё бельё и косметика?</summary>
+        <div class="faq-answer">Мои. Расходники одноразовые.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Сколько занимает сборка?</summary>
+        <div class="faq-answer">Пять-десять минут развернуть, столько же свернуть.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Сколько стоит?</summary>
+        <div class="faq-answer">Короткие форматы 40–70 рублей, базовые 70–100, коррекция фигуры 90–110. Точную цену называю до начала.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Даёте чек?</summary>
+        <div class="faq-answer">Да, на телефон сразу после расчёта. Работаю плательщиком налога на профессиональный доход.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Есть скидка на курс?</summary>
+        <div class="faq-answer">При предоплате курса десятый сеанс бесплатный.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Нас дома несколько — можно?</summary>
+        <div class="faq-answer">Скажите сразу, сколько вас: на двоих и больше цена ниже.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Сколько длится сеанс?</summary>
+        <div class="faq-answer">От двадцати минут до двух часов.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Когда работаете?</summary>
+        <div class="faq-answer">С девяти до семнадцати, в семнадцать — последний сеанс. Суббота выходная.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Можно приехать к вам?</summary>
+        <div class="faq-answer">Колодищи, улица Волмянский Шлях, 8. Сто метров от остановки «Звёздная».</div>
+      </details>
+  </div>
+  <p class="faq-note">Не нашли своего вопроса — позвоните или напишите, отвечу тем же днём.</p>
+</section>
+
 
 <section class="contact">
   <h2>Записаться</h2>
@@ -515,40 +617,368 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "HealthAndBeautyBusiness",
-  "name": "Алексей Гордиенко — массаж",
-  "alternateName": "Руки массажиста",
-  "url": "https://palpo.org/minsk.html",
-  "image": "https://palpo.org/og-image.jpg",
-  "telephone": "+375333778872",
-  "priceRange": "40-110 BYN",
-  "currenciesAccepted": "BYN",
-  "founder": {"@id": "https://palpo.org/#aleksei"},
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "ул. Волмянский Шлях, 8",
-    "addressLocality": "Колодищи",
-    "addressRegion": "Минская область",
-    "addressCountry": "BY"
-  },
-  "areaServed": [
-    { "@type": "City", "name": "Минск" },
-    { "@type": "Place", "name": "Колодищи" },
-    { "@type": "Place", "name": "Новая Боровая" },
-    { "@type": "Place", "name": "Юхновка" },
-    { "@type": "Place", "name": "Сухорукие" },
-    { "@type": "Place", "name": "Ближайший пригород Минска" }
-  ],
-  "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Услуги", "itemListElement": [{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Массаж шейно-воротниковой зоны"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Массаж спины и шеи"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Массаж лица"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Классический массаж всего тела"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Антицеллюлитный ручной массаж"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Лимфодренажный ручной массаж"}}, {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Комплексная программа коррекции фигуры"}}]},
-  "sameAs": [
-    "https://yandex.by/profile/29272286204",
-    "https://share.google/NzkXBERM9eFljeBZh",
-    "https://t.me/Lighthouse_massage_music"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://palpo.org/#aleksei",
+      "name": "Алексей Гордиенко",
+      "jobTitle": "Практикующий массажист",
+      "url": "https://palpo.org/",
+      "worksFor": {
+        "@id": "https://palpo.org/minsk.html#practice"
+      },
+      "sameAs": [
+        "https://t.me/Lighthouse_massage_music",
+        "https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/",
+        "https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN"
+      ]
+    },
+    {
+      "@type": "HealthAndBeautyBusiness",
+      "@id": "https://palpo.org/minsk.html#practice",
+      "name": "Алексей Гордиенко — массаж",
+      "alternateName": "Руки массажиста",
+      "url": "https://palpo.org/minsk.html",
+      "image": "https://palpo.org/og-image.jpg",
+      "telephone": "+375333778872",
+      "priceRange": "40-110 BYN",
+      "currenciesAccepted": "BYN",
+      "founder": {
+        "@id": "https://palpo.org/#aleksei"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "ул. Волмянский Шлях, 8",
+        "addressLocality": "Колодищи",
+        "addressRegion": "Минская область",
+        "addressCountry": "BY"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.951267,
+        "longitude": 27.793399
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Минск"
+        },
+        {
+          "@type": "Place",
+          "name": "Колодищи"
+        },
+        {
+          "@type": "Place",
+          "name": "Боровляны"
+        },
+        {
+          "@type": "Place",
+          "name": "Копище"
+        },
+        {
+          "@type": "Place",
+          "name": "Новая Боровая"
+        },
+        {
+          "@type": "Place",
+          "name": "Дроздово"
+        },
+        {
+          "@type": "Place",
+          "name": "Валерьяново"
+        },
+        {
+          "@type": "Place",
+          "name": "Жуков Луг"
+        },
+        {
+          "@type": "Place",
+          "name": "Королёв Стан"
+        },
+        {
+          "@type": "Place",
+          "name": "Юхновка"
+        },
+        {
+          "@type": "Place",
+          "name": "Городище"
+        },
+        {
+          "@type": "Place",
+          "name": "Слобода"
+        },
+        {
+          "@type": "Place",
+          "name": "Сосновая"
+        },
+        {
+          "@type": "Place",
+          "name": "Сосны"
+        },
+        {
+          "@type": "Place",
+          "name": "Раубичи"
+        },
+        {
+          "@type": "Place",
+          "name": "Острошицкий Городок"
+        },
+        {
+          "@type": "Place",
+          "name": "Околица"
+        },
+        {
+          "@type": "Place",
+          "name": "Марьяливо"
+        },
+        {
+          "@type": "Place",
+          "name": "Сухорукие"
+        },
+        {
+          "@type": "Place",
+          "name": "Старина"
+        },
+        {
+          "@type": "Place",
+          "name": "Глебковичи"
+        }
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 53.951267,
+          "longitude": 27.793399
+        },
+        "geoRadius": "25000"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Услуги",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Массаж шейно-воротниковой зоны"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Массаж спины и шеи"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Массаж лица"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Классический массаж всего тела"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Антицеллюлитный ручной массаж"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Лимфодренажный ручной массаж"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Комплексная программа коррекции фигуры"
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://yandex.by/profile/29272286204",
+        "https://share.google/NzkXBERM9eFljeBZh",
+        "https://t.me/Lighthouse_massage_music"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://palpo.org/minsk.html#faq",
+      "about": {
+        "@id": "https://palpo.org/minsk.html#practice"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "В какие посёлки под Минском выезжает массажист со своим столом",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Минск, Колодищи и ближайший пригород: Боровляны, Копище, Новая Боровая, Дроздово, Валерьяново, Жуков Луг, Королёв Стан, Юхновка, Городище, Слобода, Сосновая, Сосны, Раубичи, Острошицкий Городок, Околица, Марьяливо, Сухорукие, Старина, Глебковичи. Вашего адреса в списке нет — спросите."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Нужно ли платить за выезд массажиста на дом в Минске и пригороде",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "По Минску и ближайшему пригороду — нет. Если ехать дальше, скажу до записи."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Что нужно подготовить дома перед приходом массажиста",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ничего. Нужно только место."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько места в комнате нужно для массажного стола",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Массажный стол — шестьдесят сантиметров на два метра, и около полутора метров вокруг. Обычно место находится."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли сделать массаж на дому, если в квартире мало места",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Посмотрим, чаще находится. Есть свой стол — работаю на нём. На полу и на кровати не берусь."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Кто привозит бельё и косметику при выездном массаже",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Мои. Расходники одноразовые."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько времени массажист разворачивает и собирает рабочее место",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Пять-десять минут развернуть, столько же свернуть."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько стоит массаж на дому в Минске и Колодищах",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Короткие форматы 40–70 рублей, базовые 70–100, коррекция фигуры 90–110. Точную цену называю до начала."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Выдаёт ли массажист официальный чек за услуги",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, на телефон сразу после расчёта. Работаю плательщиком налога на профессиональный доход."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Есть ли скидка при покупке курса массажа",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "При предоплате курса десятый сеанс бесплатный."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли заказать массаж на дом для нескольких человек",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Скажите сразу, сколько вас: на двоих и больше цена ниже."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Сколько длится сеанс массажа на дому",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "От двадцати минут до двух часов."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "График работы массажиста с выездом на дом в Минске",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "С девяти до семнадцати, в семнадцать — последний сеанс. Суббота выходная."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Где находится кабинет массажиста в Колодищах",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Колодищи, улица Волмянский Шлях, 8. Сто метров от остановки «Звёздная»."
+          }
+        }
+      ]
+    }
   ]
 }
 </script>
 
 <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e0cfa89fa9b44378ab3443a1d1e8e7e"}'></script>
 
+
+<!-- цели Метрики -->
+<script>
+(function () {
+  function goal(name) {
+    if (typeof window.ym === 'function') { window.ym(112520327, 'reachGoal', name); }
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var h = a.getAttribute('href') || '';
+    if (h.indexOf('tel:') === 0) goal('call_click');
+    else if (h.indexOf('viber:') === 0) goal('viber_click');
+    else if (h.indexOf('t.me/') > -1 || h.indexOf('telegram.me/') > -1) goal('tg_click');
+  }, true);
+
+  var fired = false;
+  window.addEventListener('scroll', function () {
+    if (fired) return;
+    var d = document.documentElement;
+    if (window.scrollY + window.innerHeight >= d.scrollHeight - 120) { fired = true; goal('scroll_end'); }
+  }, { passive: true });
+})();
+</script>
 </body>
 </html>
