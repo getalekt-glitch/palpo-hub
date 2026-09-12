@@ -971,14 +971,14 @@
       <div class="cal-head reveal">
         <span class="section-eyebrow">Обои на месяц</span>
         <h2 class="serif">Календарь, в котором числа — часть картинки</h2>
-        <p>Ставится на экран телефона. Сверху остаётся воздух под часы, снизу под док. Одна строка-наблюдение, которую видно тридцать дней подряд.</p>
+        <p>Сделан под экран телефона. Сверху остаётся воздух под часы, снизу под док. Одна строка наблюдения, которую видно тридцать дней подряд.</p>
         <div class="cal-files">
           <a href="kalendar-oktyabr-2026-ru-light.png" download>Октябрь, светлый <span>PNG · 1290×2796</span></a>
           <a href="kalendar-oktyabr-2026-ru-dark.png" download>Октябрь, тёмный <span>PNG · 1290×2796</span></a>
           <a href="calendar-october-2026-en-light.png" download>October, light <span>PNG · 1290×2796</span></a>
           <a href="calendar-october-2026-en-dark.png" download>October, dark <span>PNG · 1290×2796</span></a>
         </div>
-        <p class="cal-note">Бесплатно, ничего заполнять не нужно. Новый месяц появляется здесь заранее.</p>
+        <p class="cal-note">Следующий месяц появляется здесь заранее.</p>
       </div>
     </div>
   </div>
@@ -1170,6 +1170,7 @@
     var h = a.getAttribute('href') || '';
     if (h.indexOf('t.me/') > -1 || h.indexOf('telegram.me/') > -1) goal('tg_click');
     else if (h.indexOf('youtube.com') > -1 || h.indexOf('youtu.be') > -1) goal('yt_click');
+    else if (h.indexOf('.png') > -1) goal('calendar_download');
   }, true);
   for (var v = 0; v < vids.length; v++) {
     vids[v].addEventListener('click', function () { goal('video_play'); }, true);
