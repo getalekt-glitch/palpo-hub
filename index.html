@@ -450,6 +450,28 @@
   details.state[open] .state-more-hint { display: none; }
   @media (prefers-reduced-motion: reduce) { .state-shot img { transition: none !important; } }
 
+  /* ===== v17.6: календарь-обои ===== */
+  section.calendar { padding: 88px 0; background: var(--bg-alt); border-top: 1px solid var(--wall); border-bottom: 1px solid var(--wall); }
+  .cal-wrap { display: grid; grid-template-columns: minmax(0,0.9fr) minmax(0,1.1fr); gap: 48px; align-items: center; }
+  @media (max-width: 820px) { .cal-wrap { grid-template-columns: 1fr; gap: 28px; } }
+  .cal-preview {
+    border: 1px solid var(--wall); border-radius: 14px; overflow: hidden;
+    box-shadow: 0 24px 48px -28px rgba(63,44,21,0.35); background: var(--bg);
+  }
+  .cal-preview img { width: 100%; display: block; }
+  .cal-head h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(1.7rem,3.6vw,2.4rem); }
+  .cal-head p { font-size: 0.9rem; color: #4a3f30; margin-top: 14px; max-width: 46ch; }
+  .cal-files { margin-top: 26px; display: flex; flex-direction: column; gap: 2px; }
+  .cal-files a {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+    padding: 13px 0; border-bottom: 1px solid var(--wall);
+    font-size: 0.9rem; color: var(--amber);
+  }
+  .cal-files a:first-child { border-top: 1px solid var(--wall); }
+  .cal-files a span { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--taupe); white-space: nowrap; }
+  .cal-files a:hover { color: var(--taupe); }
+  .cal-note { margin-top: 18px; font-size: 0.78rem; color: var(--taupe); }
+
 </style>
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 <meta name="p:domain_verify" content="342babc59d09ad48a1f9f7a3593d4126"/>
@@ -629,6 +651,7 @@
     <span class="brand">Руки массажиста</span>
     <div class="nav-links">
       <a href="#atlas">Что с телом</a>
+      <a href="#calendar">Обои</a>
       <a href="#u-stola">Со стороны стола</a>
       <a href="#polka">Чем работаю</a>
       <a href="#humor">Смешное</a>
@@ -936,6 +959,28 @@
     <p class="atlas-miss">
       Не нашли своё — <a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">двадцать лет наблюдений в канале</a>, поиском по слову
     </p>
+  </div>
+</section>
+
+<section class="calendar" id="calendar">
+  <div class="wrap">
+    <div class="cal-wrap">
+      <div class="cal-preview reveal">
+        <img src="calendar-preview.jpg" alt="Календарь-обои на октябрь 2026, светлая версия" loading="lazy" onerror="this.parentNode.style.display='none'">
+      </div>
+      <div class="cal-head reveal">
+        <span class="section-eyebrow">Обои на месяц</span>
+        <h2 class="serif">Календарь, в котором числа — часть картинки</h2>
+        <p>Ставится на экран телефона. Сверху остаётся воздух под часы, снизу под док. Одна строка-наблюдение, которую видно тридцать дней подряд.</p>
+        <div class="cal-files">
+          <a href="kalendar-oktyabr-2026-ru-light.png" download>Октябрь, светлый <span>PNG · 1290×2796</span></a>
+          <a href="kalendar-oktyabr-2026-ru-dark.png" download>Октябрь, тёмный <span>PNG · 1290×2796</span></a>
+          <a href="calendar-october-2026-en-light.png" download>October, light <span>PNG · 1290×2796</span></a>
+          <a href="calendar-october-2026-en-dark.png" download>October, dark <span>PNG · 1290×2796</span></a>
+        </div>
+        <p class="cal-note">Бесплатно, ничего заполнять не нужно. Новый месяц появляется здесь заранее.</p>
+      </div>
+    </div>
   </div>
 </section>
 
