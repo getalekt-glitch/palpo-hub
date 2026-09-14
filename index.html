@@ -3,29 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Руки массажиста — что происходит с телом, пока вы сидите</title>
-<meta name="description" content="Затекла поясница на стуле, каменеет предплечье от мышки. Наблюдения массажиста с 2006 года и одно движение на минуту для каждого состояния. Без медицинских обещаний.">
+<title>Руки массажиста — наблюдения со стороны стола</title>
+<meta name="description" content="Массажист слышит руками. Двадцать лет наблюдений от стола: обои-календарь на телефон и одно движение на минуту для каждого состояния — поясница, плечи, ноги, кисть. Без медицинских обещаний.">
 <link rel="canonical" href="https://palpo.org/">
 <link rel="alternate" hreflang="ru" href="https://palpo.org/">
 <link rel="alternate" hreflang="en" href="https://palpo.org/en.html">
 <link rel="alternate" hreflang="x-default" href="https://palpo.org/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="hero-door.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="hero-listen.jpg" fetchpriority="high">
 <meta property="og:site_name" content="Руки массажиста">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:title" content="Руки массажиста — что происходит с телом, пока вы сидите">
-<meta property="og:description" content="Наблюдения массажиста. Одно движение на минуту для каждого состояния.">
-<meta property="og:image" content="https://palpo.org/og-image.jpg">
-<meta property="og:image:alt" content="Массажный кабинет: свет, край стола, руки массажиста">
+<meta property="og:title" content="Массажист слышит руками. Первое касание уже всё говорит">
+<meta property="og:description" content="Двадцать лет наблюдений от стола. Обои на телефон и одно движение на минуту для каждого состояния.">
+<meta property="og:image" content="https://palpo.org/hero-listen.jpg">
+<meta property="og:image:alt" content="Руки массажиста на плече лежащего человека, льняное покрывало, тёплый свет">
 <meta property="og:url" content="https://palpo.org/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Руки массажиста — что происходит с телом, пока вы сидите">
-<meta name="twitter:description" content="Наблюдения массажиста. Одно движение на минуту для каждого состояния.">
-<meta name="twitter:image" content="https://palpo.org/og-image.jpg">
-<meta name="twitter:image:alt" content="Массажный кабинет: свет, край стола, руки массажиста">
+<meta name="twitter:title" content="Массажист слышит руками. Первое касание уже всё говорит">
+<meta name="twitter:description" content="Двадцать лет наблюдений от стола. Обои на телефон и одно движение на минуту для каждого состояния.">
+<meta name="twitter:image" content="https://palpo.org/hero-listen.jpg">
+<meta name="twitter:image:alt" content="Руки массажиста на плече лежащего человека, льняное покрывало, тёплый свет">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="znak-P-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="znak-P-16x16.png">
@@ -58,7 +58,6 @@
 
   /* ФОКУС — светлое кольцо на тёмных поверхностях, тёмное на светлых */
   :focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
-  .hero :focus-visible,
   .u-stola :focus-visible,
   .modules :focus-visible,
   .atmosphere-scroll :focus-visible { outline-color: var(--bg); }
@@ -111,35 +110,81 @@
     section[id], details.state[id], span[id] { scroll-margin-top: 104px; }
   }
 
-  /* HERO */
+  /* HERO — v17.8: приёмный экран, светлый по канону 12.09 */
   .hero {
-    position: relative; min-height: 62vh; display: flex; align-items: center;
-    background-image: linear-gradient(180deg, rgba(30,20,10,0.28) 0%, rgba(20,14,8,0.78) 100%), url('hero-door.jpg');
-    background-size: cover; background-position: center;
+    position: relative; display: flex; align-items: center;
+    background-color: var(--wall);
+    background-image: linear-gradient(180deg, rgba(251,249,245,0.06) 0%, rgba(251,249,245,0.10) 46%, rgba(245,238,227,0.52) 100%), url('hero-listen.jpg');
+    background-size: cover; background-position: center 42%;
+    min-height: 66vh; border-bottom: 1px solid var(--wall);
   }
-  @media (max-width: 720px) { .hero { min-height: 56vh; } }
   .hero-inner {
     position: relative; width: 100%; max-width: 1100px; margin: 0 auto;
-    padding: 48px 24px; text-align: center; color: var(--bg);
+    padding: 84px 24px 72px; text-align: center; color: var(--amber);
   }
-  .hero-inner::before {
+  .hero::before {
     content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none;
-    background: linear-gradient(180deg,
-      rgba(18,12,6,0) 0%, rgba(18,12,6,0.45) 16%,
-      rgba(18,12,6,0.45) 84%, rgba(18,12,6,0) 100%);
+    background: radial-gradient(ellipse 80% 74% at 50% 46%, rgba(251,249,245,0.38) 0%, rgba(251,249,245,0.28) 38%, rgba(251,249,245,0.15) 64%, rgba(251,249,245,0.06) 84%, rgba(251,249,245,0) 100%);
   }
-  .hero-inner > * { position: relative; z-index: 1; }
+  .hero-inner { position: relative; z-index: 1; }
+  @media (max-width: 720px) {
+    .hero-inner { padding: 56px 20px 48px; }
+    .hero { background-image: linear-gradient(180deg, rgba(251,249,245,0.05) 0%, rgba(251,249,245,0.09) 44%, rgba(245,238,227,0.56) 100%), url('hero-listen-tall.jpg'); background-position: center 30%; min-height: 76vh; }
+  }
   .eyebrow {
     display: block; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--hero-eyebrow); margin-bottom: 18px;
+    color: var(--taupe); margin-bottom: 18px;
   }
   h1.hero-title {
     font-family: 'Cormorant Garamond', serif; font-weight: 400;
-    font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.14; margin-bottom: 14px;
+    font-size: clamp(1.72rem, 7.4vw, 3.6rem); line-height: 1.14; margin-bottom: 14px;
+    text-shadow: 0 1px 14px rgba(251,249,245,0.92), 0 0 34px rgba(251,249,245,0.7);
   }
+  @media (max-width: 400px) { h1.hero-title { font-size: 1.66rem; } }
   .hero-bridge {
-    display: block; font-size: 0.86rem; letter-spacing: 0.06em;
-    color: var(--wall); margin-bottom: 28px;
+    display: block; font-size: 0.9rem; letter-spacing: 0.04em;
+    color: var(--taupe); max-width: 34ch; margin: 0 auto;
+  }
+
+  /* ===== v17.9: вторая строка фразы и единственное действие ===== */
+  .hero-title-2 {
+    display: block; margin-top: 14px; font-size: 0.54em; line-height: 1.25;
+    color: var(--amber); font-style: italic;
+    text-shadow: 0 1px 12px rgba(251,249,245,0.95), 0 0 26px rgba(251,249,245,0.75);
+  }
+  @media (max-width: 720px) { .hero-title-2 { font-size: 0.6em; } }
+  .hero-take {
+    display: inline-flex; align-items: center; gap: 10px; margin-top: 30px;
+    padding: 15px 30px; background: var(--amber); color: var(--bg); border-radius: 100px;
+    font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.14em;
+    text-transform: uppercase; transition: opacity 0.2s ease, transform 0.15s ease;
+  }
+  .hero-take:hover { opacity: 0.88; }
+  .hero-take:active { transform: scale(0.98); }
+  .hero-take-note {
+    display: block; margin-top: 14px; font-size: 0.74rem; letter-spacing: 0.04em; color: var(--amber);
+    text-shadow: 0 1px 10px rgba(251,249,245,0.95), 0 0 20px rgba(251,249,245,0.8);
+  }
+  .hero-take-note a {
+    display: inline-block; white-space: nowrap;
+    text-decoration: underline; text-underline-offset: 3px;
+  }
+  @media (max-width: 720px) {
+    .hero-take-note { line-height: 1.7; }
+    .hero-take-note a { display: block; margin-top: 2px; }
+  }
+  .entry-lang[hidden] { display: none !important; }
+  .entry-lang {
+    display: inline-block; margin-top: 26px; padding: 6px 4px;
+    font-size: 0.76rem; letter-spacing: 0.04em; color: var(--taupe);
+    text-decoration: underline; text-underline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) { .hero-take { transition: none !important; } }
+
+  /* ===== v17.9: спокойный вход в Атлас ===== */
+  .atlas-lead {
+    margin-top: 10px; font-size: 0.88rem; color: var(--taupe);
+    max-width: 52ch; margin-left: auto; margin-right: auto;
   }
 
   /* АТЛАС */
@@ -502,7 +547,7 @@
       "name": "Что здесь можно получить?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Своё состояние в списке выше и одно движение на минуту к нему — сидя, там, где вы сейчас, ничего не покупая. Под каждым состоянием стоит строка о том, когда этого недостаточно и нужен врач."
+        "text": "Своё состояние в разделе «Что с телом» ниже и одно движение на минуту к нему — сидя, там, где вы сейчас, ничего не покупая. Под каждым состоянием стоит строка о том, когда этого недостаточно и нужен врач."
       }
     },
     {
@@ -650,8 +695,8 @@
   <nav class="wrap" aria-label="Разделы сайта">
     <span class="brand">Руки массажиста</span>
     <div class="nav-links">
-      <a href="#atlas">Что с телом</a>
       <a href="#calendar">Обои</a>
+      <a href="#atlas">Что с телом</a>
       <a href="#u-stola">Со стороны стола</a>
       <a href="#polka">Чем работаю</a>
       <a href="#humor">Смешное</a>
@@ -667,9 +712,34 @@
 
 <section class="hero" id="hero">
   <div class="hero-inner">
-    <span class="eyebrow">Наблюдения массажиста · практика с 2006 года</span>
-    <h1 class="hero-title serif">Что происходит с телом,<br>пока вы сидите</h1>
-    <span class="hero-bridge">Найдите своё состояние ниже</span>
+    <h1 class="hero-title serif">Массажист слышит руками<span class="hero-title-2">Первое касание уже всё говорит</span></h1>
+
+    <a class="hero-take" href="kalendar-oktyabr-2026-ru-light.png" download>Обои на телефон &rarr;</a>
+    <span class="hero-take-note" data-en="October 2026 &middot; fits a phone screen. &lt;a href=&quot;#calendar&quot;&gt;Dark and Russian versions below&lt;/a&gt;">Октябрь 2026 &middot; под экран телефона. <a href="#calendar">Тёмная и английская — ниже</a></span>
+
+    <a class="entry-lang" href="en.html" hreflang="en" lang="en" hidden>Reading in English? The same, in English &rarr;</a>
+  </div>
+</section>
+
+<section class="calendar" id="calendar">
+  <div class="wrap">
+    <div class="cal-wrap">
+      <div class="cal-preview reveal">
+        <img src="calendar-preview.jpg" alt="Календарь-обои на октябрь 2026, светлая версия" loading="lazy" onerror="this.parentNode.style.display='none'">
+      </div>
+      <div class="cal-head reveal">
+        <span class="section-eyebrow">Обои на месяц</span>
+        <h2 class="serif">Календарь, в котором числа — часть картинки</h2>
+        <p>Сделан под экран телефона. Сверху остаётся воздух под часы, снизу под док. Одна строка наблюдения, которую видно тридцать дней подряд.</p>
+        <div class="cal-files">
+          <a href="kalendar-oktyabr-2026-ru-light.png" download>Октябрь, светлый <span>PNG · 1290×2796</span></a>
+          <a href="kalendar-oktyabr-2026-ru-dark.png" download>Октябрь, тёмный <span>PNG · 1290×2796</span></a>
+          <a href="calendar-october-2026-en-light.png" download>October, light <span>PNG · 1290×2796</span></a>
+          <a href="calendar-october-2026-en-dark.png" download>October, dark <span>PNG · 1290×2796</span></a>
+        </div>
+        <p class="cal-note">Следующий месяц появляется здесь заранее.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -677,6 +747,7 @@
   <div class="wrap">
     <div class="atlas-head">
       <h2 class="serif">Что с телом</h2>
+      <p class="atlas-lead">Если прямо сейчас телу тяжело — наблюдение от стола и одно движение к каждому состоянию.</p>
     </div>
 
     <div class="atlas-grid">
@@ -962,28 +1033,6 @@
   </div>
 </section>
 
-<section class="calendar" id="calendar">
-  <div class="wrap">
-    <div class="cal-wrap">
-      <div class="cal-preview reveal">
-        <img src="calendar-preview.jpg" alt="Календарь-обои на октябрь 2026, светлая версия" loading="lazy" onerror="this.parentNode.style.display='none'">
-      </div>
-      <div class="cal-head reveal">
-        <span class="section-eyebrow">Обои на месяц</span>
-        <h2 class="serif">Календарь, в котором числа — часть картинки</h2>
-        <p>Сделан под экран телефона. Сверху остаётся воздух под часы, снизу под док. Одна строка наблюдения, которую видно тридцать дней подряд.</p>
-        <div class="cal-files">
-          <a href="kalendar-oktyabr-2026-ru-light.png" download>Октябрь, светлый <span>PNG · 1290×2796</span></a>
-          <a href="kalendar-oktyabr-2026-ru-dark.png" download>Октябрь, тёмный <span>PNG · 1290×2796</span></a>
-          <a href="calendar-october-2026-en-light.png" download>October, light <span>PNG · 1290×2796</span></a>
-          <a href="calendar-october-2026-en-dark.png" download>October, dark <span>PNG · 1290×2796</span></a>
-        </div>
-        <p class="cal-note">Следующий месяц появляется здесь заранее.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <span id="ustola" aria-hidden="true"></span>
 <section class="u-stola" id="u-stola">
   <div class="wrap">
@@ -1073,7 +1122,7 @@
 
       <details>
         <summary class="serif">Что здесь можно получить?</summary>
-        <p>Своё состояние в списке выше и одно движение на минуту к нему — сидя, там, где вы сейчас, ничего не покупая. Под каждым состоянием стоит строка о том, когда этого недостаточно и нужен врач.</p>
+        <p>Своё состояние в разделе «Что с телом» ниже и одно движение на минуту к нему — сидя, там, где вы сейчас, ничего не покупая. Под каждым состоянием стоит строка о том, когда этого недостаточно и нужен врач.</p>
       </details>
 
       <details>
@@ -1149,16 +1198,40 @@
     });
   }
 
-  /* переход по якорю раскрывает плашку */
+  /* переход по якорю раскрывает плашку — v17.8: и доводит её до верха экрана */
   function openByHash() {
     var id = (location.hash || '').slice(1);
     if (!id) return;
     var el = document.getElementById(id);
-    if (el && el.tagName === 'DETAILS') el.open = true;
+    if (el && el.tagName === 'DETAILS') {
+      el.open = true;
+      if (el.scrollIntoView) el.scrollIntoView({ block: 'start' });
+    }
   }
   openByHash();
   window.addEventListener('hashchange', openByHash);
 
+  /* ===== v17.8: строка для тех, у кого браузер не на русском ===== */
+  var lg = (navigator.language || navigator.userLanguage || '').toLowerCase();
+  var notRu = lg && lg.indexOf('ru') !== 0 && lg.indexOf('be') !== 0 && lg.indexOf('uk') !== 0;
+  var langLine = document.querySelector('.entry-lang');
+  if (langLine && notRu) langLine.hidden = false;
+  var take = document.querySelector('.hero-take');
+  if (take && /iP(hone|ad|od)/.test(navigator.userAgent || '')) {
+    take.removeAttribute('download');
+    take.setAttribute('target', '_blank');
+    take.setAttribute('rel', 'noreferrer');
+  }
+  if (take && notRu) {
+    take.setAttribute('href', 'calendar-october-2026-en-light.png');
+    take.textContent = 'Phone wallpaper \u2192';
+    var note = document.querySelector('.hero-take-note');
+    if (note && note.getAttribute('data-en')) {
+      var t = document.createElement('textarea');
+      t.innerHTML = note.getAttribute('data-en');
+      note.innerHTML = t.value;
+    }
+  }
 
   /* ===== v17.3: цели Метрики ===== */
   function goal(name) {
@@ -1168,7 +1241,9 @@
     var a = e.target.closest ? e.target.closest('a[href]') : null;
     if (!a) return;
     var h = a.getAttribute('href') || '';
-    if (h.indexOf('t.me/') > -1 || h.indexOf('telegram.me/') > -1) goal('tg_click');
+    if (a.classList.contains('hero-take')) goal('wallpaper_intent');
+    else if (a.classList.contains('entry-lang')) goal('entry_lang');
+    else if (h.indexOf('t.me/') > -1 || h.indexOf('telegram.me/') > -1) goal('tg_click');
     else if (h.indexOf('youtube.com') > -1 || h.indexOf('youtu.be') > -1) goal('yt_click');
     else if (h.indexOf('.png') > -1) goal('calendar_download');
   }, true);
