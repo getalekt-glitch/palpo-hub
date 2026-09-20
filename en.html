@@ -137,6 +137,65 @@
     color: var(--wall); margin-bottom: 28px;
   }
 
+  /* ===== v15.8: entry by own words on the first screen ===== */
+  .finder { max-width: 560px; margin: 4px auto 0; text-align: center; }
+  .finder-label {
+    display: block; font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 4.2vw, 1.55rem);
+    color: var(--bg); margin-bottom: 10px;
+  }
+  .finder-box { display: none; position: relative; }
+  .finder.is-live .finder-box { display: block; }
+  .finder-input {
+    width: 100%; padding: 15px 60px 15px 22px; border-radius: 100px;
+    border: 1px solid var(--linen); background: rgba(251,249,245,0.96); color: var(--amber);
+    font-family: 'Inter', sans-serif; font-weight: 300; font-size: 16px; line-height: 1.3;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.25); transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    -webkit-appearance: none; appearance: none;
+  }
+  .finder-input::placeholder { color: var(--taupe); opacity: 0.85; }
+  .finder-input:focus { outline: none; border-color: var(--beige); box-shadow: 0 4px 22px rgba(0,0,0,0.35); }
+  .finder-input:focus-visible { outline: 2px solid var(--bg); outline-offset: 3px; }
+  .finder-go {
+    position: absolute; top: 50%; right: 6px; transform: translateY(-50%);
+    width: 44px; height: 44px; border-radius: 50%; border: 0; cursor: pointer;
+    background: var(--amber); color: var(--bg); font-size: 1.15rem; line-height: 1;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+  }
+  .finder-go:hover { opacity: 0.88; }
+  .finder-go:active { transform: translateY(-50%) scale(0.95); }
+  .finder-msg {
+    margin: 12px auto 0; padding: 10px 16px; max-width: 48ch; border-radius: 14px;
+    background: rgba(251,249,245,0.96); border: 1px solid var(--linen);
+    font-size: 0.82rem; line-height: 1.5; color: var(--amber); text-align: left;
+  }
+  .finder-msg[hidden] { display: none; }
+  .finder-msg a { text-decoration: underline; text-underline-offset: 3px; margin-right: 4px; }
+  .finder-chips { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 14px; }
+  .finder-chip, .finder-all a {
+    display: inline-block; padding: 7px 14px; border-radius: 100px;
+    background: rgba(251,249,245,0.94); border: 1px solid var(--linen); color: var(--amber);
+    font-size: 0.8rem; line-height: 1.3; letter-spacing: 0.01em;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  }
+  .finder-chip:hover, .finder-all a:hover { background: var(--bg-alt); border-color: var(--taupe); }
+  .finder-chip:active, .finder-all a:active { transform: scale(0.97); }
+  .finder-all a { background: transparent; border: 1px dashed var(--linen); color: var(--wall); }
+  .finder-all a:hover { background: rgba(251,249,245,0.16); border-color: var(--wall); }
+  .finder-safe { margin-top: 14px; font-size: 0.74rem; line-height: 1.5; color: var(--wall); }
+  @media (max-width: 720px) {
+    .finder-chips li:nth-child(n+7):not(.finder-all) { display: none; }
+  }
+  details.state.is-found { animation: foundPulse 2.2s ease-out 1; }
+  @keyframes foundPulse {
+    0% { box-shadow: 0 0 0 0 rgba(63,44,21,0.38); }
+    60% { box-shadow: 0 0 0 12px rgba(63,44,21,0); }
+    100% { box-shadow: 0 0 0 0 rgba(63,44,21,0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .finder-input, .finder-go, .finder-chip, .finder-all a { transition: none !important; }
+    details.state.is-found { animation: none; outline: 2px solid var(--taupe); outline-offset: 3px; }
+  }
+
   section.atlas { padding: 34px 0 72px; background: var(--bg); }
   .atlas-head { text-align: center; margin-bottom: 20px; }
   .atlas-head h2 {
@@ -670,6 +729,27 @@
     <span class="eyebrow">A massage therapist's observations · at the table since 2006</span>
     <h1 class="hero-title serif">What happens to the body<br>while you sit</h1>
     <span class="hero-bridge">Find your state below</span>
+
+    <div class="finder" id="finder" role="search">
+      <label class="finder-label" for="finder-input">What&rsquo;s going on with your body right now?</label>
+      <div class="finder-box">
+        <input id="finder-input" class="finder-input" type="text" maxlength="80" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="e.g. lost voice after video calls">
+        <button class="finder-go" id="finder-go" type="button" aria-label="Find your state">&rarr;</button>
+      </div>
+      <p class="finder-msg" id="finder-msg" role="status" aria-live="polite" hidden></p>
+      <ul class="finder-chips">
+        <li><a class="finder-chip" href="#voice">lost voice after video calls</a></li>
+        <li><a class="finder-chip" href="#jaw">clenching my jaw</a></li>
+        <li><a class="finder-chip" href="#shoulders">shoulders up to my ears</a></li>
+        <li><a class="finder-chip" href="#cold-hands">cold hands at desk</a></li>
+        <li><a class="finder-chip" href="#breathing">forgetting to breathe at desk</a></li>
+        <li><a class="finder-chip" href="#heavy-legs">heavy legs after sitting all day</a></li>
+        <li><a class="finder-chip" href="#lower-back">stiff lower back from sitting</a></li>
+        <li><a class="finder-chip" href="#mouse-hand">mouse hand pain</a></li>
+        <li class="finder-all"><a href="#atlas">see all</a></li>
+      </ul>
+      <p class="finder-safe">If the pain is sharp, you feel dizzy, or it is hard to breathe even sitting &mdash; see a doctor, not this page.</p>
+    </div>
   </div>
 </section>
 
@@ -1307,6 +1387,173 @@
     entries.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('is-visible'); });
   }, { threshold: 0.15 });
   for (var m = 0; m < targets.length; m++) io.observe(targets[m]);
+})();
+</script>
+<script>
+/* v15.8: entry by own words (EN). Nothing is sent or stored; only the state id goes to Metrika. */
+(function () {
+  var box = document.getElementById('finder');
+  var input = document.getElementById('finder-input');
+  var go = document.getElementById('finder-go');
+  var msg = document.getElementById('finder-msg');
+  if (!box || !input || !go || !msg) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NAMES = {
+    'lower-back': 'Stiff lower back from sitting', 'shoulders': 'Shoulders up to the ears',
+    'heavy-legs': 'Legs heavy by evening', 'face-fluid': 'The face is heavy in the morning',
+    'mouse-hand': 'The hand stops feeling light by evening', 'shoulder-blade': 'A burning spot between the shoulder blades',
+    'back-of-head': 'A brick under the back of the head by evening', 'voice': 'The voice is gone by Friday',
+    'cold-hands': 'Warm room, cold fingers', 'jaw': 'Catching myself with clenched teeth',
+    'breathing': 'Catching myself not breathing'
+  };
+
+  /* [stem, weight]. '=' means whole word. Weight 2: the zone or the sensation itself; weight 1: weak hint. Needs a total of 2. */
+  var W = {
+    'lower-back': [['lumbar',2],['=lower',1],['=back',1],['stiff',1],['sitting',1],['=sit',1],['chair',1],['straighten',1],['desk',1]],
+    'shoulders': [['shoulder',2],['trapez',2],['=ears',1],['=ear',1],['creep',1],['rise',1],['rising',1],['hunch',1],['raised',1],['tension',1]],
+    'heavy-legs': [['leg',2],['=feet',2],['=foot',2],['ankle',2],['calf',2],['calves',2],['shoes',2],['heavy',1],['tired',1],['swollen',1],['swell',1],['tighter',1],['evening',1],['=lead',1]],
+    'face-fluid': [['face',2],['facial',2],['puffy',2],['puff',2],['eyes',1],['eyelid',1],['morning',1],['wake',1],['waking',1],['swollen',1],['heavy',1]],
+    'mouse-hand': [['mouse',2],['wrist',2],['forearm',2],['carpal',2],['pinky',1],['numb',1],['hand',1],['finger',1],['typing',1],['keyboard',1]],
+    'shoulder-blade': [['blade',2],['scapula',2],['between',1],['burning',1],['knot',1],['stabbing',1],['shoulder',1]],
+    'back-of-head': [['skull',2],['occipital',2],['head',1],['=band',1],['heavy',1],['brick',1],['evening',1],['pressure',1]],
+    'voice': [['voice',2],['hoarse',2],['raspy',2],['vocal',2],['throat',1],['talking',1],['calls',1],['zoom',1],['lost',1],['gone',1],['tired',1]],
+    'cold-hands': [['cold',2],['freezing',2],['icy',2],['chilly',2],['finger',1],['hand',1],['warm',1],['room',1],['typing',1]],
+    'jaw': [['jaw',2],['tmj',2],['clench',2],['grind',2],['bruxism',2],['teeth',1],['tooth',1],['tight',1]],
+    'breathing': [['breath',2],['inhale',2],['exhale',2],['diaphragm',2],['=air',1],['deep',1],['shallow',1],['forgetting',1],['hold',1]],
+    'neck': [['neck',2],['cervical',2],['posture',1],['stiff',1],['=turn',1],['=rock',1],['tech',1],['forward',1]]
+  };
+
+  var ALARM = /(chest pain|heart attack|heart|faint|passed out|stroke|bleeding|blood|cant breathe|cannot breathe|choking|numb(ness)? (in )?(face|arm|leg)|weakness (in )?(arm|leg|face))/;
+
+  function norm(s) {
+    return String(s || '').toLowerCase().replace(/['\u2019]/g, '').replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').replace(/^ | $/g, '');
+  }
+  function score(tokens, list) {
+    var sum = 0, i, j, st, ex, hit;
+    for (i = 0; i < list.length; i++) {
+      st = list[i][0]; ex = st.charAt(0) === '=';
+      if (ex) st = st.slice(1);
+      hit = false;
+      for (j = 0; j < tokens.length; j++) {
+        if (ex ? tokens[j] === st : tokens[j].indexOf(st) === 0) { hit = true; break; }
+      }
+      if (hit) sum += list[i][1];
+    }
+    return sum;
+  }
+  function goal(name, id) {
+    try {
+      if (typeof window.ym === 'function') {
+        if (id) window.ym(112520327, 'reachGoal', name, { state: id, lang: 'en' });
+        else window.ym(112520327, 'reachGoal', name, { lang: 'en' });
+      }
+    } catch (e) {}
+  }
+  function clearMsg() { msg.hidden = true; msg.innerHTML = ''; }
+  function say(text, ids) {
+    msg.innerHTML = '';
+    var t = document.createElement('span');
+    t.textContent = text + (ids && ids.length ? ' ' : '');
+    msg.appendChild(t);
+    if (ids) {
+      for (var i = 0; i < ids.length; i++) {
+        var a = document.createElement('a');
+        a.href = '#' + ids[i];
+        a.setAttribute('data-finder', ids[i]);
+        a.textContent = '\u201c' + NAMES[ids[i]] + '\u201d';
+        msg.appendChild(a);
+      }
+    }
+    msg.hidden = false;
+  }
+  var foundTimer = null;
+  function openState(id, how) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    clearMsg();
+    el.open = true;
+    var prev = document.querySelector('details.state.is-found');
+    if (prev) prev.classList.remove('is-found');
+    void el.offsetWidth;
+    el.classList.add('is-found');
+    clearTimeout(foundTimer);
+    foundTimer = setTimeout(function () { el.classList.remove('is-found'); }, 2400);
+    try { el.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' }); } catch (e) { el.scrollIntoView(); }
+    try { if (history.replaceState) history.replaceState(null, '', '#' + id); } catch (e) {}
+    goal(how, id);
+  }
+  function search() {
+    var q = norm(input.value);
+    if (!q) { input.focus(); return; }
+    if (ALARM.test(q)) {
+      say('This is not for a minute at the desk. If you have chest pain, fainting, sudden weakness, or trouble breathing even while sitting, see a doctor or call an ambulance.');
+      goal('finder_alarm');
+      return;
+    }
+    var tokens = q.split(' '), best = 0, ids = [], k, s;
+    for (k in W) {
+      if (!W.hasOwnProperty(k)) continue;
+      s = score(tokens, W[k]);
+      if (s > best) { best = s; ids = [k]; } else if (s === best && s > 0) { ids.push(k); }
+    }
+    if (best < 2) {
+      say('Nothing like that here yet. Everything we have is below:', null);
+      var a = document.createElement('a');
+      a.href = '#atlas'; a.textContent = 'see all';
+      msg.appendChild(document.createTextNode(' ')); msg.appendChild(a);
+      goal('finder_miss');
+      return;
+    }
+    if (ids.length === 1) {
+      if (ids[0] === 'neck') {
+        say('There is no separate card for the neck yet. Close by:', ['shoulders', 'back-of-head']);
+        goal('finder_miss');
+        return;
+      }
+      openState(ids[0], 'finder_search');
+      return;
+    }
+    var shown = [];
+    for (k = 0; k < ids.length && shown.length < 3; k++) if (ids[k] !== 'neck') shown.push(ids[k]);
+    if (!shown.length) { say('There is no separate card for the neck yet. Close by:', ['shoulders', 'back-of-head']); goal('finder_miss'); return; }
+    say('Could be one of these:', shown);
+  }
+
+  box.classList.add('is-live');
+  go.addEventListener('click', search);
+  input.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); search(); } });
+  input.addEventListener('input', function () { if (!msg.hidden) clearMsg(); });
+  box.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
+    if (!a) return;
+    var id = a.getAttribute('data-finder') || (a.getAttribute('href') || '').slice(1);
+    if (NAMES[id]) { e.preventDefault(); openState(id, 'finder_pick'); }
+  });
+
+  /* live phrases typed into the field until the person starts typing */
+  var phrases = ['lost voice after video calls', 'clenching my jaw', 'shoulders up to my ears', 'cold hands at desk', 'forgetting to breathe at desk', 'burning spot between shoulder blades'];
+  if (reduce) return;
+  var pi = 0, ci = 0, erasing = false, rounds = 0, stopped = false;
+  function stop() { stopped = true; input.placeholder = 'e.g. ' + phrases[0]; }
+  input.addEventListener('focus', function () { stopped = true; });
+  function tick() {
+    if (stopped || input.value) { if (!stopped) stopped = true; return; }
+    if (document.hidden) { setTimeout(tick, 800); return; }
+    var p = phrases[pi], delay;
+    if (!erasing) {
+      ci++; input.placeholder = 'e.g. ' + p.slice(0, ci);
+      if (ci >= p.length) { erasing = true; delay = 1700; } else delay = 70;
+    } else {
+      ci--; input.placeholder = ci > 0 ? 'e.g. ' + p.slice(0, ci) : 'e.g.';
+      if (ci <= 0) {
+        erasing = false; pi++;
+        if (pi >= phrases.length) { pi = 0; rounds++; if (rounds >= 2) { stop(); return; } }
+        delay = 350;
+      } else delay = 32;
+    }
+    setTimeout(tick, delay);
+  }
+  setTimeout(tick, 1600);
 })();
 </script>
 </body>
