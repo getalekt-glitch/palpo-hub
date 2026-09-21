@@ -1712,7 +1712,7 @@
       var id = this.getAttribute('data-yt');
       if (!id) return;
       var f = document.createElement('iframe');
-      f.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
+      f.src = 'https://www.youtube.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1&loop=1&playlist=' + id;
       f.allow = 'accelerometer; autoplay; encrypted-media; picture-in-picture';
       f.setAttribute('allowfullscreen', '');
       f.title = 'Показ движения';
@@ -1723,13 +1723,38 @@
   }
 
   /* переход по якорю раскрывает плашку — v17.8: и доводит её до верха экрана */
+  /* v17.23: точная доводка карточки под шапку. Высота шапки измеряется, а не берётся числом;
+     через 0,7 и 1,5 секунды положение проверяется и, если сдвинулось, поправляется.
+     Если человек сам тронул страницу, доводка отменяется. */
+  var alignMoved = false;
+  ['touchstart', 'wheel', 'keydown'].forEach(function (ev) {
+    window.addEventListener(ev, function () { alignMoved = true; }, { passive: true });
+  });
+  function alignCard(el, smooth) {
+    var hdr = document.querySelector('.site-header');
+    var off = (hdr ? hdr.getBoundingClientRect().height : 80) + 12;
+    function go(beh) {
+      var y = el.getBoundingClientRect().top + (window.pageYOffset || 0) - off;
+      try { window.scrollTo({ top: Math.max(0, y), behavior: beh }); } catch (e) { window.scrollTo(0, Math.max(0, y)); }
+    }
+    alignMoved = false;
+    go(smooth ? 'smooth' : 'auto');
+    [700, 1500].forEach(function (t) {
+      setTimeout(function () {
+        if (alignMoved) return;
+        if (Math.abs(el.getBoundingClientRect().top - off) > 6) go('auto');
+      }, t);
+    });
+  }
+  window.palpoAlign = alignCard;
+
   function openByHash() {
     var id = (location.hash || '').slice(1);
     if (!id) return;
     var el = document.getElementById(id);
     if (el && el.tagName === 'DETAILS') {
       el.open = true;
-      if (el.scrollIntoView) el.scrollIntoView({ block: 'start' });
+      alignCard(el, false);
     }
   }
   openByHash();
@@ -1923,7 +1948,8 @@
     el.classList.add('is-found');
     clearTimeout(foundTimer);
     foundTimer = setTimeout(function () { el.classList.remove('is-found'); }, 2400);
-    try { el.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' }); } catch (e) { el.scrollIntoView(); }
+    try { var ae = document.activeElement; if (ae && ae.tagName === 'INPUT' && ae.blur) ae.blur(); } catch (e) {}
+    if (window.palpoAlign) window.palpoAlign(el, !reduce); else el.scrollIntoView({ block: 'start' });
     try { if (history.replaceState) history.replaceState(null, '', '#' + id); } catch (e) {}
     goal(how, id);
   }
