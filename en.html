@@ -169,7 +169,7 @@
     font-size: 0.82rem; line-height: 1.5; color: var(--amber); text-align: left;
   }
   .finder-msg[hidden] { display: none; }
-  .finder-msg a { text-decoration: underline; text-underline-offset: 3px; margin-right: 4px; }
+  .finder-msg a { display: block; margin-top: 4px; text-decoration: underline; text-underline-offset: 3px; }
   .finder-chips { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 14px; }
   .finder-chip, .finder-all a {
     display: inline-block; padding: 7px 14px; border-radius: 100px;
@@ -889,20 +889,20 @@
     <div class="finder" id="finder" role="search">
       <label class="finder-label" for="finder-input">What&rsquo;s going on with your body right now?</label>
       <div class="finder-box">
-        <input id="finder-input" class="finder-input" type="text" maxlength="80" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="e.g. lost voice after video calls">
-        <button class="finder-go" id="finder-go" type="button" aria-label="Find your state">&rarr;</button>
+        <input id="finder-input" class="finder-input" type="text" maxlength="80" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="e.g. back pain">
+        <button class="finder-go" id="finder-go" type="button" aria-label="Search">&rarr;</button>
       </div>
       <p class="finder-msg" id="finder-msg" role="status" aria-live="polite" hidden></p>
       <ul class="finder-chips">
-        <li><a class="finder-chip" href="#voice">lost voice after video calls</a></li>
-        <li><a class="finder-chip" href="#jaw">clenching my jaw</a></li>
-        <li><a class="finder-chip" href="#shoulders">shoulders up to my ears</a></li>
-        <li><a class="finder-chip" href="#cold-hands">cold hands at desk</a></li>
-        <li><a class="finder-chip" href="#breathing">forgetting to breathe at desk</a></li>
-        <li><a class="finder-chip" href="#heavy-legs">heavy legs after sitting all day</a></li>
-        <li><a class="finder-chip" href="#lower-back">stiff lower back from sitting</a></li>
-        <li><a class="finder-chip" href="#mouse-hand">mouse hand pain</a></li>
-        <li class="finder-all"><a href="#atlas">see all</a></li>
+        <li><a class="finder-chip" href="#atlas" data-q="back pain">back</a></li>
+        <li><a class="finder-chip" href="#lower-back">lower back</a></li>
+        <li><a class="finder-chip" href="#shoulders">shoulders</a></li>
+        <li><a class="finder-chip" href="#shoulder-blade">between the shoulder blades</a></li>
+        <li><a class="finder-chip" href="#back-of-head">back of the head</a></li>
+        <li><a class="finder-chip" href="#heavy-legs">legs</a></li>
+        <li><a class="finder-chip" href="#mouse-hand">hand</a></li>
+        <li><a class="finder-chip" href="#jaw">jaw</a></li>
+        <li class="finder-all"><a href="#atlas">show all</a></li>
       </ul>
       <p class="finder-safe">If the pain is sharp, you feel dizzy, or it is hard to breathe even sitting &mdash; see a doctor, not this page.</p>
     </div>
@@ -927,7 +927,7 @@
         </summary>
         <div class="state-body">
 
-          <button class="st-video" type="button" data-yt="zHRqfTJ_vPU" aria-label="Show the movement, 40 seconds">
+          <button class="st-video" type="button" data-yt="K_vuy1c7Drc" aria-label="Show the movement, 40 seconds">
             <img src="atlas-alt-lower-back.jpg" alt="Rocking the pelvis while sitting on the edge of a chair" loading="lazy" onerror="this.style.display='none'">
           </button>
           <span class="st-vcap">Show the movement &middot; 40 seconds</span>
@@ -965,11 +965,6 @@
         </summary>
         <div class="state-body">
 
-          <button class="st-video" type="button" data-yt="4Avo-UjqFWc" aria-label="Show the movement, 60 seconds">
-            <img src="atlas-shoulders.jpg" alt="Palms pressing into the table, shoulders dropping" loading="lazy" onerror="this.style.display='none'">
-          </button>
-          <span class="st-vcap">Show the movement &middot; 60 seconds</span>
-
           <ol class="st-steps">
             <li>Put your palms on the table.</li>
             <li>On the exhale press the palms down — and release after four seconds.</li>
@@ -1002,11 +997,6 @@
           <span class="state-more-hint">What to do →</span>
         </summary>
         <div class="state-body">
-
-          <button class="st-video" type="button" data-yt="vx6VODRTXXc" aria-label="Show the movement, 60 seconds">
-            <img src="atlas-heavy-legs.jpg" alt="Rolling the foot from toes to heel" loading="lazy" onerror="this.style.display='none'">
-          </button>
-          <span class="st-vcap">Show the movement &middot; 60 seconds</span>
 
           <ol class="st-steps">
             <li>Curl your toes for five seconds — and release.</li>
@@ -1041,11 +1031,6 @@
         </summary>
         <div class="state-body">
 
-          <button class="st-video" type="button" data-yt="mDOX15S57v0" aria-label="Show the movement, 40 seconds">
-            <img src="atlas-alt-mouse-hand.jpg" alt="Pressing into the pad between thumb and index finger" loading="lazy" onerror="this.style.display='none'">
-          </button>
-          <span class="st-vcap">Show the movement &middot; 40 seconds</span>
-
           <ol class="st-steps">
             <li>Take the muscular pad between your thumb and index finger, using the thumb and index of the other hand.</li>
             <li>Slowly, without a jerk, sink the finger in and hold an even pressure for forty seconds, breathing calmly.</li>
@@ -1078,11 +1063,6 @@
         </summary>
         <div class="state-body">
 
-          <button class="st-video" type="button" data-yt="QuIKDpf5gY8" aria-label="Show the movement, 60 seconds">
-            <img src="atlas-shoulder-blade.jpg" alt="A ball against the wall next to the shoulder blade" loading="lazy" onerror="this.style.display='none'">
-          </button>
-          <span class="st-vcap">Show the movement &middot; 60 seconds</span>
-
           <ol class="st-steps">
             <li>Press a ball to the wall next to the sore spot — about a palm to the side, closer to the spine or higher.</li>
             <li>Look not for pain but for a response: the point where pressing echoes in that same familiar place.</li>
@@ -1109,11 +1089,6 @@
           <span class="state-more-hint">What to do →</span>
         </summary>
         <div class="state-body">
-
-          <button class="st-video" type="button" data-yt="NTmTTyGvBdo" aria-label="Show the movement, 60 seconds">
-            <img src="atlas-face-fluid.jpg" alt="Fingertips in the hollows above the collarbones" loading="lazy" onerror="this.style.display='none'">
-          </button>
-          <span class="st-vcap">Show the movement &middot; 60 seconds</span>
 
           <ol class="st-steps">
             <li>Cross your palms so that the fingertips land in the hollows above the collarbones.</li>
@@ -1146,6 +1121,11 @@
           <span class="state-more-hint">What to do →</span>
         </summary>
         <div class="state-body">
+
+          <button class="st-video" type="button" data-yt="NUhX4W20tAI" aria-label="Show the movement, 60 seconds">
+            <img src="atlas-back-of-head.jpg" alt="" loading="lazy" onerror="this.style.display='none'">
+          </button>
+          <span class="st-vcap">Show the movement &middot; 60 seconds</span>
 
           <ol class="st-steps">
             <li>Sit back against your chair. Lace your fingers under the base of your skull and let your head rest in your palms.</li>
@@ -1563,26 +1543,55 @@
     'breathing': 'Catching myself not breathing'
   };
 
-  /* [stem, weight]. '=' means whole word. Weight 2: the zone or the sensation itself; weight 1: weak hint. Needs a total of 2. */
+  /* v15.11: a person writes the place that hurts, the way they would tell a massage therapist. A named place (back, neck, shoulders, legs…) is enough to find the right note. Weak hints (tight, heavy, by evening) only help choose between two. Needs a total of 2. '=' means whole word. */
   var W = {
-    'lower-back': [['lumbar',2],['=lower',1],['=back',1],['stiff',1],['sitting',1],['=sit',1],['chair',1],['straighten',1],['desk',1]],
+    'lower-back': [['lowerback',2],['lumbar',2],['sacrum',2],['stiff',1],['sitting',1],['=sit',1],['chair',1],['straighten',1],['desk',1]],
     'shoulders': [['shoulder',2],['trapez',2],['=ears',1],['=ear',1],['creep',1],['rise',1],['rising',1],['hunch',1],['raised',1],['tension',1]],
     'heavy-legs': [['leg',2],['=feet',2],['=foot',2],['ankle',2],['calf',2],['calves',2],['shoes',2],['heavy',1],['tired',1],['swollen',1],['swell',1],['tighter',1],['evening',1],['=lead',1]],
     'face-fluid': [['face',2],['facial',2],['puffy',2],['puff',2],['eyes',1],['eyelid',1],['morning',1],['wake',1],['waking',1],['swollen',1],['heavy',1]],
-    'mouse-hand': [['mouse',2],['wrist',2],['forearm',2],['carpal',2],['pinky',1],['numb',1],['hand',1],['finger',1],['typing',1],['keyboard',1]],
-    'shoulder-blade': [['blade',2],['scapula',2],['between',1],['burning',1],['knot',1],['stabbing',1],['shoulder',1]],
-    'back-of-head': [['skull',2],['occipital',2],['head',1],['=band',1],['heavy',1],['brick',1],['evening',1],['pressure',1]],
+    'mouse-hand': [['mouse',2],['wrist',2],['forearm',2],['carpal',2],['=hand',2],['=hands',2],['=arm',2],['=arms',2],['pinky',1],['numb',1],['finger',1],['typing',1],['keyboard',1]],
+    'shoulder-blade': [['blade',2],['scapula',2],['upperback',2],['between',1],['burning',1],['knot',1],['stabbing',1],['shoulder',1]],
+    'back-of-head': [['skull',2],['backofhead',2],['occipital',2],['=head',2],['headache',2],['temple',2],['=band',1],['heavy',1],['brick',1],['evening',1],['pressure',1]],
     'voice': [['voice',2],['hoarse',2],['raspy',2],['vocal',2],['throat',1],['talking',1],['calls',1],['zoom',1],['lost',1],['gone',1],['tired',1]],
     'cold-hands': [['cold',2],['freezing',2],['icy',2],['chilly',2],['finger',1],['hand',1],['warm',1],['room',1],['typing',1]],
     'jaw': [['jaw',2],['tmj',2],['clench',2],['grind',2],['bruxism',2],['teeth',1],['tooth',1],['tight',1]],
     'breathing': [['breath',2],['inhale',2],['exhale',2],['diaphragm',2],['=air',1],['deep',1],['shallow',1],['forgetting',1],['hold',1]],
     'neck': [['neck',2],['cervical',2],['posture',1],['stiff',1],['=turn',1],['=rock',1],['tech',1],['forward',1]]
   };
-
-  var ALARM = /(chest pain|heart attack|heart|faint|passed out|stroke|bleeding|blood|cant breathe|cannot breathe|choking|numb(ness)? (in )?(face|arm|leg)|weakness (in )?(arm|leg|face))/;
+  /* Typo repair: a word one letter off one of these becomes it ("shouler", "lumbr"). */
+  var VOCAB = ['shoulder','shoulders','lumbar','wrist','blade','blades','sitting','breathing','clenching','tension','muscle','headache','forearm','hurts','aching','knees','elbow'];
+  /* First, what is not for a minute at the desk: the first rule, before any matching. */
+  var ALARM_A = /(chest pain|pain in (my |the )?chest|chest pressure|pressure in (my |the )?chest|chest hurts|heart|faint|passed out|stroke|bleeding|blood|cant breathe|cannot breathe|hard to breathe|trouble breathing|difficulty breathing|choking|weakness (in )?(arm|leg|face)|numb(ness)? (in |on )?(my |the )?(face|half|whole))/;
+  var ALARM_B = /(herniat|slipped disc|bulging disc|sciatica|pinched nerve|shooting pain|radiating|dizz|injur|fractur|broke|accident|fell\b|fever|lump|tumou?r|numb(ness)? (in |on )?(my |the )?(arm|leg|foot|side)|pain (down|into|in) (my |the )?(arm|leg))/;
+  var NAV = /\b(minsk|book|booking|appointment|price|prices|pricing|cost|costs|how much|address|phone|contact|home visit|house call)\b/;
+  var NAV_PAGE = { href: '/minsk.html', label: 'Cabinet and visits · Minsk →' };
+  var FILLER = /^(my|the|very|really|again|still|some|just|here|there|now|this|that|too|also)$/;
+  var PAINW = /^(hurt|pain|ache|sore|aching|throb|stiff)/;
 
   function norm(s) {
-    return String(s || '').toLowerCase().replace(/['\u2019]/g, '').replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').replace(/^ | $/g, '');
+    return String(s || '').toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').replace(/^ | $/g, '');
+  }
+  function near(a, b) {
+    var la = a.length, lb = b.length, i = 0;
+    if (a === b) return true;
+    if (Math.abs(la - lb) > 1) return false;
+    while (i < la && i < lb && a.charAt(i) === b.charAt(i)) i++;
+    if (la === lb) {
+      return a.slice(i + 1) === b.slice(i + 1) ||
+        (a.charAt(i) === b.charAt(i + 1) && a.charAt(i + 1) === b.charAt(i) && a.slice(i + 2) === b.slice(i + 2));
+    }
+    return la > lb ? a.slice(i + 1) === b.slice(i) : b.slice(i + 1) === a.slice(i);
+  }
+  function fix(tokens) {
+    var out = [], i, j, t, r;
+    for (i = 0; i < tokens.length; i++) {
+      t = tokens[i]; r = t;
+      if (t.length >= 5) {
+        for (j = 0; j < VOCAB.length; j++) { if (t === VOCAB[j]) { r = t; break; } if (near(t, VOCAB[j])) { r = VOCAB[j]; break; } }
+      }
+      out.push(r);
+    }
+    return out;
   }
   function score(tokens, list) {
     var sum = 0, i, j, st, ex, hit;
@@ -1597,6 +1606,10 @@
     }
     return sum;
   }
+  function has(tokens, re) {
+    for (var i = 0; i < tokens.length; i++) if (re.test(tokens[i])) return true;
+    return false;
+  }
   function goal(name, id) {
     try {
       if (typeof window.ym === 'function') {
@@ -1606,19 +1619,26 @@
     } catch (e) {}
   }
   function clearMsg() { msg.hidden = true; msg.innerHTML = ''; }
-  function say(text, ids) {
+  function say(text, ids, extra) {
     msg.innerHTML = '';
     var t = document.createElement('span');
-    t.textContent = text + (ids && ids.length ? ' ' : '');
+    t.textContent = text + ((ids && ids.length) || extra ? ' ' : '');
     msg.appendChild(t);
+    var i, a;
     if (ids) {
-      for (var i = 0; i < ids.length; i++) {
-        var a = document.createElement('a');
+      for (i = 0; i < ids.length; i++) {
+        a = document.createElement('a');
         a.href = '#' + ids[i];
         a.setAttribute('data-finder', ids[i]);
-        a.textContent = '\u201c' + NAMES[ids[i]] + '\u201d';
+        a.textContent = '“' + NAMES[ids[i]] + '”';
         msg.appendChild(a);
       }
+    }
+    if (extra) {
+      a = document.createElement('a');
+      a.href = extra.href;
+      a.textContent = extra.label;
+      msg.appendChild(a);
     }
     msg.hidden = false;
   }
@@ -1638,41 +1658,66 @@
     try { if (history.replaceState) history.replaceState(null, '', '#' + id); } catch (e) {}
     goal(how, id);
   }
+  function miss(text) {
+    say(text, null, { href: '#atlas', label: 'show all' });
+    goal('finder_miss');
+  }
   function search() {
-    var q = norm(input.value);
+    var q = norm(input.value)
+      .replace(/\bback of (my |the |your )?head\b/g, 'backofhead')
+      .replace(/\bback of (my |the |your )?neck\b/g, 'neck')
+      .replace(/\b(lower|low) back\b/g, 'lowerback')
+      .replace(/\bbottom of (my |the )?back\b/g, 'lowerback')
+      .replace(/\b(upper|mid|middle) back\b/g, 'upperback');
     if (!q) { input.focus(); return; }
-    if (ALARM.test(q)) {
+    if (ALARM_A.test(q)) {
       say('This is not for a minute at the desk. If you have chest pain, fainting, sudden weakness, or trouble breathing even while sitting, see a doctor or call an ambulance.');
       goal('finder_alarm');
       return;
     }
-    var tokens = q.split(' '), best = 0, ids = [], k, s;
-    for (k in W) {
-      if (!W.hasOwnProperty(k)) continue;
-      s = score(tokens, W[k]);
+    if (ALARM_B.test(q)) {
+      say('A minute at the desk will not help with this. It is a question for a doctor.', null, { href: '#atlas', label: 'show all' });
+      goal('finder_alarm');
+      return;
+    }
+    if (NAV.test(q)) {
+      say('Massage visits, prices and how to reach me are on a separate page (it is in Russian):', null, NAV_PAGE);
+      goal('finder_nav');
+      return;
+    }
+    var tokens = fix(q.split(' ')), best = 0, ids = [], sc = {}, k, s, back = has(tokens, /^back$/);
+    for (k in W) if (W.hasOwnProperty(k)) sc[k] = score(tokens, W[k]);
+    for (k in sc) {
+      if (!sc.hasOwnProperty(k)) continue;
+      s = sc[k];
       if (s > best) { best = s; ids = [k]; } else if (s === best && s > 0) { ids.push(k); }
     }
     if (best < 2) {
-      say('Nothing like that here yet. Everything we have is below:', null);
-      var a = document.createElement('a');
-      a.href = '#atlas'; a.textContent = 'see all';
-      msg.appendChild(document.createTextNode(' ')); msg.appendChild(a);
-      goal('finder_miss');
-      return;
-    }
-    if (ids.length === 1) {
-      if (ids[0] === 'neck') {
-        say('There is no separate card for the neck yet. Close by:', ['shoulders', 'back-of-head']);
-        goal('finder_miss');
+      if (back) { say('I have two separate notes about the back. Where exactly?', ['lower-back', 'shoulder-blade']); goal('finder_hub'); return; }
+      var only = true, i, t, meaningful = 0;
+      for (i = 0; i < tokens.length; i++) {
+        t = tokens[i];
+        if (t.length <= 2 || FILLER.test(t)) continue;
+        meaningful++;
+        if (!PAINW.test(t)) only = false;
+      }
+      if (only && meaningful && !has(tokens, /^(everything|everywhere|all)$/)) {
+        say('Where exactly does it hurt? Type a place — for example lower back, shoulders or legs — or pick one below.');
+        goal('finder_ask');
         return;
       }
-      openState(ids[0], 'finder_search');
+      miss('I haven’t written about that yet. Everything I have is below:');
       return;
     }
     var shown = [];
     for (k = 0; k < ids.length && shown.length < 3; k++) if (ids[k] !== 'neck') shown.push(ids[k]);
-    if (!shown.length) { say('There is no separate card for the neck yet. Close by:', ['shoulders', 'back-of-head']); goal('finder_miss'); return; }
-    say('Could be one of these:', shown);
+    if (!shown.length) {
+      say('I don’t have a separate note about the neck yet. Closest to it:', ['shoulders', 'back-of-head']);
+      goal('finder_miss', 'neck');
+      return;
+    }
+    if (shown.length === 1) { openState(shown[0], 'finder_search'); return; }
+    say('Could be one of these notes:', shown);
   }
 
   box.classList.add('is-live');
@@ -1682,12 +1727,14 @@
   box.addEventListener('click', function (e) {
     var a = e.target.closest ? e.target.closest('a[href^="#"]') : null;
     if (!a) return;
+    var q = a.getAttribute('data-q');
+    if (q) { e.preventDefault(); input.value = q; search(); return; }
     var id = a.getAttribute('data-finder') || (a.getAttribute('href') || '').slice(1);
     if (NAMES[id]) { e.preventDefault(); openState(id, 'finder_pick'); }
   });
 
   /* live phrases typed into the field until the person starts typing */
-  var phrases = ['lost voice after video calls', 'clenching my jaw', 'shoulders up to my ears', 'cold hands at desk', 'forgetting to breathe at desk', 'burning spot between shoulder blades'];
+  var phrases = ['back pain', 'between the shoulder blades', 'shoulders up to my ears', 'lower back hurts', 'legs heavy by evening', 'pressure at the back of my head'];
   if (reduce) return;
   var pi = 0, ci = 0, erasing = false, rounds = 0, stopped = false;
   function stop() { stopped = true; input.placeholder = 'e.g. ' + phrases[0]; }
