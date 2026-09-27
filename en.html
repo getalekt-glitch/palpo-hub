@@ -143,8 +143,9 @@
     display: block; font-family: 'Cormorant Garamond', serif; font-size: clamp(1.2rem, 4.2vw, 1.55rem);
     color: var(--bg); margin-bottom: 10px;
   }
-  .finder-box { display: none; position: relative; }
-  .finder.is-live .finder-box { display: block; }
+  .finder-box { position: relative; }
+  /* v17.25: место под поле держится с первого кадра, чтобы страница не прыгала, когда поле оживает */
+  .finder:not(.is-live) .finder-box { visibility: hidden; }
   .finder-input {
     width: 100%; padding: 15px 60px 15px 22px; border-radius: 100px;
     border: 1px solid var(--linen); background: rgba(251,249,245,0.96); color: var(--amber);

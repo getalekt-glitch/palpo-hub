@@ -11,7 +11,8 @@
 <link rel="alternate" hreflang="x-default" href="https://palpo.org/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="hero-listen.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="hero-listen.jpg" fetchpriority="high" media="(min-width: 721px)">
+<link rel="preload" as="image" href="hero-listen-tall.jpg" fetchpriority="high" media="(max-width: 720px)">
 <meta property="og:site_name" content="Руки массажиста">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:locale:alternate" content="en_US">
@@ -188,8 +189,9 @@
     color: var(--amber); margin-bottom: 10px;
     text-shadow: 0 1px 12px rgba(251,249,245,0.95), 0 0 26px rgba(251,249,245,0.75);
   }
-  .finder-box { display: none; position: relative; }
-  .finder.is-live .finder-box { display: block; }
+  .finder-box { position: relative; }
+  /* v17.25: место под поле держится с первого кадра, чтобы страница не прыгала, когда поле оживает */
+  .finder:not(.is-live) .finder-box { visibility: hidden; }
   .finder-input {
     width: 100%; padding: 15px 60px 15px 22px; border-radius: 100px;
     border: 1px solid var(--linen); background: rgba(251,249,245,0.96); color: var(--amber);
