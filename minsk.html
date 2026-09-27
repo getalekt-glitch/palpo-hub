@@ -297,6 +297,12 @@
   footer a:hover { border-color: var(--taupe); }
 
   /* ── липкая панель на телефоне ───────────── */
+  /* v2.4: как проходит выезд */
+  .how-steps { list-style: none; margin: 0; padding: 0; counter-reset: s; }
+  .how-steps li { counter-increment: s; position: relative; padding: 10px 0 10px 44px; border-bottom: 1px solid var(--linen); }
+  .how-steps li:last-child { border-bottom: 0; }
+  .how-steps li::before { content: counter(s); position: absolute; left: 0; top: 9px; width: 28px; height: 28px; border-radius: 50%;
+    background: var(--beige, #DBC38E); color: var(--amber); font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; justify-content: center; }
   .sticky { display: none; }
   @media (max-width: 640px) {
     body { padding-bottom: 74px; }
@@ -402,6 +408,16 @@
   </div>
   <p class="byline">Алексей Гордиенко · массажист · практика с 2006 года</p>
 </header>
+
+<section class="how">
+  <h2>Как проходит выезд</h2>
+  <ol class="how-steps">
+    <li>Звоните или пишете — в Telegram, Viber или по телефону.</li>
+    <li>Договариваемся о дне, времени и адресе. Цену называю сразу.</li>
+    <li>Приезжаю со своим столом, ставлю его за пять–десять минут.</li>
+    <li>После сеанса — чек через «Профдоход».</li>
+  </ol>
+</section>
 
 <section>
   <ul class="statements">
