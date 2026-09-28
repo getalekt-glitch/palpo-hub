@@ -191,7 +191,6 @@
   }
   .finder-box { position: relative; }
   /* v17.25: место под поле держится с первого кадра, чтобы страница не прыгала, когда поле оживает */
-  .finder:not(.is-live) .finder-box { visibility: hidden; }
   .finder-input {
     width: 100%; padding: 15px 60px 15px 22px; border-radius: 100px;
     border: 1px solid var(--linen); background: rgba(251,249,245,0.96); color: var(--amber);
@@ -588,6 +587,15 @@
   .cal-files a span { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--taupe); white-space: nowrap; }
   .cal-files a:hover { color: var(--taupe); }
   .cal-note { margin-top: 18px; font-size: 0.78rem; color: var(--taupe); }
+
+  /* v17.26: открытки под календарём */
+  .cards-strip { margin-top: 48px; text-align: center; }
+  .cards-strip h3 { font-weight: 400; font-size: clamp(1.5rem,3.4vw,2rem); margin-bottom: 16px; }
+  .cards-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  @media (min-width: 821px) { .cards-row { grid-template-columns: repeat(6, 1fr); } }
+  .cardlink { display: block; border-radius: 10px; overflow: hidden; background: var(--wall); box-shadow: 0 8px 20px -14px rgba(63,44,21,.45); }
+  .cardlink img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; }
+  .cards-all { margin-top: 20px; }
 
 </style>
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
@@ -1015,7 +1023,7 @@
       <a href="#calendar">Обои</a>
       <a href="#u-stola">Со стороны стола</a>
       <a href="#polka">Чем работаю</a>
-      <a href="#humor">Смешное</a>
+      <a href="/humor.html">Смешное</a>
       <a href="#faq">Вопросы</a>
       <a href="#atmosphere">Атмосфера</a>
       <a href="/minsk.html">Минск</a>
@@ -1535,6 +1543,19 @@
         <p class="cal-note">Следующий месяц появляется здесь заранее.</p>
       </div>
     </div>
+
+    <div class="cards-strip reveal">
+      <h3 class="serif">Открытки и мемы</h3>
+      <div class="cards-row">
+        <a href="humor.html#otkrytka-den-rozhdeniya-ded-dohrenaletie" class="cardlink"><img src="humor/otkrytka-den-rozhdeniya-ded-dohrenaletie-480.webp" alt="Дед в кресле: С днём твоего дохреналетия" loading="lazy" decoding="async" width="480" height="720"></a>
+        <a href="humor.html#mem-kot-luchshiy-massazh-v-zhizni" class="cardlink"><img src="humor/mem-kot-luchshiy-massazh-v-zhizni-480.webp" alt="Кот на массажном столе: как получить лучший массаж в жизни" loading="lazy" decoding="async" width="480" height="720"></a>
+        <a href="humor.html#otkrytka-den-rozhdeniya-fenek-poyasnitsa" class="cardlink"><img src="humor/otkrytka-den-rozhdeniya-fenek-poyasnitsa-480.webp" alt="Фенек: поясница выходит из чата, потому что ты чихнул" loading="lazy" decoding="async" width="480" height="720"></a>
+        <a href="humor.html#otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat" class="cardlink"><img src="humor/otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat-480.webp" alt="Волк: клуб «Я ещё лягу в десять»" loading="lazy" decoding="async" width="480" height="720"></a>
+        <a href="humor.html#otkrytka-dlya-dvoih-s-tebya-ustalost" class="cardlink"><img src="humor/otkrytka-dlya-dvoih-s-tebya-ustalost-480.webp" alt="Записка: с тебя — усталость, с меня — массаж" loading="lazy" decoding="async" width="480" height="720"></a>
+        <a href="humor.html#mem-akciya-kupi-tretiy" class="cardlink"><img src="humor/mem-akciya-kupi-tretiy-480.webp" alt="Акция: купи два массажа и третий тоже купи" loading="lazy" decoding="async" width="480" height="720"></a>
+      </div>
+      <a class="btn cards-all" href="humor.html">Все открытки и мемы →</a>
+    </div>
   </div>
 </section>
 
@@ -1613,7 +1634,7 @@
     </div>
     <div class="modules-row reveal">
       <a class="btn" href="polka.html">Чем работаю →</a>
-      <a class="btn" href="humor.html">Смешное из кабинета →</a>
+      <a class="btn" href="humor.html">Открытки и мемы →</a>
       <a class="btn" href="biomechanics.html">О чём этот проект →</a>
     </div>
   </div>
@@ -1713,6 +1734,7 @@
   <a class="btn" href="https://t.me/aleksei_massage_minsk" target="_blank" rel="noreferrer">Контакты</a>
   <span class="footer-note">личный контакт · не канал</span>
   <a class="footer-geo" href="/minsk.html">Кабинет и выезд · Минск</a>
+  <a class="footer-geo" href="/humor.html">Открытки и мемы</a>
   <div class="footer-links">
     <a href="https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/" target="_blank" rel="noreferrer">Pinterest</a>
     <a href="https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN" target="_blank" rel="noreferrer">Lighthouse · музыка</a>
@@ -1815,6 +1837,7 @@
     else if (h.indexOf('t.me/') > -1 || h.indexOf('telegram.me/') > -1) goal('tg_click');
     else if (h.indexOf('youtube.com') > -1 || h.indexOf('youtu.be') > -1) goal('yt_click');
     else if (h.indexOf('.png') > -1) goal('calendar_download');
+    else if (h.indexOf('humor.html') > -1) goal('calendar_to_humor');
   }, true);
   for (var v = 0; v < vids.length; v++) {
     vids[v].addEventListener('click', function () { goal('video_play'); }, true);
