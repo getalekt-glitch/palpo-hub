@@ -367,6 +367,34 @@
     display: inline-block; padding: 4px 0; color: var(--amber);
     text-decoration: underline; text-underline-offset: 3px;
   }
+
+  /* v2.6: как это выглядит — лента фото и ролик */
+  .look { padding-bottom: 56px; }
+  .look-strip {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; list-style: none; margin: 0; padding: 0;
+  }
+  .look-strip li:first-child { grid-column: 1 / -1; }
+  .look-strip figure { margin: 0; }
+  .look-strip img {
+    display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover;
+    border-radius: 14px; background: var(--wall); border: 1px solid var(--wall);
+  }
+  .look-strip figcaption, .look-video figcaption { margin-top: 7px; font-size: 0.8rem; line-height: 1.4; color: var(--taupe); }
+  .look-hint { display: none; margin-top: 8px; font-size: 0.76rem; color: var(--taupe); }
+  @media (max-width: 640px) {
+    .look-strip {
+      display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px;
+      margin: 0 -24px; padding: 0 24px 6px; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+    }
+    .look-strip::-webkit-scrollbar { display: none; }
+    .look-strip li { flex: 0 0 84%; scroll-snap-align: center; }
+    .look-hint { display: block; }
+  }
+  .look-video { margin: 26px 0 0; }
+  .look-video video {
+    display: block; width: 100%; aspect-ratio: 4 / 3; border-radius: 14px;
+    background: var(--wall); border: 1px solid var(--wall);
+  }
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -428,6 +456,26 @@
   <p>От вас не нужно ничего. Убирать перед моим приходом не нужно, угощать тоже. Нужно только место, где встанет стол.</p>
   <p>Выезд по Минску и Колодищам входит в стоимость. За дорогу отдельно платить не нужно.</p>
   <p>Ближайший пригород — тоже: Новая Боровая, Юхновка, Сухорукие и соседние посёлки. Если вашего адреса в списке нет, просто спросите.</p>
+</section>
+
+<section class="look" aria-labelledby="look-h">
+  <h2 id="look-h">Как это выглядит</h2>
+  <ul class="look-strip">
+    <li><figure><img src="minsk-vyezd-svisloch.jpg" alt="Массажный стол у окна в минской квартире, зима" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Стол встаёт в обычной комнате</figcaption></figure></li>
+    <li><figure><img src="minsk-vyezd-gostinaya.jpg" alt="Складной массажный стол в гостиной между диваном и шкафом" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Обычно место находится</figcaption></figure></li>
+    <li><figure><img src="minsk-stol-so-mnoy.jpg" alt="Складной стол у окна, сумка и флакон масла на стуле" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Приезжаю со своим столом</figcaption></figure></li>
+    <li><figure><img src="minsk-stopy.jpg" alt="Руки массажиста держат стопу человека под льняной простынёй" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Стопы</figcaption></figure></li>
+    <li><figure><img src="minsk-nogi.jpg" alt="Руки массажиста на бедре лежащего человека" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Ноги</figcaption></figure></li>
+    <li><figure><img src="minsk-bambuk.jpg" alt="Бамбуковые палки, ребристый ролик и флакон масла на табурете" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Бамбуковые палки — в коррекции фигуры</figcaption></figure></li>
+    <li><figure><img src="minsk-sheya.jpg" alt="Руки массажиста на шее и плече лежащего человека" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Шея и трапеции</figcaption></figure></li>
+  </ul>
+  <span class="look-hint">Листайте вбок →</span>
+  <figure class="look-video">
+    <video controls muted playsinline preload="none" poster="minsk-sheya-poster.jpg" aria-label="Шея и трапеции, 16 секунд">
+      <source src="minsk-sheya-trapetsii.mp4" type="video/mp4">
+    </video>
+    <figcaption>Шея и трапеции · 16 секунд</figcaption>
+  </figure>
 </section>
 
 <div class="band">
