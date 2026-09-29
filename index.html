@@ -68,7 +68,7 @@
     position: absolute; left: -9999px; top: 0; z-index: 120;
     background: var(--amber); color: var(--bg);
     padding: 12px 20px; border-radius: 0 0 12px 0;
-    font-size: 0.8rem; letter-spacing: 0.08em;
+    font-size: 0.875rem; letter-spacing: 0.08em;
   }
   .skip-link:focus { left: 0; }
 
@@ -84,7 +84,7 @@
     padding-top: 16px; padding-bottom: 16px; gap: 20px;
   }
   .brand { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; letter-spacing: 0.12em; text-transform: uppercase; flex-shrink: 0; }
-  .nav-links { display: flex; gap: 22px; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
+  .nav-links { display: flex; gap: 22px; font-size: 0.875rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
   .nav-links a { position: relative; padding: 6px 0; white-space: nowrap; }
   .nav-links a::after {
     content: ''; position: absolute; left: 0; right: 100%; bottom: 0;
@@ -92,7 +92,7 @@
   }
   .nav-links a:hover::after { right: 0; }
   .lang-toggle {
-    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.08em;
+    font-size: 0.875rem; font-weight: 500; letter-spacing: 0.08em;
     border: 1px solid var(--amber); border-radius: 100px; padding: 7px 14px;
     color: var(--amber); flex-shrink: 0;
   }
@@ -101,7 +101,7 @@
     .brand { flex: 1 1 auto; font-size: 1rem; }
     .lang-toggle { order: 2; }
     .nav-links {
-      order: 3; flex: 1 0 100%; gap: 18px; font-size: 0.7rem;
+      order: 3; flex: 1 0 100%; gap: 18px; font-size: 0.875rem;
       overflow-x: auto; -webkit-overflow-scrolling: touch;
       scrollbar-width: none; padding-bottom: 2px;
       -webkit-mask-image: linear-gradient(90deg, #000 0, #000 92%, transparent 100%);
@@ -133,7 +133,7 @@
     .hero { background-image: linear-gradient(180deg, rgba(251,249,245,0.05) 0%, rgba(251,249,245,0.09) 44%, rgba(245,238,227,0.56) 100%), url('hero-listen-tall.jpg'); background-position: center 30%; min-height: 76vh; }
   }
   .eyebrow {
-    display: block; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase;
+    display: block; font-size: 0.875rem; letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--taupe); margin-bottom: 18px;
   }
   h1.hero-title {
@@ -157,13 +157,13 @@
   .hero-take {
     display: inline-flex; align-items: center; gap: 10px; margin-top: 30px;
     padding: 15px 30px; background: var(--amber); color: var(--bg); border-radius: 100px;
-    font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.14em;
+    font-family: 'Inter', sans-serif; font-size: 0.875rem; letter-spacing: 0.14em;
     text-transform: uppercase; transition: opacity 0.2s ease, transform 0.15s ease;
   }
   .hero-take:hover { opacity: 0.88; }
   .hero-take:active { transform: scale(0.98); }
   .hero-take-note {
-    display: block; margin-top: 14px; font-size: 0.74rem; letter-spacing: 0.04em; color: var(--amber);
+    display: block; margin-top: 14px; font-size: 0.875rem; letter-spacing: 0.04em; color: var(--amber);
     text-shadow: 0 1px 10px rgba(251,249,245,0.95), 0 0 20px rgba(251,249,245,0.8);
   }
   .hero-take-note a {
@@ -177,7 +177,7 @@
   .entry-lang[hidden] { display: none !important; }
   .entry-lang {
     display: inline-block; margin-top: 26px; padding: 6px 4px;
-    font-size: 0.76rem; letter-spacing: 0.04em; color: var(--taupe);
+    font-size: 0.875rem; letter-spacing: 0.04em; color: var(--taupe);
     text-decoration: underline; text-underline-offset: 3px;
   }
   @media (prefers-reduced-motion: reduce) { .hero-take { transition: none !important; } }
@@ -212,7 +212,7 @@
   .finder-msg {
     margin: 12px auto 0; padding: 10px 16px; max-width: 48ch; border-radius: 14px;
     background: rgba(251,249,245,0.96); border: 1px solid var(--linen);
-    font-size: 0.82rem; line-height: 1.5; color: var(--amber);
+    font-size: 0.875rem; line-height: 1.5; color: var(--amber);
   }
   .finder-msg[hidden] { display: none; }
   .finder-msg a { display: block; margin-top: 4px; text-decoration: underline; text-underline-offset: 3px; }
@@ -220,20 +220,20 @@
   .finder-chip, .finder-all a {
     display: inline-block; padding: 7px 14px; border-radius: 100px;
     background: rgba(251,249,245,0.94); border: 1px solid var(--linen); color: var(--amber);
-    font-size: 0.8rem; line-height: 1.3; letter-spacing: 0.01em;
+    font-size: 0.875rem; line-height: 1.3; letter-spacing: 0.01em;
     transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
   }
   .finder-chip:hover, .finder-all a:hover { background: var(--bg-alt); border-color: var(--taupe); }
   .finder-chip:active, .finder-all a:active { transform: scale(0.97); }
   .finder-all a { background: transparent; border-style: dashed; color: var(--taupe); }
   /* v17.24: тихий вход к записи сразу под окном */
-  .finder-geo { margin-top: 10px; font-size: 0.78rem; letter-spacing: 0.04em; }
+  .finder-geo { margin-top: 10px; font-size: 0.875rem; letter-spacing: 0.04em; }
   .finder-geo a { display: inline-block; padding: 6px 4px; color: var(--amber); text-decoration: underline; text-underline-offset: 3px;
     text-shadow: 0 1px 10px rgba(251,249,245,0.95), 0 0 20px rgba(251,249,245,0.8); }
   /* v17.24: подзаголовок на телефоне плотнее к фону */
   @media (max-width: 720px) { .hero-title-2 { text-shadow: 0 0 14px rgba(251,249,245,1), 0 0 30px rgba(251,249,245,0.95), 0 0 48px rgba(251,249,245,0.8); } }
   .finder-safe {
-    margin-top: 14px; font-size: 0.74rem; line-height: 1.5; color: var(--amber);
+    margin-top: 14px; font-size: 0.875rem; line-height: 1.5; color: var(--amber);
     text-shadow: 0 1px 10px rgba(251,249,245,0.95), 0 0 20px rgba(251,249,245,0.8);
   }
   @media (max-width: 720px) {
@@ -279,7 +279,7 @@
   .state-name {
     font-family: 'Cormorant Garamond', serif; font-size: 1.24rem; line-height: 1.3; color: var(--amber);
   }
-  .state-hint { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--taupe); }
+  .state-hint { font-size: 0.875rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--taupe); }
   details.state[open] > summary { border-bottom: 1px solid var(--wall); }
   .state-body { padding: 20px 24px 24px; }
   .state-body p { font-size: 0.9rem; color: #4a3f30; margin-bottom: 12px; }
@@ -290,18 +290,18 @@
   }
   .state-do b { font-weight: 500; }
   .state-limit {
-    font-size: 0.82rem; color: var(--taupe); border-left: 2px solid var(--linen);
+    font-size: 0.875rem; color: var(--taupe); border-left: 2px solid var(--linen);
     padding-left: 12px; margin: 18px 0 12px;
   }
-  .state-src { font-size: 0.72rem; letter-spacing: 0.06em; color: var(--taupe); }
+  .state-src { font-size: 0.875rem; letter-spacing: 0.06em; color: var(--taupe); }
   .state-src a { text-decoration: underline; text-underline-offset: 3px; }
   .state-gate {
     display: block; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--wall);
-    font-size: 0.78rem; color: var(--amber);
+    font-size: 0.875rem; color: var(--amber);
   }
   .state-gate a { text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
 
-  .atlas-miss { text-align: center; margin-top: 28px; font-size: 0.84rem; color: var(--taupe); }
+  .atlas-miss { text-align: center; margin-top: 28px; font-size: 0.875rem; color: var(--taupe); }
   .atlas-miss a { display: inline-block; padding: 6px 2px; text-decoration: underline; text-underline-offset: 3px; }
 
   /* KTO ETO */
@@ -316,7 +316,7 @@
     font-size: clamp(1.2rem, 2.4vw, 1.5rem); line-height: 1.65; color: var(--amber);
     max-width: 680px; margin: 0 auto;
   }
-  .kto-eto-geo { margin-top: 28px; font-size: 0.84rem; }
+  .kto-eto-geo { margin-top: 28px; font-size: 0.875rem; }
   .kto-eto-geo a {
     display: inline-block; padding: 8px 4px; color: var(--taupe);
     text-decoration: underline; text-underline-offset: 4px;
@@ -330,7 +330,7 @@
   }
   .u-stola-head { text-align: center; max-width: 640px; margin: 0 auto 56px; }
   .u-stola-eyebrow {
-    display: block; font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase;
+    display: block; font-size: 0.875rem; letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--beige); margin-bottom: 14px;
   }
   .u-stola-head h2 { font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(1.8rem, 4vw, 2.6rem); }
@@ -345,7 +345,7 @@
   .card blockquote { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; line-height: 1.55; }
   .card-read {
     display: flex; align-items: center; gap: 8px; margin-top: 18px; padding-top: 16px;
-    padding-bottom: 6px; border-top: 1px solid var(--wall); font-size: 0.72rem; font-weight: 500;
+    padding-bottom: 6px; border-top: 1px solid var(--wall); font-size: 0.875rem; font-weight: 500;
     letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber);
   }
 
@@ -357,7 +357,7 @@
   .btn {
     display: inline-flex; align-items: center; gap: 10px; padding: 14px 28px;
     background: var(--amber); color: var(--bg); border-radius: 100px;
-    font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; transition: opacity 0.2s;
+    font-size: 0.875rem; letter-spacing: 0.14em; text-transform: uppercase; transition: opacity 0.2s;
   }
   .btn:hover { opacity: 0.85; }
 
@@ -365,7 +365,7 @@
   section.polka { background: var(--bg-alt); border-top: 1px solid var(--wall); border-bottom: 1px solid var(--wall); padding: 96px 0; }
   .polka-head { text-align: center; max-width: 560px; margin: 0 auto 56px; }
   .section-eyebrow {
-    display: block; font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+    display: block; font-size: 0.875rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--taupe); margin-bottom: 14px;
   }
   .polka-items { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -380,7 +380,7 @@
   .polka-item blockquote { font-family: 'Cormorant Garamond', serif; font-size: 1.02rem; line-height: 1.5; color: var(--amber); }
   .polka-read {
     display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; padding-block: 6px;
-    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber);
+    font-size: 0.875rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber);
   }
 
   /* MODULES */
@@ -398,7 +398,7 @@
   section.faq { padding: 96px 0; }
   .faq-head { text-align: center; margin-bottom: 48px; }
   h2.faq-title {
-    font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
+    font-size: 0.875rem; letter-spacing: 0.2em; text-transform: uppercase;
     color: var(--taupe); font-weight: 500; font-family: 'Inter', sans-serif;
   }
   .faq-list { max-width: 720px; margin: 0 auto; }
@@ -417,7 +417,7 @@
   section.atmosphere { padding: 100px 0 0; }
   .atmosphere-head { text-align: center; max-width: 600px; margin: 0 auto 48px; padding: 0 24px; }
   h2.atmosphere-title {
-    font-size: 0.75rem; letter-spacing: 0.22em; text-transform: uppercase;
+    font-size: 0.875rem; letter-spacing: 0.22em; text-transform: uppercase;
     color: var(--taupe); font-weight: 500; font-family: 'Inter', sans-serif;
   }
   .atmosphere-quote {
@@ -426,7 +426,7 @@
   }
   .atmosphere-read {
     display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; padding-block: 6px;
-    font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber);
+    font-size: 0.875rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber);
   }
   .atmosphere-scroll {
     display: flex; overflow-x: auto; scroll-snap-type: x mandatory;
@@ -447,18 +447,18 @@
   }
   .footer-geo {
     display: inline-block; padding: 6px 4px;
-    font-size: 0.78rem; letter-spacing: 0.04em; color: var(--taupe);
+    font-size: 0.875rem; letter-spacing: 0.04em; color: var(--taupe);
     text-decoration: underline; text-underline-offset: 3px;
   }
-  .footer-copy { font-size: 0.7rem; letter-spacing: 0.08em; color: var(--taupe); text-align: center; }
+  .footer-copy { font-size: 0.875rem; letter-spacing: 0.08em; color: var(--taupe); text-align: center; }
   .footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; letter-spacing: 0.04em; color: var(--amber); }
   .footer-links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
   .footer-links a {
     display: inline-block; padding: 6px 2px;
-    font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+    font-size: 0.875rem; letter-spacing: 0.08em; text-transform: uppercase;
     color: var(--taupe); text-decoration: underline; text-underline-offset: 3px;
   }
-  .footer-note { font-size: 0.72rem; letter-spacing: 0.04em; color: var(--taupe); }
+  .footer-note { font-size: 0.875rem; letter-spacing: 0.04em; color: var(--taupe); }
 
   /* REVEAL — только ниже первых двух экранов */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -484,7 +484,7 @@
   .st-video iframe { width: 100%; height: 100%; border: 0; display: block; }
   .st-video.is-live::before, .st-video.is-live::after { display: none; }
   .st-vcap {
-    display: block; text-align: center; font-size: 0.75rem; letter-spacing: 0.14em;
+    display: block; text-align: center; font-size: 0.875rem; letter-spacing: 0.14em;
     text-transform: uppercase; color: var(--taupe); margin-top: 8px;
   }
   /* ===== v17: шаги ===== */
@@ -497,25 +497,25 @@
     counter-increment: s; content: counter(s);
     position: absolute; left: 0; top: 1px; width: 20px; height: 20px; border-radius: 50%;
     background: var(--beige); color: #241605;
-    font-size: 0.7rem; font-weight: 500; line-height: 20px; text-align: center;
+    font-size: 0.875rem; font-weight: 500; line-height: 20px; text-align: center;
   }
   /* ===== v17: кнопка на конкретный пост ===== */
   .st-post {
     display: block; margin-top: 18px; padding: 14px 16px;
     background: var(--amber); color: var(--bg); border-radius: 12px;
-    font-size: 0.86rem; line-height: 1.4; transition: opacity 0.2s;
+    font-size: 0.875rem; line-height: 1.4; transition: opacity 0.2s;
   }
   .st-post:hover { opacity: 0.9; }
   .st-post b { display: block; font-weight: 500; margin-bottom: 3px; }
   .st-post span {
-    display: block; font-size: 0.7rem; letter-spacing: 0.12em;
+    display: block; font-size: 0.875rem; letter-spacing: 0.12em;
     text-transform: uppercase; opacity: 0.8; margin-top: 6px;
   }
   /* ===== v17: второй взгляд ===== */
   .st-more { margin-top: 14px; }
   .st-more > summary {
     cursor: pointer; list-style: none; padding: 6px 0;
-    font-size: 0.8rem; letter-spacing: 0.04em; color: var(--taupe);
+    font-size: 0.875rem; letter-spacing: 0.04em; color: var(--taupe);
     text-decoration: underline; text-underline-offset: 3px;
   }
   .st-more > summary::-webkit-details-marker { display: none; }
@@ -523,9 +523,9 @@
   /* ===== v17: правовой низ ===== */
   .st-foot {
     margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--wall);
-    font-size: 0.78rem; line-height: 1.45; color: var(--taupe);
+    font-size: 0.875rem; line-height: 1.45; color: var(--taupe);
   }
-  .st-foot .src { display: block; font-size: 0.75rem; margin-top: 5px; }
+  .st-foot .src { display: block; font-size: 0.875rem; margin-top: 5px; }
 
   /* ===== v17.1: уменьшенное движение ===== */
   @media (prefers-reduced-motion: reduce) {
@@ -539,7 +539,7 @@
   .st-next {
     margin-top: 16px; padding-top: 12px; border-top: 1px solid var(--wall);
     display: flex; flex-direction: column; gap: 4px;
-    font-size: 0.78rem; line-height: 1.5; color: var(--taupe);
+    font-size: 0.875rem; line-height: 1.5; color: var(--taupe);
   }
   .st-next a {
     display: inline-block; padding: 4px 0; color: var(--amber);
@@ -560,7 +560,7 @@
   .state-name, .state-hint { padding: 0 24px; }
   .state-name { display: block; margin-bottom: 8px; }
   .state-more-hint {
-    display: block; padding: 10px 24px 0; font-size: 0.72rem; letter-spacing: 0.12em;
+    display: block; padding: 10px 24px 0; font-size: 0.875rem; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--taupe);
   }
   details.state[open] .state-more-hint { display: none; }
@@ -584,9 +584,9 @@
     font-size: 0.9rem; color: var(--amber);
   }
   .cal-files a:first-child { border-top: 1px solid var(--wall); }
-  .cal-files a span { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--taupe); white-space: nowrap; }
+  .cal-files a span { font-size: 0.875rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--taupe); white-space: nowrap; }
   .cal-files a:hover { color: var(--taupe); }
-  .cal-note { margin-top: 18px; font-size: 0.78rem; color: var(--taupe); }
+  .cal-note { margin-top: 18px; font-size: 0.875rem; color: var(--taupe); }
 
   /* v17.26: открытки под календарём */
   .cards-strip { margin-top: 48px; text-align: center; }
@@ -606,13 +606,13 @@
   .free-item { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 4px; }
   .free-item img { width: 72px; height: 108px; object-fit: cover; border-radius: 8px; box-shadow: 0 6px 14px -8px rgba(63,44,21,.55); transition: transform .25s ease; background: var(--wall); }
   .free-item:hover img { transform: translateY(-4px) rotate(-1deg); }
-  .free-item span { font-size: .66rem; letter-spacing: .06em; color: var(--amber); background: var(--bg-alt); border-radius: 100px; padding: 1px 8px; }
+  .free-item span { font-size: 0.875rem; letter-spacing: .06em; color: var(--amber); background: var(--bg-alt); border-radius: 100px; padding: 1px 8px; }
 
   /* v18: холл — двери для всех */
   .hero { min-height: 0; }
   .hero-inner { padding: 64px 24px 56px; }
   .hall-eyebrow {
-    display: block; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber);
+    display: block; font-size: 0.875rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber);
     margin-bottom: 12px; text-shadow: 0 1px 10px rgba(251,249,245,0.95), 0 0 20px rgba(251,249,245,0.8);
   }
   h1.hall-title {
@@ -633,17 +633,17 @@
   .door-name { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; line-height: 1.2; color: var(--amber); }
   .door-name::after { content: ' →'; font-size: 1.1rem; display: inline-block; transition: transform .2s ease; }
   .door-name:hover::after { transform: translateX(4px); }
-  .door-text { display: block; font-size: 0.86rem; line-height: 1.5; color: #4a3f30; margin-top: 4px; }
-  .door-free { display: block; margin-top: 2px; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--taupe); }
+  .door-text { display: block; font-size: 0.875rem; line-height: 1.5; color: #4a3f30; margin-top: 4px; }
+  .door-free { display: block; margin-top: 2px; font-size: 0.875rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--taupe); }
   .door .free-view { margin-top: 12px; }
   .door-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
   .door-chips a {
     display: inline-block; padding: 7px 13px; border-radius: 100px; border: 1px solid var(--linen);
-    background: var(--bg-alt); font-size: 0.8rem; line-height: 1.3; color: var(--amber);
+    background: var(--bg-alt); font-size: 0.875rem; line-height: 1.3; color: var(--amber);
     transition: background .2s ease, border-color .2s ease;
   }
   .door-chips a:hover { background: var(--wall); border-color: var(--taupe); }
-  .hall-quiet { margin-top: 18px; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 20px; font-size: 0.82rem; }
+  .hall-quiet { margin-top: 18px; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 20px; font-size: 0.875rem; }
   .hall-quiet a {
     display: inline-block; padding: 6px 2px; color: var(--amber); text-decoration: underline; text-underline-offset: 3px;
     text-shadow: 0 0 10px rgba(251,249,245,1), 0 0 20px rgba(251,249,245,0.9);
@@ -686,8 +686,8 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Алексей",
-  "jobTitle": "Практикующий массажист",
-  "description": "Практикующий массажист из Минска, более 20 лет практики. Пишет наблюдения о теле и работе с телом.",
+  "jobTitle": "Массажист",
+  "description": "Массажист из Минска, у стола с 2006 года. Пишет наблюдения о теле и работе с телом.",
   "url": "https://palpo.org",
   "sameAs": [
     "https://t.me/Lighthouse_massage_music",
@@ -708,7 +708,7 @@
       "name": "Что здесь можно получить?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Своё состояние в разделе «Что с телом» ниже и одно движение на минуту к нему — сидя, там, где вы сейчас, ничего не покупая. Под каждым состоянием стоит строка о том, когда этого недостаточно и нужен врач."
+        "text": "В разделе «Как помочь себе самому» — места, которые устают от сидения, и одно движение на минуту к каждому. Сидя, там, где вы сейчас, ничего не покупая. Под каждым стоит строка о том, когда этого недостаточно и нужен врач."
       }
     },
     {
@@ -716,7 +716,7 @@
       "name": "Здесь дают советы по здоровью?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Нет. Алексей не врач и не претендует на это. Здесь — наблюдения от стола, не медицинские рекомендации. Если у вас что-то болит — это к врачу. Здесь другое: как тело ведёт себя, что оно говорит, когда его слушают руками."
+        "text": "Нет. Я не врач и на это не претендую. Здесь — наблюдения от стола, не медицинские рекомендации. Если у вас что-то болит — это к врачу. Здесь другое: как тело ведёт себя, что оно говорит, когда его слушают руками."
       }
     },
     {
@@ -732,7 +732,7 @@
       "name": "Сел голос к вечеру: что делать, если не кричал?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Губы сомкнуты, зубы разомкнуты, челюсть свободна. На длинном выдохе — тихое «м-м-м», секунд десять. Шесть раз. Плечи не поднимаются. Если голос сипит уже третью неделю и к утру не возвращается — это к врачу. Состояние на странице: «К пятнице сел голос»."
+        "text": "Губы сомкнуты, зубы разомкнуты, челюсть свободна. На длинном выдохе — тихое «м-м-м», секунд десять. Шесть раз. Плечи не поднимаются. Если голос сипит уже третью неделю и к утру не возвращается — это к врачу. Подробнее на странице: «К пятнице сел голос»."
       }
     },
     {
@@ -740,7 +740,7 @@
       "name": "Быстро устают ноги и гудят к вечеру: как облегчить?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Поджать пальцы стоп на пять секунд — и расслабить. Перенести вес на пятки, оторвав носки от пола. Натянуть носок сильно на себя. Десять перекатов. Если отёк только на одной ноге, сопровождается жаром или острой распирающей болью — это к врачу. Состояние на странице: «К вечеру ноги налились»."
+        "text": "Поджать пальцы стоп на пять секунд — и расслабить. Перенести вес на пятки, оторвав носки от пола. Натянуть носок сильно на себя. Десять перекатов. Если отёк только на одной ноге, сопровождается жаром или острой распирающей болью — это к врачу. Подробнее на странице: «К вечеру ноги налились»."
       }
     },
     {
@@ -748,7 +748,7 @@
       "name": "Мёрзнут пальцы рук и стопы в тёплой комнате: что предпринять?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Медленно сожмите кулаки и одновременно подожмите пальцы ног. На выдохе раскройте широко. Десять раз. Потом покрутите стопами в одну и в другую сторону. Если пальцы белеют или синеют на холоде и долго не отходят — это к врачу. Состояние на странице: «В комнате тепло, а пальцы ледяные»."
+        "text": "Медленно сожмите кулаки и одновременно подожмите пальцы ног. На выдохе раскройте широко. Десять раз. Потом покрутите стопами в одну и в другую сторону. Если пальцы белеют или синеют на холоде и долго не отходят — это к врачу. Подробнее на странице: «В комнате тепло, а пальцы ледяные»."
       }
     },
     {
@@ -756,7 +756,7 @@
       "name": "Ноет между лопатками после сидения: что делать?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Прижмите мяч к стене рядом с больным местом — примерно на ладонь в сторону, ближе к позвоночнику или выше. Ищите не боль, а отклик: точку, нажатие на которую отзывается в том самом знакомом месте. Найдя — не катайте. Оставьте на ней вес тела на тридцать-сорок секунд и спокойно дышите. Если боль отдаёт током вниз по руке до пальцев, если не получается опустить подбородок к груди, если онемение не проходит после того, как отошли от стены — это к врачу. Состояние на странице: «Жжёт точкой между лопаток»."
+        "text": "Прижмите мяч к стене рядом с больным местом — примерно на ладонь в сторону, ближе к позвоночнику или выше. Ищите не боль, а отклик: точку, нажатие на которую отзывается в том самом знакомом месте. Найдя — не катайте. Оставьте на ней вес тела на тридцать-сорок секунд и спокойно дышите. Если боль отдаёт током вниз по руке до пальцев, если не получается опустить подбородок к груди, если онемение не проходит после того, как отошли от стены — это к врачу. Подробнее на странице: «Жжёт точкой между лопаток»."
       }
     },
     {
@@ -764,7 +764,7 @@
       "name": "Как опустить плечи, если они сами поднимаются к ушам?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Положите ладони на стол. На выдохе надавите ладонями вниз — и отпустите через четыре секунды. Плечи уйдут вниз сами. Три раза, между делами. Если опускание плеча отдаёт резкой стреляющей болью в пальцы руки или шею заклинило — это к врачу. Состояние на странице: «Плечи поднялись к ушам»."
+        "text": "Положите ладони на стол. На выдохе надавите ладонями вниз — и отпустите через четыре секунды. Плечи уйдут вниз сами. Три раза, между делами. Если опускание плеча отдаёт резкой стреляющей болью в пальцы руки или шею заклинило — это к врачу. Подробнее на странице: «Плечи поднялись к ушам»."
       }
     },
     {
@@ -772,7 +772,7 @@
       "name": "Болит поясница от сидячей работы: как помочь спине на стуле?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Сядьте на край стула, стопы плотно в пол. Медленно качните таз вперёд — и отпустите назад. Движение мелкое, глазу почти не видно. Пять-шесть раз, без усилия. Спина сама найдёт, где отпустить. Если ночью будит и к утру хуже, чем было вечером — это к врачу. Состояние на странице: «Затекла поясница на стуле»."
+        "text": "Сядьте на край стула, стопы плотно в пол. Медленно качните таз вперёд — и отпустите назад. Движение мелкое, глазу почти не видно. Пять-шесть раз, без усилия. Спина сама найдёт, где отпустить. Если ночью будит и к утру хуже, чем было вечером — это к врачу. Подробнее на странице: «Затекла поясница на стуле»."
       }
     },
     {
@@ -780,7 +780,7 @@
       "name": "Болит рука от мышки: что сделать прямо за столом?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Захватите большим и указательным пальцами другой руки мышечную подушку в развилке между большим и указательным. Медленно, без рывка, погрузите палец и держите ровное давление сорок секунд, дыша спокойно. Потом другая рука. Если онемение пальцев держится стойко, вещи выпадают из рук или пропала чувствительность к горячему и холодному — это к врачу. Состояние на странице: «Кисть к вечеру перестаёт быть лёгкой»."
+        "text": "Захватите большим и указательным пальцами другой руки мышечную подушку в развилке между большим и указательным. Медленно, без рывка, погрузите палец и держите ровное давление сорок секунд, дыша спокойно. Потом другая рука. Если онемение пальцев держится стойко, вещи выпадают из рук или пропала чувствительность к горячему и холодному — это к врачу. Подробнее на странице: «Кисть к вечеру перестаёт быть лёгкой»."
       }
     },
     {
@@ -788,7 +788,7 @@
       "name": "Сжимаю зубы за компьютером: как расслабить челюсть?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Разомкните зубы. Кончик языка опустите за нижние зубы. Положите пальцы перед ушами. На выдохе отпустите челюсть вниз. Посидите так десять–двадцать секунд. Если челюсть щёлкает и рот открывается не до конца — это к стоматологу. Состояние на странице: «Ловлю себя на сжатых зубах»."
+        "text": "Разомкните зубы. Кончик языка опустите за нижние зубы. Положите пальцы перед ушами. На выдохе отпустите челюсть вниз. Посидите так десять–двадцать секунд. Если челюсть щёлкает и рот открывается не до конца — это к стоматологу. Подробнее на странице: «Ловлю себя на сжатых зубах»."
       }
     },
     {
@@ -796,7 +796,7 @@
       "name": "Что такое «Чем работаю»?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Раздел про объекты, с которыми работает Алексей: масла, инструменты, текстиль. Не реклама — наблюдения про то, как конкретная вещь меняет работу. Алексей пишет только про то, что реально использует."
+        "text": "Раздел про то, чем я работаю: масла, инструменты, текстиль. Не реклама — наблюдения про то, как конкретная вещь меняет работу. Пишу только про то, чем пользуюсь сам."
       }
     },
     {
@@ -1151,7 +1151,7 @@
   <div class="wrap">
     <div class="atlas-head">
       <h2 class="serif">Как помочь себе самому</h2>
-      <p class="atlas-lead">Если прямо сейчас телу тяжело — наблюдение от стола и одно движение к каждому состоянию.</p>
+      <p class="atlas-lead">Если прямо сейчас телу тяжело — наблюдение от стола и одно движение к каждому месту.</p>
     </div>
     <div class="finder" id="finder" role="search">
       <label class="finder-label" for="finder-input">Напишите, где тянет или болит</label>
@@ -1687,7 +1687,7 @@
 <section class="channels">
   <div class="wrap">
     <div class="channels-head reveal">
-      <h2 class="serif">Новые состояния появляются каждую неделю. Первыми — в канале.</h2>
+      <h2 class="serif">Раз в неделю — короткая история о теле. В Telegram.</h2>
     </div>
     <div class="channel-row">
       <a class="btn" href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">Читать в Telegram →</a>
@@ -1707,12 +1707,12 @@
 
       <details>
         <summary class="serif">Что здесь можно получить?</summary>
-        <p>Своё состояние в разделе «Что с телом» ниже и одно движение на минуту к нему — сидя, там, где вы сейчас, ничего не покупая. Под каждым состоянием стоит строка о том, когда этого недостаточно и нужен врач.</p>
+        <p>В разделе «Как помочь себе самому» — места, которые устают от сидения, и одно движение на минуту к каждому. Сидя, там, где вы сейчас, ничего не покупая. Под каждым стоит строка о том, когда этого недостаточно и нужен врач.</p>
       </details>
 
       <details>
         <summary class="serif">Здесь дают советы по здоровью?</summary>
-        <p>Нет. Алексей не врач и не претендует на это. Здесь — наблюдения от стола, не медицинские рекомендации. Если у вас что-то болит — это к врачу. Здесь другое: как тело ведёт себя, что оно говорит, когда его слушают руками.</p>
+        <p>Нет. Я не врач и на это не претендую. Здесь — наблюдения от стола, не медицинские рекомендации. Если у вас что-то болит — это к врачу. Здесь другое: как тело ведёт себя, что оно говорит, когда его слушают руками.</p>
       </details>
 
       <details>
@@ -1722,47 +1722,47 @@
 
       <details>
         <summary class="serif">Сел голос к вечеру: что делать, если не кричал?</summary>
-        <p>Губы сомкнуты, зубы разомкнуты, челюсть свободна. На длинном выдохе — тихое «м-м-м», секунд десять. Шесть раз. Плечи не поднимаются. Если голос сипит уже третью неделю и к утру не возвращается — это к врачу. Состояние на странице: <a href="#voice">«К пятнице сел голос»</a>.</p>
+        <p>Губы сомкнуты, зубы разомкнуты, челюсть свободна. На длинном выдохе — тихое «м-м-м», секунд десять. Шесть раз. Плечи не поднимаются. Если голос сипит уже третью неделю и к утру не возвращается — это к врачу. Подробнее на странице: <a href="#voice">«К пятнице сел голос»</a>.</p>
       </details>
 
       <details>
         <summary class="serif">Быстро устают ноги и гудят к вечеру: как облегчить?</summary>
-        <p>Поджать пальцы стоп на пять секунд — и расслабить. Перенести вес на пятки, оторвав носки от пола. Натянуть носок сильно на себя. Десять перекатов. Если отёк только на одной ноге, сопровождается жаром или острой распирающей болью — это к врачу. Состояние на странице: <a href="#heavy-legs">«К вечеру ноги налились»</a>.</p>
+        <p>Поджать пальцы стоп на пять секунд — и расслабить. Перенести вес на пятки, оторвав носки от пола. Натянуть носок сильно на себя. Десять перекатов. Если отёк только на одной ноге, сопровождается жаром или острой распирающей болью — это к врачу. Подробнее на странице: <a href="#heavy-legs">«К вечеру ноги налились»</a>.</p>
       </details>
 
       <details>
         <summary class="serif">Мёрзнут пальцы рук и стопы в тёплой комнате: что предпринять?</summary>
-        <p>Медленно сожмите кулаки и одновременно подожмите пальцы ног. На выдохе раскройте широко. Десять раз. Потом покрутите стопами в одну и в другую сторону. Если пальцы белеют или синеют на холоде и долго не отходят — это к врачу. Состояние на странице: <a href="#cold-hands">«В комнате тепло, а пальцы ледяные»</a>.</p>
+        <p>Медленно сожмите кулаки и одновременно подожмите пальцы ног. На выдохе раскройте широко. Десять раз. Потом покрутите стопами в одну и в другую сторону. Если пальцы белеют или синеют на холоде и долго не отходят — это к врачу. Подробнее на странице: <a href="#cold-hands">«В комнате тепло, а пальцы ледяные»</a>.</p>
       </details>
 
       <details>
         <summary class="serif">Ноет между лопатками после сидения: что делать?</summary>
-        <p>Прижмите мяч к стене рядом с больным местом — примерно на ладонь в сторону, ближе к позвоночнику или выше. Ищите не боль, а отклик: точку, нажатие на которую отзывается в том самом знакомом месте. Найдя — не катайте. Оставьте на ней вес тела на тридцать-сорок секунд и спокойно дышите. Если боль отдаёт током вниз по руке до пальцев, если не получается опустить подбородок к груди, если онемение не проходит после того, как отошли от стены — это к врачу. Состояние на странице: <a href="#shoulder-blade">«Жжёт точкой между лопаток»</a>.</p>
+        <p>Прижмите мяч к стене рядом с больным местом — примерно на ладонь в сторону, ближе к позвоночнику или выше. Ищите не боль, а отклик: точку, нажатие на которую отзывается в том самом знакомом месте. Найдя — не катайте. Оставьте на ней вес тела на тридцать-сорок секунд и спокойно дышите. Если боль отдаёт током вниз по руке до пальцев, если не получается опустить подбородок к груди, если онемение не проходит после того, как отошли от стены — это к врачу. Подробнее на странице: <a href="#shoulder-blade">«Жжёт точкой между лопаток»</a>.</p>
       </details>
 
       <details>
         <summary class="serif">Как опустить плечи, если они сами поднимаются к ушам?</summary>
-        <p>Положите ладони на стол. На выдохе надавите ладонями вниз — и отпустите через четыре секунды. Плечи уйдут вниз сами. Три раза, между делами. Если опускание плеча отдаёт резкой стреляющей болью в пальцы руки или шею заклинило — это к врачу. Состояние на странице: <a href="#shoulders">«Плечи поднялись к ушам»</a>.</p>
+        <p>Положите ладони на стол. На выдохе надавите ладонями вниз — и отпустите через четыре секунды. Плечи уйдут вниз сами. Три раза, между делами. Если опускание плеча отдаёт резкой стреляющей болью в пальцы руки или шею заклинило — это к врачу. Подробнее на странице: <a href="#shoulders">«Плечи поднялись к ушам»</a>.</p>
       </details>
 
       <details>
         <summary class="serif">Болит поясница от сидячей работы: как помочь спине на стуле?</summary>
-        <p>Сядьте на край стула, стопы плотно в пол. Медленно качните таз вперёд — и отпустите назад. Движение мелкое, глазу почти не видно. Пять-шесть раз, без усилия. Спина сама найдёт, где отпустить. Если ночью будит и к утру хуже, чем было вечером — это к врачу. Состояние на странице: <a href="#lower-back">«Затекла поясница на стуле»</a>.</p>
+        <p>Сядьте на край стула, стопы плотно в пол. Медленно качните таз вперёд — и отпустите назад. Движение мелкое, глазу почти не видно. Пять-шесть раз, без усилия. Спина сама найдёт, где отпустить. Если ночью будит и к утру хуже, чем было вечером — это к врачу. Подробнее на странице: <a href="#lower-back">«Затекла поясница на стуле»</a>.</p>
       </details>
 
       <details>
         <summary class="serif">Болит рука от мышки: что сделать прямо за столом?</summary>
-        <p>Захватите большим и указательным пальцами другой руки мышечную подушку в развилке между большим и указательным. Медленно, без рывка, погрузите палец и держите ровное давление сорок секунд, дыша спокойно. Потом другая рука. Если онемение пальцев держится стойко, вещи выпадают из рук или пропала чувствительность к горячему и холодному — это к врачу. Состояние на странице: <a href="#mouse-hand">«Кисть к вечеру перестаёт быть лёгкой»</a>.</p>
+        <p>Захватите большим и указательным пальцами другой руки мышечную подушку в развилке между большим и указательным. Медленно, без рывка, погрузите палец и держите ровное давление сорок секунд, дыша спокойно. Потом другая рука. Если онемение пальцев держится стойко, вещи выпадают из рук или пропала чувствительность к горячему и холодному — это к врачу. Подробнее на странице: <a href="#mouse-hand">«Кисть к вечеру перестаёт быть лёгкой»</a>.</p>
       </details>
 
       <details>
         <summary class="serif">Сжимаю зубы за компьютером: как расслабить челюсть?</summary>
-        <p>Разомкните зубы. Кончик языка опустите за нижние зубы. Положите пальцы перед ушами. На выдохе отпустите челюсть вниз. Посидите так десять–двадцать секунд. Если челюсть щёлкает и рот открывается не до конца — это к стоматологу. Состояние на странице: <a href="#jaw">«Ловлю себя на сжатых зубах»</a>.</p>
+        <p>Разомкните зубы. Кончик языка опустите за нижние зубы. Положите пальцы перед ушами. На выдохе отпустите челюсть вниз. Посидите так десять–двадцать секунд. Если челюсть щёлкает и рот открывается не до конца — это к стоматологу. Подробнее на странице: <a href="#jaw">«Ловлю себя на сжатых зубах»</a>.</p>
       </details>
 
       <details>
         <summary class="serif">Что такое «Чем работаю»?</summary>
-        <p>Раздел про объекты, с которыми работает Алексей: масла, инструменты, текстиль. Не реклама — наблюдения про то, как конкретная вещь меняет работу. Алексей пишет только про то, что реально использует.</p>
+        <p>Раздел про то, чем я работаю: масла, инструменты, текстиль. Не реклама — наблюдения про то, как конкретная вещь меняет работу. Пишу только про то, чем пользуюсь сам.</p>
       </details>
 
       <details>
