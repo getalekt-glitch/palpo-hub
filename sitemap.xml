@@ -3,21 +3,21 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://palpo.org/</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
   </url>
   <url>
     <loc>https://palpo.org/en.html</loc>
-    <lastmod>2026-09-21</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
   </url>
   <url>
     <loc>https://palpo.org/minsk.html</loc>
-    <lastmod>2026-09-27</lastmod>
+    <lastmod>2026-09-29</lastmod>
   </url>
   <url>
     <loc>https://palpo.org/polka.html</loc>
@@ -30,5 +30,9 @@
   <url>
     <loc>https://palpo.org/biomechanics.html</loc>
     <lastmod>2026-09-19</lastmod>
+  </url>
+  <url>
+    <loc>https://palpo.org/en-humor.html</loc>
+    <lastmod>2026-09-29</lastmod>
   </url>
 </urlset>

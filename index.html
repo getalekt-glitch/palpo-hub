@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Руки массажиста — наблюдения о теле и одно движение на минуту</title>
-<meta name="description" content="Затекла поясница, плечи у ушей, гудят ноги, сел голос? Наблюдения массажиста и одно движение на минуту для каждого состояния. Без медицинских обещаний.">
+<title>Руки массажиста · palpo.org — открытки, обои и одно движение на минуту</title>
+<meta name="description" content="palpo.org — сайт массажиста из Минска. Смешные открытки и мемы про массаж, обои-календарь на телефон, одно движение на минуту для спины, плеч и ног. Бесплатно, в высоком качестве. Кабинет и выезд на дом — Колодищи и Минск.">
 <link rel="canonical" href="https://palpo.org/">
 <link rel="alternate" hreflang="ru" href="https://palpo.org/">
 <link rel="alternate" hreflang="en" href="https://palpo.org/en.html">
@@ -597,9 +597,90 @@
   .cardlink img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; }
   .cards-all { margin-top: 20px; }
 
+
+  /* v17.27: «Скачать бесплатно» — лента */
+  .free-view { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+  .free-track { display: flex; gap: 10px; width: max-content; animation: freeRun 38s linear infinite; }
+  .free-view:hover .free-track, .free-view:active .free-track { animation-play-state: paused; }
+  @keyframes freeRun { to { transform: translateX(-50%); } }
+  .free-item { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 4px; }
+  .free-item img { width: 72px; height: 108px; object-fit: cover; border-radius: 8px; box-shadow: 0 6px 14px -8px rgba(63,44,21,.55); transition: transform .25s ease; background: var(--wall); }
+  .free-item:hover img { transform: translateY(-4px) rotate(-1deg); }
+  .free-item span { font-size: .66rem; letter-spacing: .06em; color: var(--amber); background: var(--bg-alt); border-radius: 100px; padding: 1px 8px; }
+
+  /* v18: холл — двери для всех */
+  .hero { min-height: 0; }
+  .hero-inner { padding: 64px 24px 56px; }
+  .hall-eyebrow {
+    display: block; font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber);
+    margin-bottom: 12px; text-shadow: 0 1px 10px rgba(251,249,245,0.95), 0 0 20px rgba(251,249,245,0.8);
+  }
+  h1.hall-title {
+    font-family: 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(2.3rem, 8.6vw, 4rem); line-height: 1.05;
+    text-shadow: 0 1px 14px rgba(251,249,245,0.92), 0 0 34px rgba(251,249,245,0.7);
+  }
+  .hall-lead {
+    max-width: 38ch; margin: 12px auto 0; font-size: 1.02rem; line-height: 1.5; color: var(--amber);
+    text-shadow: 0 0 14px rgba(251,249,245,1), 0 0 30px rgba(251,249,245,0.9);
+  }
+  .doors { display: grid; grid-template-columns: 1fr; gap: 14px; max-width: 880px; margin: 28px auto 0; text-align: left; }
+  @media (min-width: 780px) { .doors { grid-template-columns: 1.3fr 1fr; } }
+  .doors > * { min-width: 0; }
+  .door {
+    overflow: hidden; background: rgba(251,249,245,0.94); border: 1px solid var(--linen); border-radius: 18px;
+    padding: 18px 18px 16px; box-shadow: 0 16px 34px -22px rgba(63,44,21,0.5);
+  }
+  .door-name { display: block; font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; line-height: 1.2; color: var(--amber); }
+  .door-name::after { content: ' →'; font-size: 1.1rem; display: inline-block; transition: transform .2s ease; }
+  .door-name:hover::after { transform: translateX(4px); }
+  .door-text { display: block; font-size: 0.86rem; line-height: 1.5; color: #4a3f30; margin-top: 4px; }
+  .door-free { display: block; margin-top: 2px; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--taupe); }
+  .door .free-view { margin-top: 12px; }
+  .door-chips { list-style: none; display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+  .door-chips a {
+    display: inline-block; padding: 7px 13px; border-radius: 100px; border: 1px solid var(--linen);
+    background: var(--bg-alt); font-size: 0.8rem; line-height: 1.3; color: var(--amber);
+    transition: background .2s ease, border-color .2s ease;
+  }
+  .door-chips a:hover { background: var(--wall); border-color: var(--taupe); }
+  .hall-quiet { margin-top: 18px; display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 20px; font-size: 0.82rem; }
+  .hall-quiet a {
+    display: inline-block; padding: 6px 2px; color: var(--amber); text-decoration: underline; text-underline-offset: 3px;
+    text-shadow: 0 0 10px rgba(251,249,245,1), 0 0 20px rgba(251,249,245,0.9);
+  }
+  @media (max-width: 720px) {
+    .hero-inner { padding: 36px 16px 36px; }
+    .door { padding: 16px 14px 14px; }
+    .door-name { font-size: 1.35rem; }
+  }
+  /* поле поиска теперь внутри атласа */
+  .atlas .finder { margin: 22px auto 26px; }
+  .atlas .finder-label { font-size: clamp(1.15rem, 4vw, 1.4rem); text-shadow: none; }
+  .atlas .finder-safe { text-shadow: none; color: var(--taupe); }
+  .cards--one { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+  .line-link { text-align: center; padding: 34px 24px; font-size: 0.95rem; }
+  .line-link a { display: inline-block; padding: 6px 2px; color: var(--amber); text-decoration: underline; text-underline-offset: 4px; }
+  section.line-sec { border-top: 1px solid var(--wall); }
+  @media (prefers-reduced-motion: reduce) {
+    .free-track { animation: none !important; }
+    .free-view { overflow-x: auto; }
+    .door-name::after { transition: none; }
+  }
 </style>
 <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 <meta name="p:domain_verify" content="342babc59d09ad48a1f9f7a3593d4126"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://palpo.org/#site",
+  "name": "Руки массажиста",
+  "alternateName": ["palpo.org", "palpo", "Palpo", "Massage Hands"],
+  "url": "https://palpo.org/",
+  "inLanguage": ["ru", "en"],
+  "description": "Сайт массажиста из Минска: открытки и мемы про массаж, обои-календарь на телефон, одно движение на минуту для спины, плеч и ног. Кабинет и выезд на дом — Колодищи и Минск."
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1019,13 +1100,9 @@
   <nav class="wrap" aria-label="Разделы сайта">
     <span class="brand">Руки массажиста</span>
     <div class="nav-links">
-      <a href="#atlas">Что с телом</a>
+      <a href="/humor.html">Открытки</a>
+      <a href="#atlas">Помочь себе</a>
       <a href="#calendar">Обои</a>
-      <a href="#u-stola">Со стороны стола</a>
-      <a href="#polka">Чем работаю</a>
-      <a href="/humor.html">Смешное</a>
-      <a href="#faq">Вопросы</a>
-      <a href="#atmosphere">Атмосфера</a>
       <a href="/minsk.html">Минск</a>
     </div>
     <a href="en.html" class="lang-toggle" hreflang="en" lang="en">EN</a>
@@ -1036,10 +1113,48 @@
 
 <section class="hero" id="hero">
   <div class="hero-inner">
-    <h1 class="hero-title serif">Массажист слышит руками<span class="hero-title-2">Первое касание уже всё говорит</span></h1>
+    <span class="hall-eyebrow">palpo.org · Минск · у стола с 2006 года</span>
+    <h1 class="hall-title serif">Руки массажиста</h1>
+    <p class="hall-lead">Здесь можно взять открытку, обои на телефон и одно движение для спины. Бесплатно, в высоком качестве.</p>
 
+    <div class="doors">
+      <div class="door" id="humor">
+        <a class="door-name" href="/humor.html" data-goal="door_humor">Открытки и мемы</a>
+        <span class="door-text">Ко дню рождения, для двоих, просто посмеяться.</span>
+        <span class="door-free">Скачать бесплатно</span>
+        <div class="free-view"><div class="free-track"><a class="free-item" href="/#calendar"><img src="calendar-preview.jpg" alt="Календарь-обои на октябрь" width="72" height="108" decoding="async"><span>обои</span></a><a class="free-item" href="humor.html#otkrytka-den-rozhdeniya-ded-dohrenaletie"><img src="otkrytka-den-rozhdeniya-ded-dohrenaletie-480.webp" alt="С днём твоего дохреналетия" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="humor.html#mem-kot-luchshiy-massazh-v-zhizni"><img src="mem-kot-luchshiy-massazh-v-zhizni-480.webp" alt="Как получить лучший массаж в жизни" width="72" height="108" decoding="async"><span>мем</span></a><a class="free-item" href="humor.html#otkrytka-dlya-dvoih-s-tebya-ustalost"><img src="otkrytka-dlya-dvoih-s-tebya-ustalost-480.webp" alt="С тебя — усталость, с меня — массаж" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="humor.html#otkrytka-den-rozhdeniya-fenek-poyasnitsa"><img src="otkrytka-den-rozhdeniya-fenek-poyasnitsa-480.webp" alt="Поясница выходит из чата" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="humor.html#mem-akciya-kupi-tretiy"><img src="mem-akciya-kupi-tretiy-480.webp" alt="Купи два массажа и третий тоже купи" width="72" height="108" decoding="async"><span>мем</span></a><a class="free-item" href="humor.html#otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat"><img src="otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat-480.webp" alt="Клуб «Я ещё лягу в десять»" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="/#calendar" aria-hidden="true" tabindex="-1"><img src="calendar-preview.jpg" alt="" width="72" height="108" decoding="async"><span>обои</span></a><a class="free-item" href="humor.html#otkrytka-den-rozhdeniya-ded-dohrenaletie" aria-hidden="true" tabindex="-1"><img src="otkrytka-den-rozhdeniya-ded-dohrenaletie-480.webp" alt="" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="humor.html#mem-kot-luchshiy-massazh-v-zhizni" aria-hidden="true" tabindex="-1"><img src="mem-kot-luchshiy-massazh-v-zhizni-480.webp" alt="" width="72" height="108" decoding="async"><span>мем</span></a><a class="free-item" href="humor.html#otkrytka-dlya-dvoih-s-tebya-ustalost" aria-hidden="true" tabindex="-1"><img src="otkrytka-dlya-dvoih-s-tebya-ustalost-480.webp" alt="" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="humor.html#otkrytka-den-rozhdeniya-fenek-poyasnitsa" aria-hidden="true" tabindex="-1"><img src="otkrytka-den-rozhdeniya-fenek-poyasnitsa-480.webp" alt="" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="humor.html#mem-akciya-kupi-tretiy" aria-hidden="true" tabindex="-1"><img src="mem-akciya-kupi-tretiy-480.webp" alt="" width="72" height="108" decoding="async"><span>мем</span></a><a class="free-item" href="humor.html#otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat" aria-hidden="true" tabindex="-1"><img src="otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat-480.webp" alt="" width="72" height="108" decoding="async"><span>открытка</span></a></div></div>
+      </div>
+      <div class="door">
+        <a class="door-name" href="#atlas" data-goal="door_atlas">Как помочь себе самому</a>
+        <span class="door-text">Затекла поясница, плечи у ушей, гудят ноги. Одно движение на минуту, сидя, там, где вы сейчас.</span>
+        <ul class="door-chips">
+          <li><a href="#lower-back" data-goal="door_atlas">поясница</a></li>
+          <li><a href="#shoulders" data-goal="door_atlas">плечи</a></li>
+          <li><a href="#shoulder-blade" data-goal="door_atlas">между лопаток</a></li>
+          <li><a href="#heavy-legs" data-goal="door_atlas">ноги</a></li>
+          <li><a href="#back-of-head" data-goal="door_atlas">затылок</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="hall-quiet">
+      <a href="/minsk.html" data-goal="door_minsk">Массаж в Колодищах и Минске, выезд на дом →</a>
+      <a href="/biomechanics.html" data-goal="door_bio">Биомеханика — пока только вступление →</a>
+    </p>
+
+
+    <a class="entry-lang" href="en.html" hreflang="en" lang="en" hidden>Reading in English? The same, in English &rarr;</a>
+  </div>
+</section>
+
+<section class="atlas" id="atlas">
+  <div class="wrap">
+    <div class="atlas-head">
+      <h2 class="serif">Как помочь себе самому</h2>
+      <p class="atlas-lead">Если прямо сейчас телу тяжело — наблюдение от стола и одно движение к каждому состоянию.</p>
+    </div>
     <div class="finder" id="finder" role="search">
-      <label class="finder-label" for="finder-input">Что с телом сейчас?</label>
+      <label class="finder-label" for="finder-input">Напишите, где тянет или болит</label>
       <div class="finder-box">
         <input id="finder-input" class="finder-input" type="text" maxlength="80" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="search" placeholder="например: болит спина">
         <button class="finder-go" id="finder-go" type="button" aria-label="Найти">&rarr;</button>
@@ -1057,19 +1172,6 @@
         <li class="finder-all"><a href="#atlas">показать всё</a></li>
       </ul>
       <p class="finder-safe">Если боль резкая, кружится голова или трудно дышать даже сидя — это к врачу, не сюда.</p>
-      <p class="finder-geo"><a href="/minsk.html">Кабинет и выезд · Минск →</a></p>
-    </div>
-
-
-    <a class="entry-lang" href="en.html" hreflang="en" lang="en" hidden>Reading in English? The same, in English &rarr;</a>
-  </div>
-</section>
-
-<section class="atlas" id="atlas">
-  <div class="wrap">
-    <div class="atlas-head">
-      <h2 class="serif">Что с телом</h2>
-      <p class="atlas-lead">Если прямо сейчас телу тяжело — наблюдение от стола и одно движение к каждому состоянию.</p>
     </div>
 
     <div class="atlas-grid">
@@ -1281,7 +1383,7 @@
         <summary>
           <span class="state-shot"><img src="atlas-shoulder-blade.jpg" alt="Руки массажиста на лопатке" loading="lazy" onerror="this.parentNode.style.display='none'"></span>
           <span class="state-name">Жжёт точкой между лопаток</span>
-          <span class="state-hint">Минута &middot; стоя у стены</span>
+          <span class="state-hint">Минута &middot; у стены, с мячом</span>
           <span class="state-more-hint">Что делать →</span>
         </summary>
         <div class="state-body">
@@ -1565,17 +1667,9 @@
       <span class="u-stola-eyebrow">Со стороны стола</span>
       <h2 class="serif">Кто-то положил телефон экраном вниз</h2>
     </div>
-    <div class="cards reveal">
+    <div class="cards cards--one reveal">
       <a class="card" href="https://t.me/Lighthouse_massage_music/1723" target="_blank" rel="noreferrer">
         <blockquote>«Телефон — рядом на стуле. Экраном вниз. Он перевернул его, прежде чем лечь.»</blockquote>
-        <span class="card-read">Читать полностью →</span>
-      </a>
-      <a class="card" href="https://t.me/Lighthouse_massage_music/1730" target="_blank" rel="noreferrer">
-        <blockquote>«Берёшь за руку — он подаёт руку. За ногу — подаёт ногу.»</blockquote>
-        <span class="card-read">Читать полностью →</span>
-      </a>
-      <a class="card" href="https://t.me/Lighthouse_massage_music/1731" target="_blank" rel="noreferrer">
-        <blockquote>«Его пяткой я массажирую свою ладонь.»</blockquote>
         <span class="card-read">Читать полностью →</span>
       </a>
     </div>
@@ -1601,44 +1695,10 @@
   </div>
 </section>
 
-<section class="polka" id="polka">
-  <div class="wrap">
-    <div class="polka-head reveal">
-      <span class="section-eyebrow">Чем работаю</span>
-      <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;">С чем реально работаю</h2>
-    </div>
-    <div class="polka-items reveal">
-      <a class="polka-item" href="https://t.me/Lighthouse_massage_music/1510" target="_blank" rel="noreferrer">
-        <img src="polka-balm.jpg" alt="Бальзам, текстура на пальцах" loading="lazy">
-        <div class="polka-item-body">
-          <blockquote>«Держу этот бальзам в кабинете уже второй год. Использую перед плотной работой — на плечах, крестце, глубоких точках. Плотный, тянется за пальцем, не растекается. Хватает надолго. Работаю — доволен.»</blockquote>
-          <span class="polka-read">Читать полностью →</span>
-        </div>
-      </a>
-      <a class="polka-item" href="https://t.me/Lighthouse_massage_music/1561" target="_blank" rel="noreferrer">
-        <img src="polka-cream.jpg" alt="Крем плотной текстуры, растёртый в руке" loading="lazy">
-        <div class="polka-item-body">
-          <blockquote>«Крем плотной текстуры — работаю им полтора часа подряд, не липнет, не улетает. После сеанса кожа как выдохнула.»</blockquote>
-          <span class="polka-read">Читать полностью →</span>
-        </div>
-      </a>
-    </div>
-  </div>
+<section class="line-sec" id="polka">
+  <p class="line-link"><a href="/polka.html">Чем работаю — бальзам и крем, которыми пользуюсь сам →</a></p>
 </section>
 
-<section class="modules" id="humor">
-  <div class="wrap">
-    <div class="modules-head">
-      <span class="section-eyebrow">Ещё в проекте</span>
-      <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;color:var(--bg);">Что ещё есть на сайте</h2>
-    </div>
-    <div class="modules-row reveal">
-      <a class="btn" href="polka.html">Чем работаю →</a>
-      <a class="btn" href="humor.html">Открытки и мемы →</a>
-      <a class="btn" href="biomechanics.html">О чём этот проект →</a>
-    </div>
-  </div>
-</section>
 
 <section class="faq" id="faq">
   <div class="wrap">
@@ -1714,17 +1774,8 @@
   </div>
 </section>
 
-<section class="atmosphere" id="atmosphere">
-  <div class="wrap">
-    <div class="atmosphere-head reveal">
-      <h2 class="atmosphere-title">Атмосфера</h2>
-      <p class="atmosphere-quote">«Мне нравится момент между сеансами, когда кабинет пустой. Свет, масло, край стола. Всё на месте. И ничего не нужно.»</p>
-      <a class="atmosphere-read" href="https://t.me/Lighthouse_massage_music/1632" target="_blank" rel="noreferrer">Читать полностью →</a>
-    </div>
-    <div class="atmosphere-scroll">
-      <div class="atmosphere-slide"><img src="atmosphere.jpg" alt="Лампа, табурет, комната" loading="lazy"></div>
-    </div>
-  </div>
+<section class="line-sec" id="atmosphere">
+  <p class="line-link"><a href="/minsk.html#atmosphere" data-goal="door_minsk">Кабинет изнутри — на странице Минска →</a></p>
 </section>
 
 </main>
@@ -1825,14 +1876,17 @@
   }
 
   /* ===== v17.3: цели Метрики ===== */
-  function goal(name) {
-    if (typeof window.ym === 'function') { window.ym(112520327, 'reachGoal', name); }
+  function goal(name, p) {
+    try { if (typeof window.ym === 'function') { window.ym(112520327, 'reachGoal', name, p || undefined); } } catch (e) {}
   }
   document.addEventListener('click', function (e) {
     var a = e.target.closest ? e.target.closest('a[href]') : null;
     if (!a) return;
     var h = a.getAttribute('href') || '';
-    if (a.classList.contains('hero-take')) goal('wallpaper_intent');
+    var dg = a.getAttribute('data-goal');
+    if (dg) goal(dg);
+    else if (a.classList.contains('free-item')) goal('free_strip', { to: h });
+    else if (a.classList.contains('hero-take')) goal('wallpaper_intent');
     else if (a.classList.contains('entry-lang')) goal('entry_lang');
     else if (h.indexOf('t.me/') > -1 || h.indexOf('telegram.me/') > -1) goal('tg_click');
     else if (h.indexOf('youtube.com') > -1 || h.indexOf('youtu.be') > -1) goal('yt_click');

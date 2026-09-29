@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Массаж с выездом на дом — Минск, Колодищи и пригород — Алексей Гордиенко</title>
-<meta name="description" content="Приезжаю со своим столом, косметикой и одноразовым бельём. Выезд по Минску, Колодищам и ближайшему пригороду включён в стоимость. Есть кабинет в Колодищах. Практика с 2006 года.">
+<title>Массажист в Колодищах и Минске — массаж на дому с выездом, кабинет в Колодищах</title>
+<meta name="description" content="Массажист Алексей Гордиенко: массаж на дому с выездом по Минску, Колодищам, Боровлянам, Ждановичам и Минскому району. Приезжаю со своим столом. Кабинет в Колодищах, Волмянский Шлях, 8. С 9 до 19, суббота выходная.">
+<link rel="preload" as="image" href="minsk-stol-so-mnoy.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
@@ -12,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="znak-P-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="znak-P-16x16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="znak-P-180x180.png">
-<meta property="og:title" content="Массаж с выездом на дом — Минск, Колодищи и пригород">
+<meta property="og:title" content="Массажист в Колодищах и Минске — выезд на дом со своим столом">
 <meta property="og:description" content="Приезжаю со своим столом, косметикой и одноразовым бельём. От вас не нужно ничего.">
 <meta property="og:image" content="https://palpo.org/og-image.jpg">
 <meta property="og:url" content="https://palpo.org/minsk.html">
@@ -395,6 +396,32 @@
     display: block; width: 100%; aspect-ratio: 4 / 3; border-radius: 14px;
     background: var(--wall); border: 1px solid var(--wall);
   }
+
+  /* v2.6: фото стола первым экраном */
+  .hero-shot {
+    display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover;
+    border-radius: 18px; margin: 0 0 26px; background: var(--wall);
+    box-shadow: 0 10px 30px -18px rgba(63,44,21,.45);
+  }
+  @media (min-width: 641px) { .hero-shot { aspect-ratio: 16 / 9; } }
+  @media (max-width: 640px) { .hero { padding-top: 18px; } }
+  /* v2.7: куда приезжаю, атмосфера, кот */
+  .zona p + p { margin-top: 12px; }
+  .zona b { font-weight: 500; color: var(--amber); }
+  .atmo { text-align: center; }
+  .atmo-quote {
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic;
+    font-size: 1.28rem; line-height: 1.6; color: var(--amber); max-width: 32em; margin: 0 auto;
+  }
+  .atmo-read { display: inline-block; margin-top: 12px; font-size: 0.82rem; color: var(--taupe); text-decoration: underline; text-underline-offset: 3px; }
+  .atmo img {
+    display: block; width: 100%; max-width: 420px; height: auto; margin: 24px auto 0;
+    border-radius: 16px; background: var(--wall); box-shadow: 0 14px 34px -20px rgba(63,44,21,.5);
+  }
+  .kot { max-width: 260px; margin: 0 auto 26px; text-align: center; }
+  .kot a { display: block; border-radius: 14px; overflow: hidden; box-shadow: 0 12px 28px -18px rgba(63,44,21,.5); }
+  .kot img { display: block; width: 100%; height: auto; }
+  .kot figcaption { margin-top: 8px; font-size: 0.8rem; color: var(--taupe); }
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -416,7 +443,8 @@
 </nav>
 
 <header class="hero">
-  <span class="eyebrow">Минск, Колодищи и ближайший пригород · выезд на дом</span>
+  <img class="hero-shot" src="minsk-stol-so-mnoy.jpg" alt="Складной массажный стол у окна, на стуле сумка и флакон масла" width="1200" height="896" fetchpriority="high" decoding="async">
+  <span class="eyebrow">Массажист · Колодищи, Минск и пригород · выезд на дом</span>
   <h1>Массаж у вас дома.<br>Приезжаю со своим столом.</h1>
   <p class="lead">Никуда ехать не нужно. Готовиться тоже не нужно — всё, что требуется для сеанса, я привожу с собой.</p>
 
@@ -458,15 +486,24 @@
   <p>Ближайший пригород — тоже: Новая Боровая, Юхновка, Сухорукие и соседние посёлки. Если вашего адреса в списке нет, просто спросите.</p>
 </section>
 
+<section class="zona" id="zona" aria-labelledby="zona-h">
+  <h2 id="zona-h">Куда приезжаю</h2>
+  <p><b>Колодищи и Колодищанский сельсовет.</b> Здесь мой кабинет, сюда ближе всего.</p>
+  <p><b>Минск</b> — по всему городу, в том числе Первомайский, Советский, Центральный, Заводской и Ленинский районы, Цнянка.</p>
+  <p><b>Минский район и пригород:</b> Боровляны, Копище, Новая Боровая, Ждановичи, Ратомка, Тарасово, Дроздово, Валерьяново, Жуков Луг, Королёв Стан, Юхновка, Городище, Слобода, Сосновая, Сосны, Раубичи, Острошицкий Городок, Околица, Марьяливо, Сухорукие, Старина, Глебковичи, Смолевичи.</p>
+  <p>Вашего адреса нет в списке — позвоните или напишите. Скажу сразу, приеду ли и сколько это будет стоить.</p>
+</section>
+
 <section class="look" aria-labelledby="look-h">
   <h2 id="look-h">Как это выглядит</h2>
   <ul class="look-strip">
     <li><figure><img src="minsk-vyezd-svisloch.jpg" alt="Массажный стол у окна в минской квартире, зима" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Стол встаёт в обычной комнате</figcaption></figure></li>
     <li><figure><img src="minsk-vyezd-gostinaya.jpg" alt="Складной массажный стол в гостиной между диваном и шкафом" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Обычно место находится</figcaption></figure></li>
-    <li><figure><img src="minsk-stol-so-mnoy.jpg" alt="Складной стол у окна, сумка и флакон масла на стуле" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Приезжаю со своим столом</figcaption></figure></li>
     <li><figure><img src="minsk-stopy.jpg" alt="Руки массажиста держат стопу человека под льняной простынёй" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Стопы</figcaption></figure></li>
     <li><figure><img src="minsk-nogi.jpg" alt="Руки массажиста на бедре лежащего человека" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Ноги</figcaption></figure></li>
     <li><figure><img src="minsk-bambuk.jpg" alt="Бамбуковые палки, ребристый ролик и флакон масла на табурете" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Бамбуковые палки — в коррекции фигуры</figcaption></figure></li>
+    <li><figure><img src="minsk-ruki-spina-1.jpg" alt="Руки массажиста на спине лежащего человека" width="1200" height="900" loading="lazy" decoding="async" onerror="var l=this.closest('li');if(l)l.remove()"><figcaption>Спина</figcaption></figure></li>
+    <li><figure><img src="minsk-ruki-spina-2.jpg" alt="Ладони массажиста вдоль спины лежащего человека" width="1200" height="900" loading="lazy" decoding="async" onerror="var l=this.closest('li');if(l)l.remove()"><figcaption>Спина</figcaption></figure></li>
     <li><figure><img src="minsk-sheya.jpg" alt="Руки массажиста на шее и плече лежащего человека" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Шея и трапеции</figcaption></figure></li>
   </ul>
   <span class="look-hint">Листайте вбок →</span>
@@ -534,6 +571,12 @@
   </div>
 </section>
 
+<section class="atmo" id="atmosphere" aria-label="Атмосфера кабинета">
+  <p class="atmo-quote">«Мне нравится момент между сеансами, когда кабинет пустой. Свет, масло, край стола. Всё на месте. И ничего не нужно.»</p>
+  <a class="atmo-read" href="https://t.me/Lighthouse_massage_music/1632" target="_blank" rel="noopener">Читать полностью →</a>
+  <img src="atmosphere.jpg" alt="Лампа, табурет, комната" width="768" height="1376" loading="lazy" decoding="async">
+</section>
+
 <section>
   <h2>Обо мне коротко</h2>
   <p>Практика с 2006 года. Руки знают, что делают, и не торопятся.</p>
@@ -568,8 +611,36 @@
   <h2 id="faq-h">Что спрашивают до записи</h2>
   <div class="faq-list">
       <details class="faq-item">
+        <summary>Есть массажист в Колодищах?</summary>
+        <div class="faq-answer">Есть. Кабинет в Колодищах, улица Волмянский Шлях, 8, сто метров от остановки «Звёздная». И выезд на дом по Колодищам и Колодищанскому сельсовету.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Можно вызвать массажиста на дом в Минске?</summary>
+        <div class="faq-answer">Да, по всему Минску. Приезжаю со своим столом, дорога входит в стоимость.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Массаж спины и шеи на дому делаете?</summary>
+        <div class="faq-answer">Да. Спина и шея, шейно-воротниковая зона, классический массаж всего тела — всё это на выезде, со своим столом.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Антицеллюлитный массаж с выездом есть?</summary>
+        <div class="faq-answer">Есть. Ручной антицеллюлитный, лимфодренажный и комплексная коррекция фигуры: бамбуковые палки, вакуумный, обёртывание. Косметика уже входит в стоимость.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Массаж лица на дому делаете?</summary>
+        <div class="faq-answer">Да: классический, асахи, с массажным мячом, 3D-лифтинг.</div>
+      </details>
+      <details class="faq-item">
+        <summary>В воскресенье работаете?</summary>
+        <div class="faq-answer">Да, с девяти до девятнадцати. Суббота выходная.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Как записаться?</summary>
+        <div class="faq-answer">Позвоните или напишите в Telegram или Viber: +375 33 377 88 72. Отвечаю в течение дня.</div>
+      </details>
+      <details class="faq-item">
         <summary>Выезжаете в мой посёлок?</summary>
-        <div class="faq-answer">Минск, Колодищи и ближайший пригород: Боровляны, Копище, Новая Боровая, Дроздово, Валерьяново, Жуков Луг, Королёв Стан, Юхновка, Городище, Слобода, Сосновая, Сосны, Раубичи, Острошицкий Городок, Околица, Марьяливо, Сухорукие, Старина, Глебковичи. Вашего адреса в списке нет — спросите.</div>
+        <div class="faq-answer">Минск, Колодищи и Колодищанский сельсовет, Минский район: Боровляны, Копище, Новая Боровая, Ждановичи, Ратомка, Тарасово, Дроздово, Валерьяново, Жуков Луг, Королёв Стан, Юхновка, Городище, Слобода, Сосновая, Сосны, Раубичи, Острошицкий Городок, Околица, Марьяливо, Сухорукие, Старина, Глебковичи, Смолевичи. Вашего адреса в списке нет — спросите.</div>
       </details>
       <details class="faq-item">
         <summary>Дорога оплачивается отдельно?</summary>
@@ -629,6 +700,10 @@
 
 
 <section class="contact">
+  <figure class="kot">
+    <a href="/humor.html#mem-kot-luchshiy-massazh-v-zhizni"><img src="mem-kot-luchshiy-massazh-v-zhizni-480.webp" alt="Рыжий кот спит на массажном столе под простынёй. «Как получить лучший массаж в жизни: 1. Запишись на массаж. 2. Приди на массаж»" width="480" height="715" loading="lazy" decoding="async"></a>
+    <figcaption>Инструкция из двух пунктов</figcaption>
+  </figure>
   <h2>Записаться</h2>
   <a class="phone" href="tel:+375333778872">+375 33 377 88 72</a>
   <div class="actions">
@@ -654,7 +729,7 @@
 
 <p class="disclaimer">Все процедуры не являются медицинскими услугами, не направлены на лечение, диагностику и медицинскую реабилитацию. Имеют общеоздоровительное, косметическое или релаксирующее воздействие на организм.</p>
 
-<div class="next-line">Дальше: <a href="/#lower-back">Поясница</a> · <a href="/#shoulders">Плечи к ушам</a></div>
+<div class="next-line">Дальше: <a href="/#lower-back">Поясница</a> · <a href="/#shoulders">Плечи к ушам</a> · <a href="/humor.html">Открытки</a></div>
 
 <footer>
   <div class="legal">
@@ -712,8 +787,12 @@
     {
       "@type": "HealthAndBeautyBusiness",
       "@id": "https://palpo.org/minsk.html#practice",
-      "name": "Алексей Гордиенко — массаж",
-      "alternateName": "Руки массажиста",
+      "name": "Массажист Алексей Гордиенко — Колодищи и Минск",
+      "alternateName": [
+        "Руки массажиста",
+        "palpo.org",
+        "Массаж на дому Колодищи"
+      ],
       "url": "https://palpo.org/minsk.html",
       "image": "https://palpo.org/og-image.jpg",
       "telephone": "+375333778872",
@@ -818,6 +897,34 @@
         {
           "@type": "Place",
           "name": "Глебковичи"
+        },
+        {
+          "@type": "Place",
+          "name": "Колодищанский сельсовет"
+        },
+        {
+          "@type": "Place",
+          "name": "Ждановичи"
+        },
+        {
+          "@type": "Place",
+          "name": "Ратомка"
+        },
+        {
+          "@type": "Place",
+          "name": "Тарасово"
+        },
+        {
+          "@type": "Place",
+          "name": "Цнянка"
+        },
+        {
+          "@type": "Place",
+          "name": "Смолевичи"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Минский район"
         }
       ],
       "serviceArea": {
@@ -848,6 +955,20 @@
         "@type": "OfferCatalog",
         "name": "Услуги",
         "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Массаж в кабинете в Колодищах"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Массаж на дому с выездом"
+            }
+          },
           {
             "@type": "Offer",
             "itemOffered": {
@@ -903,7 +1024,8 @@
         "https://yandex.by/profile/29272286204",
         "https://share.google/NzkXBERM9eFljeBZh",
         "https://t.me/Lighthouse_massage_music"
-      ]
+      ],
+      "description": "Массажист с выездом на дом по Минску, Колодищам и Минскому району. Приезжает со своим складным столом, косметикой и одноразовым бельём. Кабинет в Колодищах, ул. Волмянский Шлях, 8."
     },
     {
       "@type": "FAQPage",
@@ -914,10 +1036,66 @@
       "mainEntity": [
         {
           "@type": "Question",
+          "name": "Массажист в Колодищах: кабинет или выезд на дом",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Есть. Кабинет в Колодищах, улица Волмянский Шлях, 8, сто метров от остановки «Звёздная». И выезд на дом по Колодищам и Колодищанскому сельсовету."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Можно ли вызвать массажиста на дом в Минске",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, по всему Минску. Приезжаю со своим столом, дорога входит в стоимость."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Массаж спины и шеи на дому в Минске и Колодищах",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да. Спина и шея, шейно-воротниковая зона, классический массаж всего тела — всё это на выезде, со своим столом."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Антицеллюлитный и лимфодренажный массаж с выездом на дом",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Есть. Ручной антицеллюлитный, лимфодренажный и комплексная коррекция фигуры: бамбуковые палки, вакуумный, обёртывание. Косметика уже входит в стоимость."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Массаж лица на дому в Минске и Колодищах",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да: классический, асахи, с массажным мячом, 3D-лифтинг."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Работает ли массажист в воскресенье",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Да, с девяти до девятнадцати. Суббота выходная."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Как записаться к массажисту в Колодищах и Минске",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Позвоните или напишите в Telegram или Viber: +375 33 377 88 72. Отвечаю в течение дня."
+          }
+        },
+        {
+          "@type": "Question",
           "name": "В какие посёлки под Минском выезжает массажист со своим столом",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Минск, Колодищи и ближайший пригород: Боровляны, Копище, Новая Боровая, Дроздово, Валерьяново, Жуков Луг, Королёв Стан, Юхновка, Городище, Слобода, Сосновая, Сосны, Раубичи, Острошицкий Городок, Околица, Марьяливо, Сухорукие, Старина, Глебковичи. Вашего адреса в списке нет — спросите."
+            "text": "Минск, Колодищи и Колодищанский сельсовет, Минский район: Боровляны, Копище, Новая Боровая, Ждановичи, Ратомка, Тарасово, Дроздово, Валерьяново, Жуков Луг, Королёв Стан, Юхновка, Городище, Слобода, Сосновая, Сосны, Раубичи, Острошицкий Городок, Околица, Марьяливо, Сухорукие, Старина, Глебковичи, Смолевичи. Вашего адреса в списке нет — спросите."
           }
         },
         {
