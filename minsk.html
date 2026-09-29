@@ -23,7 +23,7 @@
 <style>
   :root {
     --beige: #DBC38E;
-    --taupe: #7C6E4E;
+    --taupe: #6B5E40;
     --amber: #3F2C15;
     --linen: #C8B595;
     --wall: #E6D9C0;
@@ -422,7 +422,60 @@
   .kot a { display: block; border-radius: 14px; overflow: hidden; box-shadow: 0 12px 28px -18px rgba(63,44,21,.5); }
   .kot img { display: block; width: 100%; height: auto; }
   .kot figcaption { margin-top: 8px; font-size: 0.8rem; color: var(--taupe); }
+
+  /* v2.8: ритм — тёплый фон и тёмные ступени (галерея, атмосфера, подвал) */
+  body { background: #F3EBDD; }
+  .disclaimer { opacity: 1; }
+  .look, .atmo {
+    max-width: none; margin: 8px 0 64px;
+    padding: 58px max(24px, calc((100% - 612px) / 2)) 58px;
+  }
+  .look { background: #2A1F14; color: #EDE3D1; }
+  .atmo { background: #1F170F; }
+  .look h2 { color: #EDE3D1; }
+  .look-strip img, .look-video video { border-color: #4A3A26; background: #3A2C1C; }
+  .look-strip figcaption, .look-video figcaption, .look-hint { color: #B9A889; }
+  .atmo-quote { color: #EDE3D1; }
+  .atmo-read { color: #DBC38E; }
+  .atmo img { box-shadow: 0 0 60px -10px rgba(219,195,142,.35); }
+  footer { background: #1A130C; color: #B9A889; border-top: 0; }
+  footer a { color: #EDE3D1; border-bottom-color: #4A3A26; }
+  footer a:hover { border-color: #DBC38E; }
+  .next-line { border-top-color: #E0D2BA; }
+  /* шапка: фото медленно приближается */
+  .hero-frame { overflow: hidden; border-radius: 18px; margin: 0 0 26px; box-shadow: 0 10px 30px -18px rgba(63,44,21,.45); }
+  .hero-frame .hero-shot { margin: 0; border-radius: 0; box-shadow: none; animation: kenburns 24s ease-in-out infinite alternate; transform-origin: 40% 60%; }
+  @keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.06); } }
+  /* блоки мягко проявляются при прокрутке — один раз */
+  html.js .rv { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+  html.js .rv.in { opacity: 1; transform: none; }
+  /* кот спит: дышит и «z z z», только пока виден */
+  .kot { max-width: 220px; }
+  .kot a { position: relative; }
+  .kot.on img { animation: catBreath 4.2s ease-in-out infinite; transform-origin: 50% 85%; }
+  @keyframes catBreath { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.012); } }
+  .zz { position: absolute; left: 34%; top: 47%; pointer-events: none; }
+  .zz i {
+    position: absolute; left: 0; top: 0; font-style: normal; font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600; color: #7a5a2e; opacity: 0; font-size: 15px;
+  }
+  .kot.on .zz i { animation: zz 3s ease-out infinite; }
+  .kot.on .zz i:nth-child(2) { animation-delay: 1s; font-size: 18px; }
+  .kot.on .zz i:nth-child(3) { animation-delay: 2s; font-size: 21px; }
+  @keyframes zz {
+    0% { opacity: 0; transform: translate(0, 0); }
+    20% { opacity: .9; }
+    100% { opacity: 0; transform: translate(26px, -44px); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-frame .hero-shot, .kot.on img, .kot.on .zz i { animation: none !important; }
+    .zz i { opacity: .7; }
+    .zz i:nth-child(2) { transform: translate(10px, -16px); }
+    .zz i:nth-child(3) { transform: translate(20px, -32px); }
+    html.js .rv { opacity: 1; transform: none; transition: none; }
+  }
 </style>
+<script>document.documentElement.className += " js";</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -443,7 +496,7 @@
 </nav>
 
 <header class="hero">
-  <img class="hero-shot" src="minsk-stol-so-mnoy.jpg" alt="Складной массажный стол у окна, на стуле сумка и флакон масла" width="1200" height="896" fetchpriority="high" decoding="async">
+  <div class="hero-frame"><img class="hero-shot" src="minsk-stol-so-mnoy.jpg" alt="Складной массажный стол у окна, на стуле сумка и флакон масла" width="1200" height="896" fetchpriority="high" decoding="async"></div>
   <span class="eyebrow">Массажист · Колодищи, Минск и пригород · выезд на дом</span>
   <h1>Массаж у вас дома.<br>Приезжаю со своим столом.</h1>
   <p class="lead">Никуда ехать не нужно. Готовиться тоже не нужно — всё, что требуется для сеанса, я привожу с собой.</p>
@@ -465,7 +518,7 @@
   <p class="byline">Алексей Гордиенко · массажист · практика с 2006 года</p>
 </header>
 
-<section class="how">
+<section class="how rv">
   <h2>Как проходит выезд</h2>
   <ol class="how-steps">
     <li>Звоните или пишете — в Telegram, Viber или по телефону.</li>
@@ -486,7 +539,7 @@
   <p>Ближайший пригород — тоже: Новая Боровая, Юхновка, Сухорукие и соседние посёлки. Если вашего адреса в списке нет, просто спросите.</p>
 </section>
 
-<section class="zona" id="zona" aria-labelledby="zona-h">
+<section class="zona rv" id="zona" aria-labelledby="zona-h">
   <h2 id="zona-h">Куда приезжаю</h2>
   <p><b>Колодищи и Колодищанский сельсовет.</b> Здесь мой кабинет, сюда ближе всего.</p>
   <p><b>Минск</b> — по всему городу, в том числе Первомайский, Советский, Центральный, Заводской и Ленинский районы, Цнянка.</p>
@@ -571,7 +624,7 @@
   </div>
 </section>
 
-<section class="atmo" id="atmosphere" aria-label="Атмосфера кабинета">
+<section class="atmo rv" id="atmosphere" aria-label="Атмосфера кабинета">
   <p class="atmo-quote">«Мне нравится момент между сеансами, когда кабинет пустой. Свет, масло, край стола. Всё на месте. И ничего не нужно.»</p>
   <a class="atmo-read" href="https://t.me/Lighthouse_massage_music/1632" target="_blank" rel="noopener">Читать полностью →</a>
   <img src="atmosphere.jpg" alt="Лампа, табурет, комната" width="768" height="1376" loading="lazy" decoding="async">
@@ -607,7 +660,7 @@
   </div>
 </section>
 <!-- ── вопросы до записи ───────────────────────────────── -->
-<section id="faq" aria-labelledby="faq-h">
+<section class="rv" id="faq" aria-labelledby="faq-h">
   <h2 id="faq-h">Что спрашивают до записи</h2>
   <div class="faq-list">
       <details class="faq-item">
@@ -701,7 +754,7 @@
 
 <section class="contact">
   <figure class="kot">
-    <a href="/humor.html#mem-kot-luchshiy-massazh-v-zhizni"><img src="mem-kot-luchshiy-massazh-v-zhizni-480.webp" alt="Рыжий кот спит на массажном столе под простынёй. «Как получить лучший массаж в жизни: 1. Запишись на массаж. 2. Приди на массаж»" width="480" height="715" loading="lazy" decoding="async"></a>
+    <a href="/humor.html#mem-kot-luchshiy-massazh-v-zhizni"><span class="zz" aria-hidden="true"><i>z</i><i>z</i><i>z</i></span><img src="mem-kot-luchshiy-massazh-v-zhizni-480.webp" alt="Рыжий кот спит на массажном столе под простынёй. «Как получить лучший массаж в жизни: 1. Запишись на массаж. 2. Приди на массаж»" width="480" height="715" loading="lazy" decoding="async"></a>
     <figcaption>Инструкция из двух пунктов</figcaption>
   </figure>
   <h2>Записаться</h2>
@@ -1232,6 +1285,22 @@
     var d = document.documentElement;
     if (window.scrollY + window.innerHeight >= d.scrollHeight - 120) { fired = true; goal('scroll_end'); }
   }, { passive: true });
+})();
+</script>
+<script>
+/* v2.8: проявление блоков и кот, который спит только пока его видно */
+(function () {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var rv = document.querySelectorAll('.rv');
+  if (reduce || !('IntersectionObserver' in window)) { for (var i = 0; i < rv.length; i++) rv[i].classList.add('in'); }
+  else {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.08 });
+    for (var j = 0; j < rv.length; j++) io.observe(rv[j]);
+  }
+  var kot = document.querySelector('.kot');
+  if (kot && !reduce && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) { kot.classList.toggle('on', es[0].isIntersecting); }, { threshold: 0.3 }).observe(kot);
+  }
 })();
 </script>
 </body>

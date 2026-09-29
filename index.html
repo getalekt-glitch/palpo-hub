@@ -198,7 +198,7 @@
     box-shadow: 0 4px 18px rgba(63,44,21,0.10); transition: border-color 0.2s ease, box-shadow 0.2s ease;
     -webkit-appearance: none; appearance: none;
   }
-  .finder-input::placeholder { color: var(--taupe); opacity: 0.85; }
+  .finder-input::placeholder { color: var(--taupe); opacity: 1; }
   .finder-input:focus { outline: none; border-color: var(--amber); box-shadow: 0 4px 22px rgba(63,44,21,0.18); }
   .finder-input:focus-visible { outline: 2px solid var(--amber); outline-offset: 3px; }
   .finder-go {
@@ -2141,13 +2141,20 @@
       ci--; input.placeholder = ci > 0 ? 'например: ' + p.slice(0, ci) : 'например:';
       if (ci <= 0) {
         erasing = false; pi++;
-        if (pi >= phrases.length) { pi = 0; rounds++; if (rounds >= 2) { stop(); return; } }
+        if (pi >= phrases.length) { pi = 0; rounds++; if (rounds >= 1) { stop(); return; } }
         delay = 350;
       } else delay = 32;
     }
     setTimeout(tick, delay);
   }
-  setTimeout(tick, 1600);
+  /* v18.1: печатать начинает, когда поле попало на экран — поле теперь в атласе, ниже первого экрана */
+  if ('IntersectionObserver' in window) {
+    var started = false;
+    var fio = new IntersectionObserver(function (es) {
+      if (es[0].isIntersecting && !started) { started = true; fio.disconnect(); setTimeout(tick, 400); }
+    }, { threshold: 0.6 });
+    fio.observe(input);
+  } else { setTimeout(tick, 1600); }
 })();
 </script>
 </body>
