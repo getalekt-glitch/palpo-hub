@@ -475,6 +475,34 @@
     html.js .rv { opacity: 1; transform: none; transition: none; }
   }
 a[href^="tel:"], .phone { font-variant-numeric: lining-nums; }
+
+  /* v2.12: вопросы массажисту — памятка с копированием */
+  .memo {
+    position: relative; background: var(--card); border: 1px solid var(--linen);
+    border-radius: 18px; padding: 26px 24px 22px; overflow: hidden;
+  }
+  .memo::before {
+    content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+    background: var(--beige);
+  }
+  .memo-lead { font-size: 0.95rem; color: var(--taupe); margin-bottom: 14px; }
+  .memo-list { margin: 0; padding-left: 1.35em; }
+  .memo-list li {
+    font-size: 0.98rem; color: var(--ink); line-height: 1.55;
+    padding: 7px 0 7px 4px; border-bottom: 1px solid var(--wall);
+  }
+  .memo-list li:last-child { border-bottom: 0; }
+  .memo-list li::marker { color: var(--taupe); font-size: 0.9em; }
+  .memo-copy {
+    margin-top: 18px; cursor: pointer; font: inherit;
+    font-size: 0.92rem; border: 1px solid var(--linen); background: var(--bg-alt);
+    color: var(--amber); padding: 12px 20px; border-radius: 999px;
+    transition: transform .18s ease, background .18s ease;
+  }
+  .memo-copy:hover { transform: translateY(-2px); background: var(--wall); }
+  .memo-copy:focus-visible { outline: 2px solid var(--taupe); outline-offset: 3px; }
+  .memo-copy.done { background: var(--amber); color: var(--bg); border-color: var(--amber); }
+  @media (max-width: 640px) { .memo { padding: 22px 18px 20px; } .memo-copy { width: 100%; } }
 </style>
 <script>document.documentElement.className += " js";</script>
 <!-- Yandex.Metrika counter -->
@@ -660,6 +688,26 @@ a[href^="tel:"], .phone { font-variant-numeric: lining-nums; }
     </a>
   </div>
 </section>
+<!-- v2.12: что спросить у массажиста — памятка для любого выбора -->
+<section class="rv" id="voprosy" aria-labelledby="voprosy-h">
+  <h2 id="voprosy-h">Что спросить у массажиста, прежде чем звать домой</h2>
+  <div class="memo">
+    <p class="memo-lead">Скопируйте и задайте любому массажисту. Мне тоже.</p>
+    <ol class="memo-list" id="memo-list">
+      <li>Сколько выйдет вместе со всем? Что идёт сверху?</li>
+      <li>Дорогу оплачивать отдельно?</li>
+      <li>На чём будете делать&nbsp;— привезёте своё или на моей кровати?</li>
+      <li>Чьё бельё и масло? Упаковку откроете при мне?</li>
+      <li>Чек дадите?</li>
+      <li>Сколько длится сам массаж&nbsp;— без сборки и разговоров?</li>
+      <li>Что мне подготовить?</li>
+      <li>Если станет больно или неприятно&nbsp;— можно сказать сразу?</li>
+      <li>А если я не могу расслабиться&nbsp;— это нормально?</li>
+    </ol>
+    <button type="button" class="memo-copy" id="memo-copy">Скопировать вопросы</button>
+  </div>
+</section>
+
 <!-- ── вопросы до записи ───────────────────────────────── -->
 <section class="rv" id="faq" aria-labelledby="faq-h">
   <h2 id="faq-h">Что спрашивают до записи</h2>
@@ -773,17 +821,9 @@ a[href^="tel:"], .phone { font-variant-numeric: lining-nums; }
   <p class="reply-note">Отвечаю в течение дня. Если не ответил сразу — я за столом.</p>
 </section>
 
-<section>
-  <div class="channel">
-    <h2>Раз в неделю пишу о теле</h2>
-    <p>Короткие истории о том, что видно рукам за столом. Читать можно с любой.</p>
-    <a class="channel-link" href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noopener">Читать в Telegram <span aria-hidden="true">→</span></a>
-  </div>
-</section>
-
 <p class="disclaimer">Все процедуры не являются медицинскими услугами, не направлены на лечение, диагностику и медицинскую реабилитацию. Имеют общеоздоровительное, косметическое или релаксирующее воздействие на организм.</p>
 
-<div class="next-line">Дальше: <a href="/#lower-back">Поясница</a> · <a href="/#shoulders">Плечи к ушам</a> · <a href="/humor.html">Открытки</a></div>
+<div class="next-line">Дальше: <a href="/#lower-back">Поясница</a> · <a href="/#shoulders">Плечи к ушам</a> · <a href="/humor.html">Открытки</a> · <a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noopener">Заметки в Telegram</a></div>
 
 <footer>
   <div class="legal">
@@ -1284,8 +1324,33 @@ a[href^="tel:"], .phone { font-variant-numeric: lining-nums; }
     var h = a.getAttribute('href') || '';
     if (h.indexOf('tel:') === 0) goal('call_click');
     else if (h.indexOf('viber:') === 0) goal('viber_click');
+    else if (h.indexOf('Lighthouse_massage_music') > -1) goal('channel_click');
     else if (h.indexOf('t.me/') > -1 || h.indexOf('telegram.me/') > -1) goal('tg_click');
   }, true);
+
+  /* v2.12: копирование вопросов массажисту */
+  var mb = document.getElementById('memo-copy'), ml = document.getElementById('memo-list');
+  if (mb && ml) {
+    var items = ml.querySelectorAll('li'), lines = ['Что спросить у массажиста, прежде чем звать домой'];
+    for (var i = 0; i < items.length; i++) lines.push((i + 1) + '. ' + items[i].textContent.trim());
+    var text = lines.join('\n');
+    var ok = function () {
+      mb.classList.add('done'); mb.textContent = 'Скопировано';
+      goal('memo_copy');
+      setTimeout(function () { mb.classList.remove('done'); mb.textContent = 'Скопировать вопросы'; }, 2500);
+    };
+    var old = function () {
+      var t = document.createElement('textarea'); t.value = text;
+      t.setAttribute('readonly', ''); t.style.position = 'fixed'; t.style.top = '-1000px';
+      document.body.appendChild(t); t.select();
+      try { if (document.execCommand('copy')) ok(); } catch (e) {}
+      document.body.removeChild(t);
+    };
+    mb.addEventListener('click', function () {
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(ok, old);
+      else old();
+    });
+  }
 
   var fired = false;
   window.addEventListener('scroll', function () {
