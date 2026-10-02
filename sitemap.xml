@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://palpo.org/</loc>
     <lastmod>2026-10-02</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
+  
+    <image:image><image:loc>https://palpo.org/kalendar-oktyabr-2026-ru-light.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/kalendar-oktyabr-2026-ru-dark.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/kalendar-noyabr-2026-ru-light.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/kalendar-noyabr-2026-ru-dark.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/kalendar-dekabr-2026-ru-light.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/kalendar-dekabr-2026-ru-dark.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://palpo.org/en.html</loc>
@@ -14,6 +22,13 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
+  
+    <image:image><image:loc>https://palpo.org/calendar-october-2026-en-light.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/calendar-october-2026-en-dark.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/calendar-november-2026-en-light.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/calendar-november-2026-en-dark.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/calendar-december-2026-en-light.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/calendar-december-2026-en-dark.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://palpo.org/minsk.html</loc>
@@ -25,7 +40,35 @@
   </url>
   <url>
     <loc>https://palpo.org/humor.html</loc>
-    <lastmod>2026-09-28</lastmod>
+    <lastmod>2026-10-02</lastmod>
+  
+    <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/humor.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en-humor.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/humor.html"/>
+    <image:image><image:loc>https://palpo.org/mem-akciya-kupi-tretiy.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-before-after-massage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-do-i-posle-massazha.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-dokazano-zrenie.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-granata-massage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-gusenica-babochka.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-kot-luchshiy-massazh-v-zhizni.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-lya-tut-massazh.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-massage-enter.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-po-faktu-kazhdomu-nuzhen-massazh.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-ruka-svecha-massage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-stol-on.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-stol-ona.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/otkrytka-den-rozhdeniya-ded-dohrenaletie.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/otkrytka-den-rozhdeniya-fenek-poyasnitsa.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/otkrytka-den-rozhdeniya-fenek-tishina-temnaya.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/otkrytka-den-rozhdeniya-fenek-tishina.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/otkrytka-den-rozhdeniya-gus-raz-v-godu.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/otkrytka-dlya-dvoih-plany-i-maslo.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/otkrytka-dlya-dvoih-s-tebya-ustalost.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/otkrytka-dlya-dvoih-snimay-chasy.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/otkrytka-dlya-dvoih-ty-moe-vse-namek.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/otkrytka-dlya-dvoih-vremya-zamedlitsya-serdce.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://palpo.org/biomechanics.html</loc>
@@ -33,6 +76,30 @@
   </url>
   <url>
     <loc>https://palpo.org/en-humor.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
+  
+    <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/humor.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en-humor.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/humor.html"/>
+    <image:image><image:loc>https://palpo.org/card-birthday-fennec-party-sound.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-birthday-fox-knees-applaud.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-birthday-goose-once-a-year.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-birthday-lynx-unprovoked-oof.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-birthday-otter-still-not-evening.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-birthday-wolf-lower-back-left-the-chat.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-for-two-phones-away.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-for-two-plans-and-warm-oil.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-for-two-slow-down.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-for-two-take-off-your-watch.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-for-two-the-deal-tonight.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-for-two-tonight-is-for-silence.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-for-two-undo-the-day.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/card-for-two-waiting-for-you.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-before-after-massage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-granata-massage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-massage-enter.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-ruka-svecha-massage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-stol-on.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-stol-ona.jpg</image:loc></image:image>
   </url>
 </urlset>
