@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://palpo.org/</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://palpo.org/en.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
@@ -32,15 +32,15 @@
   </url>
   <url>
     <loc>https://palpo.org/minsk.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://palpo.org/polka.html</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
   <url>
     <loc>https://palpo.org/humor.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
 
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/humor.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en-humor.html"/>
@@ -88,7 +88,7 @@
   </url>
   <url>
     <loc>https://palpo.org/en-humor.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-09</lastmod>
 
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/humor.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en-humor.html"/>

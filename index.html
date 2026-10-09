@@ -1093,22 +1093,43 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/112520327" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<style id="pn-style">
+/* v1 09.10.2026: единое меню и подвал palpo.org — одинаковы на всех страницах */
+.pn-head{position:sticky;top:0;z-index:100;background:rgba(251,249,245,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid #E3D5BB;color:#3F2C15;font-family:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif}
+.pn-nav{text-align:left;max-width:1120px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap}
+.pn-brand{font-family:'Cormorant Garamond','Iowan Old Style',Georgia,serif;font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:#3F2C15;flex:1 1 auto;white-space:nowrap}
+.pn-links{display:flex;gap:6px 22px;font-size:.92rem;font-weight:400;order:2}
+.pn-links a{color:#3F2C15;text-decoration:none;white-space:nowrap;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .2s}
+.pn-links a:hover,.pn-links a[aria-current]{border-bottom-color:#A87244}
+.pn-lang{order:3;font-size:.82rem;font-weight:500;letter-spacing:.08em;border:1px solid #A87244;border-radius:100px;padding:6px 13px;color:#A87244;text-decoration:none;flex-shrink:0}
+@media (max-width:899px){
+ .pn-nav{padding:10px 16px 6px}
+ .pn-brand{font-size:.95rem}
+ .pn-lang{order:2}
+ .pn-links{order:3;flex:1 0 100%;display:grid;grid-template-columns:1fr 1fr;gap:0 16px;font-size:.9rem}
+ .pn-links a{padding:5px 0}
+}
+footer.pn-foot{display:block;max-width:none;width:auto}
+.pn-foot{border-top:1px solid #E3D5BB;background:#F2EADC;color:#3F2C15;font-family:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif;font-size:.86rem;line-height:1.6;text-align:left;padding:28px 16px 32px;margin:0}
+.pn-foot-in{max-width:1120px;margin:0 auto;display:grid;gap:18px}
+.pn-foot a{color:#3F2C15;text-decoration:none;border-bottom:1px solid rgba(168,114,68,.45)}
+.pn-foot a:hover{border-bottom-color:#A87244}
+.pn-row{display:flex;flex-wrap:wrap;gap:6px 18px}
+.pn-label{display:block;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#6E5E44;margin-bottom:6px}
+.pn-collab{font-family:'Cormorant Garamond','Iowan Old Style',Georgia,serif;font-size:1.15rem;line-height:1.35}
+.pn-small{font-size:.74rem;color:#6E5E44}
+.pn-away{margin:18px 0 0;display:grid;gap:8px;font-size:.95rem}
+.pn-away a{color:inherit;text-underline-offset:3px}
+.pn-quiet{max-width:880px;margin:22px auto 0;display:grid;gap:10px;text-align:left;font-size:.95rem;line-height:1.45}
+.pn-quiet a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(168,114,68,.5)}
+.pn-quiet b{font-weight:500}
+@media (prefers-reduced-motion:reduce){.pn-links a{transition:none}}
+</style>
 </head>
 <body>
+<header class="pn-head site-header"><a class="skip-link" href="#main">К содержанию</a><nav class="pn-nav" aria-label="Разделы сайта"><a class="pn-brand" href="/">Руки массажиста</a><div class="pn-links"><a href="/#atlas">Где вы замерли</a><a href="/biomechanics.html">Ткнуть пальцем</a><a href="/humor.html">Кто тоже врёт</a><a href="/minsk.html">Можно молчать</a></div><a class="pn-lang" href="en.html" hreflang="en" lang="en">EN</a></nav></header>
 
-<header class="site-header">
-  <a class="skip-link" href="#main">К содержанию</a>
-  <nav class="wrap" aria-label="Разделы сайта">
-    <span class="brand">Руки массажиста</span>
-    <div class="nav-links">
-      <a href="/humor.html">Открытки</a>
-      <a href="#atlas">Помочь себе</a>
-      <a href="#calendar">Обои</a>
-      <a href="/minsk.html">Минск</a>
-    </div>
-    <a href="en.html" class="lang-toggle" hreflang="en" lang="en">EN</a>
-  </nav>
-</header>
+
 
 <main id="main">
 
@@ -1116,18 +1137,17 @@
   <div class="hero-inner">
     <span class="hall-eyebrow">palpo.org · Минск · у стола с 2006 года</span>
     <h1 class="hall-title serif">Руки массажиста</h1>
-    <p class="hall-lead">Здесь можно взять открытку, обои на телефон и одно движение для спины. Бесплатно, в высоком качестве.</p>
 
     <div class="doors">
       <div class="door" id="humor">
-        <a class="door-name" href="/humor.html" data-goal="door_humor">Открытки и мемы</a>
-        <span class="door-text">Ко дню рождения, для двоих, просто посмеяться.</span>
+        <a class="door-name" href="/humor.html" data-goal="door_humor">Делаете вид, что ничего не затекло?</a>
+        <span class="door-text">Отправьте картинку тем, кто тоже врёт.</span>
         <span class="door-free">Скачать бесплатно</span>
         <div class="free-view"><div class="free-track"><a class="free-item" href="/#calendar"><img src="calendar-preview.jpg" alt="Календарь-обои на ноябрь" width="72" height="108" decoding="async"><span>обои</span></a><a class="free-item" href="humor.html#otkrytka-den-rozhdeniya-ded-dohrenaletie"><img src="otkrytka-den-rozhdeniya-ded-dohrenaletie-480.webp" alt="С днём твоего дохреналетия" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="humor.html#mem-kot-luchshiy-massazh-v-zhizni"><img src="mem-kot-luchshiy-massazh-v-zhizni-480.webp" alt="Как получить лучший массаж в жизни" width="72" height="108" decoding="async"><span>мем</span></a><a class="free-item" href="humor.html#otkrytka-dlya-dvoih-s-tebya-ustalost"><img src="otkrytka-dlya-dvoih-s-tebya-ustalost-480.webp" alt="С тебя — усталость, с меня — массаж" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="humor.html#otkrytka-den-rozhdeniya-fenek-poyasnitsa"><img src="otkrytka-den-rozhdeniya-fenek-poyasnitsa-480.webp" alt="Поясница выходит из чата" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="humor.html#mem-akciya-kupi-tretiy"><img src="mem-akciya-kupi-tretiy-480.webp" alt="Купи два массажа и третий тоже купи" width="72" height="108" decoding="async"><span>мем</span></a><a class="free-item" href="humor.html#otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat"><img src="otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat-480.webp" alt="Клуб «Я ещё лягу в десять»" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="/#calendar" aria-hidden="true" tabindex="-1"><img src="calendar-preview.jpg" alt="" width="72" height="108" decoding="async"><span>обои</span></a><a class="free-item" href="humor.html#otkrytka-den-rozhdeniya-ded-dohrenaletie" aria-hidden="true" tabindex="-1"><img src="otkrytka-den-rozhdeniya-ded-dohrenaletie-480.webp" alt="" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="humor.html#mem-kot-luchshiy-massazh-v-zhizni" aria-hidden="true" tabindex="-1"><img src="mem-kot-luchshiy-massazh-v-zhizni-480.webp" alt="" width="72" height="108" decoding="async"><span>мем</span></a><a class="free-item" href="humor.html#otkrytka-dlya-dvoih-s-tebya-ustalost" aria-hidden="true" tabindex="-1"><img src="otkrytka-dlya-dvoih-s-tebya-ustalost-480.webp" alt="" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="humor.html#otkrytka-den-rozhdeniya-fenek-poyasnitsa" aria-hidden="true" tabindex="-1"><img src="otkrytka-den-rozhdeniya-fenek-poyasnitsa-480.webp" alt="" width="72" height="108" decoding="async"><span>открытка</span></a><a class="free-item" href="humor.html#mem-akciya-kupi-tretiy" aria-hidden="true" tabindex="-1"><img src="mem-akciya-kupi-tretiy-480.webp" alt="" width="72" height="108" decoding="async"><span>мем</span></a><a class="free-item" href="humor.html#otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat" aria-hidden="true" tabindex="-1"><img src="otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat-480.webp" alt="" width="72" height="108" decoding="async"><span>открытка</span></a></div></div>
       </div>
       <div class="door">
-        <a class="door-name" href="#atlas" data-goal="door_atlas">Как помочь себе самому</a>
-        <span class="door-text">Затекла поясница, плечи у ушей, гудят ноги. Одно движение на минуту, сидя, там, где вы сейчас.</span>
+        <a class="door-name" href="#atlas" data-goal="door_atlas">Замерли и не дышите, пока читаете?</a>
+        <span class="door-text">Минутная проверка прямо на стуле.</span>
         <ul class="door-chips">
           <li><a href="#lower-back" data-goal="door_atlas">поясница</a></li>
           <li><a href="#shoulders" data-goal="door_atlas">плечи</a></li>
@@ -1138,10 +1158,10 @@
       </div>
     </div>
 
-    <p class="hall-quiet">
-      <a href="/minsk.html" data-goal="door_minsk">Массаж в Колодищах и Минске, выезд на дом →</a>
-      <a href="/biomechanics.html" data-goal="door_bio">Атлас тела в гравюрах →</a>
-    </p>
+    <div class="pn-quiet">
+      <a href="/biomechanics.html" data-goal="door_bio">Стыдно признаться, что не знаете, где ноет? <b>Ткните пальцем в гравюру →</b></a>
+      <a href="/minsk.html" data-goal="door_minsk">Боитесь, что заурчит живот или неловко раздеться? <b>Здесь можно просто молчать →</b></a>
+    </div>
 
 
     <a class="entry-lang" href="en.html" hreflang="en" lang="en" hidden>Reading in English? The same, in English &rarr;</a>
@@ -1780,19 +1800,10 @@
 </section>
 
 </main>
+<footer class="pn-foot"><div class="pn-foot-in"><p class="pn-collab" style="margin:0">Открыт к совместным проектам и предложениям. <a href="https://t.me/aleksei_massage_minsk" target="_blank" rel="noreferrer">Напишите в Telegram →</a></p><div><span class="pn-label">Страницы</span><div class="pn-row"><a href="/#atlas">Минута на стуле</a><a href="/biomechanics.html">Гравюры тела</a><a href="/humor.html">Открытки и мемы</a><a href="/#calendar">Обои на месяц</a><a href="/polka.html">Чем работаю</a><a href="/minsk.html">Массаж в Минске и Колодищах</a><a href="/en.html">English</a></div></div><div><span class="pn-label">Где ещё</span><div class="pn-row"><a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">Telegram</a><a href="https://www.tiktok.com/@aleksei_massage_minsk" target="_blank" rel="noreferrer">TikTok</a><a href="https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN" target="_blank" rel="noreferrer">YouTube</a><a href="https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/" target="_blank" rel="noreferrer">Pinterest</a></div></div><p class="pn-small" style="margin:0">Заметки массажиста, не медицинская консультация. © 2026 HARDZIYENKA ALIAKSEI · palpo.org</p></div></footer>
 
-<footer>
-  <span class="footer-brand">Проект «Руки массажиста»</span>
-  <a class="btn" href="https://t.me/aleksei_massage_minsk" target="_blank" rel="noreferrer">Контакты</a>
-  <span class="footer-note">личный контакт · не канал</span>
-  <a class="footer-geo" href="/minsk.html">Кабинет и выезд · Минск</a>
-  <a class="footer-geo" href="/humor.html">Открытки и мемы</a>
-  <div class="footer-links">
-    <a href="https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/" target="_blank" rel="noreferrer">Pinterest</a>
-    <a href="https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN" target="_blank" rel="noreferrer">Lighthouse · музыка</a>
-  </div>
-  <span class="footer-copy">© 2026 HARDZIYENKA ALIAKSEI. palpo.org</span>
-</footer>
+
+
 
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e0cfa89fa9b44378ab3443a1d1e8e7e"}'></script><!-- End Cloudflare Web Analytics -->
 

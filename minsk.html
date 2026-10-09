@@ -517,13 +517,43 @@ a[href^="tel:"], .phone { font-variant-numeric: lining-nums; }
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/112520327" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+<style id="pn-style">
+/* v1 09.10.2026: единое меню и подвал palpo.org — одинаковы на всех страницах */
+.pn-head{position:sticky;top:0;z-index:100;background:rgba(251,249,245,.95);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid #E3D5BB;color:#3F2C15;font-family:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif}
+.pn-nav{text-align:left;max-width:1120px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:10px 22px;flex-wrap:wrap}
+.pn-brand{font-family:'Cormorant Garamond','Iowan Old Style',Georgia,serif;font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:#3F2C15;flex:1 1 auto;white-space:nowrap}
+.pn-links{display:flex;gap:6px 22px;font-size:.92rem;font-weight:400;order:2}
+.pn-links a{color:#3F2C15;text-decoration:none;white-space:nowrap;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .2s}
+.pn-links a:hover,.pn-links a[aria-current]{border-bottom-color:#A87244}
+.pn-lang{order:3;font-size:.82rem;font-weight:500;letter-spacing:.08em;border:1px solid #A87244;border-radius:100px;padding:6px 13px;color:#A87244;text-decoration:none;flex-shrink:0}
+@media (max-width:899px){
+ .pn-nav{padding:10px 16px 6px}
+ .pn-brand{font-size:.95rem}
+ .pn-lang{order:2}
+ .pn-links{order:3;flex:1 0 100%;display:grid;grid-template-columns:1fr 1fr;gap:0 16px;font-size:.9rem}
+ .pn-links a{padding:5px 0}
+}
+footer.pn-foot{display:block;max-width:none;width:auto}
+.pn-foot{border-top:1px solid #E3D5BB;background:#F2EADC;color:#3F2C15;font-family:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif;font-size:.86rem;line-height:1.6;text-align:left;padding:28px 16px 32px;margin:0}
+.pn-foot-in{max-width:1120px;margin:0 auto;display:grid;gap:18px}
+.pn-foot a{color:#3F2C15;text-decoration:none;border-bottom:1px solid rgba(168,114,68,.45)}
+.pn-foot a:hover{border-bottom-color:#A87244}
+.pn-row{display:flex;flex-wrap:wrap;gap:6px 18px}
+.pn-label{display:block;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:#6E5E44;margin-bottom:6px}
+.pn-collab{font-family:'Cormorant Garamond','Iowan Old Style',Georgia,serif;font-size:1.15rem;line-height:1.35}
+.pn-small{font-size:.74rem;color:#6E5E44}
+.pn-away{margin:18px 0 0;display:grid;gap:8px;font-size:.95rem}
+.pn-away a{color:inherit;text-underline-offset:3px}
+.pn-quiet{max-width:880px;margin:22px auto 0;display:grid;gap:10px;text-align:left;font-size:.95rem;line-height:1.45}
+.pn-quiet a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(168,114,68,.5)}
+.pn-quiet b{font-weight:500}
+@media (prefers-reduced-motion:reduce){.pn-links a{transition:none}}
+</style>
 </head>
 <body>
+<header class="pn-head"><nav class="pn-nav" aria-label="Разделы сайта"><a class="pn-brand" href="/">Руки массажиста</a><div class="pn-links"><a href="/#atlas">Где вы замерли</a><a href="/biomechanics.html">Ткнуть пальцем</a><a href="/humor.html">Кто тоже врёт</a><a href="/minsk.html" aria-current="page">Можно молчать</a></div><a class="pn-lang" href="en.html" hreflang="en" lang="en">EN</a></nav></header>
 
-<nav>
-  <a class="brand" href="/">Руки массажиста</a>
-  <a class="back-link" href="/">На главную</a>
-</nav>
+
 
 <header class="hero">
   <div class="hero-frame"><img class="hero-shot" src="minsk-stol-so-mnoy.jpg" alt="Складной массажный стол у окна, на стуле сумка и флакон масла" width="1200" height="896" fetchpriority="high" decoding="async"></div>
@@ -546,6 +576,10 @@ a[href^="tel:"], .phone { font-variant-numeric: lining-nums; }
     </a>
   </div>
   <p class="byline">Алексей Гордиенко · массажист · практика с 2006 года</p>
+  <div class="pn-away">
+    <a href="/biomechanics.html">Вы не в Минске? Ткните пальцем в гравюру, где ноет →</a>
+    <a href="/#atlas">Или минутная проверка прямо на стуле →</a>
+  </div>
 </header>
 
 <section class="how rv">
@@ -826,6 +860,7 @@ a[href^="tel:"], .phone { font-variant-numeric: lining-nums; }
 
 <div class="next-line">Дальше: <a href="/#lower-back">Поясница</a> · <a href="/#shoulders">Плечи к ушам</a> · <a href="/humor.html">Открытки</a> · <a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noopener">Заметки в Telegram</a></div>
 
+<footer class="pn-foot"><div class="pn-foot-in"><p class="pn-collab" style="margin:0">Открыт к совместным проектам и предложениям. <a href="https://t.me/aleksei_massage_minsk" target="_blank" rel="noreferrer">Напишите в Telegram →</a></p><div><span class="pn-label">Страницы</span><div class="pn-row"><a href="/#atlas">Минута на стуле</a><a href="/biomechanics.html">Гравюры тела</a><a href="/humor.html">Открытки и мемы</a><a href="/#calendar">Обои на месяц</a><a href="/polka.html">Чем работаю</a><a href="/minsk.html">Массаж в Минске и Колодищах</a><a href="/en.html">English</a></div></div><div><span class="pn-label">Где ещё</span><div class="pn-row"><a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">Telegram</a><a href="https://www.tiktok.com/@aleksei_massage_minsk" target="_blank" rel="noreferrer">TikTok</a><a href="https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN" target="_blank" rel="noreferrer">YouTube</a><a href="https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/" target="_blank" rel="noreferrer">Pinterest</a></div></div><p class="pn-small" style="margin:0">Заметки массажиста, не медицинская консультация. © 2026 HARDZIYENKA ALIAKSEI · palpo.org</p></div></footer>
 <footer>
   <div class="legal">
     Гордиенко Алексей Евгеньевич · плательщик налога на профессиональный доход · УНП AB7716165
