@@ -94,6 +94,16 @@
     100% { opacity: 0; left: 53.6%; top: 53.6%; }
   }
 
+  /* Знак «дальше» внизу обложки: без слов, пропадает после первой прокрутки */
+  .cue { display: none; }
+  @media (max-width: 899px) {
+    .cue { display: grid; place-items: center; position: absolute; left: 50%; bottom: 18px; width: 44px; height: 44px; margin-left: -22px; border-radius: 50%; background: rgba(251, 249, 245, .82); box-shadow: 0 4px 14px -6px rgba(63, 44, 21, .5); transition: opacity .4s; }
+    .cue span { width: 11px; height: 11px; border-right: 1.5px solid var(--ink); border-bottom: 1.5px solid var(--ink); transform: translateY(-2px) rotate(45deg); }
+    .cue { animation: nudge 2.2s ease-in-out infinite; }
+    .cue.gone { opacity: 0; pointer-events: none; }
+  }
+  @keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
   /* Таблички справа / ниже */
   .side { display: grid; gap: 16px; min-width: 0; }
   .label { font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: var(--ink-soft); }
@@ -106,7 +116,7 @@
   .manifest-body p:first-child { font-family: var(--font-display); font-style: italic; font-size: 1.22rem; line-height: 1.45; }
   .manifest-back { display: block; width: 100%; max-width: 360px; height: auto; margin: 6px 0 18px; border-radius: 2px; }
   .more { justify-self: start; background: none; border: 0; padding: 4px 0; font: inherit; font-size: .74rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); border-bottom: 1px solid var(--ink-soft); cursor: pointer; }
-  .more:focus-visible, .thumb:focus-visible, .hall button:focus-visible { outline: 2px solid rgb(var(--glow)); outline-offset: 3px; }
+  .more:focus-visible, .thumb:focus-visible, .hall .ico:focus-visible { outline: 2px solid rgb(var(--glow)); outline-offset: 3px; }
 
   details.howto summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
   details.howto summary::-webkit-details-marker { display: none; }
@@ -128,21 +138,22 @@
   .plate-name b { font-family: var(--font-display); font-weight: 500; font-size: .95rem; margin-right: 4px; }
 
   /* Зал осмотра */
-  .hall { position: fixed; inset: 0; z-index: 50; background: var(--hall); color: var(--hall-ink); display: grid; grid-template-rows: auto minmax(0, 1fr); padding: env(safe-area-inset-top, 0px) 0 env(safe-area-inset-bottom, 0px); }
-  .hall-bar { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 10px 16px; }
-  .hall button { background: none; border: 1px solid rgba(239, 230, 212, .28); color: var(--hall-ink); border-radius: 99px; padding: 8px 14px; font: inherit; font-size: .74rem; letter-spacing: .06em; cursor: pointer; }
-  .hall-right { display: flex; gap: 8px; }
-  .hall-view { position: relative; min-height: 0; display: grid; place-items: center; padding: 0 12px 12px; }
-  .hall-view img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; border-radius: 2px; touch-action: pan-y; user-select: none; }
-  .arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 44px; height: 44px; padding: 0 !important; font-size: 1.1rem !important; background: rgba(23, 19, 15, .6) !important; }
-  .arrow.prev { left: 12px; } .arrow.next { right: 12px; }
-  .caption { position: absolute; left: 12px; right: 12px; bottom: 14px; margin: 0 auto; max-width: 560px; background: rgba(23, 19, 15, .9); border: 1px solid rgba(239, 230, 212, .18); padding: 14px 18px; border-radius: 4px; display: grid; gap: 4px; transition: opacity .35s, transform .35s; }
+  .hall { position: fixed; inset: 0; z-index: 50; background: #0B0907; color: var(--hall-ink); overflow: hidden; }
+  .hall-view { position: absolute; inset: 0; }
+  .hall-view img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+  .hall-bar { position: absolute; top: 0; left: 0; right: 0; z-index: 2; display: flex; justify-content: space-between; padding: calc(env(safe-area-inset-top, 0px) + 10px) 12px 28px; background: linear-gradient(rgba(11, 9, 7, .6), rgba(11, 9, 7, 0)); transition: opacity .4s; }
+  .ico { display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 0; border-radius: 50%; background: rgba(11, 9, 7, .45); color: var(--hall-ink); cursor: pointer; }
+  .ico svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+  .arrow { position: absolute; top: 50%; z-index: 2; margin-top: -20px; transition: opacity .4s; }
+  .arrow.prev { left: 10px; } .arrow.next { right: 10px; }
+  @media (hover: none) { .arrow { display: none; } }
+  .hall.calm .hall-bar, .hall.calm .arrow { opacity: 0; pointer-events: none; }
+  .caption { position: absolute; z-index: 2; left: 12px; right: 12px; bottom: calc(env(safe-area-inset-bottom, 0px) + 14px); margin: 0 auto; max-width: 560px; background: rgba(11, 9, 7, .82); padding: 14px 18px; border-radius: 6px; display: grid; gap: 4px; transition: opacity .35s, transform .35s; }
   .caption.off { opacity: 0; transform: translateY(10px); pointer-events: none; }
   .cap-num { font-size: .64rem; letter-spacing: .2em; text-transform: uppercase; color: rgba(239, 230, 212, .6); }
   .cap-lat { font-family: var(--font-display); font-style: italic; color: rgba(239, 230, 212, .7); }
   .cap-ru { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.2; }
   .cap-en { font-style: italic; color: rgba(239, 230, 212, .75); font-size: .9rem; }
-  .tap-note { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); font-size: .7rem; letter-spacing: .08em; color: rgba(239, 230, 212, .55); white-space: nowrap; transition: opacity .35s; pointer-events: none; }
 
   .cta { padding-block: 32px 48px; text-align: center; border-top: 1px solid var(--rule); }
   .cta p { font-family: var(--font-display); font-style: italic; color: var(--ink-soft); margin: 0 0 18px; }
@@ -152,7 +163,7 @@
   footer { border-top: 1px solid var(--rule); padding-block: 28px; text-align: center; font-size: .68rem; color: var(--ink-soft); }
 
   @media (prefers-reduced-motion: reduce) {
-    .zone.wave ellipse, .finger.go { animation: none; }
+    .zone.wave ellipse, .finger.go, .cue { animation: none; }
     .zone ellipse { stroke: rgba(var(--glow), .45); }
     * { transition: none !important; }
   }
@@ -184,11 +195,12 @@
       </svg>
       <span class="hint" id="hint">Коснитесь тела · Touch the body</span>
       <span class="finger" id="finger" aria-hidden="true"></span>
+      <a class="cue" id="cue" href="#manifest" aria-label="Листать дальше · Scroll down"><span></span></a>
     </figure>
 
     <div class="side">
       <section class="plaque manifest" id="manifest">
-        <span class="label">Манифест · Manifesto</span>
+        <span class="label">Почему гравюры · Why engravings</span>
         <img class="manifest-back" src="modules-bg.jpg" width="900" height="1600" alt="Старая гравюра: мышцы спины в сепии · Sepia engraving of the back muscles" loading="lazy" data-pin-description="Anatomy without noise — a sepia engraving of the back muscles from the palpo anatomy atlas." data-pin-url="https://palpo.org/biomechanics.html" onerror="this.hidden=true">
         <div class="manifest-body" id="manifestBody">
           <p>Я изучал анатомию и продолжаю изучать сам. Это не факультатив. Это основа работы. Если не понимаешь, что лежит под кожей, ты не работаешь с телом. Ты работаешь с поверхностью.</p>
@@ -242,21 +254,20 @@
 </div>
 
 <div class="hall" id="hall" hidden role="dialog" aria-modal="true" aria-labelledby="capRu">
-  <div class="hall-bar">
-    <button type="button" id="hallBack">← Атлас · Atlas</button>
-    <div class="hall-right"><button type="button" id="hallFull">На весь экран</button></div>
-  </div>
   <div class="hall-view" id="hallView">
     <img id="hallImg" src="" alt="" width="1008" height="1792">
-    <button type="button" class="arrow prev" id="prev" aria-label="Предыдущий лист">‹</button>
-    <button type="button" class="arrow next" id="next" aria-label="Следующий лист">›</button>
-    <span class="tap-note" id="tapNote">Коснитесь листа — подпись · Tap for caption</span>
-    <div class="caption off" id="caption" aria-live="polite">
-      <span class="cap-num" id="capNum"></span>
-      <span class="cap-lat" id="capLat"></span>
-      <span class="cap-ru" id="capRu"></span>
-      <span class="cap-en" id="capEn"></span>
-    </div>
+  </div>
+  <div class="hall-bar">
+    <button type="button" class="ico" id="hallBack" aria-label="Назад к атласу · Back to atlas"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button type="button" class="ico" id="hallFull" aria-label="Во весь экран · Full screen"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+  </div>
+  <button type="button" class="ico arrow prev" id="prev" aria-label="Предыдущий лист · Previous plate"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button type="button" class="ico arrow next" id="next" aria-label="Следующий лист · Next plate"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div class="caption off" id="caption" aria-live="polite">
+    <span class="cap-num" id="capNum"></span>
+    <span class="cap-lat" id="capLat"></span>
+    <span class="cap-ru" id="capRu"></span>
+    <span class="cap-en" id="capEn"></span>
   </div>
 </div>
 
@@ -324,6 +335,10 @@
   }
 
 
+  /* Знак «дальше» гаснет после первой прокрутки */
+  var cue = document.getElementById('cue');
+  window.addEventListener('scroll', function once() { if (window.scrollY > 40) { cue.classList.add('gone'); window.removeEventListener('scroll', once); } }, { passive: true });
+
   /* Манифест */
   var man = document.getElementById('manifest'), manBtn = document.getElementById('manifestBtn');
   manBtn.addEventListener('click', function () {
@@ -333,7 +348,9 @@
   });
 
   /* Зал осмотра: адрес #plate-NN открывает лист */
-  var hall = document.getElementById('hall'), img = document.getElementById('hallImg'), cap = document.getElementById('caption'), note = document.getElementById('tapNote');
+  var hall = document.getElementById('hall'), img = document.getElementById('hallImg'), cap = document.getElementById('caption');
+  var calmT = null, firstOpen = true;
+  function wake(ms) { hall.classList.remove('calm'); clearTimeout(calmT); calmT = setTimeout(function () { hall.classList.add('calm'); }, ms || 2500); }
   var cur = null, lastScroll = 0;
   function show(p) {
     cur = p;
@@ -348,7 +365,9 @@
     document.getElementById('capLat').textContent = p.lat;
     document.getElementById('capRu').textContent = p.ru;
     document.getElementById('capEn').textContent = p.en;
-    cap.classList.add('off'); note.style.opacity = '';
+    cap.classList.add('off');
+    if (firstOpen) { firstOpen = false; cap.classList.remove('off'); setTimeout(function () { cap.classList.add('off'); }, 2600); }
+    wake();
     if (hall.hidden) { lastScroll = window.scrollY; hall.hidden = false; document.body.style.overflow = 'hidden'; }
     var hint = document.getElementById('hint'); if (hint) hint.classList.add('gone');
     if (typeof window.ym === 'function') window.ym(112520327, 'reachGoal', 'atlas_plate');
@@ -375,7 +394,8 @@
   });
   document.getElementById('prev').addEventListener('click', function () { go(-1); });
   document.getElementById('next').addEventListener('click', function () { go(1); });
-  img.addEventListener('click', function () { cap.classList.toggle('off'); note.style.opacity = '0'; });
+  img.addEventListener('click', function () { cap.classList.toggle('off'); wake(); });
+  hall.addEventListener('mousemove', function () { wake(); });
   cap.addEventListener('click', function () { cap.classList.add('off'); });
   document.addEventListener('keydown', function (e) {
     if (hall.hidden) return;
@@ -394,6 +414,7 @@
   fullBtn.addEventListener('click', function () {
     if (document.fullscreenElement) { document.exitFullscreen().catch(function () {}); return; }
     if (hall.requestFullscreen) hall.requestFullscreen().catch(function () { fullBtn.hidden = true; });
+    wake(1500);
   });
   route();
 })();
