@@ -8,7 +8,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
-  
+
     <image:image><image:loc>https://palpo.org/kalendar-oktyabr-2026-ru-light.png</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/kalendar-oktyabr-2026-ru-dark.png</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/kalendar-noyabr-2026-ru-light.png</image:loc></image:image>
@@ -22,7 +22,7 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
-  
+
     <image:image><image:loc>https://palpo.org/calendar-october-2026-en-light.png</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/calendar-october-2026-en-dark.png</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/calendar-november-2026-en-light.png</image:loc></image:image>
@@ -41,7 +41,7 @@
   <url>
     <loc>https://palpo.org/humor.html</loc>
     <lastmod>2026-10-02</lastmod>
-  
+
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/humor.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en-humor.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/humor.html"/>
@@ -72,12 +72,24 @@
   </url>
   <url>
     <loc>https://palpo.org/biomechanics.html</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-09</lastmod>
+    <image:image><image:loc>https://palpo.org/plate-00-frontispiece-modern.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/modules-bg.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/plate-01-neck-nuchal.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/plate-02-scapula-bridge.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/plate-03-masseter-jaw.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/plate-04-clavicle-chest.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/plate-05-forearm-hand.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/plate-06-lumbar-pelvis.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/plate-07-itband-thigh.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/plate-08-hamstrings.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/plate-09-calf-achilles.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/plate-10-plantar-foot.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://palpo.org/en-humor.html</loc>
     <lastmod>2026-10-02</lastmod>
-  
+
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/humor.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en-humor.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/humor.html"/>
