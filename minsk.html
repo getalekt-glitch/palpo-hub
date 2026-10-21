@@ -398,6 +398,61 @@
     background: var(--wall); border: 1px solid var(--wall);
   }
 
+  /* v2.16: витрина — шесть кадров сменяют друг друга */
+  .vitrina {
+    position: relative; width: min(960px, calc(100vw - 32px)); margin: 6px 0 0 50%; transform: translateX(-50%);
+    aspect-ratio: 4 / 3; border-radius: 18px; overflow: hidden; background: #3A2C1C;
+    box-shadow: 0 24px 60px -30px rgba(0,0,0,.7);
+    -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; touch-action: pan-y;
+  }
+  .vitrina figure { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity 1.6s ease; }
+  .vitrina figure.on { opacity: 1; }
+  .vitrina img {
+    display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none;
+    -webkit-user-drag: none; transform-origin: 60% 50%;
+  }
+  .vitrina figure.on img { animation: vitrina-breath 7.5s ease-out forwards; }
+  @keyframes vitrina-breath { from { transform: scale(1); } to { transform: scale(1.06); } }
+  .vitrina::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 34%; pointer-events: none;
+    background: linear-gradient(to top, rgba(26,19,12,.72), rgba(26,19,12,0));
+  }
+  .vitrina figcaption {
+    position: absolute; left: 22px; bottom: 30px; z-index: 2;
+    font-family: 'Cormorant Garamond', Georgia, serif; font-style: italic; font-size: 1.5rem; line-height: 1.1;
+    color: #EDE3D1; opacity: 0; transform: translateY(6px); transition: opacity .9s ease .5s, transform .9s ease .5s;
+  }
+  .vitrina figure.on figcaption { opacity: 1; transform: none; }
+  .vitrina-shield { position: absolute; inset: 0; z-index: 3; cursor: pointer; }
+  .vitrina-bars { position: absolute; left: 22px; right: 22px; bottom: 14px; z-index: 4; display: flex; gap: 6px; }
+  .vitrina-bars button {
+    flex: 1; height: 14px; padding: 6px 0; border: 0; background: none; cursor: pointer;
+  }
+  .vitrina-bars button span { display: block; height: 2px; border-radius: 2px; background: rgba(237,227,209,.28); overflow: hidden; }
+  .vitrina-bars button span i { display: block; height: 100%; width: 0; background: #DBC38E; }
+  .vitrina-bars button.done span i { width: 100%; }
+  .vitrina-bars button.on span i { animation: vitrina-bar var(--t, 6s) linear forwards; }
+  .vitrina.paused .vitrina-bars button.on span i { animation-play-state: paused; }
+  @keyframes vitrina-bar { from { width: 0; } to { width: 100%; } }
+  .vitrina-cta { margin-top: 22px; text-align: center; }
+  .vitrina-cta p { font-size: 0.95rem; color: #B9A889; margin-bottom: 12px; }
+  .vitrina-cta a {
+    display: inline-block; padding: 12px 28px; border-radius: 999px; background: #DBC38E; color: #2A1F14;
+    font-weight: 500; text-decoration: none; letter-spacing: .02em;
+  }
+  .vitrina-cta a:hover { background: #E6D3A6; }
+  .look-strip.vyezd { margin-top: 40px; }
+  @media (max-width: 640px) {
+    .vitrina { border-radius: 14px; }
+    .vitrina figcaption { left: 16px; bottom: 26px; font-size: 1.25rem; }
+    .vitrina-bars { left: 16px; right: 16px; bottom: 10px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .vitrina figure { transition: none; }
+    .vitrina figure.on img { animation: none; }
+    .vitrina figcaption { transition: none; }
+  }
+
   /* v2.6: фото стола первым экраном */
   .hero-shot {
     display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover;
@@ -613,15 +668,24 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 
 <section class="look" aria-labelledby="look-h">
   <h2 id="look-h">Как это выглядит</h2>
-  <ul class="look-strip">
+  <div class="vitrina" id="vitrina" aria-roledescription="витрина" aria-label="Шесть кадров массажа">
+    <figure class="on"><img src="minsk-vitrina-stopy-1-1200.webp" srcset="minsk-vitrina-stopy-1-800.webp 800w, minsk-vitrina-stopy-1-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Руки массажиста на стопе: одна держит стопу, большой палец другой на подошве, ноги на льняном валике" width="1200" height="900" loading="lazy" decoding="async" draggable="false"><figcaption>Стопы</figcaption></figure>
+    <figure><img data-src="minsk-vitrina-spina-1-1200.webp" data-srcset="minsk-vitrina-spina-1-800.webp 800w, minsk-vitrina-spina-1-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Ладонь массажиста держит плечо, другая рука работает у края лопатки, человек лежит на льняном столе" width="1200" height="900" decoding="async" draggable="false"><figcaption>Под лопаткой</figcaption></figure>
+    <figure><img data-src="minsk-vitrina-litso-1200.webp" data-srcset="minsk-vitrina-litso-800.webp 800w, minsk-vitrina-litso-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Ладонь массажиста у виска, человек лежит на спине, голова на льняном подголовнике" width="1200" height="900" decoding="async" draggable="false"><figcaption>Лицо</figcaption></figure>
+    <figure><img data-src="minsk-vitrina-sheya-1200.webp" data-srcset="minsk-vitrina-sheya-800.webp 800w, minsk-vitrina-sheya-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Одна рука массажиста у затылка, другая на шее у плеча, лицо в льняном подголовнике" width="1200" height="900" decoding="async" draggable="false"><figcaption>Шея и затылок</figcaption></figure>
+    <figure><img data-src="minsk-vitrina-spina-2-1200.webp" data-srcset="minsk-vitrina-spina-2-800.webp 800w, minsk-vitrina-spina-2-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Пальцы массажиста идут вдоль позвоночника между лопатками, рука человека свободно лежит на льне" width="1200" height="900" decoding="async" draggable="false"><figcaption>Между лопатками</figcaption></figure>
+    <figure><img data-src="minsk-vitrina-stopy-2-1200.webp" data-srcset="minsk-vitrina-stopy-2-800.webp 800w, minsk-vitrina-stopy-2-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Ладонь массажиста держит пятку, другая рука обхватывает стопу, ноги на льняном валике у окна" width="1200" height="900" decoding="async" draggable="false"><figcaption>Пятка и свод</figcaption></figure>
+    <div class="vitrina-shield" aria-hidden="true"></div>
+    <div class="vitrina-bars" role="group" aria-label="Кадры"></div>
+  </div>
+  <div class="vitrina-cta">
+    <p>Дома у вас или в кабинете в Колодищах.</p>
+    <a href="#zapis">Записаться</a>
+  </div>
+  <ul class="look-strip vyezd">
     <li><figure><img src="minsk-vyezd-svisloch.jpg" alt="Массажный стол у окна в минской квартире, зима" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Стол встаёт в обычной комнате</figcaption></figure></li>
     <li><figure><img src="minsk-vyezd-gostinaya.jpg" alt="Складной массажный стол в гостиной между диваном и шкафом" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Обычно место находится</figcaption></figure></li>
-    <li><figure><img src="minsk-stopy.jpg" alt="Руки массажиста держат стопу человека под льняной простынёй" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Стопы</figcaption></figure></li>
-    <li><figure><img src="minsk-nogi.jpg" alt="Руки массажиста на бедре лежащего человека" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Ноги</figcaption></figure></li>
     <li><figure><img src="minsk-bambuk.jpg" alt="Бамбуковые палки, ребристый ролик и флакон масла на табурете" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Бамбуковые палки — в коррекции фигуры</figcaption></figure></li>
-    <li><figure><img src="minsk-ruki-spina-1.jpg" alt="Руки массажиста на спине лежащего человека" width="1200" height="900" loading="lazy" decoding="async" onerror="var l=this.closest('li');if(l)l.remove()"><figcaption>Спина</figcaption></figure></li>
-    <li><figure><img src="minsk-ruki-spina-2.jpg" alt="Ладони массажиста вдоль спины лежащего человека" width="1200" height="900" loading="lazy" decoding="async" onerror="var l=this.closest('li');if(l)l.remove()"><figcaption>Спина</figcaption></figure></li>
-    <li><figure><img src="minsk-sheya.jpg" alt="Руки массажиста на шее и плече лежащего человека" width="1200" height="900" loading="lazy" decoding="async"><figcaption>Шея и трапеции</figcaption></figure></li>
   </ul>
   <span class="look-hint">Листайте вбок →</span>
   <figure class="look-video">
@@ -836,7 +900,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 </section>
 
 
-<section class="contact">
+<section class="contact" id="zapis">
   <figure class="kot">
     <a href="/humor.html#mem-kot-luchshiy-massazh-v-zhizni"><span class="zz" aria-hidden="true"><i>z</i><i>z</i><i>z</i></span><img src="mem-kot-luchshiy-massazh-v-zhizni-480.webp" alt="Рыжий кот спит на массажном столе под простынёй. «Как получить лучший массаж в жизни: 1. Запишись на массаж. 2. Приди на массаж»" width="480" height="715" loading="lazy" decoding="async"></a>
     <figcaption>Инструкция из двух пунктов</figcaption>
@@ -1410,6 +1474,76 @@ footer.pn-foot{display:block;max-width:none;width:auto}
   if (kot && !reduce && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (es) { kot.classList.toggle('on', es[0].isIntersecting); }, { threshold: 0.3 }).observe(kot);
   }
+})();
+</script>
+<script>
+/* v2.16: витрина — плавная смена кадров, полоски, свайп, без скачивания */
+(function () {
+  var box = document.getElementById('vitrina');
+  if (!box) return;
+  var figs = box.querySelectorAll('figure'), bars = box.querySelector('.vitrina-bars');
+  var n = figs.length, cur = 0, T = 6000, timer = null, seen = false, hold = 0;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  box.style.setProperty('--t', T + 'ms');
+  function load(i) {
+    var im = figs[i] && figs[i].querySelector('img');
+    if (im && im.getAttribute('data-src')) {
+      if (im.getAttribute('data-srcset')) im.setAttribute('srcset', im.getAttribute('data-srcset'));
+      im.src = im.getAttribute('data-src');
+      im.removeAttribute('data-src'); im.removeAttribute('data-srcset');
+    }
+  }
+  for (var i = 0; i < n; i++) {
+    var b = document.createElement('button');
+    b.type = 'button'; b.setAttribute('aria-label', 'Кадр ' + (i + 1) + ': ' + figs[i].querySelector('figcaption').textContent);
+    b.innerHTML = '<span><i></i></span>';
+    (function (k) { b.addEventListener('click', function (e) { e.stopPropagation(); go(k, true); }); })(i);
+    bars.appendChild(b);
+  }
+  var btns = bars.querySelectorAll('button');
+  function paint() {
+    for (var j = 0; j < n; j++) {
+      figs[j].classList.toggle('on', j === cur);
+      btns[j].classList.toggle('done', j < cur);
+      btns[j].classList.remove('on');
+    }
+    void btns[cur].offsetWidth; btns[cur].classList.add('on');
+    load((cur + 1) % n);
+  }
+  function go(k, byHand) {
+    cur = (k + n) % n; load(cur);
+    var im = figs[cur].querySelector('img');
+    if (im) { im.style.animation = 'none'; void im.offsetWidth; im.style.animation = ''; }
+    paint();
+    if (byHand) hold = Date.now() + 12000;
+    plan();
+  }
+  function plan() {
+    clearTimeout(timer);
+    if (!seen || document.hidden) { box.classList.add('paused'); return; }
+    var wait = Math.max(T, hold - Date.now());
+    box.classList.toggle('paused', hold > Date.now());
+    timer = setTimeout(function () { hold = 0; go(cur + 1, false); }, wait);
+  }
+  box.querySelector('.vitrina-shield').addEventListener('click', function () { if (moved) { moved = false; return; } go(cur + 1, true); });
+  var x0 = null, moved = false;
+  box.addEventListener('pointerdown', function (e) { x0 = e.clientX; });
+  box.addEventListener('pointerup', function (e) {
+    if (x0 === null) return; var dx = e.clientX - x0; x0 = null;
+    if (Math.abs(dx) > 40) { moved = true; go(cur + (dx < 0 ? 1 : -1), true); }
+  });
+  box.addEventListener('contextmenu', function (e) { e.preventDefault(); });
+  box.addEventListener('dragstart', function (e) { e.preventDefault(); });
+  document.addEventListener('visibilitychange', plan);
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function (es) {
+      seen = es[0].isIntersecting;
+      if (seen) load(1);
+      plan();
+    }, { threshold: 0.35 }).observe(box);
+  } else { seen = true; }
+  if (reduce) T = 8000;
+  paint(); plan();
 })();
 </script>
 </body>
