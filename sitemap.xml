@@ -40,7 +40,7 @@
   </url>
   <url>
     <loc>https://palpo.org/humor.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-21</lastmod>
 
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/humor.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en-humor.html"/>
@@ -58,6 +58,10 @@
     <image:image><image:loc>https://palpo.org/mem-ruka-svecha-massage.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/mem-stol-on.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/mem-stol-ona.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-ii-nashel-uzel.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-ii-genialno.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-ii-staraetsya.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-ii-rasslabsya.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/otkrytka-den-rozhdeniya-ded-dohrenaletie.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/otkrytka-den-rozhdeniya-fenek-poyasnitsa.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/otkrytka-den-rozhdeniya-fenek-tishina-temnaya.jpg</image:loc></image:image>
@@ -88,7 +92,7 @@
   </url>
   <url>
     <loc>https://palpo.org/en-humor.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-21</lastmod>
 
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/humor.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en-humor.html"/>
@@ -113,6 +117,9 @@
     <image:image><image:loc>https://palpo.org/mem-ruka-svecha-massage.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/mem-stol-on.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/mem-stol-ona.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-ai-found-your-knot.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-ai-confident.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/mem-ai-first-day.jpg</image:loc></image:image>
   </url>
   <url>
     <loc>https://palpo.org/atmosphere.html</loc>
