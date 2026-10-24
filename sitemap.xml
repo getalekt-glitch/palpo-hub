@@ -32,13 +32,15 @@
   </url>
   <url>
     <loc>https://palpo.org/minsk.html</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-stopy-1-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-spina-1-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-litso-1200.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/minsk-vitrina-bok-1-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-sheya-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-spina-2-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-stopy-2-1200.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/minsk-vitrina-bok-2-1200.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://palpo.org/polka.html</loc>
@@ -82,7 +84,7 @@
   </url>
   <url>
     <loc>https://palpo.org/biomechanics.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-23</lastmod>
     <image:image><image:loc>https://palpo.org/plate-00-frontispiece-modern.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/modules-bg.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/plate-01-neck-nuchal.webp</image:loc></image:image>

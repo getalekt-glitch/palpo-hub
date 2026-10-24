@@ -398,7 +398,7 @@
     background: var(--wall); border: 1px solid var(--wall);
   }
 
-  /* v2.16: витрина — шесть кадров сменяют друг друга */
+  /* v2.18: витрина — восемь кадров сменяют друг друга */
   .vitrina {
     position: relative; width: min(960px, calc(100vw - 32px)); margin: 6px 0 0 50%; transform: translateX(-50%);
     aspect-ratio: 4 / 3; border-radius: 18px; overflow: hidden; background: #3A2C1C;
@@ -668,13 +668,15 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 
 <section class="look" aria-labelledby="look-h">
   <h2 id="look-h">Как это выглядит</h2>
-  <div class="vitrina" id="vitrina" aria-roledescription="витрина" aria-label="Шесть кадров массажа">
+  <div class="vitrina" id="vitrina" aria-roledescription="витрина" aria-label="Восемь кадров массажа">
     <figure class="on"><img src="minsk-vitrina-stopy-1-1200.webp" srcset="minsk-vitrina-stopy-1-800.webp 800w, minsk-vitrina-stopy-1-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Руки массажиста на стопе: одна держит стопу, большой палец другой на подошве, ноги на льняном валике" width="1200" height="900" loading="lazy" decoding="async" draggable="false"><figcaption>Стопы</figcaption></figure>
     <figure><img data-src="minsk-vitrina-spina-1-1200.webp" data-srcset="minsk-vitrina-spina-1-800.webp 800w, minsk-vitrina-spina-1-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Ладонь массажиста держит плечо, другая рука работает у края лопатки, человек лежит на льняном столе" width="1200" height="900" decoding="async" draggable="false"><figcaption>Под лопаткой</figcaption></figure>
     <figure><img data-src="minsk-vitrina-litso-1200.webp" data-srcset="minsk-vitrina-litso-800.webp 800w, minsk-vitrina-litso-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Ладонь массажиста у виска, человек лежит на спине, голова на льняном подголовнике" width="1200" height="900" decoding="async" draggable="false"><figcaption>Массаж лица</figcaption></figure>
+    <figure><img data-src="minsk-vitrina-bok-1-1200.webp" data-srcset="minsk-vitrina-bok-1-800.webp 800w, minsk-vitrina-bok-1-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Две руки массажиста собрали кожу на боку в складку, человек лежит на льняном складном столе у окна" width="1200" height="900" decoding="async" draggable="false"><figcaption>Бок</figcaption></figure>
     <figure><img data-src="minsk-vitrina-sheya-1200.webp" data-srcset="minsk-vitrina-sheya-800.webp 800w, minsk-vitrina-sheya-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Одна рука массажиста у затылка, другая на шее у плеча, лицо в льняном подголовнике" width="1200" height="900" decoding="async" draggable="false"><figcaption>Шея и затылок</figcaption></figure>
     <figure><img data-src="minsk-vitrina-spina-2-1200.webp" data-srcset="minsk-vitrina-spina-2-800.webp 800w, minsk-vitrina-spina-2-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Пальцы массажиста идут вдоль позвоночника между лопатками, рука человека свободно лежит на льне" width="1200" height="900" decoding="async" draggable="false"><figcaption>Между лопатками</figcaption></figure>
     <figure><img data-src="minsk-vitrina-stopy-2-1200.webp" data-srcset="minsk-vitrina-stopy-2-800.webp 800w, minsk-vitrina-stopy-2-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Ладонь массажиста держит пятку, другая рука обхватывает стопу, ноги на льняном валике у окна" width="1200" height="900" decoding="async" draggable="false"><figcaption>Пятка и свод</figcaption></figure>
+    <figure><img data-src="minsk-vitrina-bok-2-1200.webp" data-srcset="minsk-vitrina-bok-2-800.webp 800w, minsk-vitrina-bok-2-1200.webp 1200w" sizes="(max-width: 640px) 100vw, 960px" alt="Крупно сверху: большие пальцы массажиста сошлись, между ними складка кожи на боку, льняная простыня" width="1200" height="900" decoding="async" draggable="false"><figcaption>Бок, крупно</figcaption></figure>
     <div class="vitrina-shield" aria-hidden="true"></div>
     <div class="vitrina-bars" role="group" aria-label="Кадры"></div>
   </div>
@@ -993,9 +995,11 @@ footer.pn-foot{display:block;max-width:none;width:auto}
         "https://palpo.org/minsk-vitrina-stopy-1-1200.webp",
         "https://palpo.org/minsk-vitrina-spina-1-1200.webp",
         "https://palpo.org/minsk-vitrina-litso-1200.webp",
+        "https://palpo.org/minsk-vitrina-bok-1-1200.webp",
         "https://palpo.org/minsk-vitrina-sheya-1200.webp",
         "https://palpo.org/minsk-vitrina-spina-2-1200.webp",
-        "https://palpo.org/minsk-vitrina-stopy-2-1200.webp"
+        "https://palpo.org/minsk-vitrina-stopy-2-1200.webp",
+        "https://palpo.org/minsk-vitrina-bok-2-1200.webp"
       ],
       "telephone": "+375333778872",
       "priceRange": "40-110 BYN",
@@ -1478,6 +1482,27 @@ footer.pn-foot{display:block;max-width:none;width:auto}
     },
     {
       "@type": "ImageObject",
+      "@id": "https://palpo.org/minsk.html#minsk-vitrina-bok-1",
+      "name": "Бок · массаж в Минске и Колодищах",
+      "description": "Две руки массажиста собрали кожу на боку в складку, человек лежит на льняном складном столе у окна",
+      "contentUrl": "https://palpo.org/minsk-vitrina-bok-1-1200.webp",
+      "thumbnailUrl": "https://palpo.org/minsk-vitrina-bok-1-800.webp",
+      "width": 1200,
+      "height": 900,
+      "encodingFormat": "image/webp",
+      "creator": {
+        "@id": "https://palpo.org/#aleksei"
+      },
+      "creditText": "palpo.org",
+      "copyrightNotice": "© 2026 HARDZIYENKA ALIAKSEI / palpo.org",
+      "license": "https://palpo.org/minsk.html#prava",
+      "acquireLicensePage": "https://palpo.org/minsk.html#prava",
+      "contentLocation": {
+        "@id": "https://palpo.org/minsk.html#practice"
+      }
+    },
+    {
+      "@type": "ImageObject",
       "@id": "https://palpo.org/minsk.html#minsk-vitrina-sheya",
       "name": "Шея и затылок · массаж в Минске и Колодищах",
       "description": "Одна рука массажиста у затылка, другая на шее у плеча, лицо в льняном подголовнике",
@@ -1525,6 +1550,27 @@ footer.pn-foot{display:block;max-width:none;width:auto}
       "description": "Ладонь массажиста держит пятку, другая рука обхватывает стопу, ноги на льняном валике у окна",
       "contentUrl": "https://palpo.org/minsk-vitrina-stopy-2-1200.webp",
       "thumbnailUrl": "https://palpo.org/minsk-vitrina-stopy-2-800.webp",
+      "width": 1200,
+      "height": 900,
+      "encodingFormat": "image/webp",
+      "creator": {
+        "@id": "https://palpo.org/#aleksei"
+      },
+      "creditText": "palpo.org",
+      "copyrightNotice": "© 2026 HARDZIYENKA ALIAKSEI / palpo.org",
+      "license": "https://palpo.org/minsk.html#prava",
+      "acquireLicensePage": "https://palpo.org/minsk.html#prava",
+      "contentLocation": {
+        "@id": "https://palpo.org/minsk.html#practice"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://palpo.org/minsk.html#minsk-vitrina-bok-2",
+      "name": "Бок, крупно · массаж в Минске и Колодищах",
+      "description": "Крупно сверху: большие пальцы массажиста сошлись, между ними складка кожи на боку, льняная простыня",
+      "contentUrl": "https://palpo.org/minsk-vitrina-bok-2-1200.webp",
+      "thumbnailUrl": "https://palpo.org/minsk-vitrina-bok-2-800.webp",
       "width": 1200,
       "height": 900,
       "encodingFormat": "image/webp",
