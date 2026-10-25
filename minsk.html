@@ -245,6 +245,16 @@
     transition: transform .18s ease;
   }
   .profile-chip:hover .arr { transform: translateX(4px); }
+  /* v2.19 25.10.2026: отзывы из Google — текст дословно, без чужих скриптов */
+  .otzyvy-lead { color: var(--taupe); font-size: 0.95rem; margin-bottom: 18px; }
+  .otzyvy-lead b { font-weight: 500; color: var(--amber); }
+  .otzyv { margin: 0 0 14px; padding: 18px 20px; border: 1px solid var(--linen); border-radius: 14px; background: var(--card); }
+  .otzyv-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 8px; font-size: 0.9rem; }
+  .otzyv-name { font-weight: 500; }
+  .otzyv-stars { color: #A87244; letter-spacing: .08em; }
+  .otzyv-date { color: var(--taupe); font-size: 0.82rem; }
+  .otzyv blockquote { font-size: 0.97rem; color: var(--ink); line-height: 1.6; }
+  .otzyvy-all { margin-top: 6px; }
 
   .receipt {
     margin-top: 22px; padding: 18px 20px; border-radius: 14px;
@@ -789,6 +799,33 @@ footer.pn-foot{display:block;max-width:none;width:auto}
     </a>
   </div>
 </section>
+<!-- v2.19: отзывы из Google, дословно -->
+<section class="rv" id="otzyvy" aria-labelledby="otzyvy-h">
+  <h2 id="otzyvy-h">Что пишут в Google</h2>
+  <p class="otzyvy-lead"><b>5 отзывов, все 5 из 5.</b></p>
+  <figure class="otzyv">
+    <figcaption class="otzyv-head"><span class="otzyv-name">Kiryl A.</span><span class="otzyv-stars" aria-label="5 звёзд из 5">★★★★★</span><span class="otzyv-date">октябрь 2026 · Google</span></figcaption>
+    <blockquote>Алексей настоящий профессионал своего дела. Уверенные руки, приятная атмосфера и индивидуальный подход. Он внимательно выслушал, где беспокоит, и проработал все зажимы. После сеанса ушло напряжение в шее и спине, а лёгкость сохраняется уже несколько дней.</blockquote>
+  </figure>
+  <figure class="otzyv">
+    <figcaption class="otzyv-head"><span class="otzyv-name">Ольга Я.</span><span class="otzyv-stars" aria-label="5 звёзд из 5">★★★★★</span><span class="otzyv-date">сентябрь 2026 · Google</span></figcaption>
+    <blockquote>Рекомендовали массажиста Алексея. Прошла курс.))) Легкость в теле, прилив сил). Осталась очень довольна. Рекомендую.👍👍</blockquote>
+  </figure>
+  <figure class="otzyv">
+    <figcaption class="otzyv-head"><span class="otzyv-name">Елена Б.</span><span class="otzyv-stars" aria-label="5 звёзд из 5">★★★★★</span><span class="otzyv-date">сентябрь 2026 · Google</span></figcaption>
+    <blockquote>Была у Алексея не один раз. Скажу вам так, прекрасный специалист, знает свое дело. Массаж понравился, с задачей справился. Осталась довольна. Благодарю 🩵</blockquote>
+  </figure>
+  <figure class="otzyv">
+    <figcaption class="otzyv-head"><span class="otzyv-name">Наталья Я.</span><span class="otzyv-stars" aria-label="5 звёзд из 5">★★★★★</span><span class="otzyv-date">сентябрь 2026 · Google</span></figcaption>
+    <blockquote>Осталась в приятном шоке после массажа, такой легкости в теле давно не было , профессионал своего дела !!! Однозначно-рекомендую!!!!</blockquote>
+  </figure>
+  <div class="profiles otzyvy-all">
+    <a class="profile-chip" href="https://share.google/NzkXBERM9eFljeBZh" target="_blank" rel="noopener">
+      <span class="txt"><span class="name">Все отзывы в Google</span><span class="what">Там же можно оставить свой</span></span>
+      <span class="arr" aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
 <!-- v2.12: что спросить у массажиста — памятка для любого выбора -->
 <section class="rv" id="voprosy" aria-labelledby="voprosy-h">
   <h2 id="voprosy-h">Что спросить у массажиста, прежде чем звать домой</h2>
@@ -926,7 +963,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 
 <div class="next-line">Дальше: <a href="/#lower-back">Поясница</a> · <a href="/#shoulders">Плечи к ушам</a> · <a href="/humor.html">Открытки</a> · <a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noopener">Заметки в Telegram</a></div>
 
-<footer class="pn-foot"><div class="pn-foot-in"><p class="pn-collab" style="margin:0">Открыт к совместным проектам и предложениям. <a href="https://t.me/aleksei_massage_minsk" target="_blank" rel="noreferrer">Напишите в Telegram →</a></p><div><span class="pn-label">Страницы</span><div class="pn-row"><a href="/#atlas">Минута на стуле</a><a href="/biomechanics.html">Гравюры тела</a><a href="/humor.html">Открытки и мемы</a><a href="/#calendar">Обои на месяц</a><a href="/atmosphere.html">Зима и Рождество</a><a href="/polka.html">Чем работаю</a><a href="/minsk.html">Массаж в Минске и Колодищах</a><a href="/en.html">English</a></div></div><div><span class="pn-label">Где ещё</span><div class="pn-row"><a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">Telegram</a><a href="https://www.tiktok.com/@aleksei_massage_minsk" target="_blank" rel="noreferrer">TikTok</a><a href="https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN" target="_blank" rel="noreferrer">YouTube</a><a href="https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/" target="_blank" rel="noreferrer">Pinterest</a></div></div><p class="pn-small" style="margin:0">Заметки массажиста, не медицинская консультация. © 2026 HARDZIYENKA ALIAKSEI · palpo.org</p></div></footer>
+<footer class="pn-foot"><div class="pn-foot-in"><p class="pn-collab" style="margin:0">Открыт к совместным проектам и предложениям. <a href="https://t.me/aleksei_massage_minsk" target="_blank" rel="noreferrer">Напишите в Telegram →</a></p><div><span class="pn-label">Страницы</span><div class="pn-row"><a href="/#atlas">Минута на стуле</a><a href="/biomechanics.html">Гравюры тела</a><a href="/humor.html">Открытки и мемы</a><a href="/zapiski.html">Записки из кабинета</a><a href="/#calendar">Обои на месяц</a><a href="/atmosphere.html">Зима и Рождество</a><a href="/polka.html">Чем работаю</a><a href="/minsk.html">Массаж в Минске и Колодищах</a><a href="/en.html">English</a></div></div><div><span class="pn-label">Где ещё</span><div class="pn-row"><a href="https://t.me/Lighthouse_massage_music" target="_blank" rel="noreferrer">Telegram</a><a href="https://www.tiktok.com/@aleksei_massage_minsk" target="_blank" rel="noreferrer">TikTok</a><a href="https://www.youtube.com/playlist?list=PL7ddbSzpKWQN-wiGbr2l6Lj6TnHCayPGN" target="_blank" rel="noreferrer">YouTube</a><a href="https://www.pinterest.com/0gz4fxak0pr4kelvn9vx9odl4svjwc/" target="_blank" rel="noreferrer">Pinterest</a></div></div><p class="pn-small" style="margin:0">Заметки массажиста, не медицинская консультация. © 2026 HARDZIYENKA ALIAKSEI · palpo.org</p></div></footer>
 <footer>
   <div class="legal">
     Гордиенко Алексей Евгеньевич · плательщик налога на профессиональный доход · УНП AB7716165
