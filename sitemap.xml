@@ -180,4 +180,23 @@
     <image:image><image:loc>https://palpo.org/palpo-autumn-wallpaper-05-dear-shoulders-en.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/palpo-autumn-wallpaper-06-uyutnyy-sezon-ru.jpg</image:loc></image:image>
   </url>
+  <url>
+    <loc>https://palpo.org/zapiski.html</loc>
+    <lastmod>2026-10-25</lastmod>
+    <image:image>
+      <image:loc>https://palpo.org/zapiski-1826-dorogaya-golova.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://palpo.org/zapiski-1826-golovu-mozhno-ne-derzhat.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://palpo.org/zapiski-1826-minuty-schitayu-ya.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://palpo.org/zapiski-1826-vse-33-massazh.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://palpo.org/zapiski-1826-tut-rabotaete-ne-vy.jpg</image:loc>
+    </image:image>
+  </url>
 </urlset>
