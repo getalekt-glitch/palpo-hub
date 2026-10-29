@@ -185,7 +185,19 @@
   </url>
   <url>
     <loc>https://palpo.org/zapiski.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-29</lastmod>
+    <image:image>
+      <image:loc>https://palpo.org/zapiski-1828-cherez-plecho.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://palpo.org/zapiski-1828-kamennyj.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://palpo.org/zapiski-1828-zritel-v-dveryah.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://palpo.org/zapiski-1828-anatomiya.jpg</image:loc>
+    </image:image>
     <image:image>
       <image:loc>https://palpo.org/zapiski-vlazhnye-ladoni.jpg</image:loc>
     </image:image>
