@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://palpo.org/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
@@ -15,10 +15,12 @@
     <image:image><image:loc>https://palpo.org/kalendar-noyabr-2026-ru-dark.png</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/kalendar-dekabr-2026-ru-light.png</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/kalendar-dekabr-2026-ru-dark.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/kalendar-yanvar-2027-ru-light.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/kalendar-yanvar-2027-ru-dark.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://palpo.org/en.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
@@ -29,10 +31,12 @@
     <image:image><image:loc>https://palpo.org/calendar-november-2026-en-dark.png</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/calendar-december-2026-en-light.png</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/calendar-december-2026-en-dark.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/calendar-january-2027-en-light.png</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/calendar-january-2027-en-dark.png</image:loc></image:image>
   </url>
   <url>
     <loc>https://palpo.org/minsk.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-stopy-1-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-spina-1-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-litso-1200.webp</image:loc></image:image>
@@ -42,6 +46,8 @@
     <image:image><image:loc>https://palpo.org/minsk-vitrina-spina-2-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-stopy-2-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-bok-2-1200.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/minsk-vitrina-poyasnica-1200.webp</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/minsk-vitrina-ikry-1200.webp</image:loc></image:image>
   </url>
   <url>
     <loc>https://palpo.org/polka.html</loc>
