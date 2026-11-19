@@ -569,6 +569,24 @@ a[href^="tel:"], .phone { font-variant-numeric: lining-nums; }
   .memo-copy:focus-visible { outline: 2px solid var(--taupe); outline-offset: 3px; }
   .memo-copy.done { background: var(--amber); color: var(--bg); border-color: var(--amber); }
   @media (max-width: 640px) { .memo { padding: 22px 18px 20px; } .memo-copy { width: 100%; } }
+  /* v2.20: фото кабинета (kabinet-01..06) */
+  .kf { margin: 0; }
+  .kf img {
+    display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover;
+    border-radius: 14px; background: var(--wall); border: 1px solid var(--wall);
+  }
+  .kf figcaption { margin-top: 7px; font-size: 0.875rem; line-height: 1.4; color: var(--taupe); }
+  .kf-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; list-style: none; margin: 26px 0 0; padding: 0; }
+  .kf-one { max-width: 340px; margin: 28px auto 0; }
+  .kf-pre { max-width: 660px; margin: 0 auto; padding: 0 24px 48px; }
+  @media (max-width: 640px) {
+    .kf-trio {
+      display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px;
+      margin: 26px -24px 0; padding: 0 24px 6px; scrollbar-width: none; -webkit-overflow-scrolling: touch;
+    }
+    .kf-trio::-webkit-scrollbar { display: none; }
+    .kf-trio li { flex: 0 0 72%; scroll-snap-align: center; }
+  }
 </style>
 <script>document.documentElement.className += " js";</script>
 <!-- Yandex.Metrika counter -->
@@ -736,6 +754,8 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 
     </div>
 
+    <figure class="kf kf-one"><a href="kabinet-05-golen-na-valike.jpg"><img src="kabinet-05-golen-na-valike-720.webp" srcset="kabinet-05-golen-na-valike-720.webp 720w, kabinet-05-golen-na-valike-1080.webp 1080w" sizes="(max-width: 640px) 86vw, 340px" alt="Ручной массаж голени на валике в кабинете массажа в Колодищах" width="720" height="1280" loading="lazy" decoding="async"></a><figcaption>Проработка ног, когда к вечеру накапливается тяжесть.</figcaption></figure>
+
     <p class="course">
       Любой формат берётся разово. Но тело отвечает не на один сеанс, а на череду — поэтому есть курс из десяти.
       <b>От 400 до 1000 руб.</b> за курс, в зависимости от формата.
@@ -765,6 +785,11 @@ footer.pn-foot{display:block;max-width:none;width:auto}
       </a>
     </div>
   </div>
+  <ul class="kf-trio" aria-label="Кабинет в Колодищах">
+    <li><figure class="kf"><a href="kabinet-01-stol-u-shtory.jpg"><img src="kabinet-01-stol-u-shtory-720.webp" srcset="kabinet-01-stol-u-shtory-720.webp 720w, kabinet-01-stol-u-shtory-1080.webp 1080w" sizes="(max-width: 640px) 72vw, 200px" alt="Массажный стол с подголовником и льняной простынёй в отдельном светлом кабинете в Колодищах под Минском" width="720" height="1280" loading="lazy" decoding="async"></a><figcaption>Отдельный кабинет в Колодищах - на приёме за дверью никого постороннего.</figcaption></figure></li>
+    <li><figure class="kf"><a href="kabinet-02-polotentsa-voda.jpg"><img src="kabinet-02-polotentsa-voda-720.webp" srcset="kabinet-02-polotentsa-voda-720.webp 720w, kabinet-02-polotentsa-voda-1080.webp 1080w" sizes="(max-width: 640px) 72vw, 200px" alt="Стопка вафельных полотенец, флакон масла на льняном массажном столе и стакан воды у окна" width="720" height="1280" loading="lazy" decoding="async"></a><figcaption>Чистый лён, вафельные полотенца и вода уже на месте - с собой ничего везти не нужно.</figcaption></figure></li>
+    <li><figure class="kf"><a href="kabinet-03-ugol-stola-bloknot.jpg"><img src="kabinet-03-ugol-stola-bloknot-720.webp" srcset="kabinet-03-ugol-stola-bloknot-720.webp 720w, kabinet-03-ugol-stola-bloknot-1080.webp 1080w" sizes="(max-width: 640px) 72vw, 200px" alt="Массажный стол с льняной простынёй, вафельным полотенцем и блокнотом в утреннем свете" width="720" height="1280" loading="lazy" decoding="async"></a><figcaption>Спокойный приём по записи, без потока и ожидания в коридоре.</figcaption></figure></li>
+  </ul>
 </section>
 
 <section class="atmo rv" id="atmosphere" aria-label="Атмосфера кабинета">
@@ -776,6 +801,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 <section>
   <h2>Обо мне коротко</h2>
   <p>Практика с 2006 года. Руки знают, что делают, и не торопятся.</p>
+  <figure class="kf kf-one"><a href="kabinet-04-ruki-cherez-len.jpg"><img src="kabinet-04-ruki-cherez-len-720.webp" srcset="kabinet-04-ruki-cherez-len-720.webp 720w, kabinet-04-ruki-cherez-len-1080.webp 1080w" sizes="(max-width: 640px) 86vw, 340px" alt="Ручной массаж спины через простыню из натурального льна в кабинете под Минском" width="720" height="1280" loading="lazy" decoding="async"></a><figcaption>Ручная работа с телом и тонусом, без аппаратов и спешки.</figcaption></figure>
   <p>Работаю официально, как плательщик налога на профессиональный доход.</p>
 
   <div class="receipt">
@@ -942,6 +968,10 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 </section>
 
 
+<div class="kf-pre">
+  <figure class="kf kf-one"><a href="kabinet-06-ruki-v-svete.jpg"><img src="kabinet-06-ruki-v-svete-720.webp" srcset="kabinet-06-ruki-v-svete-720.webp 720w, kabinet-06-ruki-v-svete-1080.webp 1080w" sizes="(max-width: 640px) 86vw, 340px" alt="Руки массажиста над массажным столом с льняной простынёй в мягком дневном свете" width="720" height="1280" loading="lazy" decoding="async"></a><figcaption>Работаем с тем, что устало на самом деле: спина, шея, плечи.</figcaption></figure>
+</div>
+
 <section class="contact" id="zapis">
   <figure class="kot">
     <a href="/humor.html#mem-kot-luchshiy-massazh-v-zhizni"><span class="zz" aria-hidden="true"><i>z</i><i>z</i><i>z</i></span><img src="mem-kot-luchshiy-massazh-v-zhizni-480.webp" alt="Рыжий кот спит на массажном столе под простынёй. «Как получить лучший массаж в жизни: 1. Запишись на массаж. 2. Приди на массаж»" width="480" height="715" loading="lazy" decoding="async"></a>
@@ -1046,6 +1076,26 @@ footer.pn-foot{display:block;max-width:none;width:auto}
         "https://palpo.org/minsk-vitrina-bok-2-1200.webp",
         "https://palpo.org/minsk-vitrina-poyasnica-1200.webp",
         "https://palpo.org/minsk-vitrina-ikry-1200.webp"
+      ],
+      "photo": [
+        {
+          "@id": "https://palpo.org/minsk.html#kabinet-01-stol-u-shtory"
+        },
+        {
+          "@id": "https://palpo.org/minsk.html#kabinet-02-polotentsa-voda"
+        },
+        {
+          "@id": "https://palpo.org/minsk.html#kabinet-03-ugol-stola-bloknot"
+        },
+        {
+          "@id": "https://palpo.org/minsk.html#kabinet-04-ruki-cherez-len"
+        },
+        {
+          "@id": "https://palpo.org/minsk.html#kabinet-05-golen-na-valike"
+        },
+        {
+          "@id": "https://palpo.org/minsk.html#kabinet-06-ruki-v-svete"
+        }
       ],
       "telephone": "+375333778872",
       "priceRange": "40-110 BYN",
@@ -1688,6 +1738,150 @@ footer.pn-foot{display:block;max-width:none;width:auto}
       "encodingFormat": "image/webp",
       "creator": {
         "@id": "https://palpo.org/#aleksei"
+      },
+      "creditText": "palpo.org",
+      "copyrightNotice": "© 2026 HARDZIYENKA ALIAKSEI / palpo.org",
+      "license": "https://palpo.org/minsk.html#prava",
+      "acquireLicensePage": "https://palpo.org/minsk.html#prava",
+      "contentLocation": {
+        "@id": "https://palpo.org/minsk.html#practice"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://palpo.org/minsk.html#kabinet-01-stol-u-shtory",
+      "name": "Отдельный кабинет в Колодищах - на приёме за дверью никого постороннего.",
+      "description": "Массажный стол с подголовником и льняной простынёй в отдельном светлом кабинете в Колодищах под Минском",
+      "contentUrl": "https://palpo.org/kabinet-01-stol-u-shtory.jpg",
+      "url": "https://palpo.org/kabinet-01-stol-u-shtory.jpg",
+      "thumbnailUrl": "https://palpo.org/kabinet-01-stol-u-shtory-720.webp",
+      "width": 1080,
+      "height": 1920,
+      "encodingFormat": "image/jpeg",
+      "creator": {
+        "@type": "Organization",
+        "name": "palpo.org",
+        "url": "https://palpo.org/"
+      },
+      "creditText": "palpo.org",
+      "copyrightNotice": "© 2026 HARDZIYENKA ALIAKSEI / palpo.org",
+      "license": "https://palpo.org/minsk.html#prava",
+      "acquireLicensePage": "https://palpo.org/minsk.html#prava",
+      "contentLocation": {
+        "@id": "https://palpo.org/minsk.html#practice"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://palpo.org/minsk.html#kabinet-02-polotentsa-voda",
+      "name": "Чистый лён, вафельные полотенца и вода уже на месте - с собой ничего везти не нужно.",
+      "description": "Стопка вафельных полотенец, флакон масла на льняном массажном столе и стакан воды у окна",
+      "contentUrl": "https://palpo.org/kabinet-02-polotentsa-voda.jpg",
+      "url": "https://palpo.org/kabinet-02-polotentsa-voda.jpg",
+      "thumbnailUrl": "https://palpo.org/kabinet-02-polotentsa-voda-720.webp",
+      "width": 1080,
+      "height": 1920,
+      "encodingFormat": "image/jpeg",
+      "creator": {
+        "@type": "Organization",
+        "name": "palpo.org",
+        "url": "https://palpo.org/"
+      },
+      "creditText": "palpo.org",
+      "copyrightNotice": "© 2026 HARDZIYENKA ALIAKSEI / palpo.org",
+      "license": "https://palpo.org/minsk.html#prava",
+      "acquireLicensePage": "https://palpo.org/minsk.html#prava",
+      "contentLocation": {
+        "@id": "https://palpo.org/minsk.html#practice"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://palpo.org/minsk.html#kabinet-03-ugol-stola-bloknot",
+      "name": "Спокойный приём по записи, без потока и ожидания в коридоре.",
+      "description": "Массажный стол с льняной простынёй, вафельным полотенцем и блокнотом в утреннем свете",
+      "contentUrl": "https://palpo.org/kabinet-03-ugol-stola-bloknot.jpg",
+      "url": "https://palpo.org/kabinet-03-ugol-stola-bloknot.jpg",
+      "thumbnailUrl": "https://palpo.org/kabinet-03-ugol-stola-bloknot-720.webp",
+      "width": 1080,
+      "height": 1920,
+      "encodingFormat": "image/jpeg",
+      "creator": {
+        "@type": "Organization",
+        "name": "palpo.org",
+        "url": "https://palpo.org/"
+      },
+      "creditText": "palpo.org",
+      "copyrightNotice": "© 2026 HARDZIYENKA ALIAKSEI / palpo.org",
+      "license": "https://palpo.org/minsk.html#prava",
+      "acquireLicensePage": "https://palpo.org/minsk.html#prava",
+      "contentLocation": {
+        "@id": "https://palpo.org/minsk.html#practice"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://palpo.org/minsk.html#kabinet-04-ruki-cherez-len",
+      "name": "Ручная работа с телом и тонусом, без аппаратов и спешки.",
+      "description": "Ручной массаж спины через простыню из натурального льна в кабинете под Минском",
+      "contentUrl": "https://palpo.org/kabinet-04-ruki-cherez-len.jpg",
+      "url": "https://palpo.org/kabinet-04-ruki-cherez-len.jpg",
+      "thumbnailUrl": "https://palpo.org/kabinet-04-ruki-cherez-len-720.webp",
+      "width": 1080,
+      "height": 1920,
+      "encodingFormat": "image/jpeg",
+      "creator": {
+        "@type": "Organization",
+        "name": "palpo.org",
+        "url": "https://palpo.org/"
+      },
+      "creditText": "palpo.org",
+      "copyrightNotice": "© 2026 HARDZIYENKA ALIAKSEI / palpo.org",
+      "license": "https://palpo.org/minsk.html#prava",
+      "acquireLicensePage": "https://palpo.org/minsk.html#prava",
+      "contentLocation": {
+        "@id": "https://palpo.org/minsk.html#practice"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://palpo.org/minsk.html#kabinet-05-golen-na-valike",
+      "name": "Проработка ног, когда к вечеру накапливается тяжесть.",
+      "description": "Ручной массаж голени на валике в кабинете массажа в Колодищах",
+      "contentUrl": "https://palpo.org/kabinet-05-golen-na-valike.jpg",
+      "url": "https://palpo.org/kabinet-05-golen-na-valike.jpg",
+      "thumbnailUrl": "https://palpo.org/kabinet-05-golen-na-valike-720.webp",
+      "width": 1080,
+      "height": 1920,
+      "encodingFormat": "image/jpeg",
+      "creator": {
+        "@type": "Organization",
+        "name": "palpo.org",
+        "url": "https://palpo.org/"
+      },
+      "creditText": "palpo.org",
+      "copyrightNotice": "© 2026 HARDZIYENKA ALIAKSEI / palpo.org",
+      "license": "https://palpo.org/minsk.html#prava",
+      "acquireLicensePage": "https://palpo.org/minsk.html#prava",
+      "contentLocation": {
+        "@id": "https://palpo.org/minsk.html#practice"
+      }
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://palpo.org/minsk.html#kabinet-06-ruki-v-svete",
+      "name": "Работаем с тем, что устало на самом деле: спина, шея, плечи.",
+      "description": "Руки массажиста над массажным столом с льняной простынёй в мягком дневном свете",
+      "contentUrl": "https://palpo.org/kabinet-06-ruki-v-svete.jpg",
+      "url": "https://palpo.org/kabinet-06-ruki-v-svete.jpg",
+      "thumbnailUrl": "https://palpo.org/kabinet-06-ruki-v-svete-720.webp",
+      "width": 1080,
+      "height": 1920,
+      "encodingFormat": "image/jpeg",
+      "creator": {
+        "@type": "Organization",
+        "name": "palpo.org",
+        "url": "https://palpo.org/"
       },
       "creditText": "palpo.org",
       "copyrightNotice": "© 2026 HARDZIYENKA ALIAKSEI / palpo.org",
