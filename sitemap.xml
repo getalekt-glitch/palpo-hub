@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://palpo.org/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://palpo.org/en.html</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
@@ -36,7 +36,7 @@
   </url>
   <url>
     <loc>https://palpo.org/minsk.html</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-stopy-1-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-spina-1-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-litso-1200.webp</image:loc></image:image>
@@ -61,7 +61,7 @@
   </url>
   <url>
     <loc>https://palpo.org/humor.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-11-20</lastmod>
 
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/humor.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en-humor.html"/>
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://palpo.org/en-humor.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-11-20</lastmod>
 
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/humor.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en-humor.html"/>
@@ -153,7 +153,7 @@
   </url>
   <url>
     <loc>https://palpo.org/atmosphere.html</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-11-20</lastmod>
     <image:image><image:loc>https://palpo.org/palpo-autumn-massage-01-gua-sha-spa-towel.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/palpo-autumn-massage-02-stones-in-bowl.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/palpo-autumn-massage-03-stoneware-oil-wet-leaves.jpg</image:loc></image:image>
@@ -197,7 +197,19 @@
   </url>
   <url>
     <loc>https://palpo.org/zapiski.html</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-20</lastmod>
+    <image:image>
+      <image:loc>https://palpo.org/palpo-1843-hochu-prikosnovenij-pin-1.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://palpo.org/palpo-1843-mne-priyatno-no-ya-molchu-1.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://palpo.org/palpo-1843-mne-nepriyatno-no-ya-terplyu-2.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://palpo.org/palpo-1842-kogda-hotyat-snyat-otkaz-1.jpg</image:loc>
+    </image:image>
     <image:image>
       <image:loc>https://palpo.org/zapiski-1828-cherez-plecho.jpg</image:loc>
     </image:image>
