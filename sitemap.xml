@@ -4,7 +4,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://palpo.org/</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://palpo.org/en.html</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://palpo.org/"/>
@@ -36,7 +36,7 @@
   </url>
   <url>
     <loc>https://palpo.org/minsk.html</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-stopy-1-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-spina-1-1200.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/minsk-vitrina-litso-1200.webp</image:loc></image:image>
@@ -57,11 +57,11 @@
   </url>
   <url>
     <loc>https://palpo.org/polka.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-11-21</lastmod>
   </url>
   <url>
     <loc>https://palpo.org/humor.html</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
 
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/humor.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en-humor.html"/>
@@ -99,7 +99,7 @@
   </url>
   <url>
     <loc>https://palpo.org/biomechanics.html</loc>
-    <lastmod>2026-10-23</lastmod>
+    <lastmod>2026-11-21</lastmod>
     <image:image><image:loc>https://palpo.org/plate-00-frontispiece-modern.webp</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/modules-bg.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/plate-01-neck-nuchal.webp</image:loc></image:image>
@@ -122,7 +122,7 @@
   </url>
   <url>
     <loc>https://palpo.org/en-humor.html</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
 
     <xhtml:link rel="alternate" hreflang="ru" href="https://palpo.org/humor.html"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://palpo.org/en-humor.html"/>
@@ -153,7 +153,53 @@
   </url>
   <url>
     <loc>https://palpo.org/atmosphere.html</loc>
-    <lastmod>2026-11-20</lastmod>
+    <lastmod>2026-11-21</lastmod>
+    <image:image><image:loc>https://palpo.org/palpo-tihie-kadry-01-nablyudenie-kruzhka-len.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-autumn-massage-01-gua-sha-spa-towel.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-autumn-massage-02-stones-in-bowl.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-autumn-massage-03-stoneware-oil-wet-leaves.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-autumn-massage-04-wet-towel-black-stone.jpg</image:loc></image:image>
+
+    <image:image><image:loc>https://palpo.org/palpo-christmas-massage-01-gift-wrapping-forearms.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-christmas-massage-02-spa-ornament.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-christmas-massage-03-village-street-sign.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-christmas-massage-04-village-tree-square.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-christmas-massage-05-card-merry-christmas.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-christmas-massage-06-card-merry-christmas-new-year.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-christmas-massage-07-otkrytka-s-rozhdestvom-i-novym-godom.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-01-cabin-snow-pines-shoulders.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-02-spa-towel-hot-stone.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-03-hot-stones-wood-stove.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-04-mitten-stone-pine.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-05-fireplace-two-mugs.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-06-first-snow-towel-oil.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-07-stones-spell-massage.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-08-pump-bottle-frost.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-09-spa-fireplace-snowfall.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-10-stone-tea-frost.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-11-snowfall-stone-candle.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-12-lavender-frost-stone.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-13-rolled-towel-stone-tea.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-14-cold-armor-frosted-windows.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-15-cold-hands-oil-bowl-linen.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-16-silent-hour-snowfall-window.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-17-breathe-deep-bolster-snowy-branches.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-18-afterward-face-cradle-tea.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-christmas-massage-08-gift-of-rest-paper-scroll-fir.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-19-cold-feet-wool-socks-bolster.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-20-unclench-face-cradle-water.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-winter-massage-21-warming-oil-steam-bowl-frost.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-autumn-wallpaper-01-dark-at-5pm-en.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-autumn-wallpaper-02-dorogie-plechi-ru.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-autumn-wallpaper-03-cozy-season-en.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-autumn-wallpaper-04-temneet-v-pyat-ru.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-autumn-wallpaper-05-dear-shoulders-en.jpg</image:loc></image:image>
+    <image:image><image:loc>https://palpo.org/palpo-autumn-wallpaper-06-uyutnyy-sezon-ru.jpg</image:loc></image:image>
+  </url>
+  <url>
+    <loc>https://palpo.org/atmosfera.html</loc>
+    <lastmod>2026-11-21</lastmod>
+    <image:image><image:loc>https://palpo.org/palpo-tihie-kadry-01-nablyudenie-kruzhka-len.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/palpo-autumn-massage-01-gua-sha-spa-towel.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/palpo-autumn-massage-02-stones-in-bowl.jpg</image:loc></image:image>
     <image:image><image:loc>https://palpo.org/palpo-autumn-massage-03-stoneware-oil-wet-leaves.jpg</image:loc></image:image>
