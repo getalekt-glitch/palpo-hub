@@ -553,6 +553,24 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 .pn-quiet b{font-weight:500}
 @media (prefers-reduced-motion:reduce){.pn-links a{transition:none}}
 </style>
+<style id="pin-save-style">
+/* 22.11.2026: plain Save-to-Pinterest link, below or beside the image, never over it */
+.pin-save-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+a.pin-save{display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;border-radius:100px;background:var(--amber,var(--ink,#3F2C15));color:var(--bg,var(--paper,#FBF9F5));font:inherit;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;line-height:1.2;max-width:100%;box-sizing:border-box;text-align:center;white-space:normal}
+a.pin-save:hover{transform:translateY(-2px)}
+@media (max-width:640px){a.pin-save{letter-spacing:.05em;padding:8px 12px}}
+.lb-row a.pin-save{background:transparent;color:#F0E4C8;border:1px solid #F0E4C8;letter-spacing:.04em;text-transform:none;font-size:.8rem;padding:10px 18px}
+.cal-files .pin-save-row{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;border-bottom:1px solid var(--wall,#E3D5BB)}
+.cal-files .pin-save-row>a:not(.pin-save){flex:1 1 12em;border-bottom:0}
+.cal-files a.pin-save{flex:0 0 auto;margin:6px 0;padding:7px 12px;letter-spacing:.06em;border-bottom:0;color:var(--bg,var(--paper,#FBF9F5));background:var(--amber,var(--ink,#3F2C15));justify-content:center}
+.pin-save-item{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}
+.grid>.pin-save-item{align-items:stretch}
+.strip .pin-save-item{flex:0 0 80%;max-width:340px;scroll-snap-align:start}
+.strip .pin-save-item .r-item{flex:none;max-width:none;width:100%}
+.kto-eto .pin-save-row,.atmosphere-scroll+.pin-save-row,.zn .pin-save-row{margin:10px 0 0}
+.polka-items .pin-save-item{display:flex;flex-direction:column;gap:8px}
+</style>
+
 </head>
 <body>
 <header class="pn-head"><nav class="pn-nav" aria-label="Sections"><a class="pn-brand" href="/en.html">Massage Hands</a><div class="pn-links"><a href="/en.html#atlas">Where you freeze</a><a href="/biomechanics.html">Point to it</a><a href="/en-humor.html" aria-current="page">Who else is faking</a><a href="/minsk.html">Silence allowed</a></div><a class="pn-lang" href="/humor.html" hreflang="ru" lang="ru">RU</a></nav></header>
@@ -591,7 +609,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>Happy birthday! The evening hasn’t even started.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-birthday-otter-still-not-evening.jpg" download="palpo-card-birthday-otter-still-not-evening.jpg" data-card="card-birthday-otter-still-not-evening">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-birthday-otter-still-not-evening.jpg" download="palpo-card-birthday-otter-still-not-evening.jpg" data-card="card-birthday-otter-still-not-evening">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-birthday-otter-still-not-evening&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-birthday-otter-still-not-evening.jpg&amp;description=For%20a%20friend%20who%20swears%20it%E2%80%99s%20not%20late%20yet" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="card-birthday-goose-once-a-year">
         <button class="card-img" type="button" data-full="card-birthday-goose-once-a-year.jpg" aria-label="Open large">
@@ -602,7 +620,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>Happy birthday! Today you’re allowed everything. Even the whole cake.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-birthday-goose-once-a-year.jpg" download="palpo-card-birthday-goose-once-a-year.jpg" data-card="card-birthday-goose-once-a-year">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-birthday-goose-once-a-year.jpg" download="palpo-card-birthday-goose-once-a-year.jpg" data-card="card-birthday-goose-once-a-year">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-birthday-goose-once-a-year&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-birthday-goose-once-a-year.jpg&amp;description=For%20mum%2C%20a%20colleague%2C%20your%20boss" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="card-birthday-fennec-party-sound">
         <button class="card-img" type="button" data-full="card-birthday-fennec-party-sound.jpg" aria-label="Open large">
@@ -613,7 +631,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>Happy birthday! Wishing you quiet, a blanket and no calls.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-birthday-fennec-party-sound.jpg" download="palpo-card-birthday-fennec-party-sound.jpg" data-card="card-birthday-fennec-party-sound">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-birthday-fennec-party-sound.jpg" download="palpo-card-birthday-fennec-party-sound.jpg" data-card="card-birthday-fennec-party-sound">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-birthday-fennec-party-sound&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-birthday-fennec-party-sound.jpg&amp;description=For%20a%20former%20party%20animal" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="card-birthday-fox-knees-applaud">
         <button class="card-img" type="button" data-full="card-birthday-fox-knees-applaud.jpg" aria-label="Open large">
@@ -624,7 +642,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>Happy birthday! Your knees are just proud of you.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-birthday-fox-knees-applaud.jpg" download="palpo-card-birthday-fox-knees-applaud.jpg" data-card="card-birthday-fox-knees-applaud">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-birthday-fox-knees-applaud.jpg" download="palpo-card-birthday-fox-knees-applaud.jpg" data-card="card-birthday-fox-knees-applaud">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-birthday-fox-knees-applaud&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-birthday-fox-knees-applaud.jpg&amp;description=For%20someone%20whose%20knees%20talk%20back" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="card-birthday-wolf-lower-back-left-the-chat">
         <button class="card-img" type="button" data-full="card-birthday-wolf-lower-back-left-the-chat.jpg" aria-label="Open large">
@@ -635,7 +653,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>Happy birthday! Look after your back and sneeze gently.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-birthday-wolf-lower-back-left-the-chat.jpg" download="palpo-card-birthday-wolf-lower-back-left-the-chat.jpg" data-card="card-birthday-wolf-lower-back-left-the-chat">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-birthday-wolf-lower-back-left-the-chat.jpg" download="palpo-card-birthday-wolf-lower-back-left-the-chat.jpg" data-card="card-birthday-wolf-lower-back-left-the-chat">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-birthday-wolf-lower-back-left-the-chat&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-birthday-wolf-lower-back-left-the-chat.jpg&amp;description=For%20a%20friend%20who%20sneezes%20carefully" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="card-birthday-lynx-unprovoked-oof">
         <button class="card-img" type="button" data-full="card-birthday-lynx-unprovoked-oof.jpg" aria-label="Open large">
@@ -646,7 +664,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>Happy birthday! Every “oof” is well earned.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-birthday-lynx-unprovoked-oof.jpg" download="palpo-card-birthday-lynx-unprovoked-oof.jpg" data-card="card-birthday-lynx-unprovoked-oof">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-birthday-lynx-unprovoked-oof.jpg" download="palpo-card-birthday-lynx-unprovoked-oof.jpg" data-card="card-birthday-lynx-unprovoked-oof">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-birthday-lynx-unprovoked-oof&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-birthday-lynx-unprovoked-oof.jpg&amp;description=For%20someone%20who%20just%20said%20%E2%80%9Coof%E2%80%9D%20getting%20up" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
     </div>
   </section>
@@ -663,7 +681,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>Come home. I’ve got the rest.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-for-two-waiting-for-you.jpg" download="palpo-card-for-two-waiting-for-you.jpg" data-card="card-for-two-waiting-for-you">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-for-two-waiting-for-you.jpg" download="palpo-card-for-two-waiting-for-you.jpg" data-card="card-for-two-waiting-for-you">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-for-two-waiting-for-you&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-for-two-waiting-for-you.jpg&amp;description=For%20someone%20who%20carries%20everything" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="card-for-two-phones-away">
         <button class="card-img" type="button" data-full="card-for-two-phones-away.jpg" aria-label="Open large">
@@ -674,7 +692,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>Tonight the phones sleep first.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-for-two-phones-away.jpg" download="palpo-card-for-two-phones-away.jpg" data-card="card-for-two-phones-away">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-for-two-phones-away.jpg" download="palpo-card-for-two-phones-away.jpg" data-card="card-for-two-phones-away">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-for-two-phones-away&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-for-two-phones-away.jpg&amp;description=For%20the%20one%20glued%20to%20their%20phone" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="card-for-two-plans-and-warm-oil">
         <button class="card-img" type="button" data-full="card-for-two-plans-and-warm-oil.jpg" aria-label="Open large">
@@ -685,7 +703,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>Don’t be late tonight.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-for-two-plans-and-warm-oil.jpg" download="palpo-card-for-two-plans-and-warm-oil.jpg" data-card="card-for-two-plans-and-warm-oil">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-for-two-plans-and-warm-oil.jpg" download="palpo-card-for-two-plans-and-warm-oil.jpg" data-card="card-for-two-plans-and-warm-oil">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-for-two-plans-and-warm-oil&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-for-two-plans-and-warm-oil.jpg&amp;description=Only%20to%20your%20person.%20Check%20the%20chat%20twice" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="card-for-two-slow-down">
         <button class="card-img" type="button" data-full="card-for-two-slow-down.jpg" aria-label="Open large">
@@ -696,7 +714,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>Tonight is yours. Do nothing.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-for-two-slow-down.jpg" download="palpo-card-for-two-slow-down.jpg" data-card="card-for-two-slow-down">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-for-two-slow-down.jpg" download="palpo-card-for-two-slow-down.jpg" data-card="card-for-two-slow-down">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-for-two-slow-down&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-for-two-slow-down.jpg&amp;description=For%20the%20tired%20one%20who%20won%E2%80%99t%20admit%20it" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="card-for-two-take-off-your-watch">
         <button class="card-img" type="button" data-full="card-for-two-take-off-your-watch.jpg" aria-label="Open large">
@@ -707,7 +725,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>No rush tonight.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-for-two-take-off-your-watch.jpg" download="palpo-card-for-two-take-off-your-watch.jpg" data-card="card-for-two-take-off-your-watch">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-for-two-take-off-your-watch.jpg" download="palpo-card-for-two-take-off-your-watch.jpg" data-card="card-for-two-take-off-your-watch">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-for-two-take-off-your-watch&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-for-two-take-off-your-watch.jpg&amp;description=For%20someone%20always%20checking%20the%20time" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="card-for-two-the-deal-tonight">
         <button class="card-img" type="button" data-full="card-for-two-the-deal-tonight.jpg" aria-label="Open large">
@@ -718,7 +736,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>Deal?</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-for-two-the-deal-tonight.jpg" download="palpo-card-for-two-the-deal-tonight.jpg" data-card="card-for-two-the-deal-tonight">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-for-two-the-deal-tonight.jpg" download="palpo-card-for-two-the-deal-tonight.jpg" data-card="card-for-two-the-deal-tonight">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-for-two-the-deal-tonight&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-for-two-the-deal-tonight.jpg&amp;description=For%20someone%20who%20comes%20home%20wrecked" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="card-for-two-undo-the-day">
         <button class="card-img" type="button" data-full="card-for-two-undo-the-day.jpg" aria-label="Open large">
@@ -729,7 +747,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>Leave the day at the door.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-for-two-undo-the-day.jpg" download="palpo-card-for-two-undo-the-day.jpg" data-card="card-for-two-undo-the-day">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-for-two-undo-the-day.jpg" download="palpo-card-for-two-undo-the-day.jpg" data-card="card-for-two-undo-the-day">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-for-two-undo-the-day&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-for-two-undo-the-day.jpg&amp;description=After%20a%20long%2C%20hard%20day" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="card-for-two-tonight-is-for-silence">
         <button class="card-img" type="button" data-full="card-for-two-tonight-is-for-silence.jpg" aria-label="Open large">
@@ -740,7 +758,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">What to write with it?</button>
           <div class="say-box" hidden><p>No talking tonight. Just rest.</p><button class="say-copy" type="button">Copy</button></div>
         </div>
-        <a class="dl" href="card-for-two-tonight-is-for-silence.jpg" download="palpo-card-for-two-tonight-is-for-silence.jpg" data-card="card-for-two-tonight-is-for-silence">Download</a>
+        <div class="pin-save-row"><a class="dl" href="card-for-two-tonight-is-for-silence.jpg" download="palpo-card-for-two-tonight-is-for-silence.jpg" data-card="card-for-two-tonight-is-for-silence">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23card-for-two-tonight-is-for-silence&amp;media=https%3A%2F%2Fpalpo.org%2Fcard-for-two-tonight-is-for-silence.jpg&amp;description=After%20a%20day%20of%20calls%20and%20meetings" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
     </div>
     <p class="gift">You can give the massage itself, too. In Minsk — that’s me.<br><a href="/minsk.html">Massage in Minsk (page in Russian) →</a></p>
@@ -754,63 +772,63 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <img src="mem-ai-found-your-knot-480.webp" srcset="mem-ai-found-your-knot-480.webp 480w, mem-ai-found-your-knot-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1000" height="1500" alt="A robot with AI on its chest kneads a pillow on a stool next to the massage table while the man on the table stares at it. Speech bubble: “Found your knot! Trigger point right here.”" loading="lazy" decoding="async">
         </button>
         <figcaption>For the friend who says robots will replace everyone</figcaption>
-        <a class="dl" href="mem-ai-found-your-knot.jpg" download="palpo-mem-ai-found-your-knot.jpg" data-card="mem-ai-found-your-knot">Download</a>
+        <div class="pin-save-row"><a class="dl" href="mem-ai-found-your-knot.jpg" download="palpo-mem-ai-found-your-knot.jpg" data-card="mem-ai-found-your-knot">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23mem-ai-found-your-knot&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-ai-found-your-knot.jpg&amp;description=For%20the%20friend%20who%20says%20robots%20will%20replace%20everyone" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-ai-confident">
         <button class="card-img" type="button" data-full="mem-ai-confident.jpg" aria-label="Open large">
           <img src="mem-ai-confident-480.webp" srcset="mem-ai-confident-480.webp 480w, mem-ai-confident-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1000" height="1500" alt="A smiling robot massages a woman’s back over a towel; she glances at it, unconvinced. Caption: “AI is confident. Skills… not so much.”" loading="lazy" decoding="async">
         </button>
         <figcaption>For your most confident coworker</figcaption>
-        <a class="dl" href="mem-ai-confident.jpg" download="palpo-mem-ai-confident.jpg" data-card="mem-ai-confident">Download</a>
+        <div class="pin-save-row"><a class="dl" href="mem-ai-confident.jpg" download="palpo-mem-ai-confident.jpg" data-card="mem-ai-confident">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23mem-ai-confident&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-ai-confident.jpg&amp;description=For%20your%20most%20confident%20coworker" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-ai-first-day">
         <button class="card-img" type="button" data-full="mem-ai-first-day.jpg" aria-label="Open large">
           <img src="mem-ai-first-day-480.webp" srcset="mem-ai-first-day-480.webp 480w, mem-ai-first-day-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1000" height="1500" alt="A smiling robot gives a massage over a thick towel; the woman on the table smirks. Caption: “AI’s first day.”" loading="lazy" decoding="async">
         </button>
         <figcaption>For the new hire</figcaption>
-        <a class="dl" href="mem-ai-first-day.jpg" download="palpo-mem-ai-first-day.jpg" data-card="mem-ai-first-day">Download</a>
+        <div class="pin-save-row"><a class="dl" href="mem-ai-first-day.jpg" download="palpo-mem-ai-first-day.jpg" data-card="mem-ai-first-day">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23mem-ai-first-day&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-ai-first-day.jpg&amp;description=For%20the%20new%20hire" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-before-after-massage">
         <button class="card-img" type="button" data-full="mem-before-after-massage.jpg" aria-label="Open large">
           <img src="mem-before-after-massage-480.webp" srcset="mem-before-after-massage-480.webp 480w, mem-before-after-massage-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="480" height="643" alt="Before massage — an iron frowning face; after massage — a shining golden one" loading="lazy" decoding="async">
         </button>
         <figcaption>For the colleague at the next desk</figcaption>
-        <a class="dl" href="mem-before-after-massage.jpg" download="palpo-mem-before-after-massage.jpg" data-card="mem-before-after-massage">Download</a>
+        <div class="pin-save-row"><a class="dl" href="mem-before-after-massage.jpg" download="palpo-mem-before-after-massage.jpg" data-card="mem-before-after-massage">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23mem-before-after-massage&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-before-after-massage.jpg&amp;description=For%20the%20colleague%20at%20the%20next%20desk" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-massage-enter">
         <button class="card-img" type="button" data-full="mem-massage-enter.jpg" aria-label="Open large">
           <img src="mem-massage-enter-480.webp" srcset="mem-massage-enter-480.webp 480w, mem-massage-enter-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="480" height="853" alt="Keyboard keys M-A-S-S-A-G-E and an Enter key" loading="lazy" decoding="async">
         </button>
         <figcaption>For your IT friend</figcaption>
-        <a class="dl" href="mem-massage-enter.jpg" download="palpo-mem-massage-enter.jpg" data-card="mem-massage-enter">Download</a>
+        <div class="pin-save-row"><a class="dl" href="mem-massage-enter.jpg" download="palpo-mem-massage-enter.jpg" data-card="mem-massage-enter">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23mem-massage-enter&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-massage-enter.jpg&amp;description=For%20your%20IT%20friend" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-granata-massage">
         <button class="card-img" type="button" data-full="mem-granata-massage.jpg" aria-label="Open large">
           <img src="mem-granata-massage-480.webp" srcset="mem-granata-massage-480.webp 480w, mem-granata-massage-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="480" height="853" alt="A grenade made of keys: Spa, Zen, Massage, Relax, Calm" loading="lazy" decoding="async">
         </button>
         <figcaption>For someone about to explode</figcaption>
-        <a class="dl" href="mem-granata-massage.jpg" download="palpo-mem-granata-massage.jpg" data-card="mem-granata-massage">Download</a>
+        <div class="pin-save-row"><a class="dl" href="mem-granata-massage.jpg" download="palpo-mem-granata-massage.jpg" data-card="mem-granata-massage">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23mem-granata-massage&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-granata-massage.jpg&amp;description=For%20someone%20about%20to%20explode" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-ruka-svecha-massage">
         <button class="card-img" type="button" data-full="mem-ruka-svecha-massage.jpg" aria-label="Open large">
           <img src="mem-ruka-svecha-massage-480.webp" srcset="mem-ruka-svecha-massage-480.webp 480w, mem-ruka-svecha-massage-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="480" height="853" alt="A hand holding a light bulb with a candle burning inside; the word Massage" loading="lazy" decoding="async">
         </button>
         <figcaption>For someone who has burnt out</figcaption>
-        <a class="dl" href="mem-ruka-svecha-massage.jpg" download="palpo-mem-ruka-svecha-massage.jpg" data-card="mem-ruka-svecha-massage">Download</a>
+        <div class="pin-save-row"><a class="dl" href="mem-ruka-svecha-massage.jpg" download="palpo-mem-ruka-svecha-massage.jpg" data-card="mem-ruka-svecha-massage">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23mem-ruka-svecha-massage&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-ruka-svecha-massage.jpg&amp;description=For%20someone%20who%20has%20burnt%20out" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-stol-on">
         <button class="card-img" type="button" data-full="mem-stol-on.jpg" aria-label="Open large">
           <img src="mem-stol-on-480.webp" srcset="mem-stol-on-480.webp 480w, mem-stol-on-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="480" height="853" alt="Sketch: a man lies perfectly straight on a massage table. Massage, with a heart made of palms" loading="lazy" decoding="async">
         </button>
         <figcaption>For him</figcaption>
-        <a class="dl" href="mem-stol-on.jpg" download="palpo-mem-stol-on.jpg" data-card="mem-stol-on">Download</a>
+        <div class="pin-save-row"><a class="dl" href="mem-stol-on.jpg" download="palpo-mem-stol-on.jpg" data-card="mem-stol-on">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23mem-stol-on&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-stol-on.jpg&amp;description=For%20him" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-stol-ona">
         <button class="card-img" type="button" data-full="mem-stol-ona.jpg" aria-label="Open large">
           <img src="mem-stol-ona-480.webp" srcset="mem-stol-ona-480.webp 480w, mem-stol-ona-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="480" height="853" alt="Sketch: a woman on a massage table, her hair going every which way. Massage, with a heart made of palms" loading="lazy" decoding="async">
         </button>
         <figcaption>For her</figcaption>
-        <a class="dl" href="mem-stol-ona.jpg" download="palpo-mem-stol-ona.jpg" data-card="mem-stol-ona">Download</a>
+        <div class="pin-save-row"><a class="dl" href="mem-stol-ona.jpg" download="palpo-mem-stol-ona.jpg" data-card="mem-stol-ona">Download</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23mem-stol-ona&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-stol-ona.jpg&amp;description=For%20her" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </figure>
     </div>
     <p class="more-small">Free to download, in high quality.</p>
@@ -822,8 +840,8 @@ footer.pn-foot{display:block;max-width:none;width:auto}
       <a class="oboi-prev" href="/en.html#calendar"><img src="calendar-preview-en.jpg" alt="Wallpaper calendar for October 2026 for a phone screen" width="800" height="1200" loading="lazy" decoding="async"></a>
       <div class="oboi-files">
         <p>A calendar for a phone screen. Space at the top for the clock, at the bottom for the dock.</p>
-        <a class="dl" href="calendar-october-2026-en-light.png" download data-card="calendar-en-light">October, light</a>
-        <a class="dl" href="calendar-october-2026-en-dark.png" download data-card="calendar-en-dark">October, dark</a>
+        <div class="pin-save-row"><a class="dl" href="calendar-october-2026-en-light.png" download data-card="calendar-en-light">October, light</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23wallpaper&amp;media=https%3A%2F%2Fpalpo.org%2Fcalendar-october-2026-en-light.png&amp;description=October%2C%20light.%20Phone%20wallpaper%20calendar%20from%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
+        <div class="pin-save-row"><a class="dl" href="calendar-october-2026-en-dark.png" download data-card="calendar-en-dark">October, dark</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen-humor.html%23wallpaper&amp;media=https%3A%2F%2Fpalpo.org%2Fcalendar-october-2026-en-dark.png&amp;description=October%2C%20dark.%20Phone%20wallpaper%20calendar%20from%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
       </div>
     </div>
   </section>
@@ -846,7 +864,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="The picture, large">
   <img id="lb-img" alt="">
   <p class="lb-hint" id="lb-hint">To save it, press and hold the picture and choose “Save image”.</p>
-  <div class="lb-row"><a id="lb-dl" href="#" download>Download</a><button type="button" id="lb-close">Close</button></div>
+  <div class="lb-row"><a id="lb-dl" href="#" download>Download</a><a class="pin-save" id="lb-pin" href="#" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a><button type="button" id="lb-close">Close</button></div>
 </div>
 
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e0cfa89fa9b44378ab3443a1d1e8e7e"}'></script><!-- End Cloudflare Web Analytics -->
@@ -859,10 +877,24 @@ footer.pn-foot{display:block;max-width:none;width:auto}
   var touch = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
   var lb = document.getElementById('lb'), lbImg = document.getElementById('lb-img'), lbDl = document.getElementById('lb-dl');
   var lastFocus = null;
-  function openLb(full, alt, name) {
+  function absPin(u) { if (!u) return ''; if (/^https?:\/\//i.test(u)) return u; return location.origin + '/' + String(u).replace(/^\//, ''); }
+  function setLbPin(full, alt, fromEl) {
+    var a = document.getElementById('lb-pin'); if (!a) return;
+    var img = null, fig = null;
+    if (fromEl) {
+      img = (fromEl.tagName === 'IMG') ? fromEl : (fromEl.querySelector && fromEl.querySelector('img'));
+      fig = fromEl.closest ? fromEl.closest('figure[id], article[id], section[id]') : null;
+    }
+    var url = (img && img.getAttribute('data-pin-url')) || (location.origin + location.pathname + (fig && fig.id ? '#' + fig.id : ''));
+    var media = (img && img.getAttribute('data-pin-media')) || absPin(full);
+    var desc = (img && (img.getAttribute('data-pin-description') || img.getAttribute('data-pin-title'))) || alt || '';
+    a.href = 'https://www.pinterest.com/pin/create/button/?url=' + encodeURIComponent(url) + '&media=' + encodeURIComponent(media) + '&description=' + encodeURIComponent(desc);
+  }
+  function openLb(full, alt, name, fromEl) {
     lastFocus = document.activeElement;
     lbImg.src = full; lbImg.alt = alt || '';
     lbDl.href = full; lbDl.setAttribute('download', name || '');
+    setLbPin(full, alt, fromEl);
     lb.hidden = false; document.body.style.overflow = 'hidden';
     document.getElementById('lb-close').focus();
   }
@@ -875,7 +907,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
     var b = e.target.closest ? e.target.closest('.card-img') : null;
     if (b) {
       var f = b.closest('figure'), img = b.querySelector('img');
-      openLb(b.getAttribute('data-full'), img ? img.alt : '', 'palpo-' + f.id + '.jpg');
+      openLb(b.getAttribute('data-full'), img ? img.alt : '', 'palpo-' + f.id + '.jpg', f);
       goal('humor_open', { card: f.id });
       return;
     }
@@ -883,7 +915,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
     if (!a) return;
     var id = a.getAttribute('data-card'), href = a.getAttribute('href'), fname = a.getAttribute('download');
     goal('humor_download', { card: id });
-    if (inApp) { e.preventDefault(); goal('humor_fullscreen', { card: id }); openLb(href, '', fname); return; }
+    if (inApp) { e.preventDefault(); goal('humor_fullscreen', { card: id }); openLb(href, '', fname, a); return; }
     /* телефон: обычное меню телефона, где есть «Сохранить изображение» (в Фото, а не в Файлы) */
     if (touch && navigator.canShare && window.fetch && window.File) {
       e.preventDefault();
@@ -894,7 +926,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
       }).catch(function (err) {
         if (err && err.name === 'AbortError') return; /* человек сам закрыл меню */
         goal('humor_fullscreen', { card: id });
-        openLb(href, '', fname);
+        openLb(href, '', fname, a);
       });
     }
     /* компьютер: обычное скачивание по ссылке */
@@ -908,6 +940,8 @@ footer.pn-foot{display:block;max-width:none;width:auto}
   document.addEventListener('click', function (e) {
     var a = e.target.closest ? e.target.closest('a[href]') : null; if (!a) return;
     var h = a.getAttribute('href') || '';
+    var dg = a.getAttribute('data-goal');
+    if (dg) { goal(dg); return; }
     if (h.indexOf('t.me/') > -1) goal('tg_click');
     else if (h.indexOf('minsk.html') > -1) goal('humor_to_minsk');
     else if (h.indexOf('pinterest.com') > -1) goal('humor_to_pinterest');

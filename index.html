@@ -1125,6 +1125,24 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 .pn-quiet b{font-weight:500}
 @media (prefers-reduced-motion:reduce){.pn-links a{transition:none}}
 </style>
+<style id="pin-save-style">
+/* 22.11.2026: plain Save-to-Pinterest link, below or beside the image, never over it */
+.pin-save-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+a.pin-save{display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;border-radius:100px;background:var(--amber,var(--ink,#3F2C15));color:var(--bg,var(--paper,#FBF9F5));font:inherit;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;line-height:1.2;max-width:100%;box-sizing:border-box;text-align:center;white-space:normal}
+a.pin-save:hover{transform:translateY(-2px)}
+@media (max-width:640px){a.pin-save{letter-spacing:.05em;padding:8px 12px}}
+.lb-row a.pin-save{background:transparent;color:#F0E4C8;border:1px solid #F0E4C8;letter-spacing:.04em;text-transform:none;font-size:.8rem;padding:10px 18px}
+.cal-files .pin-save-row{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;border-bottom:1px solid var(--wall,#E3D5BB)}
+.cal-files .pin-save-row>a:not(.pin-save){flex:1 1 12em;border-bottom:0}
+.cal-files a.pin-save{flex:0 0 auto;margin:6px 0;padding:7px 12px;letter-spacing:.06em;border-bottom:0;color:var(--bg,var(--paper,#FBF9F5));background:var(--amber,var(--ink,#3F2C15));justify-content:center}
+.pin-save-item{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}
+.grid>.pin-save-item{align-items:stretch}
+.strip .pin-save-item{flex:0 0 80%;max-width:340px;scroll-snap-align:start}
+.strip .pin-save-item .r-item{flex:none;max-width:none;width:100%}
+.kto-eto .pin-save-row,.atmosphere-scroll+.pin-save-row,.zn .pin-save-row{margin:10px 0 0}
+.polka-items .pin-save-item{display:flex;flex-direction:column;gap:8px}
+</style>
+
 </head>
 <body>
 <header class="pn-head site-header"><a class="skip-link" href="#main">К содержанию</a><nav class="pn-nav" aria-label="Разделы сайта"><a class="pn-brand" href="/">Руки массажиста</a><div class="pn-links"><a href="/#atlas">Где вы замерли</a><a href="/biomechanics.html">Ткнуть пальцем</a><a href="/humor.html">Кто тоже врёт</a><a href="/minsk.html">Можно молчать</a></div><a class="pn-lang" href="en.html" hreflang="en" lang="en">EN</a></nav></header>
@@ -1656,14 +1674,14 @@ footer.pn-foot{display:block;max-width:none;width:auto}
         <h2 class="serif">Календарь, в котором числа — часть картинки</h2>
         <p>Сделан под экран телефона. Сверху остаётся воздух под часы, снизу под док. Одна строка наблюдения, которую видно тридцать дней подряд.</p>
         <div class="cal-files">
-          <a href="kalendar-oktyabr-2026-ru-light.png" download>Октябрь, светлый <span>PNG · 1290×2796</span></a>
-          <a href="kalendar-oktyabr-2026-ru-dark.png" download>Октябрь, тёмный <span>PNG · 1290×2796</span></a>
-          <a href="kalendar-noyabr-2026-ru-light.png" download>Ноябрь, светлый <span>PNG · 1290×2796</span></a>
-          <a href="kalendar-noyabr-2026-ru-dark.png" download>Ноябрь, тёмный <span>PNG · 1290×2796</span></a>
-          <a href="kalendar-dekabr-2026-ru-light.png" download>Декабрь, светлый <span>PNG · 1290×2796</span></a>
-          <a href="kalendar-dekabr-2026-ru-dark.png" download>Декабрь, тёмный <span>PNG · 1290×2796</span></a>
-          <a href="kalendar-yanvar-2027-ru-light.png" download>Январь, светлый <span>PNG · 1290×2796</span></a>
-          <a href="kalendar-yanvar-2027-ru-dark.png" download>Январь, тёмный <span>PNG · 1290×2796</span></a>
+          <div class="pin-save-row"><a href="kalendar-oktyabr-2026-ru-light.png" download>Октябрь, светлый <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2F%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fkalendar-oktyabr-2026-ru-light.png&amp;description=%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C%2C%20%D1%81%D0%B2%D0%B5%D1%82%D0%BB%D1%8B%D0%B9.%20%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C-%D0%BE%D0%B1%D0%BE%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0%20%D1%81%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
+          <div class="pin-save-row"><a href="kalendar-oktyabr-2026-ru-dark.png" download>Октябрь, тёмный <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2F%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fkalendar-oktyabr-2026-ru-dark.png&amp;description=%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C%2C%20%D1%82%D1%91%D0%BC%D0%BD%D1%8B%D0%B9.%20%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C-%D0%BE%D0%B1%D0%BE%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0%20%D1%81%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
+          <div class="pin-save-row"><a href="kalendar-noyabr-2026-ru-light.png" download>Ноябрь, светлый <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2F%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fkalendar-noyabr-2026-ru-light.png&amp;description=%D0%9D%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%2C%20%D1%81%D0%B2%D0%B5%D1%82%D0%BB%D1%8B%D0%B9.%20%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C-%D0%BE%D0%B1%D0%BE%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0%20%D1%81%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
+          <div class="pin-save-row"><a href="kalendar-noyabr-2026-ru-dark.png" download>Ноябрь, тёмный <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2F%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fkalendar-noyabr-2026-ru-dark.png&amp;description=%D0%9D%D0%BE%D1%8F%D0%B1%D1%80%D1%8C%2C%20%D1%82%D1%91%D0%BC%D0%BD%D1%8B%D0%B9.%20%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C-%D0%BE%D0%B1%D0%BE%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0%20%D1%81%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
+          <div class="pin-save-row"><a href="kalendar-dekabr-2026-ru-light.png" download>Декабрь, светлый <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2F%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fkalendar-dekabr-2026-ru-light.png&amp;description=%D0%94%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C%2C%20%D1%81%D0%B2%D0%B5%D1%82%D0%BB%D1%8B%D0%B9.%20%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C-%D0%BE%D0%B1%D0%BE%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0%20%D1%81%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
+          <div class="pin-save-row"><a href="kalendar-dekabr-2026-ru-dark.png" download>Декабрь, тёмный <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2F%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fkalendar-dekabr-2026-ru-dark.png&amp;description=%D0%94%D0%B5%D0%BA%D0%B0%D0%B1%D1%80%D1%8C%2C%20%D1%82%D1%91%D0%BC%D0%BD%D1%8B%D0%B9.%20%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C-%D0%BE%D0%B1%D0%BE%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0%20%D1%81%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
+          <div class="pin-save-row"><a href="kalendar-yanvar-2027-ru-light.png" download>Январь, светлый <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2F%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fkalendar-yanvar-2027-ru-light.png&amp;description=%D0%AF%D0%BD%D0%B2%D0%B0%D1%80%D1%8C%2C%20%D1%81%D0%B2%D0%B5%D1%82%D0%BB%D1%8B%D0%B9.%20%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C-%D0%BE%D0%B1%D0%BE%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0%20%D1%81%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
+          <div class="pin-save-row"><a href="kalendar-yanvar-2027-ru-dark.png" download>Январь, тёмный <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2F%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fkalendar-yanvar-2027-ru-dark.png&amp;description=%D0%AF%D0%BD%D0%B2%D0%B0%D1%80%D1%8C%2C%20%D1%82%D1%91%D0%BC%D0%BD%D1%8B%D0%B9.%20%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C-%D0%BE%D0%B1%D0%BE%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0%20%D1%81%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
         </div>
         <p class="cal-note">Следующий месяц появляется здесь заранее.</p>
       </div>
@@ -1699,10 +1717,10 @@ footer.pn-foot{display:block;max-width:none;width:auto}
   </div>
 </section>
 
-<section class="kto-eto">
+<section class="kto-eto" id="kto-eto">
   <div class="kto-eto-photo reveal">
     <img src="author.jpg" alt="Алексей у массажного стола, со спины" loading="lazy">
-  </div>
+  </div><div class="pin-save-row"><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2F%23kto-eto&amp;media=https%3A%2F%2Fpalpo.org%2Fauthor.jpg&amp;description=%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9%20%D1%83%20%D0%BC%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%BD%D0%BE%D0%B3%D0%BE%20%D1%81%D1%82%D0%BE%D0%BB%D0%B0%2C%20%D1%81%D0%BE%20%D1%81%D0%BF%D0%B8%D0%BD%D1%8B" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
   <p class="kto-eto-quote reveal">Я работаю руками, а замечаю глазами. За двадцать лет у стола я увидел о теле и о людях больше, чем ожидал. Здесь я это называю — как есть, без учебников.</p>
   <p class="kto-eto-geo reveal"><a href="/minsk.html">Кабинет и выезд · Минск →</a></p>
 </section>

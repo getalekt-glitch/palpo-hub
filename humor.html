@@ -660,6 +660,24 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 .pn-quiet b{font-weight:500}
 @media (prefers-reduced-motion:reduce){.pn-links a{transition:none}}
 </style>
+<style id="pin-save-style">
+/* 22.11.2026: plain Save-to-Pinterest link, below or beside the image, never over it */
+.pin-save-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+a.pin-save{display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;border-radius:100px;background:var(--amber,var(--ink,#3F2C15));color:var(--bg,var(--paper,#FBF9F5));font:inherit;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;line-height:1.2;max-width:100%;box-sizing:border-box;text-align:center;white-space:normal}
+a.pin-save:hover{transform:translateY(-2px)}
+@media (max-width:640px){a.pin-save{letter-spacing:.05em;padding:8px 12px}}
+.lb-row a.pin-save{background:transparent;color:#F0E4C8;border:1px solid #F0E4C8;letter-spacing:.04em;text-transform:none;font-size:.8rem;padding:10px 18px}
+.cal-files .pin-save-row{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;border-bottom:1px solid var(--wall,#E3D5BB)}
+.cal-files .pin-save-row>a:not(.pin-save){flex:1 1 12em;border-bottom:0}
+.cal-files a.pin-save{flex:0 0 auto;margin:6px 0;padding:7px 12px;letter-spacing:.06em;border-bottom:0;color:var(--bg,var(--paper,#FBF9F5));background:var(--amber,var(--ink,#3F2C15));justify-content:center}
+.pin-save-item{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}
+.grid>.pin-save-item{align-items:stretch}
+.strip .pin-save-item{flex:0 0 80%;max-width:340px;scroll-snap-align:start}
+.strip .pin-save-item .r-item{flex:none;max-width:none;width:100%}
+.kto-eto .pin-save-row,.atmosphere-scroll+.pin-save-row,.zn .pin-save-row{margin:10px 0 0}
+.polka-items .pin-save-item{display:flex;flex-direction:column;gap:8px}
+</style>
+
 </head>
 <body>
 <header class="pn-head"><nav class="pn-nav" aria-label="Разделы сайта"><a class="pn-brand" href="/">Руки массажиста</a><div class="pn-links"><a href="/#atlas">Где вы замерли</a><a href="/biomechanics.html">Ткнуть пальцем</a><a href="/humor.html" aria-current="page">Кто тоже врёт</a><a href="/minsk.html">Можно молчать</a></div><a class="pn-lang" href="/en-humor.html" hreflang="en" lang="en">EN</a></nav></header>
@@ -697,7 +715,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">Что написать к ней?</button>
           <div class="say-box" hidden><p>С днём рождения, старина! Ты всё ещё самый молодой из всех, кого я знаю.</p><button class="say-copy" type="button">Скопировать</button></div>
         </div>
-        <a class="dl" href="otkrytka-den-rozhdeniya-ded-dohrenaletie.jpg" download="palpo-otkrytka-den-rozhdeniya-ded-dohrenaletie.jpg" data-card="otkrytka-den-rozhdeniya-ded-dohrenaletie">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="otkrytka-den-rozhdeniya-ded-dohrenaletie.jpg" download="palpo-otkrytka-den-rozhdeniya-ded-dohrenaletie.jpg" data-card="otkrytka-den-rozhdeniya-ded-dohrenaletie">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23otkrytka-den-rozhdeniya-ded-dohrenaletie&amp;media=https%3A%2F%2Fpalpo.org%2Fotkrytka-den-rozhdeniya-ded-dohrenaletie.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D0%BA%D1%82%D0%BE%20%D1%81%D0%B0%D0%BC%20%D1%88%D1%83%D1%82%D0%B8%D1%82%20%D0%BF%D1%80%D0%BE%20%D1%81%D0%B2%D0%BE%D0%B9%20%D0%B2%D0%BE%D0%B7%D1%80%D0%B0%D1%81%D1%82" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-kot-luchshiy-massazh-v-zhizni">
         <button class="card-img" type="button" data-full="mem-kot-luchshiy-massazh-v-zhizni.jpg" aria-label="Открыть крупно">
@@ -708,7 +726,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">Что написать к ней?</button>
           <div class="say-box" hidden><p>Смотри, какая инструкция. Первый пункт за тобой.</p><button class="say-copy" type="button">Скопировать</button></div>
         </div>
-        <a class="dl" href="mem-kot-luchshiy-massazh-v-zhizni.jpg" download="palpo-mem-kot-luchshiy-massazh-v-zhizni.jpg" data-card="mem-kot-luchshiy-massazh-v-zhizni">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-kot-luchshiy-massazh-v-zhizni.jpg" download="palpo-mem-kot-luchshiy-massazh-v-zhizni.jpg" data-card="mem-kot-luchshiy-massazh-v-zhizni">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-kot-luchshiy-massazh-v-zhizni&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-kot-luchshiy-massazh-v-zhizni.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D0%BA%D1%82%D0%BE%20%D0%B2%D1%81%D1%91%20%D0%BE%D0%B1%D0%B5%D1%89%D0%B0%D0%B5%D1%82%20%D0%B7%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C%D1%81%D1%8F" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
     </div>
   </section>
@@ -725,7 +743,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">Что написать к ней?</button>
           <div class="say-box" hidden><p>С днём рождения! Береги поясницу и не чихай резко.</p><button class="say-copy" type="button">Скопировать</button></div>
         </div>
-        <a class="dl" href="otkrytka-den-rozhdeniya-fenek-poyasnitsa.jpg" download="palpo-otkrytka-den-rozhdeniya-fenek-poyasnitsa.jpg" data-card="otkrytka-den-rozhdeniya-fenek-poyasnitsa">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="otkrytka-den-rozhdeniya-fenek-poyasnitsa.jpg" download="palpo-otkrytka-den-rozhdeniya-fenek-poyasnitsa.jpg" data-card="otkrytka-den-rozhdeniya-fenek-poyasnitsa">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23otkrytka-den-rozhdeniya-fenek-poyasnitsa&amp;media=https%3A%2F%2Fpalpo.org%2Fotkrytka-den-rozhdeniya-fenek-poyasnitsa.jpg&amp;description=%D0%94%D1%80%D1%83%D0%B3%D1%83%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B9%20%D1%87%D0%B8%D1%85%D0%B0%D0%B5%D1%82%20%D0%BE%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%B6%D0%BD%D0%BE" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="otkrytka-den-rozhdeniya-gus-raz-v-godu">
         <button class="card-img" type="button" data-full="otkrytka-den-rozhdeniya-gus-raz-v-godu.jpg" aria-label="Открыть крупно">
@@ -736,7 +754,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">Что написать к ней?</button>
           <div class="say-box" hidden><p>С днём рождения! Сегодня можно всё. Даже торт целиком.</p><button class="say-copy" type="button">Скопировать</button></div>
         </div>
-        <a class="dl" href="otkrytka-den-rozhdeniya-gus-raz-v-godu.jpg" download="palpo-otkrytka-den-rozhdeniya-gus-raz-v-godu.jpg" data-card="otkrytka-den-rozhdeniya-gus-raz-v-godu">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="otkrytka-den-rozhdeniya-gus-raz-v-godu.jpg" download="palpo-otkrytka-den-rozhdeniya-gus-raz-v-godu.jpg" data-card="otkrytka-den-rozhdeniya-gus-raz-v-godu">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23otkrytka-den-rozhdeniya-gus-raz-v-godu&amp;media=https%3A%2F%2Fpalpo.org%2Fotkrytka-den-rozhdeniya-gus-raz-v-godu.jpg&amp;description=%D0%9C%D0%B0%D0%BC%D0%B5%2C%20%D1%82%D1%91%D1%82%D0%B5%2C%20%D0%BD%D0%B0%D1%87%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D1%83" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="otkrytka-den-rozhdeniya-fenek-tishina">
         <button class="card-img" type="button" data-full="otkrytka-den-rozhdeniya-fenek-tishina.jpg" aria-label="Открыть крупно">
@@ -747,7 +765,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">Что написать к ней?</button>
           <div class="say-box" hidden><p>С днём рождения! Желаю тишины, пледа и чтобы никто не звонил.</p><button class="say-copy" type="button">Скопировать</button></div>
         </div>
-        <a class="dl" href="otkrytka-den-rozhdeniya-fenek-tishina.jpg" download="palpo-otkrytka-den-rozhdeniya-fenek-tishina.jpg" data-card="otkrytka-den-rozhdeniya-fenek-tishina">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="otkrytka-den-rozhdeniya-fenek-tishina.jpg" download="palpo-otkrytka-den-rozhdeniya-fenek-tishina.jpg" data-card="otkrytka-den-rozhdeniya-fenek-tishina">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23otkrytka-den-rozhdeniya-fenek-tishina&amp;media=https%3A%2F%2Fpalpo.org%2Fotkrytka-den-rozhdeniya-fenek-tishina.jpg&amp;description=%D0%91%D1%8B%D0%B2%D1%88%D0%B8%D0%BC%20%D1%82%D1%83%D1%81%D0%BE%D0%B2%D1%89%D0%B8%D0%BA%D0%B0%D0%BC" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat">
         <button class="card-img" type="button" data-full="otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat.jpg" aria-label="Открыть крупно">
@@ -758,7 +776,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">Что написать к ней?</button>
           <div class="say-box" hidden><p>С днём рождения! Ложись когда хочешь — ты заслужил.</p><button class="say-copy" type="button">Скопировать</button></div>
         </div>
-        <a class="dl" href="otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat.jpg" download="palpo-otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat.jpg" data-card="otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat.jpg" download="palpo-otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat.jpg" data-card="otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23otkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat&amp;media=https%3A%2F%2Fpalpo.org%2Fotkrytka-den-rozhdeniya-volk-klub-lyagu-v-desyat.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D0%BA%D1%82%D0%BE%20%D1%83%D1%85%D0%BE%D0%B4%D0%B8%D1%82%20%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%BC" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="otkrytka-den-rozhdeniya-fenek-tishina-temnaya">
         <button class="card-img" type="button" data-full="otkrytka-den-rozhdeniya-fenek-tishina-temnaya.jpg" aria-label="Открыть крупно">
@@ -769,7 +787,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">Что написать к ней?</button>
           <div class="say-box" hidden><p>С днём рождения! Пусть сегодня будет тихо, тепло и без будильника.</p><button class="say-copy" type="button">Скопировать</button></div>
         </div>
-        <a class="dl" href="otkrytka-den-rozhdeniya-fenek-tishina-temnaya.jpg" download="palpo-otkrytka-den-rozhdeniya-fenek-tishina-temnaya.jpg" data-card="otkrytka-den-rozhdeniya-fenek-tishina-temnaya">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="otkrytka-den-rozhdeniya-fenek-tishina-temnaya.jpg" download="palpo-otkrytka-den-rozhdeniya-fenek-tishina-temnaya.jpg" data-card="otkrytka-den-rozhdeniya-fenek-tishina-temnaya">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23otkrytka-den-rozhdeniya-fenek-tishina-temnaya&amp;media=https%3A%2F%2Fpalpo.org%2Fotkrytka-den-rozhdeniya-fenek-tishina-temnaya.jpg&amp;description=%D0%9F%D0%BE%D0%B4%D1%80%D1%83%D0%B3%D0%B5%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D0%B0%D1%8F%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B5%20%D0%BD%D0%B5%20%D1%85%D0%BE%D0%B4%D0%B8%D1%82%20%D0%B2%20%D0%BA%D0%BB%D1%83%D0%B1" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
     </div>
     <p class="more-small">Не нашёл нужную? <a href="https://www.pinterest.com/aleksei_massage_minsk/%D0%BC%D0%B0%D1%81%D1%81%D0%B0%D0%B6%D0%BD%D1%8B%D0%B5-%D0%BC%D0%B5%D0%BC%D1%8B-massage-humor-cards/%D0%BE%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%BA%D0%B8-%D0%B8-%D0%BF%D0%BE%D0%B7%D0%B4%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BD%D0%B0-%D0%BA%D0%B0%D0%B6%D0%B4%D1%8B%D0%B9-%D0%B4%D0%B5%D0%BD%D1%8C/" target="_blank" rel="noopener">Ещё открытки — в Pinterest →</a></p>
@@ -787,7 +805,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">Что написать к ней?</button>
           <div class="say-box" hidden><p>Приходи домой. Остальное я беру на себя.</p><button class="say-copy" type="button">Скопировать</button></div>
         </div>
-        <a class="dl" href="otkrytka-dlya-dvoih-s-tebya-ustalost.jpg" download="palpo-otkrytka-dlya-dvoih-s-tebya-ustalost.jpg" data-card="otkrytka-dlya-dvoih-s-tebya-ustalost">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="otkrytka-dlya-dvoih-s-tebya-ustalost.jpg" download="palpo-otkrytka-dlya-dvoih-s-tebya-ustalost.jpg" data-card="otkrytka-dlya-dvoih-s-tebya-ustalost">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23otkrytka-dlya-dvoih-s-tebya-ustalost&amp;media=https%3A%2F%2Fpalpo.org%2Fotkrytka-dlya-dvoih-s-tebya-ustalost.jpg&amp;description=%D0%9A%D1%82%D0%BE%20%D0%BF%D1%80%D0%B8%D1%88%D1%91%D0%BB%20%D1%81%20%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B%20%D0%BD%D0%B8%D0%BA%D0%B0%D0%BA%D0%BE%D0%B9" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="otkrytka-dlya-dvoih-snimay-chasy">
         <button class="card-img" type="button" data-full="otkrytka-dlya-dvoih-snimay-chasy.jpg" aria-label="Открыть крупно">
@@ -798,7 +816,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">Что написать к ней?</button>
           <div class="say-box" hidden><p>Сегодня никуда не торопимся.</p><button class="say-copy" type="button">Скопировать</button></div>
         </div>
-        <a class="dl" href="otkrytka-dlya-dvoih-snimay-chasy.jpg" download="palpo-otkrytka-dlya-dvoih-snimay-chasy.jpg" data-card="otkrytka-dlya-dvoih-snimay-chasy">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="otkrytka-dlya-dvoih-snimay-chasy.jpg" download="palpo-otkrytka-dlya-dvoih-snimay-chasy.jpg" data-card="otkrytka-dlya-dvoih-snimay-chasy">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23otkrytka-dlya-dvoih-snimay-chasy&amp;media=https%3A%2F%2Fpalpo.org%2Fotkrytka-dlya-dvoih-snimay-chasy.jpg&amp;description=%D0%9A%D1%82%D0%BE%20%D0%B2%D0%B5%D1%87%D0%BD%D0%BE%20%D1%81%D0%BC%D0%BE%D1%82%D1%80%D0%B8%D1%82%20%D0%BD%D0%B0%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="otkrytka-dlya-dvoih-plany-i-maslo">
         <button class="card-img" type="button" data-full="otkrytka-dlya-dvoih-plany-i-maslo.jpg" aria-label="Открыть крупно">
@@ -809,7 +827,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">Что написать к ней?</button>
           <div class="say-box" hidden><p>Вечером не задерживайся.</p><button class="say-copy" type="button">Скопировать</button></div>
         </div>
-        <a class="dl" href="otkrytka-dlya-dvoih-plany-i-maslo.jpg" download="palpo-otkrytka-dlya-dvoih-plany-i-maslo.jpg" data-card="otkrytka-dlya-dvoih-plany-i-maslo">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="otkrytka-dlya-dvoih-plany-i-maslo.jpg" download="palpo-otkrytka-dlya-dvoih-plany-i-maslo.jpg" data-card="otkrytka-dlya-dvoih-plany-i-maslo">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23otkrytka-dlya-dvoih-plany-i-maslo&amp;media=https%3A%2F%2Fpalpo.org%2Fotkrytka-dlya-dvoih-plany-i-maslo.jpg&amp;description=%D0%A1%D0%B2%D0%BE%D0%B5%D0%BC%D1%83.%20%D0%9D%D0%B5%20%D0%BF%D0%B5%D1%80%D0%B5%D0%BF%D1%83%D1%82%D0%B0%D0%B9%20%D1%87%D0%B0%D1%82" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="otkrytka-dlya-dvoih-vremya-zamedlitsya-serdce">
         <button class="card-img" type="button" data-full="otkrytka-dlya-dvoih-vremya-zamedlitsya-serdce.jpg" aria-label="Открыть крупно">
@@ -820,7 +838,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">Что написать к ней?</button>
           <div class="say-box" hidden><p>Сегодня вечер только твой. Ничего не делай.</p><button class="say-copy" type="button">Скопировать</button></div>
         </div>
-        <a class="dl" href="otkrytka-dlya-dvoih-vremya-zamedlitsya-serdce.jpg" download="palpo-otkrytka-dlya-dvoih-vremya-zamedlitsya-serdce.jpg" data-card="otkrytka-dlya-dvoih-vremya-zamedlitsya-serdce">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="otkrytka-dlya-dvoih-vremya-zamedlitsya-serdce.jpg" download="palpo-otkrytka-dlya-dvoih-vremya-zamedlitsya-serdce.jpg" data-card="otkrytka-dlya-dvoih-vremya-zamedlitsya-serdce">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23otkrytka-dlya-dvoih-vremya-zamedlitsya-serdce&amp;media=https%3A%2F%2Fpalpo.org%2Fotkrytka-dlya-dvoih-vremya-zamedlitsya-serdce.jpg&amp;description=%D0%9A%D1%82%D0%BE%20%D1%83%D1%81%D1%82%D0%B0%D0%BB%2C%20%D0%BD%D0%BE%20%D0%BD%D0%B5%20%D0%BF%D1%80%D0%B8%D0%B7%D0%BD%D0%B0%D1%91%D1%82%D1%81%D1%8F" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="otkrytka-dlya-dvoih-ty-moe-vse-namek">
         <button class="card-img" type="button" data-full="otkrytka-dlya-dvoih-ty-moe-vse-namek.jpg" aria-label="Открыть крупно">
@@ -831,7 +849,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <button class="say-btn" type="button" aria-expanded="false">Что написать к ней?</button>
           <div class="say-box" hidden><p>Просто напоминаю.</p><button class="say-copy" type="button">Скопировать</button></div>
         </div>
-        <a class="dl" href="otkrytka-dlya-dvoih-ty-moe-vse-namek.jpg" download="palpo-otkrytka-dlya-dvoih-ty-moe-vse-namek.jpg" data-card="otkrytka-dlya-dvoih-ty-moe-vse-namek">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="otkrytka-dlya-dvoih-ty-moe-vse-namek.jpg" download="palpo-otkrytka-dlya-dvoih-ty-moe-vse-namek.jpg" data-card="otkrytka-dlya-dvoih-ty-moe-vse-namek">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23otkrytka-dlya-dvoih-ty-moe-vse-namek&amp;media=https%3A%2F%2Fpalpo.org%2Fotkrytka-dlya-dvoih-ty-moe-vse-namek.jpg&amp;description=%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%BE%20%D1%82%D0%B0%D0%BA%2C%20%D0%B1%D0%B5%D0%B7%20%D0%BF%D0%BE%D0%B2%D0%BE%D0%B4%D0%B0" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
     </div>
     <p class="gift">К открытке можно приложить и сам массаж. В Минске — это ко мне.<br><a href="/minsk.html">Кабинет и выезд · Минск →</a></p>
@@ -845,126 +863,126 @@ footer.pn-foot{display:block;max-width:none;width:auto}
           <img src="mem-gigiena-dlya-tela-480.webp" srcset="mem-gigiena-dlya-tela-480.webp 480w, mem-gigiena-dlya-tela-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1080" height="1920" alt="Мем: «Массаж — это не роскошь, это гигиена для тела, которое устало притворяться железным». Отговорки: нет времени, дорого, потерплю. «А тело ведь не скажет: я потерпело»" loading="lazy" decoding="async">
         </button>
         <figcaption>Тому, кто притворяется железным</figcaption>
-        <a class="dl" href="mem-gigiena-dlya-tela.jpg" download="palpo-mem-gigiena-dlya-tela.jpg" data-card="mem-gigiena-dlya-tela">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-gigiena-dlya-tela.jpg" download="palpo-mem-gigiena-dlya-tela.jpg" data-card="mem-gigiena-dlya-tela">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-gigiena-dlya-tela&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-gigiena-dlya-tela.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D0%BA%D1%82%D0%BE%20%D0%BF%D1%80%D0%B8%D1%82%D0%B2%D0%BE%D1%80%D1%8F%D0%B5%D1%82%D1%81%D1%8F%20%D0%B6%D0%B5%D0%BB%D0%B5%D0%B7%D0%BD%D1%8B%D0%BC" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-telo-boga">
         <button class="card-img" type="button" data-full="mem-telo-boga.jpg" aria-label="Открыть крупно">
           <img src="mem-telo-boga-480.webp" srcset="mem-telo-boga-480.webp 480w, mem-telo-boga-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1080" height="1920" alt="Мем: «Массаж — не роскошь, а инвестиция в тело, которое скажет спасибо». Программа «Тело бога»: спина разгружается, шея поёт, плечи расслабляются, энергия растёт, настроение улучшается" loading="lazy" decoding="async">
         </button>
         <figcaption>Тому, кто всё обещает себе отдохнуть</figcaption>
-        <a class="dl" href="mem-telo-boga.jpg" download="palpo-mem-telo-boga.jpg" data-card="mem-telo-boga">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-telo-boga.jpg" download="palpo-mem-telo-boga.jpg" data-card="mem-telo-boga">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-telo-boga&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-telo-boga.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D0%BA%D1%82%D0%BE%20%D0%B2%D1%81%D1%91%20%D0%BE%D0%B1%D0%B5%D1%89%D0%B0%D0%B5%D1%82%20%D1%81%D0%B5%D0%B1%D0%B5%20%D0%BE%D1%82%D0%B4%D0%BE%D1%85%D0%BD%D1%83%D1%82%D1%8C" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-ii-nashel-uzel">
         <button class="card-img" type="button" data-full="mem-ii-nashel-uzel.jpg" aria-label="Открыть крупно">
           <img src="mem-ii-nashel-uzel-480.webp" srcset="mem-ii-nashel-uzel-480.webp 480w, mem-ii-nashel-uzel-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1000" height="1500" alt="Робот с надписью AI мнёт подушку на табурете рядом с массажным столом, человек на столе смотрит на него в недоумении. Реплика робота: «Нашёл узел! Триггерная точка здесь.»" loading="lazy" decoding="async">
         </button>
         <figcaption>Тому, кто говорит, что всех заменят роботы</figcaption>
-        <a class="dl" href="mem-ii-nashel-uzel.jpg" download="palpo-mem-ii-nashel-uzel.jpg" data-card="mem-ii-nashel-uzel">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-ii-nashel-uzel.jpg" download="palpo-mem-ii-nashel-uzel.jpg" data-card="mem-ii-nashel-uzel">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-ii-nashel-uzel&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-ii-nashel-uzel.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D0%BA%D1%82%D0%BE%20%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B8%D1%82%2C%20%D1%87%D1%82%D0%BE%20%D0%B2%D1%81%D0%B5%D1%85%20%D0%B7%D0%B0%D0%BC%D0%B5%D0%BD%D1%8F%D1%82%20%D1%80%D0%BE%D0%B1%D0%BE%D1%82%D1%8B" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-ii-genialno">
         <button class="card-img" type="button" data-full="mem-ii-genialno.jpg" aria-label="Открыть крупно">
           <img src="mem-ii-genialno-480.webp" srcset="mem-ii-genialno-480.webp 480w, mem-ii-genialno-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1000" height="1500" alt="Робот массирует человеку голову вместо спины, человек на столе смеётся сквозь слёзы. Подпись: «ИИ в массаже. Гениально.»" loading="lazy" decoding="async">
         </button>
         <figcaption>Другу, который во всём доверяет ИИ</figcaption>
-        <a class="dl" href="mem-ii-genialno.jpg" download="palpo-mem-ii-genialno.jpg" data-card="mem-ii-genialno">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-ii-genialno.jpg" download="palpo-mem-ii-genialno.jpg" data-card="mem-ii-genialno">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-ii-genialno&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-ii-genialno.jpg&amp;description=%D0%94%D1%80%D1%83%D0%B3%D1%83%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B9%20%D0%B2%D0%BE%20%D0%B2%D1%81%D1%91%D0%BC%20%D0%B4%D0%BE%D0%B2%D0%B5%D1%80%D1%8F%D0%B5%D1%82%20%D0%98%D0%98" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-ii-staraetsya">
         <button class="card-img" type="button" data-full="mem-ii-staraetsya.jpg" aria-label="Открыть крупно">
           <img src="mem-ii-staraetsya-480.webp" srcset="mem-ii-staraetsya-480.webp 480w, mem-ii-staraetsya-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1000" height="1500" alt="Робот массирует спину женщины через полотенце, она смеётся. Подпись: «ИИ в массаже: старается. Очень.»" loading="lazy" decoding="async">
         </button>
         <figcaption>Тому, кто тоже очень старается</figcaption>
-        <a class="dl" href="mem-ii-staraetsya.jpg" download="palpo-mem-ii-staraetsya.jpg" data-card="mem-ii-staraetsya">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-ii-staraetsya.jpg" download="palpo-mem-ii-staraetsya.jpg" data-card="mem-ii-staraetsya">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-ii-staraetsya&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-ii-staraetsya.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D0%BA%D1%82%D0%BE%20%D1%82%D0%BE%D0%B6%D0%B5%20%D0%BE%D1%87%D0%B5%D0%BD%D1%8C%20%D1%81%D1%82%D0%B0%D1%80%D0%B0%D0%B5%D1%82%D1%81%D1%8F" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-ii-rasslabsya">
         <button class="card-img" type="button" data-full="mem-ii-rasslabsya.jpg" aria-label="Открыть крупно">
           <img src="mem-ii-rasslabsya-480.webp" srcset="mem-ii-rasslabsya-480.webp 480w, mem-ii-rasslabsya-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1000" height="1500" alt="Робот массирует спину мужчины прямо через футболку, тот хохочет. Подпись: «Расслабься, это я…»" loading="lazy" decoding="async">
         </button>
         <figcaption>Тому, кто не может расслабиться</figcaption>
-        <a class="dl" href="mem-ii-rasslabsya.jpg" download="palpo-mem-ii-rasslabsya.jpg" data-card="mem-ii-rasslabsya">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-ii-rasslabsya.jpg" download="palpo-mem-ii-rasslabsya.jpg" data-card="mem-ii-rasslabsya">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-ii-rasslabsya&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-ii-rasslabsya.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D0%BA%D1%82%D0%BE%20%D0%BD%D0%B5%20%D0%BC%D0%BE%D0%B6%D0%B5%D1%82%20%D1%80%D0%B0%D1%81%D1%81%D0%BB%D0%B0%D0%B1%D0%B8%D1%82%D1%8C%D1%81%D1%8F" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-akciya-kupi-tretiy">
         <button class="card-img" type="button" data-full="mem-akciya-kupi-tretiy.jpg" aria-label="Открыть крупно">
           <img src="mem-akciya-kupi-tretiy-480.webp" srcset="mem-akciya-kupi-tretiy-480.webp 480w, mem-akciya-kupi-tretiy-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="736" height="1097" alt="Плакат: «Акция: купи два массажа и третий тоже купи. Руки массажиста — руки тоже платно, только в аренду»" loading="lazy" decoding="async">
         </button>
         <figcaption>Тому, кто всё ждёт скидку</figcaption>
-        <a class="dl" href="mem-akciya-kupi-tretiy.jpg" download="palpo-mem-akciya-kupi-tretiy.jpg" data-card="mem-akciya-kupi-tretiy">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-akciya-kupi-tretiy.jpg" download="palpo-mem-akciya-kupi-tretiy.jpg" data-card="mem-akciya-kupi-tretiy">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-akciya-kupi-tretiy&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-akciya-kupi-tretiy.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D0%BA%D1%82%D0%BE%20%D0%B2%D1%81%D1%91%20%D0%B6%D0%B4%D1%91%D1%82%20%D1%81%D0%BA%D0%B8%D0%B4%D0%BA%D1%83" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-dokazano-zrenie">
         <button class="card-img" type="button" data-full="mem-dokazano-zrenie.jpg" aria-label="Открыть крупно">
           <img src="mem-dokazano-zrenie-480.webp" srcset="mem-dokazano-zrenie-480.webp 480w, mem-dokazano-zrenie-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1080" height="1920" alt="«Доказано: отсутствие регулярного массажа влияет на зрение» — надпись двоится" loading="lazy" decoding="async">
         </button>
         <figcaption>Другу, который щурится в экран</figcaption>
-        <a class="dl" href="mem-dokazano-zrenie.jpg" download="palpo-mem-dokazano-zrenie.jpg" data-card="mem-dokazano-zrenie">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-dokazano-zrenie.jpg" download="palpo-mem-dokazano-zrenie.jpg" data-card="mem-dokazano-zrenie">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-dokazano-zrenie&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-dokazano-zrenie.jpg&amp;description=%D0%94%D1%80%D1%83%D0%B3%D1%83%2C%20%D0%BA%D0%BE%D1%82%D0%BE%D1%80%D1%8B%D0%B9%20%D1%89%D1%83%D1%80%D0%B8%D1%82%D1%81%D1%8F%20%D0%B2%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-gusenica-babochka">
         <button class="card-img" type="button" data-full="mem-gusenica-babochka.jpg" aria-label="Открыть крупно">
           <img src="mem-gusenica-babochka-480.webp" srcset="mem-gusenica-babochka-480.webp 480w, mem-gusenica-babochka-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1080" height="1920" alt="Гусеница на шахматной пешке, в зеркале — бабочка. «Дааа… пора начинать делать массаж»" loading="lazy" decoding="async">
         </button>
         <figcaption>Тому, кто всё собирается начать</figcaption>
-        <a class="dl" href="mem-gusenica-babochka.jpg" download="palpo-mem-gusenica-babochka.jpg" data-card="mem-gusenica-babochka">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-gusenica-babochka.jpg" download="palpo-mem-gusenica-babochka.jpg" data-card="mem-gusenica-babochka">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-gusenica-babochka&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-gusenica-babochka.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D0%BA%D1%82%D0%BE%20%D0%B2%D1%81%D1%91%20%D1%81%D0%BE%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D1%82%D1%81%D1%8F%20%D0%BD%D0%B0%D1%87%D0%B0%D1%82%D1%8C" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-po-faktu-kazhdomu-nuzhen-massazh">
         <button class="card-img" type="button" data-full="mem-po-faktu-kazhdomu-nuzhen-massazh.jpg" aria-label="Открыть крупно">
           <img src="mem-po-faktu-kazhdomu-nuzhen-massazh-480.webp" srcset="mem-po-faktu-kazhdomu-nuzhen-massazh-480.webp 480w, mem-po-faktu-kazhdomu-nuzhen-massazh-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1080" height="1446" alt="Неоновая вывеска в окне: «По факту каждому в жизни нужен массаж»" loading="lazy" decoding="async">
         </button>
         <figcaption>Всем. По факту</figcaption>
-        <a class="dl" href="mem-po-faktu-kazhdomu-nuzhen-massazh.jpg" download="palpo-mem-po-faktu-kazhdomu-nuzhen-massazh.jpg" data-card="mem-po-faktu-kazhdomu-nuzhen-massazh">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-po-faktu-kazhdomu-nuzhen-massazh.jpg" download="palpo-mem-po-faktu-kazhdomu-nuzhen-massazh.jpg" data-card="mem-po-faktu-kazhdomu-nuzhen-massazh">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-po-faktu-kazhdomu-nuzhen-massazh&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-po-faktu-kazhdomu-nuzhen-massazh.jpg&amp;description=%D0%92%D1%81%D0%B5%D0%BC.%20%D0%9F%D0%BE%20%D1%84%D0%B0%D0%BA%D1%82%D1%83" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-lya-tut-massazh">
         <button class="card-img" type="button" data-full="mem-lya-tut-massazh.jpg" aria-label="Открыть крупно">
           <img src="mem-lya-tut-massazh-480.webp" srcset="mem-lya-tut-massazh-480.webp 480w, mem-lya-tut-massazh-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1080" height="1446" alt="Вывеска над витриной: «Ля тут массаж»" loading="lazy" decoding="async">
         </button>
         <figcaption>Тому, кто спрашивает, где тут массаж</figcaption>
-        <a class="dl" href="mem-lya-tut-massazh.jpg" download="palpo-mem-lya-tut-massazh.jpg" data-card="mem-lya-tut-massazh">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-lya-tut-massazh.jpg" download="palpo-mem-lya-tut-massazh.jpg" data-card="mem-lya-tut-massazh">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-lya-tut-massazh&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-lya-tut-massazh.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D0%BA%D1%82%D0%BE%20%D1%81%D0%BF%D1%80%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%B5%D1%82%2C%20%D0%B3%D0%B4%D0%B5%20%D1%82%D1%83%D1%82%20%D0%BC%D0%B0%D1%81%D1%81%D0%B0%D0%B6" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-do-i-posle-massazha">
         <button class="card-img" type="button" data-full="mem-do-i-posle-massazha.jpg" aria-label="Открыть крупно">
           <img src="mem-do-i-posle-massazha-480.webp" srcset="mem-do-i-posle-massazha-480.webp 480w, mem-do-i-posle-massazha-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="896" height="1200" alt="Два смайлика: до массажа — измученный, после — довольный" loading="lazy" decoding="async">
         </button>
         <figcaption>Коллеге в пятницу</figcaption>
-        <a class="dl" href="mem-do-i-posle-massazha.jpg" download="palpo-mem-do-i-posle-massazha.jpg" data-card="mem-do-i-posle-massazha">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-do-i-posle-massazha.jpg" download="palpo-mem-do-i-posle-massazha.jpg" data-card="mem-do-i-posle-massazha">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-do-i-posle-massazha&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-do-i-posle-massazha.jpg&amp;description=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%B3%D0%B5%20%D0%B2%20%D0%BF%D1%8F%D1%82%D0%BD%D0%B8%D1%86%D1%83" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-massage-enter">
         <button class="card-img" type="button" data-full="mem-massage-enter.jpg" aria-label="Открыть крупно">
           <img src="mem-massage-enter-480.webp" srcset="mem-massage-enter-480.webp 480w, mem-massage-enter-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1080" height="1920" alt="Клавиши M-A-S-S-A-G-E и клавиша Enter" loading="lazy" decoding="async">
         </button>
         <figcaption>Айтишнику</figcaption>
-        <a class="dl" href="mem-massage-enter.jpg" download="palpo-mem-massage-enter.jpg" data-card="mem-massage-enter">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-massage-enter.jpg" download="palpo-mem-massage-enter.jpg" data-card="mem-massage-enter">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-massage-enter&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-massage-enter.jpg&amp;description=%D0%90%D0%B9%D1%82%D0%B8%D1%88%D0%BD%D0%B8%D0%BA%D1%83" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-before-after-massage">
         <button class="card-img" type="button" data-full="mem-before-after-massage.jpg" aria-label="Открыть крупно">
           <img src="mem-before-after-massage-480.webp" srcset="mem-before-after-massage-480.webp 480w, mem-before-after-massage-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="896" height="1200" alt="Before massage — железный хмурый смайлик, after massage — золотой сияющий" loading="lazy" decoding="async">
         </button>
         <figcaption>Коллеге за соседним столом</figcaption>
-        <a class="dl" href="mem-before-after-massage.jpg" download="palpo-mem-before-after-massage.jpg" data-card="mem-before-after-massage">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-before-after-massage.jpg" download="palpo-mem-before-after-massage.jpg" data-card="mem-before-after-massage">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-before-after-massage&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-before-after-massage.jpg&amp;description=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%B3%D0%B5%20%D0%B7%D0%B0%20%D1%81%D0%BE%D1%81%D0%B5%D0%B4%D0%BD%D0%B8%D0%BC%20%D1%81%D1%82%D0%BE%D0%BB%D0%BE%D0%BC" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-granata-massage">
         <button class="card-img" type="button" data-full="mem-granata-massage.jpg" aria-label="Открыть крупно">
           <img src="mem-granata-massage-480.webp" srcset="mem-granata-massage-480.webp 480w, mem-granata-massage-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1080" height="1920" alt="Граната, собранная из клавиш: Spa, Zen, Massage, Relax, Calm" loading="lazy" decoding="async">
         </button>
         <figcaption>Тому, кто на взводе</figcaption>
-        <a class="dl" href="mem-granata-massage.jpg" download="palpo-mem-granata-massage.jpg" data-card="mem-granata-massage">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-granata-massage.jpg" download="palpo-mem-granata-massage.jpg" data-card="mem-granata-massage">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-granata-massage&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-granata-massage.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D0%BA%D1%82%D0%BE%20%D0%BD%D0%B0%20%D0%B2%D0%B7%D0%B2%D0%BE%D0%B4%D0%B5" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-ruka-svecha-massage">
         <button class="card-img" type="button" data-full="mem-ruka-svecha-massage.jpg" aria-label="Открыть крупно">
           <img src="mem-ruka-svecha-massage-480.webp" srcset="mem-ruka-svecha-massage-480.webp 480w, mem-ruka-svecha-massage-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1080" height="1920" alt="Рука держит лампочку, внутри горит свеча; надпись Massage" loading="lazy" decoding="async">
         </button>
         <figcaption>Тому, у кого перегорело</figcaption>
-        <a class="dl" href="mem-ruka-svecha-massage.jpg" download="palpo-mem-ruka-svecha-massage.jpg" data-card="mem-ruka-svecha-massage">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-ruka-svecha-massage.jpg" download="palpo-mem-ruka-svecha-massage.jpg" data-card="mem-ruka-svecha-massage">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-ruka-svecha-massage&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-ruka-svecha-massage.jpg&amp;description=%D0%A2%D0%BE%D0%BC%D1%83%2C%20%D1%83%20%D0%BA%D0%BE%D0%B3%D0%BE%20%D0%BF%D0%B5%D1%80%D0%B5%D0%B3%D0%BE%D1%80%D0%B5%D0%BB%D0%BE" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-stol-on">
         <button class="card-img" type="button" data-full="mem-stol-on.jpg" aria-label="Открыть крупно">
           <img src="mem-stol-on-480.webp" srcset="mem-stol-on-480.webp 480w, mem-stol-on-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1080" height="1920" alt="Набросок: мужчина лежит на массажном столе ровно. Massage с сердцем из ладоней" loading="lazy" decoding="async">
         </button>
         <figcaption>Ему</figcaption>
-        <a class="dl" href="mem-stol-on.jpg" download="palpo-mem-stol-on.jpg" data-card="mem-stol-on">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-stol-on.jpg" download="palpo-mem-stol-on.jpg" data-card="mem-stol-on">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-stol-on&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-stol-on.jpg&amp;description=%D0%95%D0%BC%D1%83" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
       <figure class="card" id="mem-stol-ona">
         <button class="card-img" type="button" data-full="mem-stol-ona.jpg" aria-label="Открыть крупно">
           <img src="mem-stol-ona-480.webp" srcset="mem-stol-ona-480.webp 480w, mem-stol-ona-720.webp 720w" sizes="(max-width: 640px) 48vw, 300px" width="1080" height="1920" alt="Набросок: у женщины на массажном столе волосы во все стороны. Massage с сердцем из ладоней" loading="lazy" decoding="async">
         </button>
         <figcaption>Ей</figcaption>
-        <a class="dl" href="mem-stol-ona.jpg" download="palpo-mem-stol-ona.jpg" data-card="mem-stol-ona">Скачать</a>
+        <div class="pin-save-row"><a class="dl" href="mem-stol-ona.jpg" download="palpo-mem-stol-ona.jpg" data-card="mem-stol-ona">Скачать</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23mem-stol-ona&amp;media=https%3A%2F%2Fpalpo.org%2Fmem-stol-ona.jpg&amp;description=%D0%95%D0%B9" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </figure>
     </div>
   </section>
@@ -975,8 +993,8 @@ footer.pn-foot{display:block;max-width:none;width:auto}
       <a class="oboi-prev" href="/#calendar"><img src="calendar-preview.jpg" alt="Календарь-обои на октябрь 2026 для экрана телефона" loading="lazy" decoding="async"></a>
       <div class="oboi-files">
         <p>Календарь под экран телефона. Сверху воздух под часы, снизу под док.</p>
-        <a class="dl" href="kalendar-oktyabr-2026-ru-light.png" download data-card="kalendar-light">Октябрь, светлый</a>
-        <a class="dl" href="kalendar-oktyabr-2026-ru-dark.png" download data-card="kalendar-dark">Октябрь, тёмный</a>
+        <div class="pin-save-row"><a class="dl" href="kalendar-oktyabr-2026-ru-light.png" download data-card="kalendar-light">Октябрь, светлый</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23oboi&amp;media=https%3A%2F%2Fpalpo.org%2Fkalendar-oktyabr-2026-ru-light.png&amp;description=%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C%2C%20%D1%81%D0%B2%D0%B5%D1%82%D0%BB%D1%8B%D0%B9.%20%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C-%D0%BE%D0%B1%D0%BE%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0%20%D1%81%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
+        <div class="pin-save-row"><a class="dl" href="kalendar-oktyabr-2026-ru-dark.png" download data-card="kalendar-dark">Октябрь, тёмный</a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fhumor.html%23oboi&amp;media=https%3A%2F%2Fpalpo.org%2Fkalendar-oktyabr-2026-ru-dark.png&amp;description=%D0%9E%D0%BA%D1%82%D1%8F%D0%B1%D1%80%D1%8C%2C%20%D1%82%D1%91%D0%BC%D0%BD%D1%8B%D0%B9.%20%D0%9A%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D1%8C-%D0%BE%D0%B1%D0%BE%D0%B8%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B5%D0%BB%D0%B5%D1%84%D0%BE%D0%BD%D0%B0%20%D1%81%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a></div>
       </div>
     </div>
   </section>
@@ -1015,7 +1033,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 <div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Открытка крупно">
   <img id="lb-img" alt="">
   <p class="lb-hint" id="lb-hint">Чтобы сохранить — удерживайте палец на картинке и выберите «Сохранить изображение».</p>
-  <div class="lb-row"><a id="lb-dl" href="#" download>Скачать</a><button type="button" id="lb-close">Закрыть</button></div>
+  <div class="lb-row"><a id="lb-dl" href="#" download>Скачать</a><a class="pin-save" id="lb-pin" href="#" target="_blank" rel="noopener" data-goal="pin_save">Сохранить в Pinterest</a><button type="button" id="lb-close">Закрыть</button></div>
 </div>
 
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "9e0cfa89fa9b44378ab3443a1d1e8e7e"}'></script><!-- End Cloudflare Web Analytics -->
@@ -1028,10 +1046,24 @@ footer.pn-foot{display:block;max-width:none;width:auto}
   var touch = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
   var lb = document.getElementById('lb'), lbImg = document.getElementById('lb-img'), lbDl = document.getElementById('lb-dl');
   var lastFocus = null;
-  function openLb(full, alt, name) {
+  function absPin(u) { if (!u) return ''; if (/^https?:\/\//i.test(u)) return u; return location.origin + '/' + String(u).replace(/^\//, ''); }
+  function setLbPin(full, alt, fromEl) {
+    var a = document.getElementById('lb-pin'); if (!a) return;
+    var img = null, fig = null;
+    if (fromEl) {
+      img = (fromEl.tagName === 'IMG') ? fromEl : (fromEl.querySelector && fromEl.querySelector('img'));
+      fig = fromEl.closest ? fromEl.closest('figure[id], article[id], section[id]') : null;
+    }
+    var url = (img && img.getAttribute('data-pin-url')) || (location.origin + location.pathname + (fig && fig.id ? '#' + fig.id : ''));
+    var media = (img && img.getAttribute('data-pin-media')) || absPin(full);
+    var desc = (img && (img.getAttribute('data-pin-description') || img.getAttribute('data-pin-title'))) || alt || '';
+    a.href = 'https://www.pinterest.com/pin/create/button/?url=' + encodeURIComponent(url) + '&media=' + encodeURIComponent(media) + '&description=' + encodeURIComponent(desc);
+  }
+  function openLb(full, alt, name, fromEl) {
     lastFocus = document.activeElement;
     lbImg.src = full; lbImg.alt = alt || '';
     lbDl.href = full; lbDl.setAttribute('download', name || '');
+    setLbPin(full, alt, fromEl);
     lb.hidden = false; document.body.style.overflow = 'hidden';
     document.getElementById('lb-close').focus();
   }
@@ -1044,7 +1076,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
     var b = e.target.closest ? e.target.closest('.card-img') : null;
     if (b) {
       var f = b.closest('figure'), img = b.querySelector('img');
-      openLb(b.getAttribute('data-full'), img ? img.alt : '', 'palpo-' + f.id + '.jpg');
+      openLb(b.getAttribute('data-full'), img ? img.alt : '', 'palpo-' + f.id + '.jpg', f);
       goal('humor_open', { card: f.id });
       return;
     }
@@ -1052,7 +1084,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
     if (!a) return;
     var id = a.getAttribute('data-card'), href = a.getAttribute('href'), fname = a.getAttribute('download');
     goal('humor_download', { card: id });
-    if (inApp) { e.preventDefault(); goal('humor_fullscreen', { card: id }); openLb(href, '', fname); return; }
+    if (inApp) { e.preventDefault(); goal('humor_fullscreen', { card: id }); openLb(href, '', fname, a); return; }
     /* телефон: обычное меню телефона, где есть «Сохранить изображение» (в Фото, а не в Файлы) */
     if (touch && navigator.canShare && window.fetch && window.File) {
       e.preventDefault();
@@ -1063,7 +1095,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
       }).catch(function (err) {
         if (err && err.name === 'AbortError') return; /* человек сам закрыл меню */
         goal('humor_fullscreen', { card: id });
-        openLb(href, '', fname);
+        openLb(href, '', fname, a);
       });
     }
     /* компьютер: обычное скачивание по ссылке */
@@ -1077,6 +1109,8 @@ footer.pn-foot{display:block;max-width:none;width:auto}
   document.addEventListener('click', function (e) {
     var a = e.target.closest ? e.target.closest('a[href]') : null; if (!a) return;
     var h = a.getAttribute('href') || '';
+    var dg = a.getAttribute('data-goal');
+    if (dg) { goal(dg); return; }
     if (h.indexOf('t.me/') > -1) goal('tg_click');
     else if (h.indexOf('minsk.html') > -1) goal('humor_to_minsk');
     else if (h.indexOf('pinterest.com') > -1) goal('humor_to_pinterest');

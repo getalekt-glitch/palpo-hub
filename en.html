@@ -893,6 +893,24 @@ footer.pn-foot{display:block;max-width:none;width:auto}
 .pn-quiet b{font-weight:500}
 @media (prefers-reduced-motion:reduce){.pn-links a{transition:none}}
 </style>
+<style id="pin-save-style">
+/* 22.11.2026: plain Save-to-Pinterest link, below or beside the image, never over it */
+.pin-save-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+a.pin-save{display:inline-flex;align-items:center;justify-content:center;padding:9px 16px;border-radius:100px;background:var(--amber,var(--ink,#3F2C15));color:var(--bg,var(--paper,#FBF9F5));font:inherit;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border:0;cursor:pointer;line-height:1.2;max-width:100%;box-sizing:border-box;text-align:center;white-space:normal}
+a.pin-save:hover{transform:translateY(-2px)}
+@media (max-width:640px){a.pin-save{letter-spacing:.05em;padding:8px 12px}}
+.lb-row a.pin-save{background:transparent;color:#F0E4C8;border:1px solid #F0E4C8;letter-spacing:.04em;text-transform:none;font-size:.8rem;padding:10px 18px}
+.cal-files .pin-save-row{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;border-bottom:1px solid var(--wall,#E3D5BB)}
+.cal-files .pin-save-row>a:not(.pin-save){flex:1 1 12em;border-bottom:0}
+.cal-files a.pin-save{flex:0 0 auto;margin:6px 0;padding:7px 12px;letter-spacing:.06em;border-bottom:0;color:var(--bg,var(--paper,#FBF9F5));background:var(--amber,var(--ink,#3F2C15));justify-content:center}
+.pin-save-item{display:flex;flex-direction:column;align-items:flex-start;gap:8px;min-width:0}
+.grid>.pin-save-item{align-items:stretch}
+.strip .pin-save-item{flex:0 0 80%;max-width:340px;scroll-snap-align:start}
+.strip .pin-save-item .r-item{flex:none;max-width:none;width:100%}
+.kto-eto .pin-save-row,.atmosphere-scroll+.pin-save-row,.zn .pin-save-row{margin:10px 0 0}
+.polka-items .pin-save-item{display:flex;flex-direction:column;gap:8px}
+</style>
+
 </head>
 <body>
 <header class="pn-head site-header"><a class="skip-link" href="#main">Skip to content</a><nav class="pn-nav" aria-label="Sections"><a class="pn-brand" href="/en.html">Massage Hands</a><div class="pn-links"><a href="/en.html#atlas">Where you freeze</a><a href="/biomechanics.html">Point to it</a><a href="/en-humor.html">Who else is faking</a><a href="/minsk.html">Silence allowed</a></div><a class="pn-lang" href="/" hreflang="ru" lang="ru">RU</a></nav></header>
@@ -1319,14 +1337,14 @@ footer.pn-foot{display:block;max-width:none;width:auto}
         <h2 class="serif">A calendar where the numbers are part of the picture</h2>
         <p>Made for a phone screen. Space is left at the top for the clock and at the bottom for the dock. One line of observation, which you see for thirty days running.</p>
         <div class="cal-files">
-          <a href="calendar-october-2026-en-light.png" download>October, light <span>PNG · 1290×2796</span></a>
-          <a href="calendar-october-2026-en-dark.png" download>October, dark <span>PNG · 1290×2796</span></a>
-          <a href="calendar-november-2026-en-light.png" download>November, light <span>PNG · 1290×2796</span></a>
-          <a href="calendar-november-2026-en-dark.png" download>November, dark <span>PNG · 1290×2796</span></a>
-          <a href="calendar-december-2026-en-light.png" download>December, light <span>PNG · 1290×2796</span></a>
-          <a href="calendar-december-2026-en-dark.png" download>December, dark <span>PNG · 1290×2796</span></a>
-          <a href="calendar-january-2027-en-light.png" download>January, light <span>PNG · 1290×2796</span></a>
-          <a href="calendar-january-2027-en-dark.png" download>January, dark <span>PNG · 1290×2796</span></a>
+          <div class="pin-save-row"><a href="calendar-october-2026-en-light.png" download>October, light <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen.html%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fcalendar-october-2026-en-light.png&amp;description=October%2C%20light.%20Phone%20wallpaper%20calendar%20from%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
+          <div class="pin-save-row"><a href="calendar-october-2026-en-dark.png" download>October, dark <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen.html%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fcalendar-october-2026-en-dark.png&amp;description=October%2C%20dark.%20Phone%20wallpaper%20calendar%20from%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
+          <div class="pin-save-row"><a href="calendar-november-2026-en-light.png" download>November, light <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen.html%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fcalendar-november-2026-en-light.png&amp;description=November%2C%20light.%20Phone%20wallpaper%20calendar%20from%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
+          <div class="pin-save-row"><a href="calendar-november-2026-en-dark.png" download>November, dark <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen.html%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fcalendar-november-2026-en-dark.png&amp;description=November%2C%20dark.%20Phone%20wallpaper%20calendar%20from%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
+          <div class="pin-save-row"><a href="calendar-december-2026-en-light.png" download>December, light <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen.html%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fcalendar-december-2026-en-light.png&amp;description=December%2C%20light.%20Phone%20wallpaper%20calendar%20from%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
+          <div class="pin-save-row"><a href="calendar-december-2026-en-dark.png" download>December, dark <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen.html%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fcalendar-december-2026-en-dark.png&amp;description=December%2C%20dark.%20Phone%20wallpaper%20calendar%20from%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
+          <div class="pin-save-row"><a href="calendar-january-2027-en-light.png" download>January, light <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen.html%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fcalendar-january-2027-en-light.png&amp;description=January%2C%20light.%20Phone%20wallpaper%20calendar%20from%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
+          <div class="pin-save-row"><a href="calendar-january-2027-en-dark.png" download>January, dark <span>PNG · 1290×2796</span></a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen.html%23calendar&amp;media=https%3A%2F%2Fpalpo.org%2Fcalendar-january-2027-en-dark.png&amp;description=January%2C%20dark.%20Phone%20wallpaper%20calendar%20from%20palpo.org." target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
         </div>
         <p class="cal-note">The next month appears here in advance.</p>
       </div>
@@ -1358,10 +1376,10 @@ footer.pn-foot{display:block;max-width:none;width:auto}
   </div>
 </section>
 
-<section class="kto-eto">
+<section class="kto-eto" id="kto-eto">
   <div class="kto-eto-photo reveal">
     <img src="author.jpg" alt="Aliaksei at the massage table, from behind" loading="lazy">
-  </div>
+  </div><div class="pin-save-row"><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen.html%23kto-eto&amp;media=https%3A%2F%2Fpalpo.org%2Fauthor.jpg&amp;description=Aliaksei%20at%20the%20massage%20table%2C%20from%20behind" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
   <p class="kto-eto-quote reveal">I work with my hands, but I notice with my eyes. Twenty years at the table have shown me more about bodies — and about people — than I expected. Here I put it into words. As it is, without textbooks.</p>
 </section>
 
@@ -1383,18 +1401,18 @@ footer.pn-foot{display:block;max-width:none;width:auto}
       <h2 class="serif" style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:400;">What I actually work with</h2>
     </div>
     <div class="polka-items reveal">
-      <a class="polka-item" href="https://t.me/Lighthouse_massage_music/1510" target="_blank" rel="noreferrer">
+      <div class="pin-save-item"><a class="polka-item" href="https://t.me/Lighthouse_massage_music/1510" target="_blank" rel="noreferrer">
         <img src="polka-balm.jpg" alt="Balm, its texture on the fingers" loading="lazy">
         <div class="polka-item-body">
           <blockquote>“I've kept this balm in the room for two years now. I use it before dense work — shoulders, sacrum, the deep points. Thick, it follows the finger, it doesn't run. It lasts a long time. I work with it, and I'm content.”</blockquote>
         </div>
-      </a>
-      <a class="polka-item" href="https://t.me/Lighthouse_massage_music/1561" target="_blank" rel="noreferrer">
+      </a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen.html%23polka&amp;media=https%3A%2F%2Fpalpo.org%2Fpolka-balm.jpg&amp;description=Balm%2C%20its%20texture%20on%20the%20fingers" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
+      <div class="pin-save-item"><a class="polka-item" href="https://t.me/Lighthouse_massage_music/1561" target="_blank" rel="noreferrer">
         <img src="polka-cream.jpg" alt="A thick cream worked into the hand" loading="lazy">
         <div class="polka-item-body">
           <blockquote>“A cream of dense texture — I can work with it for an hour and a half straight, it doesn't get sticky, it doesn't wear off. After the session the skin looks as if it had exhaled.”</blockquote>
         </div>
-      </a>
+      </a><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen.html%23polka&amp;media=https%3A%2F%2Fpalpo.org%2Fpolka-cream.jpg&amp;description=A%20thick%20cream%20worked%20into%20the%20hand" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
     </div>
   </div>
 </section>
@@ -1472,6 +1490,7 @@ footer.pn-foot{display:block;max-width:none;width:auto}
     <div class="atmosphere-scroll">
       <div class="atmosphere-slide"><img src="atmosphere.jpg" alt="A lamp, a stool, a room" loading="lazy"></div>
     </div>
+    <div class="pin-save-row"><a class="pin-save" href="https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fpalpo.org%2Fen.html%23atmosphere&amp;media=https%3A%2F%2Fpalpo.org%2Fatmosphere.jpg&amp;description=A%20lamp%2C%20a%20stool%2C%20a%20room" target="_blank" rel="noopener" data-goal="pin_save">Save to Pinterest</a></div>
     <p style="text-align:center;margin:22px 0 0"><a href="/atmosphere.html" style="font-family:'Cormorant Garamond',serif;font-size:1.25rem;text-decoration:underline;text-underline-offset:4px">Atmosphere · the album →</a></p>
   </div>
 </section>
@@ -1546,6 +1565,8 @@ footer.pn-foot{display:block;max-width:none;width:auto}
     var a = e.target.closest ? e.target.closest('a[href]') : null;
     if (!a) return;
     var h = a.getAttribute('href') || '';
+    var dg = a.getAttribute('data-goal');
+    if (dg) { goal(dg); return; }
     if (h.indexOf('t.me/') > -1 || h.indexOf('telegram.me/') > -1) goal('tg_click');
     else if (h.indexOf('youtube.com') > -1 || h.indexOf('youtu.be') > -1) goal('yt_click');
     else if (h.indexOf('.png') > -1) goal('calendar_download');
